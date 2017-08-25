@@ -1,0 +1,64 @@
+<div class="col-xs-12 home-recetas">
+	<div class="col-xs-12 section1">
+		<div class="container image"><div class="col-xs-12 hidden-xs"><img src="../recetas/img/pimientos.png" alt="pimientos"></div></div>
+		<div class="container text-center info">
+			<p class="title hidden-xs"><span>Antes</span>, los ingredientes.<br><span>Después</span>, una delicia que te prepara para ganar.</p>
+			<img src="img/introduccion-m.png" class="visible-xs img-responsive">
+			<p class="description center-block">Pon a prueba todo tu potencial en la cocina y podrás ser el ganador de un curso culinario en Perú o Italia.</p>
+			<div class="col-md-12 col-xs-12 col1 center-block"> 
+	          <button class="boton-participa center-block"><a href="#busqueda">Participa aquí</a></button>
+	        </div>
+		</div>
+	</div>
+	<div class="col-xs-12 section2">
+		<div class="col-xs-12">
+			<p class="title center-block">Elige Entre</p>
+		</div>
+		<div class="col-xs-12 col-md-6 der">
+			<p class="center-block"><span class="cursode">Curso de</span><br><span class="cocina">Cocina Italiana</span><br>Vive una experiencia culinaria en Italia y aprende a recrear sabores únicos.</p>
+		</div>
+		<div class="col-xs-12 col-md-6 izq">
+			<p class="center-block"><span class="cursode">Curso de</span><br><span class="cocina">Cocina Peruana</span><br>Vive una experiencia culinaria en Perú y aprende a cautivar el paladar con la mezcla de sabores.</p>
+		</div>
+	</div>
+	<div class="col-xs-12 section3">
+		<div class="col-xs-12">
+			<p class="title center-block"><span>Instrucciones</span><br>Pasos para ganar</p>
+		</div>
+		<div class="col-xs-12 col-md-6 uno">
+			<p class="center-block">Realiza compras superiores a $30.000 en productos del <a href="https://catalogostiendasjumbo.co/catalogos" target="_blank" class="verdeunder">CATÁLOGO VIVE SABORES</a> en nuestras tiendas a Nivel Nacional.<br><span class="chica">*En caso de ser el ganador, debes mostrar la factura de compra del producto.</span></p>
+		</div>
+		<div class="col-xs-12 col-md-6 dos">
+			<p class="center-block">Haz tu <a href="#login" class="verdeunder">REGISTRO</a> y sube una fotografia de los ingredienes y otra del plato final.</p>
+		</div>
+		<div class="col-xs-12 col-md-6 tres">
+			<p class="center-block">El Chef Juan Diego Vanegas elegira, las 10 recetas finalistas.</p>
+		</div>
+		<div class="col-xs-12 col-md-6 cuatro">
+			<p class="center-block">Los 10 finalistas deberán preparar su RECETA EN VIVO, para que nuestro Chef determine el ganador.<br><span class="chica">*La fecha del evento finál será sábado 9 de septiembre del 2017 en JUMBO SANTA ANA.</span></p>
+		</div>
+		<div class="col-xs-12 col-md-6 chef">
+			<p class="center-block"><span class="chica">Experto en alimentacion balanceada y creador del proyecto Fitness Solutions</span><br>Juan Diego Vanegas</p>
+		</div>
+	</div>
+	<div class="col-xs-12 section4">
+		<div class="container">
+		<div class="col-xs-12">
+			<p class="title center-block"><span>galería</span></p>
+		</div>
+		<div class="col-xs-12">
+			<p class="subtitle"><span>Estas son las recetas que están</span><br>participando en nuestro concurso.</p>
+		</div>
+		<div class="col-xs-12 btn-vermas"><a href="#busqueda">VER MÁS</a></div>
+			<div class="galeria-home">
+				<div class="content-galeria">
+					<div class="col-xs-12 col-sm-4" ng-repeat="gamer in data | orderBy:'-likes' | limitTo:6">
+						<a href="#servicio/{{gamer.id}}/{{gamer.receta}}"><div class="col-xs-12 cont-receta" style="background-image: url({{gamer.imgPrincipal}});">
+							<p class="receta">{{gamer.receta}}<br><span>{{gamer.nombre}} {{gamer.apellido}}</span></p>
+						</div></a>
+					</div>				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

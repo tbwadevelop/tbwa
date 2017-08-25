@@ -1,0 +1,79 @@
+<?php
+
+include_once 'blocks/agenda.block.inc';
+
+/**
+ * Implementacion del hook menu.
+ */
+function agenda_menu() {
+ $items = array();
+ $items['request/%ctools_js'] = array(
+    'page callback' => 'request_callback',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+   return $items;
+}
+
+/**
+ * Implements hook_help().
+ */
+function agenda_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#agenda':
+      return '<p>' . t('Help module', array('storage' => 'Help module' )) . '</p>';
+  }
+}
+
+/**
+ * Implements hook_permission().
+ */
+function agenda_permission() {
+  return array(
+    'administer agenda' =>  array(
+      'title' => t('Administer Agenda'),
+      'description' => t('Perform administration agenda'),
+    ),
+  );
+}
+
+
+function request_callback($ajax){
+    if ($ajax) {
+
+     global $user;
+
+     ctools_include('node.pages', 'node', '');
+     ctools_include('modal');
+     ctools_include('ajax');
+
+     $node = (object) array(
+         'uid' => $user->uid,
+         'name' => (isset($user->name) ? $user->name : ''),
+         'type' => variable_get('content_type'),
+         'language' => LANGUAGE_NONE,
+     );
+
+     $form_state = array(
+         'ajax' => TRUE,
+         'title' => t('Creación de Disponibilidad'),
+     );
+
+     $form_state['build_info']['args'] = array($node);
+
+     $output = ctools_modal_form_wrapper(variable_get('popup'), $form_state);
+
+     // This means the form has been exectued
+     if (!empty($form_state['executed'])) {
+         $output = array();
+         // Close the modal
+         $output[] = ctools_modal_command_dismiss();
+     }
+
+    print ajax_render($output);
+    exit;
+  }else {
+         return drupal_get_form(variable_get('popup'));
+   }
+} 

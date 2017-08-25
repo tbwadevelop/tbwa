@@ -1,0 +1,48 @@
+<p>{{message}}</p>
+<!-- Visualizacion de la información -->
+<div class="row">
+	<div class="col-sm-12" ng-repeat="oferts in data | filter : user : true">
+		<div class="well well-sm">
+			<div class="row">
+				<!-- fsdfsdfsd -->
+				<div class="col-md-12">
+					<img ng-src="{{oferts.imgPrincipal}}" alt="{{oferts.nombre}}" class="img-responsive img-rounded">
+				</div>
+				<div class="col-md-12">
+					<p><strong>id: </strong>{{oferts.numerodedoc}}</p>
+					<p><strong>Name: </strong>{{oferts.nombre}}</p>
+					<p><strong>Lastname: </strong>{{oferts.apellido}}</p>
+					<p><strong>Ingredientes: </strong>{{oferts.ingredientes}}</p>
+	            	<p><strong>Receta: </strong>{{oferts.preparacion}}</p>
+	            	<p><strong>Imagenes de Referencia: </strong></p>
+	            	<div class="col-xs-12 col-md-4" ng-repeat="img in oferts.imgAntes">
+            			<img src="{{img.img}}" class="img-responsive img-rounded">	            			
+	            	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12" ng-repeat="oferts in data | filter : begin | limitTo:4">
+		<div class="well well-sm">
+			<div class="row">
+				<!-- fsdfsdfsd -->
+				<div class="col-md-12">
+					<img ng-src="{{oferts.imgPrincipal}}" alt="{{oferts.nombre}}" class="img-responsive img-rounded">
+				</div>
+				<div class="col-md-12">
+					<p><strong>id: </strong>{{oferts.numerodedoc}}</p>
+					<p><strong>Name: </strong>{{oferts.nombre}}</p>
+					<p><strong>Lastname: </strong>{{oferts.apellido}}</p>
+					<p><strong>Ingredientes: </strong>{{oferts.ingredientes}}</p>
+	            	<p><strong>Receta: </strong>{{oferts.preparacion}}</p>
+	            	<p><strong>Imagenes de Referencia: </strong></p>
+	            	<div class="col-xs-12 col-md-4" ng-repeat="img in oferts.imgAntes">
+            			<img src="{{img.img}}" class="img-responsive img-rounded">	            			
+	            	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,143 @@
+<div class="page-content">
+  <div class="row registro">
+    <div class="space-6"></div>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <div class="col-sm-10 col-sm-offset-1">
+      <div id="login-box" class="login-box visible widget-box no-border">
+        <div class="widget-body">
+          <div class="widget-main">
+            <div class="space-16"></div>
+            <p class="title center-block"><span>Registro</span></p>
+            <form name="loginForm" class="form-horizontal" role="form">
+              <h2>Inicia Sesión</h2>
+              <a href="" class="btn-facebook"></a>
+            </form>
+            <form name="signupForm" class="form-horizontal" role="form">
+              <h2>Regístrate</h2>
+              <a href="" class="btn-facebook"></a>                
+              <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="name">Nombre</label>
+                <div class="">
+                  <span class="block input-icon input-icon-right">
+                  <input type="text" class="form-control" placeholder="Ingresa tu nombre completo"  
+                    ng-model="signup.name" name="nombre" required focus/>
+                  <i class="ace-icon fa fa-user"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="lastname">Apellido</label>
+                <div class="">
+                  <span class="block input-icon input-icon-right">
+                  <input type="text" class="form-control" placeholder="Ingresa tus apellidos" 
+                    ng-model="signup.lastname" required/>
+                  <i class="ace-icon fa fa-lock"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="type_doc">Tipo de documento</label>
+                <div class="">
+                  <span class="block input-icon input-icon-right">
+                  <input type="text" class="form-control" placeholder="Tipo de documento" ng-model="signup.type_doc" />
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="cc">número de documento</label>
+                <div class="">
+                  <span class="block input-icon input-icon-right">
+                  <input type="text" class="form-control" placeholder="Ingresa el número de tu documento" ng-model="signup.cc" />
+                  <i class="ace-icon fa fa-lock"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="email">Correo electrónico</label>
+                <div class="">
+                  <span class="block input-icon input-icon-right">
+                  <input type="text" class="form-control" placeholder="correo@mail.com" name="email" ng-model="signup.email" focus/>
+                  <span ng-show="signupForm.email.$error.email" class="help-inline">Email is not valid</span> 
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="phone">Teléfono móvil</label>
+                <div class="">
+                  <span class="block input-icon input-icon-right">
+                  <input type="text" class="form-control" placeholder="Número de celular" name="phone" ng-model="signup.phone"/>
+                  <i class="ace-icon fa fa-lock"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="departament">Departamento</label>
+                <div class="">
+                  <span class="block input-icon input-icon-right">
+                  <select class="form-control" ng-model="signup.departament" id="dep">
+                    <option value="">---</option>
+                    <option ng-repeat="dep in data" value="{{dep.departamento}}">{{dep.departamento}}</option>
+                  </select>
+                   <i class="ace-icon fa fa-lock"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="city">Ciudad</label>
+                <div class="">
+                  <span class="block input-icon input-icon-right">
+                  <Select class="form-control" ng-model="signup.city" id="city"> 
+                    <option value="">---</option> 
+                  </select>
+                  <i class="ace-icon fa fa-lock"></i>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="password">Password</label>
+                <div class="">
+                  <span class="block input-icon input-icon-right">
+                  <input type="password" class="form-control" name = "password" placeholder="Password" ng-model="signup.password" required/>
+                  <small class="errorMessage" data-ng-show="signupForm.password.$dirty && signupForm.password.$invalid"> Enter Password.</small>
+                  </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-3 control-label no-padding-right" for="password2">Confirm Password</label>
+                <div class="">
+                  <span class="block input-icon input-icon-right">
+                  <input type="password" class="form-control" name="password2" placeholder="Password Again" ng-model="signup.password2" password-match="signup.password" required/>                                
+                  <small class="errorMessage" data-ng-show="signupForm.password2.$dirty && signupForm.password2.$error.required"> Enter password again.</small>
+                  <small class="errorMessage" data-ng-show="signupForm.password2.$dirty && signupForm.password2.$error.passwordNoMatch && !signupForm.password2.$error.required"> Password do not match.</small>
+                  </span>
+                </div>
+              </div>
+              <div class="clearfix">
+                <input type="checkbox" name="vehicle"  ng-model="signup.terms"  value="terms">Acepto <a href="">términos y condiciones</a><br>
+                <input type="checkbox" name="vehicle" ng-model="signup.policies" value="policies">Acepto políticas de uso de datos y de sitio<br>
+             </div>
+             <!-- <div class="g-recaptcha" data-sitekey="6LeIgSsUAAAAAIB31u93CO0CuEwLH886pP6H4FFt"></div> -->
+              <div class="clearfix">
+                <span class="lbl col-sm-5"> </span>
+                <div class="col-sm-12">
+                  <label>Todos los campos son obligatorios</label>
+                  <button type="submit" class="width-35 pull-right btn btn-sm btn-primary" ng-click="signUp(signup)" data-ng-disabled="signupForm.$invalid">
+                  Enviar
+                  </button>
+                </div>
+              </div>
+              </fieldset>
+              </div>
+            </form>
+          </div>
+          <!-- /widget-main -->
+        </div>
+        <!-- /widget-body -->
+      </div>
+      <!-- /login-box -->
+    </div>
+    <!-- /position-relative -->
+  </div>
+</div>

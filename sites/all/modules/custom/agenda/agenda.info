@@ -1,0 +1,13 @@
+name = Agenda
+description = services for diary
+
+files[] = agenda.module
+dependencies[] = entity
+dependencies[] = ctools
+package = TBWA
+
+; Information added by Drupal.org packaging script on 2016-08-08
+version = "7.x-1.11"
+core = "7.x"
+project = "agenda"
+datestamp = "1470638340"

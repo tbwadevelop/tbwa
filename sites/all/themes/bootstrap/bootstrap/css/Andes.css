@@ -160,3 +160,62 @@ footer{
   border-bottom-style: solid;
   border-bottom-width: 2px;
 }
+
+/*Vanessa*/
+
+.section>.tabs {
+    display: none;
+}
+
+.pane-page-content {
+    width: 80vw;
+    background-color: #E6E7E8;
+    margin: 60px auto;
+    box-shadow: 8px 8px 5px #F1F1F2;
+    max-width: 900px;
+}
+
+h1#page-title {
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: Helvetica;
+    margin-bottom: 40px;
+}
+
+.pane-page-content {
+    padding: 2vh 5vw;
+}
+
+.form-item .description, .form-item label {
+    display: none;
+}
+
+input.form-text {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form-item {
+    margin-bottom: 0.5em;
+    margin-top: 2px;
+}
+
+input#edit-submit {
+    border-radius: 0px;
+    background: #41B65B;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0;
+}
+
+.form-actions {
+    padding-top: 10px;
+    text-align: end;
+}
+

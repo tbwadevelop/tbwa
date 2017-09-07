@@ -1,0 +1,4 @@
+name = decanatura_blocks
+description = "Decanatura Block"
+package = Andes
+core = 7.x

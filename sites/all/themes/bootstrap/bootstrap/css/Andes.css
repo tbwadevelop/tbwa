@@ -1,0 +1,221 @@
+.user-menu {
+  background-color: #333333;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+}
+
+.user-menu .dropdown ul li,
+.user-menu .dropdown ul a {
+  background-color: #333333;
+  color: white;
+}
+
+.user-menu a,
+.main-menu a {
+  color: white;
+}
+
+.user-menu .btn{
+  background-color: #333333;
+}
+
+.user-menu .btn:hover,
+.user-menu .btn:focus {
+  color: white;
+}
+
+.profile-list{
+  display: inline;
+}
+
+.profile-list li{
+  float: left;
+  padding-left: 2px;
+  padding-right: 2px;
+  list-style: none;
+}
+
+.main-menu {
+  height: 200px;
+  line-height: 200px;
+  background-color: black;
+}
+
+.logos-deca-menu img {
+  width: 100%;
+}
+
+.links-deca-menu {
+  display: inline;
+}
+
+.links-deca-menu li {
+  float: left;
+  list-style: none;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.logos-deca-menu div {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.logos-deca-menu div:nth-child(1) img{
+  border-right-style: solid;
+  border-color: white;
+  border-width: 1px
+}
+
+.logos-deca-menu div:nth-child(2) img{
+  border-left-style: solid;
+  border-color: white;
+  border-width: 1px 
+}
+
+footer{
+  background-color: black;
+}
+
+.other-sites{
+  background-color: #1d1d1d;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+}
+
+.other-sites a{
+  color: white;
+}
+
+.other-sites img {
+  width: 100%;
+}
+
+.other-sites .franja {
+  height: 10px;
+}
+
+.other-sites .other-site:nth-child(1) .franja {
+  background-color: red;
+}
+
+.other-sites .other-site:nth-child(2) .franja {
+  background-color: blue;
+}
+
+.other-sites .other-site:nth-child(3) .franja {
+  background-color: yellow;
+}
+
+.other-sites .other-site:nth-child(4) .franja {
+  background-color: green;
+}
+
+.footer-info img {
+  width: 100%;
+}
+
+.footer-info-b1 {
+  color: white;
+  font-size: 15px;
+}
+
+.footer-info-b2,
+.footer-info-b2 a{
+  font-size: 12px;
+  color: #7e7e7e;
+}
+
+.footer-info-b2 h2,
+.footer-info-b3 h2 {
+  font-size: 20px;
+  color:#818181;
+}
+
+.footer-info-b2 ul {
+  padding: 0px;
+}
+
+.footer-info-b3 .col-md-3.col-sm-3.col-xs-12{
+  padding: 0px;
+}
+
+.footer-info-b2 .franja {
+  background-color: white;
+  height: 5px;
+}
+
+.footer-info li {
+  list-style-type: none;
+}
+
+.link-directorio-redes {
+  text-align: center;
+}
+
+.link-directorio-redes a {
+  font-size: 28px;
+  color: white;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+
+/*Vanessa*/
+
+.section>.tabs {
+    display: none;
+}
+
+.pane-page-content {
+    width: 80vw;
+    background-color: #E6E7E8;
+    margin: 60px auto;
+    box-shadow: 8px 8px 5px #F1F1F2;
+    max-width: 900px;
+}
+
+h1#page-title {
+    padding-top: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: Helvetica;
+    margin-bottom: 40px;
+}
+
+.pane-page-content {
+    padding: 2vh 5vw;
+}
+
+.form-item .description, .form-item label {
+    display: none;
+}
+
+input.form-text {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form-item {
+    margin-bottom: 0.5em;
+    margin-top: 2px;
+}
+
+input#edit-submit {
+    border-radius: 0px;
+    background: #41B65B;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 0;
+}
+
+.form-actions {
+    padding-top: 10px;
+    text-align: end;
+}
+

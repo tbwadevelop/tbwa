@@ -58,7 +58,7 @@ function agenda_block_view($delta = '') {
 
   switch ($delta) {
     case 'modals':
-      $block['subject'] = t('Disponibilidad');
+      $block['subject'] = t('Availability');
       $block['content'] = modals_render();
       break;
     
@@ -67,7 +67,6 @@ function agenda_block_view($delta = '') {
 }
 
 function modals_render(){
- 
  $block = array();
 
  ctools_include('modal');

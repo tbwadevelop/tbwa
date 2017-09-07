@@ -8,12 +8,92 @@ include_once 'blocks/agenda.block.inc';
 function agenda_menu() {
  $items = array();
  $items['request/%ctools_js'] = array(
+    'title' => t('Create node api ctools'),
     'page callback' => 'request_callback',
     'page arguments' => array(1),
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
+
+  $items['availability/%/%ctools_js'] = array(
+      'title' => t('Render node save api ctools'),
+      'page callback' => 'render_availability',
+      'page arguments' => array(1),
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+    );
+
+  $items['availability-edit/%/%ctools_js'] = array(
+      'title' => t('Edit node api ctools'),
+      'page callback' => 'edit_availability',
+      'page arguments' => array(1),
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+    );
+
+  $items['availability-delete/%/%ctools_js'] = array(
+      'title' => t('Delete node api ctools'),
+      'page callback' => 'delete_availability',
+      'page arguments' => array(1),
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+    );
    return $items;
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function agenda_field_formatter_info() {
+  $info = array(
+      'operation_node' => array(
+        'label' => t('Operation Node'), 
+        'field types' => array('text'),
+        'description' => t('Field manage edit/delete for node'),
+      ), 
+    );
+  return $info; 
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function agenda_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+    $element = array();
+      switch ($display['type']) {
+        case 'operation_node':
+          foreach ($items as $delta => $item) {
+            $element[$delta] = array(
+              '#theme' => 'operations-node-availability', 
+            );
+         }
+          break;
+      }
+      return $element; 
+}
+
+/**
+ * Implements hook_theme().
+ */
+function agenda_theme($existing, $type, $theme, $path) {
+  $module_path = drupal_get_path('module', 'agenda');
+  $base = array(
+    'path' => "$module_path/theme",
+  );
+  $themes = array(
+    'item-calendar' => $base + array(
+     'template' => 'item-calendar',
+     'variables' => array('value' => NULL),
+    ),
+  );
+
+  $themes = array(
+    'operations-node-availability' => array(
+    'template' => 'theme/operations-node-availability',
+    ),
+  );
+
+  return $themes; 
 }
 
 /**
@@ -38,12 +118,93 @@ function agenda_permission() {
   );
 }
 
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function agenda_theme_registry_alter(&$theme_registry) {
+  if (isset($theme_registry['calendar_item'])) {
+     $theme_registry['calendar_item']['path'] = drupal_get_path('module', 'agenda') . '/theme';
+     $theme_registry['calendar_item']['theme path'] = drupal_get_path('module', 'agenda') . '/theme';
+     $theme_registry['calendar_item']['template'] = 'item-calendar';
+  }
+}
+
+/**
+ * Callback function for Popup page.
+ */
+function render_availability($js) {
+ if ($js) {
+    ctools_include('modal');
+    ctools_include('ajax');
+  }
+  $node = node_load(arg(1));
+  $contents = render(node_view($node, 'teaser', NULL));
+  return ctools_modal_render(t('Disponibilidad'), $contents);
+}
+
+function edit_availability($js) {
+   if ($js) {
+       global $user;
+       ctools_include('node.pages', 'node', '');
+       ctools_include('modal');
+       ctools_include('ajax');
+
+       $node = node_load(arg(1));
+
+       $form_state = array(
+           'ajax' => TRUE,
+           'title' => t('Edit availability'),
+       );
+
+       $form_state['build_info']['args'] = array($node);
+       $output = ctools_modal_form_wrapper(variable_get('popup'), $form_state);
+
+       // This means the form has been exectued
+       if (!empty($form_state['executed'])) {
+           $output = array();
+           $output[] = ctools_ajax_command_reload();
+       }
+      print ajax_render($output);
+      exit;
+    }else {
+           return drupal_get_form(variable_get('popup'));
+     }
+}
+
+
+function delete_availability($js) {
+  if ($js) {
+  // incluye los archivos.
+      ctools_include('ajax');
+      ctools_include('modal');
+   
+      $form_state = array(
+        'ajax' => TRUE,
+        'nid' => arg(1),
+        'title' => t('Delete availability'),
+      );
+       // Usa ctools para generar ajax para crear en el navegador el popup.
+      $output = ctools_modal_form_wrapper('agenda_form', $form_state);
+      
+      // si el formulario no esta vacio se asignara  $output = $form_state['ajax_commands']
+      if (!empty($form_state['ajax_commands'])) {
+        $output = $form_state['ajax_commands'];
+      }
+      // Retorna todas las intrucciones de ajax en el navegador , mientras se renderiza
+      print ajax_render($output);
+      // Salida de drupal.
+      drupal_exit();
+    }
+    else {
+      // Retornara formulario custom.
+      return drupal_get_form('agenda_form');
+    }
+}
+
 
 function request_callback($ajax){
     if ($ajax) {
-
      global $user;
-
      ctools_include('node.pages', 'node', '');
      ctools_include('modal');
      ctools_include('ajax');
@@ -57,23 +218,52 @@ function request_callback($ajax){
 
      $form_state = array(
          'ajax' => TRUE,
-         'title' => t('Creación de Disponibilidad'),
+         'title' => t('created of availability'),
      );
 
      $form_state['build_info']['args'] = array($node);
-
      $output = ctools_modal_form_wrapper(variable_get('popup'), $form_state);
 
      // This means the form has been exectued
      if (!empty($form_state['executed'])) {
          $output = array();
-         // Close the modal
-         $output[] = ctools_modal_command_dismiss();
+         $output[] = ctools_ajax_command_reload();
      }
-
     print ajax_render($output);
     exit;
   }else {
          return drupal_get_form(variable_get('popup'));
    }
-} 
+}
+
+/**
+ * Implements hook_form().
+ */
+function agenda_form($form, &$form_state) {
+  $form = array();
+ 
+  $form['from'] = array(
+   '#type'=> 'item',
+   '#markup' => t('¿Are you sure you want to delete? ').$form_state["nid"],
+ );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Delete'),
+  );
+  return $form;
+}
+/**
+ * Implements hook_form().
+ */
+function agenda_form_submit($form, &$form_state) {
+  $form = array();
+
+  ctools_include('modal');
+  ctools_include('ajax');
+
+  node_delete($form_state["nid"]);
+  $form_state['ajax_commands'][] = ctools_modal_command_dismiss();
+  $form_state['ajax_commands'][] = ctools_ajax_command_reload();
+  return $form;
+}

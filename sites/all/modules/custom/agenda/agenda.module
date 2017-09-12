@@ -1,6 +1,7 @@
 <?php
 
 include_once 'blocks/agenda.block.inc';
+require_once(DRUPAL_ROOT . "/modules/node/node.pages.inc");
 
 /**
  * Implementacion del hook menu.
@@ -38,7 +39,60 @@ function agenda_menu() {
       'access callback' => TRUE,
       'type' => MENU_CALLBACK,
     );
+
+  $items['meeting-new/%/%ctools_js'] = array(
+      'title' => t('Delete node api ctools'),
+      'page callback' => 'meeting_new',
+      'page arguments' => array(1),
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+    );
+
    return $items;
+}
+
+
+/**
+ * Implements hook_form_alter().
+ */// $rol = in_array('consejero', $user->roles) == TRUE);
+function agenda_form_alter(&$form, &$form_state, $form_id) {
+switch ($form_id) {
+     case 'disponibilidad_node_form':
+       Global $user;
+
+       $form['title']['#required'] = FALSE;
+       $current_path = explode("/", current_path());
+       $path = array_shift($current_path);
+
+       if ($path == 'request' || $path == 'availability-edit') {
+           $form['title']['#access'] = FALSE;
+           $form['field_operaciones']['#access'] = FALSE;
+           $form['field_usuario']['#access'] = FALSE;
+       }
+
+       if ($path == 'meeting-new') {
+           $form['title']['#access'] = FALSE;
+           $form['field_tipo_de_servicio']['#access'] = FALSE;
+           $form['field_fecha']['#access'] = FALSE;
+           $form['field_lugar']['#access'] = FALSE;
+           $form['field_cupo']['#access'] = FALSE;
+           $form['field_repeticion']['#access'] = FALSE;
+           $form['field_segmentacion']['#access'] = FALSE;
+           $form['field_repeticion']['#access'] = FALSE;
+           $form['field_operaciones']['#access'] = FALSE;
+       }
+
+       break;
+   } 
+}
+
+/**
+ * Implements hook_node_presave().
+ */
+function agenda_node_presave($node) {
+  $node->title = $node->name . " - " . date('m-d-Y',$node->created);
+  $wrapper = entity_metadata_wrapper('node', $node);
+  $wrapper->field_operaciones->set($node->name); 
 }
 
 /**
@@ -201,6 +255,40 @@ function delete_availability($js) {
     }
 }
 
+function meeting_new($js) {
+   if ($js) {
+       global $user;
+       ctools_include('node.pages', 'node', '');
+       ctools_include('modal');
+       ctools_include('ajax');
+
+       $node = node_load(arg(1));
+
+       $form_state = array(
+           'ajax' => TRUE,
+           'title' => t('New meeting'),
+       );
+
+       $form_state['build_info']['args'] = array($node);
+       $output = ctools_modal_form_wrapper(variable_get('popup'), $form_state);
+
+       // This means the form has been exectued
+       if (!empty($form_state['executed'])) {
+           ctools_include('node.pages', 'node', '');
+           ctools_include('modal');
+           ctools_include('ajax');        
+           $output = array();
+           $output[] = ctools_ajax_command_reload();
+       }
+      print ajax_render($output);
+      exit;
+    }else {
+           return drupal_get_form(variable_get('popup'));
+     }
+}
+
+
+
 
 function request_callback($ajax){
     if ($ajax) {
@@ -261,8 +349,8 @@ function agenda_form_submit($form, &$form_state) {
 
   ctools_include('modal');
   ctools_include('ajax');
-
   node_delete($form_state["nid"]);
+
   $form_state['ajax_commands'][] = ctools_modal_command_dismiss();
   $form_state['ajax_commands'][] = ctools_ajax_command_reload();
   return $form;

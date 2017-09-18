@@ -3,6 +3,7 @@
 /**
  * Implements hook_block_info().
  */
+
 function agenda_block_info() {
   $blocks['modals'] = array(
     'info' => t('Request Modals'),
@@ -11,10 +12,10 @@ function agenda_block_info() {
  return $blocks;
 }
 
-
 /**
  * Implements hook_block_configure().
  */
+
 function agenda_block_configure($delta = '') {
   $form = array();
   if ($delta == 'modals') {
@@ -40,6 +41,7 @@ function agenda_block_configure($delta = '') {
 /**
  * Implementation of hook_block_save().
  */
+
 function agenda_block_save($delta = '', $edit = array()) {
    switch ($delta) {
    	case 'modals':
@@ -53,6 +55,7 @@ function agenda_block_save($delta = '', $edit = array()) {
 /**
  * Implements hook_block_view().
  */
+
 function agenda_block_view($delta = '') {
   $block = array();
 

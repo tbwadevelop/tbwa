@@ -6,6 +6,7 @@ require_once(DRUPAL_ROOT . "/modules/node/node.pages.inc");
 /**
  * Implementacion del hook menu.
  */
+
 function agenda_menu() {
  $items = array();
  $items['request/%ctools_js'] = array(
@@ -51,15 +52,14 @@ function agenda_menu() {
    return $items;
 }
 
-
 /**
  * Implements hook_form_alter().
- */// $rol = in_array('consejero', $user->roles) == TRUE);
+ */
+
 function agenda_form_alter(&$form, &$form_state, $form_id) {
 switch ($form_id) {
      case 'disponibilidad_node_form':
        Global $user;
-
        $form['title']['#required'] = FALSE;
        $current_path = explode("/", current_path());
        $path = array_shift($current_path);
@@ -69,26 +69,35 @@ switch ($form_id) {
            $form['field_operaciones']['#access'] = FALSE;
            $form['field_usuario']['#access'] = FALSE;
        }
-
        if ($path == 'meeting-new') {
            $form['title']['#access'] = FALSE;
            $form['field_tipo_de_servicio']['#access'] = FALSE;
-           $form['field_fecha']['#access'] = FALSE;
+           $form['field_fecha']['#attributes']['class'][] = 'element-hidden';
            $form['field_lugar']['#access'] = FALSE;
            $form['field_cupo']['#access'] = FALSE;
            $form['field_repeticion']['#access'] = FALSE;
            $form['field_segmentacion']['#access'] = FALSE;
            $form['field_repeticion']['#access'] = FALSE;
            $form['field_operaciones']['#access'] = FALSE;
+      
+           $node = node_load($form['nid']['#value']);
+           $wrapper = entity_metadata_wrapper('node', $node);
+           
+            if (count($wrapper->field_usuario->value()) == $wrapper->field_cupo->value()) {
+              drupal_add_js(array('agenda' => array('users' => TRUE)), 'setting');
+            }else{
+              drupal_add_js(array('agenda' => array('users' => FALSE)), 'setting');
+            }
+              drupal_add_js(drupal_get_path('module', 'agenda') . '/js/count_users.js');          
        }
-
-       break;
-   } 
+        break;
+      } 
 }
 
 /**
  * Implements hook_node_presave().
  */
+
 function agenda_node_presave($node) {
   $node->title = $node->name . " - " . date('m-d-Y',$node->created);
   $wrapper = entity_metadata_wrapper('node', $node);
@@ -98,6 +107,7 @@ function agenda_node_presave($node) {
 /**
  * Implements hook_field_formatter_info().
  */
+
 function agenda_field_formatter_info() {
   $info = array(
       'operation_node' => array(
@@ -112,6 +122,7 @@ function agenda_field_formatter_info() {
 /**
  * Implements hook_field_formatter_view().
  */
+
 function agenda_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
     $element = array();
       switch ($display['type']) {
@@ -129,6 +140,7 @@ function agenda_field_formatter_view($entity_type, $entity, $field, $instance, $
 /**
  * Implements hook_theme().
  */
+
 function agenda_theme($existing, $type, $theme, $path) {
   $module_path = drupal_get_path('module', 'agenda');
   $base = array(
@@ -153,6 +165,7 @@ function agenda_theme($existing, $type, $theme, $path) {
 /**
  * Implements hook_help().
  */
+
 function agenda_help($path, $arg) {
   switch ($path) {
     case 'admin/help#agenda':
@@ -163,6 +176,7 @@ function agenda_help($path, $arg) {
 /**
  * Implements hook_permission().
  */
+
 function agenda_permission() {
   return array(
     'administer agenda' =>  array(
@@ -175,6 +189,7 @@ function agenda_permission() {
 /**
  * Implements hook_theme_registry_alter().
  */
+
 function agenda_theme_registry_alter(&$theme_registry) {
   if (isset($theme_registry['calendar_item'])) {
      $theme_registry['calendar_item']['path'] = drupal_get_path('module', 'agenda') . '/theme';
@@ -184,8 +199,9 @@ function agenda_theme_registry_alter(&$theme_registry) {
 }
 
 /**
- * Callback function for Popup page.
+ * Callback function render obj(node) availability.
  */
+
 function render_availability($js) {
  if ($js) {
     ctools_include('modal');
@@ -195,6 +211,10 @@ function render_availability($js) {
   $contents = render(node_view($node, 'teaser', NULL));
   return ctools_modal_render(t('Disponibilidad'), $contents);
 }
+
+/**
+ * Callback function edit node bundle (availability).
+ */
 
 function edit_availability($js) {
    if ($js) {
@@ -213,7 +233,6 @@ function edit_availability($js) {
        $form_state['build_info']['args'] = array($node);
        $output = ctools_modal_form_wrapper(variable_get('popup'), $form_state);
 
-       // This means the form has been exectued
        if (!empty($form_state['executed'])) {
            $output = array();
            $output[] = ctools_ajax_command_reload();
@@ -225,10 +244,13 @@ function edit_availability($js) {
      }
 }
 
+/**
+ * Callback function delete node bundle (availability).
+ */
 
 function delete_availability($js) {
   if ($js) {
-  // incluye los archivos.
+
       ctools_include('ajax');
       ctools_include('modal');
    
@@ -237,23 +259,25 @@ function delete_availability($js) {
         'nid' => arg(1),
         'title' => t('Delete availability'),
       );
-       // Usa ctools para generar ajax para crear en el navegador el popup.
+
       $output = ctools_modal_form_wrapper('agenda_form', $form_state);
       
-      // si el formulario no esta vacio se asignara  $output = $form_state['ajax_commands']
       if (!empty($form_state['ajax_commands'])) {
         $output = $form_state['ajax_commands'];
       }
-      // Retorna todas las intrucciones de ajax en el navegador , mientras se renderiza
+
       print ajax_render($output);
-      // Salida de drupal.
+
       drupal_exit();
     }
     else {
-      // Retornara formulario custom.
       return drupal_get_form('agenda_form');
     }
 }
+
+/**
+ * Callback function insert-> users bundle (availability).
+ */
 
 function meeting_new($js) {
    if ($js) {
@@ -272,7 +296,6 @@ function meeting_new($js) {
        $form_state['build_info']['args'] = array($node);
        $output = ctools_modal_form_wrapper(variable_get('popup'), $form_state);
 
-       // This means the form has been exectued
        if (!empty($form_state['executed'])) {
            ctools_include('node.pages', 'node', '');
            ctools_include('modal');
@@ -287,8 +310,9 @@ function meeting_new($js) {
      }
 }
 
-
-
+/**
+ * Callback function render new obj(node) availability.
+ */
 
 function request_callback($ajax){
     if ($ajax) {
@@ -312,7 +336,6 @@ function request_callback($ajax){
      $form_state['build_info']['args'] = array($node);
      $output = ctools_modal_form_wrapper(variable_get('popup'), $form_state);
 
-     // This means the form has been exectued
      if (!empty($form_state['executed'])) {
          $output = array();
          $output[] = ctools_ajax_command_reload();
@@ -325,8 +348,9 @@ function request_callback($ajax){
 }
 
 /**
- * Implements hook_form().
+ * Implements hook_form() for delete node(obj) bundle (availability).
  */
+
 function agenda_form($form, &$form_state) {
   $form = array();
  
@@ -341,9 +365,11 @@ function agenda_form($form, &$form_state) {
   );
   return $form;
 }
+
 /**
- * Implements hook_form().
+ * Implements hook_form_submit() delete node bundle (availability).
  */
+
 function agenda_form_submit($form, &$form_state) {
   $form = array();
 

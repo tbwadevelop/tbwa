@@ -457,24 +457,18 @@ h1#site-name {
 /* --------------- Main Menu ------------ */
 
 #main-menu {
-    clear: both;
-    position: relative;
-    left: 65.5%;
-    width: 40%;
+  clear: both;
 }
-
 #main-menu-links {
   font-size: 0.929em;
   margin: 0;
   padding: 0 15px;
 }
-
 #main-menu-links li {
-    float: left;
-    list-style: none;
-    padding: 0 1px;
-    margin: 0 1px;
-    letter-spacing: 5px;
+  float: left; /* LTR */
+  list-style: none;
+  padding: 0 1px;
+  margin: 0 1px;
 }
 #main-menu-links a {
   color: #333;

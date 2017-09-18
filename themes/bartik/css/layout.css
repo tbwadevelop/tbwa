@@ -17,18 +17,10 @@ body,
 #triptych,
 #footer-columns,
 #footer {
-/*  width: 960px;
+  width: 960px;
   margin-left: auto;
-  margin-right: auto;*/
+  margin-right: auto;
 }
-
-div#div#content {
-    left: 10%;
-}
-/*.one-sidebar #content {
-    width: 75%!important;
-}*/
-
 #header div.section {
   position: relative;
 }
@@ -63,7 +55,7 @@ div#div#content {
   position: relative;
 }
 .one-sidebar #content {
-  width: 80%;
+  width: 720px;
 }
 .two-sidebars #content {
   width: 480px;
@@ -74,7 +66,7 @@ div#div#content {
 }
 #sidebar-first,
 #sidebar-second {
-  width: 20%;
+  width: 240px;
 }
 #main-wrapper {
   min-height: 300px;

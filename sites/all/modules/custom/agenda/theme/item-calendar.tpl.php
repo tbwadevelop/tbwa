@@ -39,30 +39,68 @@
  * @see template_preprocess_calendar_item.
  */
 ctools_include('modal');
-ctools_modal_add_js(); 
+ctools_modal_add_js();
 $index = 0;
 ?>
-<div class="<?php print !empty($item->class) ? $item->class : 'item'; ?>">
-  <div class="render-disponibiliad"> 
-   <div class="view-item view-item-<?php print $view->name ?>">
-    <div class="calendar <?php print $item->granularity; ?>view">
-      <?php print theme('calendar_stripe_stripe', array('item' => $item)); ?>
-  <?php 
-echo(l('Availability', 'availability/'.$item->id.'/nojs', array('attributes' => array('class' => 'ctools-use-modal')))); ?>
-      <div class="<?php print $item->date_id ?> contents">
-        <?php foreach ($rendered_fields as $field): ?>
-          <?php if ($index++ == 0 && (isset($item->continuation) && $item->continuation)) : ?>
-          <div class="continuation">&laquo;</div>
-          <?php endif;?>
-          <?php print $field; ?>
-        <?php endforeach; ?>
-      </div>  
-      <?php if (isset($item->continues) && $item->continues) : ?>
-      <div class="continues">&raquo;</div>
-      <?php else : ?>
-      <div class="cutoff">&nbsp;</div>
-      <?php endif;?>
-    </div> 
+
+<?php if ($view->current_display == 'page_1'): ?>
+  <div class="render-calendar-month"> 
+      <div class="<?php print !empty($item->class) ? $item->class : 'item'; ?>">
+         <div class="view-item view-item-<?php print $view->name ?>">
+         <div class="count-availability"></div>
+          <div class="calendar <?php print $item->granularity; ?>view">
+            <?php print theme('calendar_stripe_stripe', array('item' => $item)); ?>
+            <div class="<?php print $item->date_id ?> contents">
+              <?php foreach ($rendered_fields as $field): ?>
+                <?php if ($index++ == 0 && (isset($item->continuation) && $item->continuation)) : ?>
+                <div class="continuation">&laquo;</div>
+                <?php endif;?>
+                <?php print $field; ?>
+              <?php endforeach; ?>
+            </div>  
+            <?php if (isset($item->continues) && $item->continues) : ?>
+            <div class="continues">&raquo;</div>
+            <?php else : ?>
+            <div class="cutoff">&nbsp;</div>
+            <?php endif;?>
+          </div> 
+          </div>
+      </div>
     </div>
-  </div>
-</div>
+<?php endif; ?>
+
+<?php if ($view->current_display != 'page_1'): ?>
+      <div class="<?php print !empty($item->class) ? $item->class : 'item'; ?>">
+        <div class="render-disponibiliad"> 
+         <div class="view-item view-item-<?php print $view->name ?>">
+          <?php  
+              $node = node_load($item->id); $wrapper = entity_metadata_wrapper('node', $node);
+              $cupo = $wrapper->field_cupo->value(); $users = count($wrapper->field_usuario->value());
+              $classes = ($cupo == $users) ? "full" : "empy";
+          ?>
+          <div class="calendar <?php print $item->granularity; ?>view <?php print($classes); ?>">
+            <?php print theme('calendar_stripe_stripe', array('item' => $item)); ?>
+             <?php echo(l('Availability', 'availability/'.$item->id.'/nojs', array('attributes' => array('class' => 'ctools-use-modal')))); ?>
+            <div class="<?php print $item->date_id ?> contents">
+              <?php foreach ($rendered_fields as $field): ?>
+                <?php if ($index++ == 0 && (isset($item->continuation) && $item->continuation)) : ?>
+                <div class="continuation">&laquo;</div>
+                <?php endif;?>
+                <?php print $field; ?>
+              <?php endforeach; ?>
+            </div>  
+            <?php if (isset($item->continues) && $item->continues) : ?>
+            <div class="continues">&raquo;</div>
+            <?php else : ?>
+            <div class="cutoff">&nbsp;</div>
+            <?php endif;?>
+          </div> 
+
+          </div>
+        </div>
+      </div>
+<?php endif; ?>
+
+
+
+

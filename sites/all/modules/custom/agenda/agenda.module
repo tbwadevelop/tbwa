@@ -4,6 +4,18 @@ include_once 'blocks/agenda.block.inc';
 require_once(DRUPAL_ROOT . "/modules/node/node.pages.inc");
 
 /**
+ * Implements hook_init().
+ */
+function agenda_init() {
+    
+    drupal_add_css(drupal_get_path('module', 'agenda') . '/css/style.css');
+
+    if (current_path() == 'calendario-consejero') {
+        drupal_add_js(drupal_get_path('module', 'agenda') . '/js/count_users.js');    
+    }
+}
+
+/**
  * Implementacion del hook menu.
  */
 
@@ -99,9 +111,12 @@ switch ($form_id) {
  */
 
 function agenda_node_presave($node) {
-  $node->title = $node->name . " - " . date('m-d-Y',$node->created);
-  $wrapper = entity_metadata_wrapper('node', $node);
-  $wrapper->field_operaciones->set($node->name); 
+   $node->title = $node->name . " - " . date('m-d-Y',$node->created);
+   $wrapper = entity_metadata_wrapper('node', $node);
+   $date = $wrapper->field_fecha->value();
+   $time = date_format(date_create($date['value']), 'g:i A') . ' - ' . date_format(date_create($date['value2']), 'g:i A'); 
+   $service = $wrapper->field_tipo_de_servicio->value()->name;
+   $wrapper->field_operaciones->set($time . ' ' . $service); 
 }
 
 /**

@@ -6,7 +6,7 @@ dependencies[] = entity
 dependencies[] = ctools
 package = TBWA
 
-; Information added by Drupal.org packaging script on 2016-08-08
+; Information added by Drupal.org packaging script on 2016-08-08 danilo
 version = "7.x-1.4"
 core = "7.x"
 project = "agenda"

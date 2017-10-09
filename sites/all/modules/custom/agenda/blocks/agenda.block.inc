@@ -4,9 +4,16 @@
  * Implements hook_block_info().
  */
 
+
+
+
 function agenda_block_info() {
   $blocks['modals'] = array(
     'info' => t('Request Modals'),
+    'cache' => DRUPAL_NO_CACHE
+  );
+  $blocks['citas_ajax'] = array(
+    'info' => t('Add citas ajax'),
     'cache' => DRUPAL_NO_CACHE
   );
  return $blocks;
@@ -57,6 +64,9 @@ function agenda_block_save($delta = '', $edit = array()) {
  */
 
 function agenda_block_view($delta = '') {
+  
+  module_load_include('inc', 'agenda', 'includes/dark_records');
+
   $block = array();
 
   switch ($delta) {
@@ -64,10 +74,16 @@ function agenda_block_view($delta = '') {
       $block['subject'] = t('Availability');
       $block['content'] = modals_render();
       break;
-    
+ 
+     case 'citas_ajax':
+      // $block['subject'] = t('Citas Ajax');
+      $block['content'] = drupal_get_form('agenda_form_records');
+      break;
+
   }
   return $block;
 }
+
 
 function modals_render(){
  $block = array();

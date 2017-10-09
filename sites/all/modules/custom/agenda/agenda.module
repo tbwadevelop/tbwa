@@ -1,6 +1,7 @@
 <?php
 
 include_once 'blocks/agenda.block.inc';
+include_once 'forms/agenda.forms.inc';
 require_once(DRUPAL_ROOT . "/modules/node/node.pages.inc");
 
 /**
@@ -88,7 +89,6 @@ switch ($form_id) {
            $form['field_lugar']['#access'] = FALSE;
            $form['field_cupo']['#access'] = FALSE;
            $form['field_repeticion']['#access'] = FALSE;
-           $form['field_segmentacion']['#access'] = FALSE;
            $form['field_repeticion']['#access'] = FALSE;
            $form['field_operaciones']['#access'] = FALSE;
       

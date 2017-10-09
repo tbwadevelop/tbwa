@@ -3,8 +3,10 @@
 
 <div class="create meeting">
 <?php 
-print(l(t('Create meeting'), 'meeting-new/'.arg(1).'/nojs', 
-      array('attributes' => array('class' => 'ctools-use-modal'))));
+// print(l(t('Create meeting'), 'meeting-new/'.arg(1).'/nojs', 
+//       array('attributes' => array('class' => 'ctools-use-modal'))));
+print(l(t('Create meeting'), 'crear/'.arg(1).'/citas'));
+
 ?>
 </div>
 

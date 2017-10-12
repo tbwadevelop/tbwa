@@ -3,7 +3,8 @@ description = Theme for project Andes Reservations.
 core = 7.x
 base theme = bootstrap
 	
-stylesheets[all][] = Andes.css
+stylesheets[all][] = css/style.css
+scripts[] = js/script.js
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Regions

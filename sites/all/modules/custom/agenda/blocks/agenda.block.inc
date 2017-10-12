@@ -76,8 +76,8 @@ function agenda_block_view($delta = '') {
       break;
  
      case 'citas_ajax':
-      // $block['subject'] = t('Citas Ajax');
-      $block['content'] = drupal_get_form('agenda_form_records');
+       $block['subject'] = t('Availability');
+       $block['content'] = drupal_get_form('agenda_form_records');
       break;
 
   }

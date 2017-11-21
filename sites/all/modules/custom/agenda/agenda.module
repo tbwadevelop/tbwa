@@ -70,6 +70,19 @@ switch ($form_id) {
            $form['field_usuario']['#access'] = FALSE;
        }
       break;
+      
+      case 'user_login':
+          $form['info'] = array(
+            '#type' => 'item',
+            '#markup' => 'Las personas que no tengan usuario y clave uniandes pueden comunicarse con la Decanatura de Estudiantes para recibir atención personalizada, en el teléfono 339 49 49 Ext. 2207, de lunes a viernes en horario de 8:00 a.m a 5:00 p.m.',
+            '#attributes' => array('class' => array('info-extra-login')),
+          );
+          $form['enlace'] = array(
+            '#type' => 'item',
+            '#markup' => l(t('Olvido su clave'), 'user/password'),
+            '#attributes' => array('class' => array('info-link-login')),
+          );          
+      break;      
       } 
 }
 
@@ -326,3 +339,5 @@ function agenda_form_submit($form, &$form_state) {
   $form_state['ajax_commands'][] = ctools_ajax_command_reload();
   return $form;
 }
+
+

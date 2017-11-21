@@ -1,7 +1,0 @@
-name = Dark
-description = Module of test for Sainet Ltda
-core = 7.x
-package = Dark
-version = 7.x-1.0
-files[] = dark.install
-configure = admin/config/system/records

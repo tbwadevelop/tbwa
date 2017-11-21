@@ -9,10 +9,6 @@ require_once(DRUPAL_ROOT . "/modules/node/node.pages.inc");
  */
 function agenda_init() {
     drupal_add_css(drupal_get_path('module', 'agenda') . '/css/style.css');
-
-    if (current_path() == 'calendario-consejero') {
-        drupal_add_js(drupal_get_path('module', 'agenda') . '/js/count_users.js');    
-    }
 }
 
 /**
@@ -53,14 +49,6 @@ function agenda_menu() {
       'type' => MENU_CALLBACK,
     );
 
-  $items['meeting-new/%/%ctools_js'] = array(
-      'title' => t('Delete node api ctools'),
-      'page callback' => 'meeting_new',
-      'page arguments' => array(1),
-      'access callback' => TRUE,
-      'type' => MENU_CALLBACK,
-    );
-
    return $items;
 }
 
@@ -81,27 +69,7 @@ switch ($form_id) {
            $form['field_operaciones']['#access'] = FALSE;
            $form['field_usuario']['#access'] = FALSE;
        }
-       if ($path == 'meeting-new') {
-           $form['title']['#access'] = FALSE;
-           $form['field_tipo_de_servicio']['#access'] = FALSE;
-           $form['field_fecha']['#attributes']['class'][] = 'element-hidden';
-           $form['field_lugar']['#access'] = FALSE;
-           $form['field_cupo']['#access'] = FALSE;
-           $form['field_repeticion']['#access'] = FALSE;
-           $form['field_repeticion']['#access'] = FALSE;
-           $form['field_operaciones']['#access'] = FALSE;
-      
-           $node = node_load($form['nid']['#value']);
-           $wrapper = entity_metadata_wrapper('node', $node);
-           
-            if (count($wrapper->field_usuario->value()) == $wrapper->field_cupo->value()) {
-              drupal_add_js(array('agenda' => array('users' => TRUE)), 'setting');
-            }else{
-              drupal_add_js(array('agenda' => array('users' => FALSE)), 'setting');
-            }
-              drupal_add_js(drupal_get_path('module', 'agenda') . '/js/count_users.js');          
-       }
-        break;
+      break;
       } 
 }
 
@@ -264,7 +232,6 @@ function edit_availability($js) {
 
 function delete_availability($js) {
   if ($js) {
-
       ctools_include('ajax');
       ctools_include('modal');
    
@@ -281,47 +248,11 @@ function delete_availability($js) {
       }
 
       print ajax_render($output);
-
       drupal_exit();
     }
     else {
       return drupal_get_form('agenda_form');
     }
-}
-
-/**
- * Callback function insert-> users bundle (availability).
- */
-
-function meeting_new($js) {
-   if ($js) {
-       global $user;
-       ctools_include('node.pages', 'node', '');
-       ctools_include('modal');
-       ctools_include('ajax');
-
-       $node = node_load(arg(1));
-
-       $form_state = array(
-           'ajax' => TRUE,
-           'title' => t('New meeting'),
-       );
-
-       $form_state['build_info']['args'] = array($node);
-       $output = ctools_modal_form_wrapper(variable_get('popup'), $form_state);
-
-       if (!empty($form_state['executed'])) {
-           ctools_include('node.pages', 'node', '');
-           ctools_include('modal');
-           ctools_include('ajax');        
-           $output = array();
-           $output[] = ctools_ajax_command_reload();
-       }
-      print ajax_render($output);
-      exit;
-    }else {
-           return drupal_get_form(variable_get('popup'));
-     }
 }
 
 /**
@@ -357,7 +288,7 @@ function request_callback($ajax){
     print ajax_render($output);
     exit;
   }else {
-         return drupal_get_form(variable_get('popup'));
+      return drupal_get_form(variable_get('popup'));
    }
 }
 

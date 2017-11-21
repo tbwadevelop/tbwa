@@ -4,9 +4,6 @@
  * Implements hook_block_info().
  */
 
-
-
-
 function agenda_block_info() {
   $blocks['modals'] = array(
     'info' => t('Request Modals'),
@@ -64,9 +61,6 @@ function agenda_block_save($delta = '', $edit = array()) {
  */
 
 function agenda_block_view($delta = '') {
-  
-  module_load_include('inc', 'agenda', 'includes/dark_records');
-
   $block = array();
 
   switch ($delta) {

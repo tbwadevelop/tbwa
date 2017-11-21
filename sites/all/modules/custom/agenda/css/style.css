@@ -25,9 +25,9 @@
     display: none;
 }
 
-/*login*/
+/*/*login*/
 
-.main-container .row > section {
+/*.main-container .row > section {
 	width: 100%;
     background: #E6E7E8;
     box-shadow: 15px 15px #F1F1F2;
@@ -73,6 +73,6 @@
 	background: #41B65B;
 	border-color: #41B65B;
     border-radius: 0px;
-}
+}*/
 
 /*End login*/

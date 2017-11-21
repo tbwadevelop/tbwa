@@ -5,3 +5,74 @@
 .calendar.dayview.full {
     background: #bbbfbb!important;
 }
+
+#participants .form-group {
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+#participants .form-item .form-control {
+    width: 80%;
+    display: inline-block;
+}
+
+.view-usuarios-agenda-de-servicios .views-exposed-form .views-widget-filter-uid {
+    float: left;
+    width: 80%;
+}
+
+#block-agenda-citas-ajax {
+    display: none;
+}
+
+/*login*/
+
+.main-container .row > section {
+	width: 100%;
+    background: #E6E7E8;
+    box-shadow: 15px 15px #F1F1F2;
+}
+.main-container section h1.page-header {
+	width: 78%;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 2px solid #808184;
+    margin-top: 45px;
+}
+.main-container section ul.tabs--primary.nav.nav-tabs {
+    display: none;
+}
+.main-container section .region #block-system-main  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main-container section .region #block-system-main form#user-login  {
+    width: 70%;
+}
+.main-container section .region #block-system-main form#user-login .form-item-name  {
+    margin-top: 54px; 
+}
+.main-container section .region #block-system-main form#user-login .form-item-pass  {
+    margin-bottom: 72px; 
+}
+.main-container section .region #block-system-main form#user-login .form-text {
+	background: #FFFFFF;
+	border-radius: 0px;
+    height: 46px;
+}
+.main-container section .region #block-system-main form#user-login #edit-actions {
+	float: right;
+	margin-bottom: 46px;
+}
+.main-container section .region #block-system-main form#user-login #edit-actions::before {
+	content: "Olvido su clave";
+	margin-right: 22px;
+}
+.main-container section .region #block-system-main form#user-login button {
+	background: #41B65B;
+	border-color: #41B65B;
+    border-radius: 0px;
+}
+
+/*End login*/

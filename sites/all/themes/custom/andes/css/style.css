@@ -39,6 +39,23 @@
 #block-agenda-citas-ajax {
     display: none;
 }
+/*Mega Menu*/
+@media screen and (max-width: 48.937em) {
+    .navbar-brand {
+        margin-left: 16px;
+    }
+    a.logo {
+        padding: 5px 15px;
+        font-size: 17px;
+        line-height: 20px;
+        border-right: 2px solid #9E9E9E;
+    }
+    header#navbar .navbar-header, .navbar-default .navbar-brand, a.logo {
+        color: #000;
+        background: #FFEB00;
+    }
+}
+/* End Mega Menu*/
 
 /*login*/
 
@@ -46,13 +63,14 @@
 	width: 100%;
     background: #E6E7E8;
     box-shadow: 15px 15px #F1F1F2;
+    margin-top: 214px;
 }
 .main-container section h1.page-header {
 	width: 78%;
     margin: 0 auto;
     text-align: center;
     border-bottom: 2px solid #808184;
-    margin-top: 45px;
+    padding-top: 40px;
 }
 .main-container section ul.tabs--primary.nav.nav-tabs {
     display: none;
@@ -64,6 +82,7 @@
 }
 .main-container section .region #block-system-main form#user-login  {
     width: 70%;
+    position: relative;
 }
 .main-container section .region #block-system-main form#user-login .form-item-name  {
     margin-top: 54px; 
@@ -72,17 +91,33 @@
     margin-bottom: 72px; 
 }
 .main-container section .region #block-system-main form#user-login .form-text {
-	background: #FFFFFF;
-	border-radius: 0px;
+    background: #FFFFFF;
+    border-radius: 0px;
     height: 46px;
+}
+.main-container section .region #block-system-main form#user-login #edit-info {
+    position: absolute;
+    left: -145px;
+    top: 258px;
+    width: 75%;
+    font-size: 14px;    
+    font-family: "Helvetica Neue";
+    text-align-last: left;
+}
+.main-container section .region #block-system-main form#user-login #edit-enlace {
+    width: 47%;
+    position: absolute;
+    top: 289px;
+    left: 566px;
+}
+.main-container section .region #block-system-main form#user-login #edit-enlace a{
+    color: #000;
+    font-family: "Helvetica Neue";
+    font-size: 15px;
 }
 .main-container section .region #block-system-main form#user-login #edit-actions {
 	float: right;
 	margin-bottom: 46px;
-}
-.main-container section .region #block-system-main form#user-login #edit-actions::before {
-	content: "Olvido su clave";
-	margin-right: 22px;
 }
 .main-container section .region #block-system-main form#user-login button {
 	background: #41B65B;
@@ -90,4 +125,63 @@
     border-radius: 0px;
 }
 
+@media screen and (max-width: 79.9375em) { /*1279*/
+    .main-container section .region #block-system-main form#user-login #edit-info {
+        width: 85%;
+        left: -94px;
+        top: 221px;
+    }
+    .main-container section .region #block-system-main form#user-login #edit-enlace {
+        left: 554px;
+    }
+}
+@media screen and (max-width: 64em) { /*1024*/
+    .main-container .row > section {
+        box-shadow: none;
+        width: 81%;
+        margin-left: 9.5%;
+        margin-top: 90px;
+    }
+    .main-container section .region #block-system-main form#user-login,.main-container section h1.page-header  {
+        width: 100%;
+    }
+    .main-container section .region #block-system-main form#user-login .form-item-pass {
+        margin-bottom: 107px;
+    }
+    .main-container section .region #block-system-main form#user-login #edit-info {
+        display: none;
+    }
+    .main-container section .region #block-system-main form#user-login #edit-enlace {
+        top: 238px;
+        left: 263px;
+    }
+    .main-container section .region #block-system-main form#user-login #edit-actions {
+        position: absolute;
+        top: 232px;
+        left: 395px;
+    }
+}
+@media screen and (max-width: 48.9375em) { /*768*/
+    .main-container section .region #block-system-main form#user-login #edit-enlace {
+        left: 173px;
+    }
+    .main-container section .region #block-system-main form#user-login #edit-actions  {
+       left: 306px;
+    }
+}
+@media screen and (max-width: 23.9375em) { /*375*/
+    .main-container section .region #block-system-main form#user-login #edit-enlace {
+        left: 12%;
+        width: 52%;
+    }
+    .main-container section .region #block-system-main form#user-login #edit-enlace a {
+        font-size: 12px;
+    }
+    .main-container section .region #block-system-main form#user-login #edit-actions  {
+        left: 55%;
+    }
+    .main-container section .region #block-system-main form#user-login button {
+        font-size: 12px
+    }
+}
 /*End login*/

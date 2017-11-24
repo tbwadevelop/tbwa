@@ -39,6 +39,10 @@
 #block-agenda-citas-ajax {
     display: none;
 }
+
+.alert.alert-block.alert-danger.messages.error {
+    display: none;
+}
 /* ------------------ Mega Menu ------------------ */
 @media screen and (max-width: 48.937em) {
     .navbar-brand {
@@ -78,6 +82,10 @@ body.page-user .main-container section ul.tabs--primary.nav.nav-tabs {
 body.page-user .main-container section .region #block-system-main  {
     width: 100%;
     display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     justify-content: center;
 }
 body.page-user .main-container section .region #block-system-main form#user-login  {
@@ -197,6 +205,10 @@ body .main-container #page-header section.Navegacion_Agenda ul.menu {
     margin: 0px;
     padding: 0px;
     display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     justify-content: center;
     background-color: white;
     margin-left: 390px;
@@ -213,7 +225,13 @@ color: #000;
     width: 74px;
     min-height: 52px;
     display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     align-items: center;
+     -ms-flex-align: center;
+    -webkit-align-items: center;
     justify-content: center;
     padding: 0px 73px;
     font-size: 16px;
@@ -226,10 +244,16 @@ body .main-container #page-header section.Navegacion_Agenda ul.menu li a:hover {
 /* -\* Header agenda de servicio - */
 body .main-container #page-header .title-agenda-de-servicio  {
     display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     justify-content: center;
     align-items: center;
-    margin-top: 57px;
-    margin-bottom: 38px;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    height: 165px;
+    background: #E8E8E8; 
 }
 body .main-container #page-header .title-agenda-de-servicio h2.block-title {
   display: none;
@@ -258,8 +282,8 @@ body.page-calendario-consejero .row {
 }
 body.page-calendario-consejero .row aside .well {
     background-color: #FFF;
-    border: 1px solid transparent;
-    box-shadow: inset 0 1px 1px transparent;
+    border: none;
+    box-shadow: none;
     
 }
 body.page-calendario-consejero .row aside .well .Calendario_Contenedor {
@@ -269,7 +293,7 @@ body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view
     color: #808184;
     font-size: 26px;
 } 
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view-header::before {  
+/*body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view-header::before {  
     content: ""; 
     position: absolute;
     background: url("../img/flecha.png");
@@ -279,7 +303,7 @@ body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view
     height: 19px;
     top: 39px;
     left: 41px;
-}
+}*/
 body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view-header nav { 
     display: inline-block;
     margin-top: 63px;
@@ -287,7 +311,7 @@ body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view
 body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view-header nav .pagination >li > a { 
     color: #000;
     background-color: transparent;
-    border: 1px solid transparent;
+    border: none;
     font-size: 12px;
 }
 body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view-header nav .prev { 
@@ -305,7 +329,7 @@ body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view
 body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view-header nav .next { 
     position: absolute;
     top: 0px;
-    left: 173px;
+    left: 159px;
 }
 body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view-header nav h3 a { 
     color: #000;
@@ -324,6 +348,63 @@ body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view
     color: #000;
     font-weight: normal;
     border: 1px solid transparent;
+}
+@media screen and (max-width: 768px) {
+    body.page-calendario-consejero .row {
+        border: none;
+        padding: 0px;
+    }
+    body.page-calendario-consejero .row aside {
+        padding: 0px;
+    }
+    body.page-calendario-consejero .row aside .well {
+        margin: 0px;
+        padding: 0px;
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view-header {
+        width: 100%;
+        background: #47AC4B;
+        height: 70px;
+        padding-left: 89px;
+        padding-top: 16px;
+
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor div.view-id-consejero_calendar .view-header::before {
+        content: ""; 
+        position: absolute;
+        background: url("../img/Menu.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 33px;
+        height: 33px;
+        top: 19px;
+        left: 25px;
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view-header nav {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-color: #FFF;
+    width: 74.2%;
+    margin: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view-content  {
+    position: absolute;
+    top: 40px;
+    left: 1px;
+    width: 74%;
+    z-index: 1;
+    background-color: #FFF;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+    }
+
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor div .view-content .month-view  {
+    width: 255px;
+    margin: auto;
+    }
 }
 
 /* -\* Button Crear Disponibilidad - */
@@ -346,8 +427,14 @@ body .main-container .row section ol.breadcrumb,h1 {
 }
 body .main-container .row section ul.tabs--primary {
     display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     flex-direction: column;
     align-items: flex-end;
+    -ms-flex-align: flex-end;
+    -webkit-align-items: flex-end;
     list-style: none;
     /* border-bottom: 1px solid transparent; */
     background-color: transparent;
@@ -358,6 +445,12 @@ body .main-container .row section ul.tabs--primary {
     border-radius: 28px;
     border: 2px solid #808184;
     position: absolute;
+}
+@media screen and (max-width: 1024px) {
+    body .main-container .row section ul.tabs--primary {
+        display: none;
+    }
+    
 }
 
 body .main-container .row section ul.tabs--primary li {
@@ -389,6 +482,15 @@ body .main-container .row section div.region.region-content {
 }
 body .main-container .row section div.region.region-content .view-consejero-calendar {
     position: relative;
+}
+@media screen and (max-width: 768px) {
+body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header a.active {
+    position: absolute;
+    top: -107px;
+    left: 255px;
+    color: #FFF;
+    }
+    
 }
 body .main-container .row section div.region.region-content .view-consejero-calendar .view-header nav ul {
     position: absolute;

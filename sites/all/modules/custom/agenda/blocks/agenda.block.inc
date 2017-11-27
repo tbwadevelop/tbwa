@@ -33,10 +33,33 @@ function agenda_block_configure($delta = '') {
         '#title' => t('Please write the name button'),
         '#default_value' => variable_get('link'),
       );
+
+      $form['coute_free'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Please write the name button second'),
+        '#default_value' => variable_get('coute_free'),
+        '#attributes' => array('class' => array('col-lg-12 col-sm-6')),
+      );
+
+      $form['coute_full'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Please write the name button three'),
+        '#default_value' => variable_get('coute_full'),
+        '#attributes' => array('class' => array('col-lg-12 col-sm-6')),
+      );
+
+      $form['today'] = array(
+        '#type' => 'textfield',
+        '#title' => t('Please write the name button four'),
+        '#default_value' => variable_get('today'),
+        '#attributes' => array('class' => array('col-lg-12 col-sm-6')),
+      );
+
       $form['content_type'] = array(
         '#type' => 'textfield',
         '#title' => t('Please write the machine_name Content Type'),
         '#default_value' => variable_get('content_type'),
+        '#attributes' => array('class' => array('col-lg-12')),
       );            
   }
   return $form;
@@ -51,6 +74,11 @@ function agenda_block_save($delta = '', $edit = array()) {
    	case 'modals':
    		variable_set('popup', $edit['popup']);
       variable_set('link',  $edit['link']);
+      
+      variable_set('coute_free',  $edit['coute_free']);
+      variable_set('coute_full',  $edit['coute_full']);
+      variable_set('today',  $edit['today']);
+
       variable_set('content_type',  $edit['content_type']);
    		break;
    }
@@ -80,15 +108,32 @@ function agenda_block_view($delta = '') {
 
 
 function modals_render(){
- $block = array();
+   $block = array();
 
- ctools_include('modal');
- ctools_modal_add_js(); 
- 
- $block['content']['popud'][] = array(
+   ctools_include('modal');
+   ctools_modal_add_js(); 
+   
+  $block['content']['popud'][] = array(
       '#prefix' => '<div id="magical-modal-link">' . l(variable_get('link'), 'request/nojs', 
                        array('attributes' => array('class' => 'ctools-use-modal'))),
       '#suffix' => '</div>',
    );
+
+
+  $block['content']['coute_free'][] = array(
+      '#prefix' => '<div class="col-lg-12 col-sm-6 col-xs-6">' . t(variable_get('coute_free')),
+      '#suffix' => '</div>',
+   );
+
+  $block['content']['coute_full'][] = array(
+      '#prefix' => '<div class="col-lg-12 col-sm-6 col-xs-6">' . t(variable_get('coute_full')),
+      '#suffix' => '</div>',
+   );
+
+  $block['content']['today'][] = array(
+      '#prefix' => '<div class="col-lg-12 col-xs-12">' . t(variable_get('today')),
+      '#suffix' => '</div>',
+   ); 
+
   return $block;
  }

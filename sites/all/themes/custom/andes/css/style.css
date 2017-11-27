@@ -537,6 +537,10 @@ body .main-container .row section div.region.region-content .view-consejero-cale
 }
 @media screen and (max-width: 767px) {
     /* -\* Calendario contenedor  - */
+    body .main-container #page-header section.Navegacion_Agenda, body .main-container #page-header .title-agenda-de-servicio, body.page-calendario-consejero .row aside .well, body .main-container .row section div.region.region-content{
+        margin-right: -15px;
+        margin-left: -15px;
+    }
     body.page-calendario-consejero .row {
         padding: 0px;
         margin: 0px;
@@ -631,7 +635,7 @@ body .main-container .row section div.region.region-content .view-consejero-cale
         z-index: 1;
     }
     body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav, body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .month-view, body.page-calendario-consejero .row aside .well section.crear_disponibilidad {
-        transform: translateX(-100%);
+        /*transform: translateX(-100%);*/
         z-index: 1;
         background-color: white;
     }
@@ -645,15 +649,9 @@ body .main-container .row section div.region.region-content .view-consejero-cale
         top: -76px;
     }
 
+    
 
-
-
-
-
-
-
-
-
+  
 }
 
 

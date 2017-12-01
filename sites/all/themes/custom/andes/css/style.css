@@ -36,6 +36,10 @@
     width: 80%;
 }
 
+#block-agenda-citas-ajax h2.block-title {
+    display: none;
+}
+
 #block-agenda-citas-ajax {
     display: none;
 }

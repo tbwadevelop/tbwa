@@ -9,7 +9,6 @@ require_once(DRUPAL_ROOT . "/modules/node/node.pages.inc");
  */
 function agenda_init() {
     drupal_add_css(drupal_get_path('module', 'agenda') . '/css/style.css');
-
     if (current_path() == 'calendario-consejero/diario') {
       drupal_add_js(drupal_get_path('module', 'agenda') . '/js/agenda.js');
     }
@@ -334,11 +333,9 @@ function agenda_form($form, &$form_state) {
 
 function agenda_form_submit($form, &$form_state) {
   $form = array();
-
   ctools_include('modal');
   ctools_include('ajax');
   node_delete($form_state["nid"]);
-
   $form_state['ajax_commands'][] = ctools_modal_command_dismiss();
   $form_state['ajax_commands'][] = ctools_ajax_command_reload();
   return $form;

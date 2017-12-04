@@ -121,12 +121,12 @@ function modals_render(){
 
 
   $block['content']['coute_free'][] = array(
-      '#prefix' => '<div class="col-lg-12 col-sm-12 col-xs-6 cupo-disponible"> <div class="caja-1"></div>' . t(variable_get('coute_free')),
+      '#prefix' => '<div class="col-lg-12 col-sm-6 col-xs-6 cupo-disponible"> <div class="caja-1"></div>' . t(variable_get('coute_free')),
       '#suffix' => '</div>',
    );
 
   $block['content']['coute_full'][] = array(
-      '#prefix' => '<div class="col-lg-12 col-sm-12 col-xs-6 cupo-lleno"><div class="caja-2"></div>' . t(variable_get('coute_full')),
+      '#prefix' => '<div class="col-lg-12 col-sm-6 col-xs-6 cupo-lleno"><div class="caja-2"></div>' . t(variable_get('coute_full')),
       '#suffix' => '</div>',
    );
 

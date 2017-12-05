@@ -221,6 +221,9 @@ body .main-container header section.user-login .view-id-user_login {
 body .main-container header section.user-login .view-id-user_login .view-header  {
     border-right: 1px solid white;
 }
+body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol {
+    width: 219px;
+}
 body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .consejero {
     background: url(../img/consejero.png)no-repeat;
     background-size: contain;
@@ -250,9 +253,7 @@ body .main-container header section.user-login .view-id-user_login .view-header 
     position: absolute;
     top: 192px;
 }
-body .main-container header section.user-login .view-id-user_login .view-header, .view-content {
-    width: 242px;
-}
+
 body .main-container header section.user-login .view-id-user_login .view-content .item-list {
     padding-top: 10px;
 }
@@ -269,7 +270,6 @@ body .main-container header section.user-login .view-id-user_login .view-content
             margin-left: -15px;
         }*/
     body .main-container header section.user-login .view-id-user_login .view-header, .view-content {
-        width: 50%;
         display: flex;
         justify-content: center;
     }
@@ -428,17 +428,7 @@ body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-
     border-width: 0px;
     padding: 0px;
 }
-/*body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header::before {  
-    content: ""; 
-    position: absolute;
-    background: url("../img/flecha.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 13px;
-    height: 19px;
-    top: 39px;
-    left: 41px;
-}*/
+
 body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav { 
     display: inline-block;
     margin-top: 63px;
@@ -544,7 +534,6 @@ body .main-container .row section ul.tabs--primary {
     -ms-flex-align: flex-end;
     -webkit-align-items: flex-end;
     list-style: none;
-    /* border-bottom: 1px solid transparent; */
     background-color: transparent;
     width: 25px;
     float: right;

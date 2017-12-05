@@ -5,6 +5,7 @@
  */
 
 function agenda_form_records($form, &$form_state) {
+  
   $form['field_container'] = [
     '#type' => 'container',
     '#weight' => 80,

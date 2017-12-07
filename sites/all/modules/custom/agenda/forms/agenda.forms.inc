@@ -5,82 +5,81 @@
  */
 
 function agenda_form_records($form, &$form_state) {
-  
-  $form['field_container'] = [
+
+  $form['field_container'] = array(
     '#type' => 'container',
     '#weight' => 80,
     '#tree' => TRUE,
     '#prefix' => '<div id="js-ajax-elements-wrapper">',
     '#suffix' => '</div>',
-  ];
+  );
 
   $form_state['field_deltas'] = isset($form_state['field_deltas']) ? $form_state['field_deltas'] : range(0, 0);
   $field_count = $form_state['field_deltas'];
 
-
-  $form['field_container']['add_name'] = [
+  $form['field_container']['add_name'] = array(
     '#type' => 'submit',
     '#value' => t('Crear Cita'),
-    '#submit' => ['agenda_ajax_example_add_more_add_one'],
-    '#ajax' => [
+    '#submit' => 'agenda_ajax_example_add_more_add_one',
+    '#ajax' =>  array(
       'callback' => 'agenda_ajax_example_add_more_add_one_callback',
       'wrapper' => 'js-ajax-elements-wrapper',
-    ],
-  ];
+     ),
+  );
 
   foreach ($field_count as $delta) {
     if ($delta > 0 ) {
-        $form['field_container'][$delta] = [
+        $form['field_container'][$delta] = array(
           '#type' => 'container',
-          '#attributes' => [
-            'class' => ['container-inline'],
-          ],
+          '#attributes' => array(
+            'class' => 'container-inline',
+          ),
           '#tree' => TRUE,
-        ];
+        );
 
-        $form['field_container'][$delta]['field1'] = [
+        $form['field_container'][$delta]['field1'] = array(
           '#type' => 'textfield',
           '#title' => t('Name' . $delta),
           '#size' => 10,
-        ];
+        );
 
-        $form['field_container'][$delta]['field2'] = [
+        $form['field_container'][$delta]['field2'] = array(
           '#type' => 'textfield',
           '#title' => t('Codigo'),
           '#size' => 10,
-        ];
+        );
 
-        $form['field_container'][$delta]['field3'] = [
+        $form['field_container'][$delta]['field3'] = array(
           '#type' => 'textfield',
           '#title' => t('Usuario'),
           '#size' => 10,
-        ];
+        );
 
-        $form['field_container'][$delta]['remove_name'] = [
+        $form['field_container'][$delta]['remove_name'] = array(
           '#type' => 'submit',
           '#value' => t('Cancelar Cita'),
-          '#submit' => ['agenda_ajax_example_add_more_remove'],
-          '#ajax' => [
+          '#submit' => 'agenda_ajax_example_add_more_remove',
+          '#ajax' => array(
             'callback' => 'agenda_ajax_example_add_more_remove_callback',
             'wrapper' => 'js-ajax-elements-wrapper',
-          ],
-          '#attributes' => [
+          ),
+          '#attributes' => array(
             'class' => ['button-small'],
-          ],
+          ),
           '#name' => 'remove_name_' . $delta,
-        ];
+        );
       }
   }
 
-    $form['field_container']['submit'] = [
+    $form['field_container']['submit'] = array(
       '#type' => 'submit',
       '#value' => t('Guardar'),
-      '#submit' => ['agenda_ajax_example_add_more_add_one'],
-      '#ajax' => [
+      '#submit' => 'agenda_ajax_example_add_more_add_one',
+      '#ajax' =>  array(
         'callback' => 'agenda_ajax_example_add_more_add_one_callback',
         'wrapper' => 'js-ajax-elements-wrapper',
-      ],
-    ];  
+      ),
+    );  
 
   return $form;
 }

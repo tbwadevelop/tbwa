@@ -272,6 +272,7 @@ body .main-container header section.user-login .view-id-user_login .view-content
     body .main-container header section.user-login .view-id-user_login .view-header, .view-content {
         display: flex;
         justify-content: center;
+        margin-bottom: 57px;
     }
     body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol {
         width: 187px;
@@ -326,7 +327,7 @@ body .main-container header section.Navegacion_Agenda ul.menu {
 }
 body .main-container header section.Navegacion_Agenda ul.menu li {
     border-right: 2px solid #000;
-        border-bottom: 1px solid #9E9E9E;
+    border-bottom: 1px solid #9E9E9E;
 }
 body .main-container header section.Navegacion_Agenda ul.menu li a {
 color: #000;
@@ -350,6 +351,31 @@ body .main-container header section.Navegacion_Agenda ul.menu li a:hover {
     background: #47AC4B !important;
     color: #fff;
 } 
+
+@media screen and (max-width: 1024px) {
+    body .main-container header section.Navegacion_Agenda ul.menu {
+        width: 100%;
+        margin-left: 0px;
+        background-color: #FFFFFF;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index: 1036;
+    }
+    body .main-container header section.Navegacion_Agenda ul.menu li {
+        width: 20%;
+        border-right: 2px solid #9E9E9E;
+    }
+    body .main-container header section.Navegacion_Agenda ul.menu li a {
+        width: auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    body .main-container header section.Navegacion_Agenda ul.menu li a {
+        padding: 0px 18%;
+        font-size: 14px;
+    }
+}
 
 /* -\* Header agenda de servicio - */
 body .main-container header section.title-agenda-de-servicio  {
@@ -576,6 +602,7 @@ body .main-container .row section ul.tabs--primary li a:before {
 /* -\* Calendario de Agenda - */
 body .main-container .row section div.region.region-content {
     clear: both;
+    z-index: -100;
 }
 body .main-container .row section div.region.region-content .view-consejero-calendar {
     position: relative;
@@ -733,7 +760,7 @@ body .main-container .row section div.region.region-content .view-consejero-cale
         height: 21px;
     }
     body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav, body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .month-view, body.page-calendario-consejero .row aside .well section.crear_disponibilidad {
-        /*transform: translateX(-100%);*/
+        transform: translateX(-100%);
         z-index: 1;
         background-color: white;
     }
@@ -747,6 +774,14 @@ body .main-container .row section div.region.region-content .view-consejero-cale
         right: -182px;
         top: -75px;
     }
+}
+@media screen and (max-width: 768px) {
+    body .main-container .row section div.region.region-content .view-consejero-calendar .view-header a.active {
+        right: 64px;
+    }  
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .date-calendar-today {
+        left: 50px;
+    }  
 }
 @media screen and (max-width: 674px) {
     body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav .prev {
@@ -774,7 +809,7 @@ body .main-container .row section div.region.region-content .view-consejero-cale
 
 @media screen and (max-width: 375px ) {
     body.page-calendario-consejero .row aside .well section.crear_disponibilidad {
-    width: calc(78.2% + 11px);
+    width: calc(78.2% + 4px);
     }
 }
 

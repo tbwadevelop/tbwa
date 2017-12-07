@@ -64,7 +64,7 @@ function agenda_form_records($form, &$form_state) {
             'wrapper' => 'js-ajax-elements-wrapper',
           ),
           '#attributes' => array(
-            'class' => ['button-small'],
+            'class' => 'button-small',
           ),
           '#name' => 'remove_name_' . $delta,
         );

@@ -661,9 +661,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     border-top: 1px solid #808184;
 }
 /* -\* Calendario de Agenda por Dia - */
-.calendar-calendar .day-view .full div.item-wrapper {
-    background-color: red;
-}
+
 .calendar-calendar .day-view .full div.item-wrapper a, .cutoff {
     display: none;
 }
@@ -671,10 +669,11 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     
 }
 .calendar.dayview.empy {
-    background: #47AC4B!important;
+    background: #47ac4b9c!important;
     color: black;
     border-radius: 0px !important;
-    border: 1px solid #47AC4B !important;
+    border: 1px solid #47ac4b9c !important;
+    border-left: 10px solid #47AC4B !important
 }
 
 .calendar.dayview.full {
@@ -682,7 +681,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 }
 
 .calendar-calendar .day-view .full td .inner div.calendar div {
-    margin: 3px;
+    margin: 2px;
 }
 /*------------------ End Calendario - Consejero ------------------ */
 

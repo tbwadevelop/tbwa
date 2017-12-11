@@ -72,6 +72,11 @@ switch ($form_id) {
            $form['field_operaciones']['#access'] = FALSE;
            $form['field_usuario']['#access'] = FALSE;
        }
+
+      if (current_path() == 'request/ajax') {
+         $form['field_citas_agenda']['#access'] = FALSE;
+      }
+
       break;
       
       case 'user_login':
@@ -293,6 +298,7 @@ function request_callback($ajax){
          'ajax' => TRUE,
          'title' => t('created of availability'),
      );
+
 
      $form_state['build_info']['args'] = array($node);
      $output = ctools_modal_form_wrapper(variable_get('popup'), $form_state);

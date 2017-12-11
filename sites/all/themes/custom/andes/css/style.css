@@ -662,12 +662,19 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 }
 /* -\* Calendario de Agenda por Dia - */
 
-.calendar-calendar .day-view .full div.item-wrapper a, .cutoff {
+/*.calendar-calendar .day-view .full div.item-wrapper a, .cutoff {
     display: none;
+}*/
+.calendar-calendar .mini-day-on {
+    padding: 0px;
+    text-align: center;
 }
-.calendar-calendar .day-view .full .inner .dayview {
-    
+.calendar-calendar .mini-day-on  a {    
+    color: #000;
+    text-decoration: none;
 }
+
+/* Dia */
 .calendar.dayview.empy {
     background: #47ac4b9c!important;
     color: black;
@@ -675,14 +682,50 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     border: 1px solid #47ac4b9c !important;
     border-left: 10px solid #47AC4B !important
 }
-
 .calendar.dayview.full {
     background: #bbbfbb!important;
 }
-
 .calendar-calendar .day-view .full td .inner div.calendar div {
     margin: 2px;
 }
+
+/* Semana*/
+.calendar-calendar .week-view .full div.single-day div.weekview, .calendar-calendar .day-view .full div.single-day div.dayview{
+    background: #47ac4b99 !important;
+    border-radius: 0px !important;
+    border: 0px solid transparent;
+    border-left: 10px solid #47AC4B !important;
+    font-size: x-small !important;
+    text-align: justify;
+    word-break: break-all;
+}
+.calendar-calendar .week-view .full div.single-day div.weekview a {
+    display: none;
+}
+
+/* Mes */
+.calendar-calendar th.days {
+    background-color: #F9FAFB;
+    color: #808081;
+    font-weight: normal;
+    border: 0px solid #ccc;
+    border-top: 1px solid #000;
+    font-size: 12px;
+}
+.calendar-calendar .month-view .full td, .calendar-calendar .week-view .full td, .calendar-calendar .day-view  td {
+    padding: 0px !important;
+}
+.calendar-calendar .month-view .full td.single-day div.monthview, .calendar-calendar .week-view .full td.single-day div.weekview, .calendar-calendar .day-view .full td.single-day div.dayview {
+    background: #47ac4b99 !important;
+    border-radius: 0px !important;
+} 
+.calendar-calendar td {
+    color: #000;
+}
+.calendar-calendar .month-view .full td.single-day div.monthview span {
+    display: none !important; 
+}
+
 /*------------------ End Calendario - Consejero ------------------ */
 
 /*------------------ Media Query ------------------ */
@@ -857,11 +900,155 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     width: calc(78.2% + 4px);
     }
 }
-
-
-
-
-
-
-
 /*------------------ Media Query ------------------ */
+
+/*------------------ Modal - Crear Disponibilidad  ------------------ */
+.backdrop-default {
+    background: #313232 !important;
+}
+
+.modal-content {
+    border-radius: 0px;
+/*  */
+}
+.modal-header {
+    text-align: center;
+}
+.modal-header h4 {
+    color: #41B65B;
+    font-size: 21px;
+}
+#modal-content {
+    width: 70% !important;
+    margin: 0 auto;
+}
+.modal-body .consejero, .date {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 0px;
+    background: #47ac4b38;
+}
+.modal-body .date {
+    background-color: white;
+}
+
+.modal-body.form-control {
+    border: 1px solid black;
+    border-radius: 1px !important;
+    -webkit-appearance: button;
+    background-image: url(../img/flecha.png);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    background-size: 14px;
+}
+.modal-body.form-control:focus {
+    border-color: #000;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(13, 13, 13, 0.25), 0 0 8px rgb(192, 196, 198);
+    box-shadow: inset 0 1px 1px rgba(13, 13, 13, 0.25), 0 0 8px rgb(192, 196, 198);
+}
+
+/* -\* checkbox *\- */
+.form-type-radio  {
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    margin: 14px 30px !important;
+    position: relative;
+    border: 1px solid black;
+}
+
+.form-type-radio  label {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    z-index: 1;
+    background: #FFF;
+   /* text-indent: -53px;*/
+    line-height: 14px;
+    font-size: 19px;
+}
+
+/*.form-type-radio  input[type=radio]:checked:before {
+  background: #26ca28;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}*/
+
+input[type=radio] {
+    padding-left:5px;
+    padding-right:5px;
+    border-radius:15px;
+    -webkit-appearance:button;      
+    color:#FFF;
+    white-space: nowrap;
+    overflow:hidden;
+    width:15px;
+    height:15px;
+}
+
+input[type=radio]:checked {
+    background-color:#26ca28;
+}
+
+/*input[type=radio]:hover {
+    box-shadow:0px 0px 10px #1300ff;
+}*/
+
+/*.form-radios .radio input {
+    position: absolute;
+    opacity: 0;
+}*/
+
+/*.form-item-terminos {
+    text-align: center;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

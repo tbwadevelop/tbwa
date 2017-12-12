@@ -1,10 +1,14 @@
-<?php
+<?php 
 
-/**
- * Implements hook_form().
- */
 
-function agenda_form_records($form, &$form_state) {
+function agenda_records_form($form, &$form_state) {
+
+ if (is_numeric(arg(1))) {
+     $node = node_load(arg(1));
+     $wrapper = entity_metadata_wrapper('node', $node);
+     variable_set('cupo', $wrapper->field_cupo->value());
+  } 
+
   $form['field_container'] = [
     '#type' => 'container',
     '#weight' => 80,
@@ -15,7 +19,6 @@ function agenda_form_records($form, &$form_state) {
 
   $form_state['field_deltas'] = isset($form_state['field_deltas']) ? $form_state['field_deltas'] : range(0, 0);
   $field_count = $form_state['field_deltas'];
-
 
   $form['field_container']['add_name'] = [
     '#type' => 'submit',
@@ -28,7 +31,7 @@ function agenda_form_records($form, &$form_state) {
   ];
 
   foreach ($field_count as $delta) {
-    if ($delta > 0 ) {
+    if ($delta > 0 && $delta <= variable_get('cupo')) {
         $form['field_container'][$delta] = [
           '#type' => 'container',
           '#attributes' => [
@@ -71,30 +74,16 @@ function agenda_form_records($form, &$form_state) {
       }
   }
 
-    $form['field_container']['submit'] = [
+    $form['submit'] = [
       '#type' => 'submit',
-      '#value' => t('Guardar'),
-      '#submit' => ['agenda_ajax_example_add_more_add_one'],
+      '#value' => 'Submit',
       '#ajax' => [
-        'callback' => 'agenda_ajax_example_add_more_add_one_callback',
+        'callback' => 'agenda_records_form_submit',
         'wrapper' => 'js-ajax-elements-wrapper',
-      ],
-    ];  
+       ], 
+    ];
 
-  return $form;
-}
-
-function agenda_ajax_example_add_more_remove($form, &$form_state) {
-  $delta_remove = $form_state['triggering_element']['#parents'][1];
-  $k = array_search($delta_remove, $form_state['field_deltas']);
-  unset($form_state['field_deltas'][$k]);
-
-  $form_state['rebuild'] = TRUE;
-  drupal_get_messages();
-}
-
-function agenda_ajax_example_add_more_remove_callback($form, &$form_state) {
-  return $form['field_container'];
+   return $form;
 }
 
 function agenda_ajax_example_add_more_add_one($form, &$form_state) {
@@ -109,4 +98,13 @@ function agenda_ajax_example_add_more_add_one($form, &$form_state) {
 
 function agenda_ajax_example_add_more_add_one_callback($form, $form_state) {
   return $form['field_container'];
+}
+ 
+function agenda_records_form_submit($form, &$form_state) {
+
+ foreach ($form_state['values']['field_container'] as $key => $value) {
+    $users .='<div id="users-created">Your name is :'.$value['field1'].'</div> <br>';
+  }
+
+  return '<div id="js-ajax-elements-wrapper">Usuario '.$key.' :'.$users.'</div>';
 }

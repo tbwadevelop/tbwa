@@ -20,6 +20,7 @@ function agenda_init() {
 
 function agenda_menu() {
  $items = array();
+
  $items['request/%ctools_js'] = array(
     'title' => t('Create node api ctools'),
     'page callback' => 'request_callback',
@@ -71,10 +72,12 @@ switch ($form_id) {
            $form['title']['#access'] = FALSE;
            $form['field_operaciones']['#access'] = FALSE;
            $form['field_usuario']['#access'] = FALSE;
+           $form['field_profile']['#access'] = FALSE;
        }
 
       if (current_path() == 'request/ajax') {
          $form['field_citas_agenda']['#access'] = FALSE;
+         $form['field_profile']['#access'] = FALSE;
       }
 
       break;
@@ -346,5 +349,6 @@ function agenda_form_submit($form, &$form_state) {
   $form_state['ajax_commands'][] = ctools_ajax_command_reload();
   return $form;
 }
+
 
 

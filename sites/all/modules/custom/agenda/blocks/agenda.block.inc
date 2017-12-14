@@ -99,7 +99,7 @@ function agenda_block_view($delta = '') {
  
      case 'citas_ajax':
        $block['subject'] = t('Availability');
-       $block['content'] = drupal_get_form('agenda_form_records');
+       $block['content'] = drupal_get_form('agenda_records_form');
       break;
 
   }

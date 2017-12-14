@@ -39,7 +39,7 @@
 }
 
 .alert.alert-block.alert-danger.messages.error {
-    display: none;
+   /* display: none;*/
 }
 /* ------------------ Mega Menu ------------------ */
 @media screen and (max-width: 48.937em) {
@@ -247,7 +247,6 @@ body .main-container header section.user-login .view-id-user_login .view-header 
     position: absolute;
     top: 192px;
 }
-
 body .main-container header section.user-login .view-id-user_login .view-content .item-list {
     padding-top: 10px;
 }
@@ -257,6 +256,13 @@ body .main-container header section.user-login .view-id-user_login .view-content
 body .main-container header section.user-login .view-id-user_login .view-content ul span, span a {
     color: white;
     font-family: "lato";
+}
+body .main-container header section.user-login .view-id-user_login .view-content ul .views-field-field-area {
+    display: inline-flex;
+    color: #fff;
+}
+body .main-container header section.user-login .view-id-user_login .view-content ul .views-field-field-area .field-content {
+    padding-left: 10px;
 }
 @media screen and (max-width: 1024px) {
         /*body .main-container header section.user-login, body .main-container #page-header section.Navegacion_Agenda, body .main-container #page-header .title-agenda-de-servicio, body.page-calendario-consejero .row aside .well, body .main-container .row section div.region.region-content {
@@ -679,7 +685,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 
 /* Dia */
 .calendar.dayview.empy {
-    background: #47ac4b9c!important;
+    background: #A1D3A1!important;
     color: black;
     border-radius: 0px !important;
     border: 1px solid #47ac4b9c !important;
@@ -694,7 +700,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 
 /* Semana*/
 .calendar-calendar .week-view .full div.single-day div.weekview, .calendar-calendar .day-view .full div.single-day div.dayview{
-    background: #47ac4b99 !important;
+    background: #A1D3A1 !important;
     border-radius: 0px !important;
     border: 0px solid transparent;
     border-left: 10px solid #47AC4B !important;
@@ -912,10 +918,10 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 
 .modal-content {
     border-radius: 0px;
-/*  */
 }
 .modal-header {
     text-align: center;
+    border-bottom: 1px solid transparent;
 }
 .modal-header h4 {
     color: #41B65B;
@@ -991,7 +997,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 }
 
 
-/* -\* Calendario *\- */
+/* -\* Modal - Calendario *\- */
 div#ui-datepicker-div {
     border: 1px solid #666;
     background: white;
@@ -1043,10 +1049,17 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 #edit-actions button .glyphicon-refresh {
     display: none;
 }
+/*------------------ Modal - Disponibilidad calendario  ------------------ */
 
+#modal-content article header {
+    display: none;
+}
+#modal-content article div {
+    background-color: #E4F7E4;
+}
+#modal-content article .field-name-field-fecha {
 
-
-
+}
 
 
 

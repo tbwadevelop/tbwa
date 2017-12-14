@@ -518,6 +518,9 @@ body.page-calendario-consejero .row aside .well section.crear_disponibilidad div
     background: #47AC4B;
     padding: 8px 38px;
 }
+body.page-calendario-consejero .row aside .well section.crear_disponibilidad div#magical-modal-link a .glyphicon-refresh {
+    display: none;
+}
 body.page-calendario-consejero .row aside .well section.crear_disponibilidad .cupo-disponible , .cupo-lleno, .hoy {
     display: inline-flex;
     padding: 26px 0px 0px 0px;
@@ -932,7 +935,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     background-color: white;
 }
 
-.modal-body.form-control {
+.modal-body .form-control {
     border: 1px solid black;
     border-radius: 1px !important;
     -webkit-appearance: button;
@@ -941,7 +944,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     background-repeat: no-repeat;
     background-size: 14px;
 }
-.modal-body.form-control:focus {
+.modal-body .form-control:focus {
     border-color: #000;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(13, 13, 13, 0.25), 0 0 8px rgb(192, 196, 198);
@@ -949,85 +952,97 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 }
 
 /* -\* checkbox *\- */
-.form-type-radio  {
-    width: 25px;
-    height: 25px;
+.modal-body #edit-field-repeticion .form-radios {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modal-body #edit-field-repeticion .form-type-radio  {
+    width: 20px;
+    height: 20px;
     background: #fff;
-    margin: 14px 30px !important;
+    margin: 14px 1px !important;
     position: relative;
     border: 1px solid black;
 }
-
-.form-type-radio  label {
-    display: block;
-    width: 14px;
-    height: 14px;
-    border-radius: 100px;
-    cursor: pointer;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    z-index: 1;
-    background: #FFF;
-   /* text-indent: -53px;*/
-    line-height: 14px;
-    font-size: 19px;
-}
-
-/*.form-type-radio  input[type=radio]:checked:before {
-  background: #26ca28;
+.modal-body #edit-field-repeticion input[type=radio] {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 15px;
+    -webkit-appearance: caret;
+    color: #FFF;
+    overflow: hidden;
     width: 15px;
     height: 15px;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-}*/
-
-input[type=radio] {
-    padding-left:5px;
-    padding-right:5px;
-    border-radius:15px;
-    -webkit-appearance:button;      
-    color:#FFF;
-    white-space: nowrap;
-    overflow:hidden;
-    width:15px;
-    height:15px;
+    position: absolute !important;
+    left: 21px;
+    top: -2px;
+    
 }
-
-input[type=radio]:checked {
+.modal-body #edit-field-repeticion input[type=radio]:checked {
     background-color:#26ca28;
 }
+/* -\* caja - fecha *\- */
+#edit-field-fecha fieldset {
+    border-color: transparent;
+}
+#edit-field-fecha fieldset legend, .date-float {
+    display: none;
+}
 
-/*input[type=radio]:hover {
-    box-shadow:0px 0px 10px #1300ff;
-}*/
 
-/*.form-radios .radio input {
-    position: absolute;
-    opacity: 0;
-}*/
+/* -\* Calendario *\- */
+div#ui-datepicker-div {
+    border: 1px solid #666;
+    background: white;
+    border-radius: 0px;
+}
 
-/*.form-item-terminos {
+div#ui-datepicker-div .ui-datepicker-header {
+    border: 1px solid transparent;
+    background: white;
+}
+
+div#ui-datepicker-div .ui-datepicker-header .ui-icon-circle-triangle-w {
+    background: url(../img/flecha.png) no-repeat;
+    background-size: contain;
+    transform: rotate(90deg);
+}
+div#ui-datepicker-div .ui-datepicker-header .ui-icon-circle-triangle-e {
+      background: url(../img/flecha.png) no-repeat;
+    background-size: contain;
+    transform: rotate(269deg);
+}
+div#ui-datepicker-div .ui-datepicker-header .ui-datepicker-month, .ui-datepicker-year {
+    -webkit-appearance: inherit;
+    border: 1px solid transparent;
+    background: white;
+}
+
+div#ui-datepicker-div table td a {
+    border: 1px solid transparent;
+    background: white;
+    color: #000;
     text-align: center;
-}*/
+}
+div#ui-datepicker-div table td a.ui-state-highlight  {
+    border: 1px solid #4C48A8;
+    background: #4C48A8;
+    color: white;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* -\* Button - guardar *\- */
+#edit-actions button span {
+    display: none;
+}
+#edit-actions button {
+    border-radius: 0px;
+    background: transparent;
+    color: black;
+}
+#edit-actions button .glyphicon-refresh {
+    display: none;
+}
 
 
 

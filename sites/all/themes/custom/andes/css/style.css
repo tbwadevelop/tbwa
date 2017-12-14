@@ -1050,22 +1050,52 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     display: none;
 }
 /*------------------ Modal - Disponibilidad calendario  ------------------ */
-
-#modal-content article header {
+#modal-content .modal-content {
+    width: 99% !important;
+}
+#modal-content modal-header h4#modal-title {
+    font-size: 18px;
+}
+#modal-content article header, .field-name-field-fecha .field-label ,.field-name-field-operaciones .field-label, footer {
     display: none;
 }
-#modal-content article div {
+
+#modal-content article .field-label, .field-items, .field-items a {
+    font-family: Lato;
+    font-size: 13px;
+    color: #231F20;
+}
+#modal-content article .field-name-field-fecha, .field-name-field-lugar, .field-name-field-tipo-de-servicio, .field-name-field-cupo {
+    display: inline-flex;
+    width: 100%;
+    border: 1px solid transparent;
     background-color: #E4F7E4;
 }
-#modal-content article .field-name-field-fecha {
 
+#modal-content article .field-name-field-cupo {
+    background-color: transparent;
+    margin: 10px 0px;
 }
 
-
-
-
-
-
+#modal-content article .operation-node {
+    display: inline-flex;
+}
+#modal-content article .operation-node .create, .edit, .delete {
+    margin: 2px;
+}
+#modal-content article .operation-node a {
+    text-align: center;
+    text-decoration: none;
+    width: 105px !important;
+    min-height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Lato;
+    font-size: 11px;
+    border: 2px solid#41B65B;
+    padding: 0px 21px;
+}
 
 
 

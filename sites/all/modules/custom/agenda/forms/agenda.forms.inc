@@ -120,32 +120,36 @@ function agenda_ajax_example_add_more_add_one_callback($form, $form_state) {
 }
  
 function agenda_records_form_submit($form, &$form_state) {
+  Global $user;
+  $node = node_load(variable_get('nid'));
+  $nwrapper = entity_metadata_wrapper('node', $node);
   
-  foreach ($form_state['values']['field_container'] as $key => $value) {
-    $uid = trim($value['uid']);
-     if (is_numeric(trim($value['uid']))) {
-          agenda_save_users($uid,variable_get('nid'));
-          $users .='<div id="users-created">Usuario :'.$value['uid'].'</div> <br>';
-     }
+  if (empty($nwrapper->field_profile->value())) {
+     $nwrapper->field_profile->set($user->uid); $nwrapper->save();
+      foreach ($form_state['values']['field_container'] as $key => $value) {
+         $uid = trim($value['uid']);
+         if (is_numeric($uid)) {
+              agenda_save_users($uid,variable_get('nid'));
+              $users .='<div id="users-created">Usuario :'.$uid.'</div> <br>';
+         }
+      }
   }
-  return '<div id="js-ajax-elements-wrapper">Citas Asignadas'.$key.'+:'.$users.'Disponibilidad'.variable_get('nid').'</div>';
+  return '<div id="js-ajax-elements-wrapper">Citas Asignadas Disponibilidad '.variable_get('nid').'</div>';
 }
 
 function agenda_save_users($uid, $nid){
-       $node = node_load($nid);
-       $nwrapper = entity_metadata_wrapper('node', $node);
-       $nwrapper->field_profile->set($uid);
-       $user = user_load($uid);
-       $uwrapper = entity_metadata_wrapper('user', $user);
-       $values = array();
-       $values['field_name'] = 'field_citas_agenda';   
-       $values['field_collec_nombre'][LANGUAGE_NONE][0]['value'] = $uwrapper->field_nombre->value();
-       $values['field_collec_codigo'][LANGUAGE_NONE][0]['value'] = $uwrapper->field_codigo->value();
-       $values['field_collec_email'][LANGUAGE_NONE][0]['value']  = $uwrapper->field_email->value();
-       $values['field_collec_uid'][LANGUAGE_NONE][0]['value']    = $user->uid;
-       $field_entity = entity_create('field_collection_item', $values);
-       $field_entity->setHostEntity('node', $node);
-       $field_entity->save();
-       $nwrapper->save();
+     $node = node_load($nid);
+     $user = user_load($uid);
+     $uwrapper = entity_metadata_wrapper('user', $user);
+     $values = array();
+     $values['field_name'] = 'field_citas_agenda';   
+     $values['field_collec_nombre'][LANGUAGE_NONE][0]['value']   = $uwrapper->field_nombre->value();
+     $values['field_collec_apellido'][LANGUAGE_NONE][0]['value'] = $uwrapper->field_apellido->value();
+     $values['field_collec_codigo'][LANGUAGE_NONE][0]['value']   = $uwrapper->field_codigo->value();
+     $values['field_collec_usuario'][LANGUAGE_NONE][0]['value']  = $uwrapper->field_email->value();
+     $values['field_collec_numero_de_documento'][LANGUAGE_NONE][0]['value'] = $uwrapper->field_numero_de_documento->value();
+     $values['field_collec_uid'][LANGUAGE_NONE][0]['value']      = $user->uid;
+     $field_entity = entity_create('field_collection_item', $values);
+     $field_entity->setHostEntity('node', $node);
+     $field_entity->save();
 }
-

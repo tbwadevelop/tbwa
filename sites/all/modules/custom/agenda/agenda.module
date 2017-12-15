@@ -61,7 +61,8 @@ function agenda_menu() {
  */
 
 function agenda_form_alter(&$form, &$form_state, $form_id) {
-switch ($form_id) {
+   
+    switch ($form_id) {
      case 'disponibilidad_node_form':
        Global $user;
        $form['title']['#required'] = FALSE;
@@ -73,6 +74,7 @@ switch ($form_id) {
            $form['field_operaciones']['#access'] = FALSE;
            $form['field_usuario']['#access'] = FALSE;
            $form['field_profile']['#access'] = FALSE;
+           $form['field_citas_agenda']['#access'] = FALSE;
        }
 
       if (current_path() == 'request/ajax') {
@@ -295,11 +297,13 @@ function request_callback($ajax){
          'name' => (isset($user->name) ? $user->name : ''),
          'type' => variable_get('content_type'),
          'language' => LANGUAGE_NONE,
+         'class' => array('jdcb1219'),
      );
 
      $form_state = array(
          'ajax' => TRUE,
          'title' => t('created of availability'),
+         'class' => array('jdcb1218'),
      );
 
 

@@ -611,12 +611,12 @@ body .main-container .row section ul.tabs--primary li a {
     border: 1px solid #ddd;
     border-bottom-color: transparent;
 }
-li.active a.active {
+body .main-container .row section ul.tabs--primary li.active a.active {
     color: #41B65B !important;
     background: transparent;
 }
 
-li.active a.active:before {
+body .main-container .row section ul.tabs--primary li.active a.active:before {
     content: "";
     margin-right: 16px;
     color: #41B65B;
@@ -960,7 +960,9 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 /* -\* checkbox *\- */
 .modal-body #edit-field-repeticion .form-radios {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+        -ms-flex-pack: distribute;
+        -webkit-justify-content: space-around; 
 }
 
 .modal-body #edit-field-repeticion .form-type-radio  {
@@ -1050,40 +1052,40 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     display: none;
 }
 /*------------------ Modal - Disponibilidad calendario  ------------------ */
-#modal-content .modal-content {
+#modalContent .modal-content #modal-content {
     width: 99% !important;
 }
-#modal-content modal-header h4#modal-title {
+#modalContent .modal-dialog.node-disponibilidad #modal-content .modal-header h4#modal-title {
     font-size: 18px;
 }
-#modal-content article header, .field-name-field-fecha .field-label ,.field-name-field-operaciones .field-label, footer {
+#modalContent .modal-dialog.node-disponibilidad #modal-content article header, .field-name-field-fecha .field-label ,.field-name-field-operaciones .field-label, footer {
     display: none;
 }
 
-#modal-content article .field-label, .field-items, .field-items a {
+#modalContent .modal-dialog.node-disponibilidad #modal-content article .field-label, .field-items, .field-items a {
     font-family: Lato;
     font-size: 13px;
     color: #231F20;
 }
-#modal-content article .field-name-field-fecha, .field-name-field-lugar, .field-name-field-tipo-de-servicio, .field-name-field-cupo {
+#modalContent .modal-dialog.node-disponibilidad #modal-content article .field-name-field-fecha, .field-name-field-lugar, .field-name-field-tipo-de-servicio, .field-name-field-cupo {
     display: inline-flex;
     width: 100%;
     border: 1px solid transparent;
     background-color: #E4F7E4;
 }
 
-#modal-content article .field-name-field-cupo {
+#modalContent .modal-dialog.node-disponibilidad #modal-content article .field-name-field-cupo {
     background-color: transparent;
     margin: 10px 0px;
 }
 
-#modal-content article .operation-node {
+#modalContent .modal-dialog.node-disponibilidad #modal-content article .operation-node {
     display: inline-flex;
 }
-#modal-content article .operation-node .create, .edit, .delete {
+#modalContent .modal-dialog.node-disponibilidad #modal-content article .operation-node .create, .edit, .delete {
     margin: 2px;
 }
-#modal-content article .operation-node a {
+#modalContent .modal-dialog.node-disponibilidad #modal-content article .operation-node a {
     text-align: center;
     text-decoration: none;
     width: 105px !important;
@@ -1097,7 +1099,20 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     padding: 0px 21px;
 }
 
-
+#modalContent .ctools-modal-dialog.modal-dialog.node-disponibilidad::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: -36px;
+    width: 51px;
+    transform: rotate(271deg);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid white;
+    z-index: 1;
+/*    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);*/
+}
 
 
 

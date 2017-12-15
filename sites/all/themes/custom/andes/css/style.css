@@ -595,6 +595,9 @@ body .main-container .row section ul.tabs--primary:before {
 body .main-container .row section ul.tabs--primary li {
     left: 40px;
 }
+body .main-container .row section ul.tabs--primary li:nth-child(1) {
+    display: none;
+}
 body .main-container .row section ul.tabs--primary li a {
     color: #000;
     padding: 0px !important;
@@ -912,9 +915,9 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 /*------------------ Media Query ------------------ */
 
 /*------------------ Modal - Crear Disponibilidad  ------------------ */
-.backdrop-default {
+/*.backdrop-default {
     background: #313232 !important;
-}
+}*/
 
 .modal-content {
     border-radius: 0px;
@@ -932,10 +935,11 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     margin: 0 auto;
 }
 .modal-body .consejero, .date {
-    font-weight: bold;
+    font-weight: normal;
     font-size: 18px;
     padding: 5px 0px;
     background: #47ac4b38;
+    font-family: lato;
 }
 .modal-body .date {
     background-color: white;
@@ -964,7 +968,9 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
         -ms-flex-pack: distribute;
         -webkit-justify-content: space-around; 
 }
-
+.modal-body #edit-field-repeticion .form-radios .form-type-radio:nth-child(1) {
+    display: none;
+}
 .modal-body #edit-field-repeticion .form-type-radio  {
     width: 20px;
     height: 20px;
@@ -1067,7 +1073,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     font-size: 13px;
     color: #231F20;
 }
-#modalContent .modal-dialog.node-disponibilidad #modal-content article .field-name-field-fecha, .field-name-field-lugar, .field-name-field-tipo-de-servicio, .field-name-field-cupo {
+#modalContent .modal-dialog.node-disponibilidad #modal-content article .field-name-field-fecha, article .field-name-field-lugar, article .field-name-field-tipo-de-servicio, article .field-name-field-cupo {
     display: inline-flex;
     width: 100%;
     border: 1px solid transparent;

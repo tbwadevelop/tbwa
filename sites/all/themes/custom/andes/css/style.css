@@ -129,6 +129,7 @@ body.page-user .main-container section .region #block-system-main form#user-logi
 	background: #41B65B;
 	border-color: #41B65B;
     border-radius: 0px;
+    color: white;
 }
 
 @media screen and (max-width: 79.9375em) { /*1279*/
@@ -218,13 +219,24 @@ body .main-container header section.user-login .view-id-user_login .view-header 
 body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol {
     width: 219px;
 }
-body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .consejero {
-    background: url(../img/consejero.png)no-repeat;
-    background-size: contain;
+body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .consejero, .estudiante , .administrator {
     width: 61px;
     height: 60px;
     float: left;
     margin: 0px 10px 0px 10px;
+}
+body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .consejero {
+     background: url(../img/consejero.png)no-repeat;
+    background-size: contain;
+}
+body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .estudiante {
+    background: url(../img/estudiante.png)no-repeat;
+    background-size: contain;
+    background-position-x: 13px;
+}
+body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .administrator {
+    background: url(../img/administrator.png)no-repeat;
+    background-size: contain;
 }
 body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol p {
     font-size: 19px;
@@ -487,6 +499,14 @@ body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-
     color: #000;
     font-family: "Myriad Pro";
 }
+body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr .mini-day-on {
+    padding: 0px;
+    text-align: center;
+}
+body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr .mini-day-on  a {    
+    color: #000;
+    text-decoration: none;
+}
 body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr td.today {
     background-color: #4C48A8;
     color: white;
@@ -637,7 +657,7 @@ body .main-container .row section ul.tabs--primary li.active a.active:before {
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
         border: 1px solid transparent;
 }
-/* -\* Calendario de Agenda - */
+/* -\* Calendario de Agenda Fecha - consejero  - */
 body .main-container .row section div.region.region-content {
     clear: both;
     z-index: -100;
@@ -672,37 +692,31 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     font-size: 12px;
     border-top: 1px solid #808184;
 }
-/* -\* Calendario de Agenda por Dia - */
-
-/*.calendar-calendar .day-view .full div.item-wrapper a, .cutoff {
-    display: none;
-}*/
-.calendar-calendar .mini-day-on {
-    padding: 0px;
-    text-align: center;
-}
-.calendar-calendar .mini-day-on  a {    
-    color: #000;
-    text-decoration: none;
-}
+/* -\* Calendario de Agenda Día - Semana - Mes  - */
 
 /* Dia */
-.calendar.dayview.empy {
+.calendar-calendar .day-view .full td .inner div.calendar div {
+    margin: 2px;
+}
+.calendar-calendar .day-view .full .single-day .dayview {
     background: #A1D3A1!important;
     color: black;
     border-radius: 0px !important;
     border: 1px solid #47ac4b9c !important;
     border-left: 10px solid #47AC4B !important
 }
-.calendar.dayview.full {
-    background: #bbbfbb!important;
+.view-id-consejero_calendar .calendar a.ctools-use-modal.ctools-use-modal-processed {
+    position: absolute;
+    text-indent: -9999px;
+    width: 100%;
+    height: 100%;
+    background: transparent;
 }
-.calendar-calendar .day-view .full td .inner div.calendar div {
-    margin: 2px;
+.calendar-calendar .day-view .full .single-day div.dayview span ,.cutoff{
+    display: none !important; 
 }
-
 /* Semana*/
-.calendar-calendar .week-view .full div.single-day div.weekview, .calendar-calendar .day-view .full div.single-day div.dayview{
+.view-id-consejero_calendar .calendar-calendar .week-view .full div.single-day div.weekview {
     background: #A1D3A1 !important;
     border-radius: 0px !important;
     border: 0px solid transparent;
@@ -711,12 +725,12 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     text-align: justify;
     word-break: break-all;
 }
-.calendar-calendar .week-view .full div.single-day div.weekview a {
-    display: none;
+.calendar-calendar .week-view .full .single-day div.weekview span ,.cutoff{
+    display: none !important; 
 }
 
 /* Mes */
-.calendar-calendar th.days {
+.calendar-calendar .month-view .full th.days {
     background-color: #F9FAFB;
     color: #808081;
     font-weight: normal;
@@ -918,7 +932,9 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 /*.backdrop-default {
     background: #313232 !important;
 }*/
-
+.modal-dialog {
+    width: 105% !important;
+}
 .modal-content {
     border-radius: 0px;
 }
@@ -1031,8 +1047,14 @@ div#ui-datepicker-div .ui-datepicker-header .ui-datepicker-month, .ui-datepicker
     -webkit-appearance: inherit;
     border: 1px solid transparent;
     background: white;
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: normal;
 }
-
+div#ui-datepicker-div table thead th {
+    font-weight: normal;
+    font-size: 13px;
+}
 div#ui-datepicker-div table td a {
     border: 1px solid transparent;
     background: white;

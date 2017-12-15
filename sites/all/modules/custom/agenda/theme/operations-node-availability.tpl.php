@@ -2,7 +2,7 @@
 	<?php ctools_include('modal'); ctools_include('ajax'); ?>
 
 	<div class="create meeting">
-	<?php  print(l(t('Create meeting'), 'crear/'.arg(1).'/citas'), array('class' => array( 'ctools-use-modal-create-metting' )) ); ?>
+	<?php  print(l(t('Create meeting'), 'crear/'.arg(1).'/citas')); ?>
 	</div>
 
 	<div class="edit availability">

@@ -1083,7 +1083,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 #modalContent .modal-content #modal-content {
     width: 99% !important;
 }
-#modalContent .modal-dialog.node-disponibilidad #modal-content .modal-header h4#modal-title {
+#modalContent .modal-dialog .modal-header h4#modal-title {
     font-size: 18px;
 }
 #modalContent .modal-dialog.node-disponibilidad #modal-content article header, .field-name-field-fecha .field-label ,.field-name-field-operaciones .field-label, footer {

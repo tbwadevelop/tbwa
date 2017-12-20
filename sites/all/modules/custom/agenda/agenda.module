@@ -75,11 +75,31 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
            $form['field_usuario']['#access'] = FALSE;
            $form['field_profile']['#access'] = FALSE;
            $form['field_citas_agenda']['#access'] = FALSE;
+           $form['actions']['cancel'] = array(
+              '#markup' => l(t('Cancel'), '#',
+                 array(
+                   'attributes' => array(
+                     'class' => 'ctools-close-modal'
+                    ),
+                   'external' => TRUE
+                 )
+               )
+            );
        }
 
       if (current_path() == 'request/ajax') {
          $form['field_citas_agenda']['#access'] = FALSE;
          $form['field_profile']['#access'] = FALSE;
+         $form['actions']['cancel'] = array(
+              '#markup' => l(t('Cancel'), '#',
+                 array(
+                   'attributes' => array(
+                     'class' => 'ctools-close-modal'
+                    ),
+                   'external' => TRUE
+                 )
+               )
+            );
       }
 
       break;
@@ -302,8 +322,8 @@ function request_callback($ajax){
 
      $form_state = array(
          'ajax' => TRUE,
-         'title' => t('created of availability'),
-         'class' => array('jdcb1218'),
+         'title' => t('Creación de disponibilidad'),
+         'class' => array('add availability'),
      );
 
 

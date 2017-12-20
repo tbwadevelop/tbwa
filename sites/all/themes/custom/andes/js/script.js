@@ -9,7 +9,7 @@
 		       $("#block-agenda-citas-ajax").css("display", "initial");
 	    	});
 	    	 
-			$.post(document.location.origin + "/request/ajax", function( data ) {
+			$.post(document.location.href + "/request/ajax", function( data ) {
 				$("#modalContent .modal-content #modal-content").each( function(item) {
 					var clase = $(this).first();
 					var clasename = clase.context.firstElementChild.className;

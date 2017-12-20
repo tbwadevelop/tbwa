@@ -4,9 +4,9 @@
  * The primary PHP file for this theme.
  */
 
-function cars_preprocess_page(&$vars, $hook) {
+function andes_preprocess_page(&$vars, $hook) {
   if (true) {
-    drupal_add_js(drupal_get_path('theme', 'andes') . '/js/Andes.js');
-    $vars['scripts'] = drupal_get_js(); 
-  }
+     drupal_add_js(drupal_get_path('theme', 'andes') . '/js/script.js');
+     $vars['scripts'] = drupal_get_js(); 
+   }
 }

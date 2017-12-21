@@ -12,11 +12,11 @@
 			$.post(document.location.href + "/request/ajax", function( data ) {
 				$("#modalContent .modal-content #modal-content").each( function(item) {
 					var clase = $(this).first();
+					var id = clase.context.firstElementChild.id
 					var clasename = clase.context.firstElementChild.className;
-					$(".ctools-modal-dialog.modal-dialog").addClass(clasename);
+					$(".ctools-modal-dialog.modal-dialog").addClass(clasename +' '+id);
 				});		
 			});
-	    
 	    }
   	};
 }(jQuery));

@@ -683,6 +683,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     color: #808184;
     width: 321px;
     border-right: 2px solid #808184;
+    font-size: 22px;
 }
 body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-content #header-container th {
     border: 0px solid #ccc;
@@ -933,7 +934,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     background: #313232 !important;
 }*/
 .modal-dialog {
-    width: 105% !important;
+    width: 100% !important;
 }
 .modal-content {
     border-radius: 0px;
@@ -942,26 +943,31 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     text-align: center;
     border-bottom: 1px solid transparent;
 }
-.modal-header h4 {
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed .modal-header h4 {
     color: #41B65B;
     font-size: 21px;
 }
-#modal-content {
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content {
     width: 70% !important;
     margin: 0 auto;
 }
-.modal-body .consejero, .date {
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form .consejero, .date {
     font-weight: normal;
     font-size: 18px;
-    padding: 5px 0px;
-    background: #47ac4b38;
+    padding: 5px 0px 5px 9px;
+    background: #D8EDD9;
     font-family: lato;
 }
-.modal-body .date {
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form .date {
     background-color: white;
+    margin-left: 5%;
+    margin-top: 10px;
 }
-
-.modal-body .form-control {
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-field-tipo-de-servicio, #edit-field-fecha, #edit-field-lugar, #edit-field-cupo, #edit-field-repeticion, #edit-actions {
+    width: 85%;
+    margin: 0 auto;
+}
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form .form-control {
     border: 1px solid black;
     border-radius: 1px !important;
     -webkit-appearance: button;
@@ -970,7 +976,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     background-repeat: no-repeat;
     background-size: 14px;
 }
-.modal-body .form-control:focus {
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form .form-control:focus {
     border-color: #000;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(13, 13, 13, 0.25), 0 0 8px rgb(192, 196, 198);
@@ -1021,7 +1027,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 }
 
 
-/* -\* Modal - Calendario *\- */
+/* -\* Calendario interno -Modal Crear Disponivilidad *\- */
 div#ui-datepicker-div {
     border: 1px solid #666;
     background: white;
@@ -1067,53 +1073,89 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     color: white;
 }
 
-/* -\* Button - guardar *\- */
-#edit-actions button span {
-    display: none;
+/* -\* Button - guardar - cancelar  *\- */
+#edit-actions {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+#edit-actions a {
+    border: 1px solid #4cae4c;
+    color: black;
+    background: #ffff !important;
+    padding: 4px 22px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    cursor: pointer;
 }
 #edit-actions button {
+    font-size: 13px;
     border-radius: 0px;
     background: transparent;
     color: black;
+    padding: 0px 27px !important;
+    height: 31px;
+}
+#edit-actions button span {
+    display: none;
 }
 #edit-actions button .glyphicon-refresh {
     display: none;
 }
+
 /*------------------ Modal - Disponibilidad calendario  ------------------ */
-#modalContent .modal-content #modal-content {
+.modal-dialog.node-teaser .modal-content {
+    border-radius: 0px;
+    box-sizing: border-box;
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .5));
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .5));
+}
+.modal-dialog.node-teaser .modal-content::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: -9px;
+    width: 2em;
+    height: 2em;
+    background-color: white;
+    transform: rotate(46deg);
+}
+.modal-dialog.node-teaser .modal-content #modal-content {
     width: 99% !important;
 }
-#modalContent .modal-dialog .modal-header h4#modal-title {
+.modal-dialog.node-teaser .modal-content .modal-header h4#modal-title {
     font-size: 18px;
 }
-#modalContent .modal-dialog.node-disponibilidad #modal-content article header, .field-name-field-fecha .field-label ,.field-name-field-operaciones .field-label, footer {
+.modal-dialog.node-teaser .modal-content #modal-content article header, .field-name-field-fecha .field-label ,.field-name-field-operaciones .field-label, footer {
     display: none;
 }
 
-#modalContent .modal-dialog.node-disponibilidad #modal-content article .field-label, .field-items, .field-items a {
+.modal-dialog.node-teaser .modal-content #modal-content article .field-label, .field-items, .field-items a {
     font-family: Lato;
     font-size: 13px;
     color: #231F20;
 }
-#modalContent .modal-dialog.node-disponibilidad #modal-content article .field-name-field-fecha, article .field-name-field-lugar, article .field-name-field-tipo-de-servicio, article .field-name-field-cupo {
+.modal-dialog.node-teaser .modal-content #modal-content article .field-name-field-fecha, article .field-name-field-lugar, article .field-name-field-tipo-de-servicio, article .field-name-field-cupo {
     display: inline-flex;
     width: 100%;
     border: 1px solid transparent;
     background-color: #E4F7E4;
 }
 
-#modalContent .modal-dialog.node-disponibilidad #modal-content article .field-name-field-cupo {
+.modal-dialog.node-teaser .modal-content #modal-content article .field-name-field-cupo {
     background-color: transparent;
     margin: 10px 0px;
 }
 
-#modalContent .modal-dialog.node-disponibilidad #modal-content article .operation-node {
+.modal-dialog.node-teaser .modal-content #modal-content article .operation-node {
     display: inline-flex;
 }
-#modalContent .modal-dialog.node-disponibilidad #modal-content article .operation-node .create, .edit, .delete {
+.modal-dialog.node-teaser .modal-content #modal-content article .operation-node .create, .edit, .delete {
     margin: 2px;
 }
-#modalContent .modal-dialog.node-disponibilidad #modal-content article .operation-node a {
+.modal-dialog.node-teaser .modal-content #modal-content article .operation-node a {
     text-align: center;
     text-decoration: none;
     width: 105px !important;
@@ -1126,25 +1168,61 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     border: 2px solid#41B65B;
     padding: 0px 21px;
 }
+/*.modal-dialog.node-teaser {
+        width: 57% !important;
+}*/
+/*------------------ Modal - Eliminar Disponibilidad  ------------------ */
 
-#modalContent .ctools-modal-dialog.modal-dialog.node-disponibilidad::before {
+.modal-dialog.ctools-use-modal-processed .modal-header:before { 
     content: "";
+    background: url("../img/andes.png")no-repeat;
+    background-size: contain;
+    width: 50px;
+    height:50px;
     position: absolute;
-    top: 30px;
-    left: -36px;
-    width: 51px;
-    transform: rotate(271deg);
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 25px solid white;
-    z-index: 1;
-/*    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);*/
+    top: -8px;
+    left: 43%;
+}
+.modal-dialog.ctools-use-modal-processed .modal-header h4 {
+    font-size: 22px;
+    color: #231F20;
+    font-weight: normal;
+    margin-top: 50px;
+}
+.modal-dialog.ctools-use-modal-processed #modal-content {
+    padding: 0px 15px 15px;
+}
+.modal-dialog.ctools-use-modal-processed #modal-content form div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
+.modal-dialog.ctools-use-modal-processed #modal-content form #edit-from {
+    font-size : 14px;
+    color : #231F20;
+    text-align: center;
+}
 
-
-
-
+.modal-dialog.ctools-use-modal-processed #modal-content form button {
+    border: 1px solid #4cae4c;
+    border-radius: 0px;
+    color: black;
+    background: #ffff !important;
+    padding: 4px 22px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    cursor: pointer;
+    width: 101px;
+}
+.modal-dialog.ctools-use-modal-processed #modal-content form button  span {
+    display: none;
+}
+.modal-dialog.ctools-use-modal-processed #modal-content form button .glyphicon-refresh {
+    display: none;
+}
 
 

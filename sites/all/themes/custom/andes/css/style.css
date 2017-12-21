@@ -61,23 +61,23 @@
 
 /*------------------ Login ------------------ */
 
-body.page-user .main-container .row > section {
+body.not-logged-in .main-container .row > section {
 	width: 100%;
     background: #E6E7E8;
     box-shadow: 15px 15px #F1F1F2;
     margin-top: 214px;
 }
-body.page-user .main-container section h1.page-header {
+body.not-logged-in .main-container section h1.page-header {
 	width: 78%;
     margin: 0 auto;
     text-align: center;
     border-bottom: 2px solid #808184;
     padding-top: 40px;
 }
-body.page-user .main-container section ul.tabs--primary.nav.nav-tabs {
+body.not-logged-in .main-container section ul.tabs--primary.nav.nav-tabs {
     display: none;
 }
-body.page-user .main-container section .region #block-system-main  {
+body.not-logged-in .main-container section .region #block-system-main  {
     width: 100%;
     display: flex;
     display: -webkit-box;
@@ -86,22 +86,22 @@ body.page-user .main-container section .region #block-system-main  {
     display: -ms-flexbox;
     justify-content: center;
 }
-body.page-user .main-container section .region #block-system-main form#user-login  {
+body.not-logged-in .main-container section .region #block-system-main form#user-login  {
     width: 70%;
     position: relative;
 }
-body.page-user .main-container section .region #block-system-main form#user-login .form-item-name  {
+body.not-logged-in .main-container section .region #block-system-main form#user-login .form-item-name  {
     margin-top: 54px; 
 }
-body.page-user .main-container section .region #block-system-main form#user-login .form-item-pass  {
+body.not-logged-in .main-container section .region #block-system-main form#user-login .form-item-pass  {
     margin-bottom: 72px; 
 }
-body.page-user .main-container section .region #block-system-main form#user-login .form-text {
+body.not-logged-in .main-container section .region #block-system-main form#user-login .form-text {
     background: #FFFFFF;
     border-radius: 0px;
     height: 46px;
 }
-body.page-user .main-container section .region #block-system-main form#user-login #edit-info {
+body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-info {
     position: absolute;
     left: -145px;
     top: 258px;
@@ -110,22 +110,21 @@ body.page-user .main-container section .region #block-system-main form#user-logi
     font-family: "Helvetica Neue";
     text-align-last: left;
 }
-body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace {
-  /*  width: 47%;*/
+body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace {
     position: absolute;
     top: 289px;
     left: 566px;
 }
-body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace a{
+body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace a{
     color: #000;
     font-family: "Helvetica Neue";
     font-size: 15px;
 }
-body.page-user .main-container section .region #block-system-main form#user-login #edit-actions {
+body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-actions {
 	float: right;
 	margin-bottom: 46px;
 }
-body.page-user .main-container section .region #block-system-main form#user-login button {
+body.not-logged-in .main-container section .region #block-system-main form#user-login button {
 	background: #41B65B;
 	border-color: #41B65B;
     border-radius: 0px;
@@ -133,61 +132,61 @@ body.page-user .main-container section .region #block-system-main form#user-logi
 }
 
 @media screen and (max-width: 79.9375em) { /*1279*/
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-info {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-info {
         width: 78%;
         left: -94px;
         top: 258px;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace {
         left: 554px;
     }
 }
 @media screen and (max-width: 64em) { /*1024*/
-    body.page-user .main-container .row > section {
+    body.not-logged-in .main-container .row > section {
         box-shadow: none;
         width: 81%;
         margin-left: 9.5%;
         margin-top: 90px;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login,body.page-user .main-container section h1.page-header  {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login,body.not-logged-in .main-container section h1.page-header  {
         width: 100%;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login .form-item-pass {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login .form-item-pass {
         margin-bottom: 107px;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-info {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-info {
         display: none;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace {
         top: 238px;
         left: 263px;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-actions {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-actions {
         position: absolute;
         top: 232px;
         left: 395px;
     }
 }
 @media screen and (max-width: 48.9375em) { /*768*/
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace {
         left: 173px;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-actions  {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-actions  {
        left: 306px;
     }
 }
 @media screen and (max-width: 23.9375em) { /*375*/
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace {
         left: 12%;
         width: 52%;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace a {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace a {
         font-size: 12px;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-actions  {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-actions  {
         left: 55%;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login button {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login button {
         font-size: 12px
     }
 }

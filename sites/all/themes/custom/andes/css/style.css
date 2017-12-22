@@ -43,24 +43,23 @@
 }
 
 /*------------------ Login ------------------ */
-
-body.page-user .main-container .row > section {
+body.not-logged-in .main-container .row > section {
 	width: 100%;
     background: #E6E7E8;
     box-shadow: 15px 15px #F1F1F2;
     margin-top: 214px;
 }
-body.page-user .main-container section h1.page-header {
+body.not-logged-in .main-container section h1.page-header {
 	width: 78%;
     margin: 0 auto;
     text-align: center;
     border-bottom: 2px solid #808184;
     padding-top: 40px;
 }
-body.page-user .main-container section ul.tabs--primary.nav.nav-tabs {
+body.not-logged-in .main-container section ul.tabs--primary.nav.nav-tabs {
     display: none;
 }
-body.page-user .main-container section .region #block-system-main  {
+body.not-logged-in .main-container section .region #block-system-main  {
     width: 100%;
     display: flex;
     display: -webkit-box;
@@ -69,23 +68,23 @@ body.page-user .main-container section .region #block-system-main  {
     display: -ms-flexbox;
     justify-content: center;
 }
-body.page-user .main-container section .region #block-system-main form#user-login  {
+body.not-logged-in .main-container section .region #block-system-main form#user-login  {
     width: 70%;
     position: relative;
 }
-body.page-user .main-container section .region #block-system-main form#user-login .form-item-name  {
+body.not-logged-in .main-container section .region #block-system-main form#user-login .form-item-name  {
     margin-top: 54px; 
 }
-body.page-user .main-container section .region #block-system-main form#user-login .form-item-pass  {
+body.not-logged-in .main-container section .region #block-system-main form#user-login .form-item-pass  {
     margin-bottom: 72px; 
 }
-body.page-user .main-container section .region #block-system-main form#user-login .form-text {
+body.not-logged-in .main-container section .region #block-system-main form#user-login .form-text {
     background: #FFFFFF;
     border-radius: 0px;
     width: 96%;
     height: 46px;
 }
-body.page-user .main-container section .region #block-system-main form#user-login #edit-info {
+body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-info {
     position: absolute;
     left: -145px;
     top: 258px;
@@ -94,22 +93,21 @@ body.page-user .main-container section .region #block-system-main form#user-logi
     font-family: "Helvetica Neue";
     text-align-last: left;
 }
-body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace {
-  /*  width: 47%;*/
+body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace {
     position: absolute;
     top: 289px;
     left: 566px;
 }
-body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace a{
+body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace a{
     color: #000;
     font-family: "Helvetica Neue";
     font-size: 15px;
 }
-body.page-user .main-container section .region #block-system-main form#user-login #edit-actions {
+body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-actions {
 	float: right;
 	margin-bottom: 46px;
 }
-body.page-user .main-container section .region #block-system-main form#user-login button {
+body.not-logged-in .main-container section .region #block-system-main form#user-login button {
 	background: #41B65B;
 	border-color: #41B65B;
     border-radius: 0px;
@@ -117,78 +115,70 @@ body.page-user .main-container section .region #block-system-main form#user-logi
 }
 
 @media screen and (max-width: 79.9375em) { /*1279*/
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-info {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-info {
         width: 78%;
         left: -94px;
         top: 258px;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace {
         left: 554px;
     }
 }
 @media screen and (max-width: 1199px) {
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace {
         left: 445px;
     }
 }
 
 @media screen and (max-width: 64em) { /*1024*/
-    body.page-user .main-container .row > section {
+    body.not-logged-in .main-container .row > section {
         box-shadow: none;
         width: 81%;
         margin-left: 9.5%;
         margin-top: 90px;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login,body.page-user .main-container section h1.page-header  {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login,body.not-logged-in .main-container section h1.page-header  {
         width: 100%;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login .form-item-pass {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login .form-item-pass {
         margin-bottom: 107px;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-info {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-info {
         display: none;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace {
         top: 238px;
         left: 263px;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-actions {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-actions {
         position: absolute;
         top: 232px;
         left: 395px;
     }
 }
 @media screen and (max-width: 48.9375em) { /*768*/
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace {
         left: 173px;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-actions  {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-actions  {
        left: 306px;
     }
 }
 @media screen and (max-width: 23.9375em) { /*375*/
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace {
         left: 12%;
         width: 52%;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-enlace a {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-enlace a {
         font-size: 12px;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login #edit-actions  {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-actions  {
         left: 55%;
     }
-    body.page-user .main-container section .region #block-system-main form#user-login button {
+    body.not-logged-in .main-container section .region #block-system-main form#user-login button {
         font-size: 12px
     }
 }
-/*------------------ End Login ------------------ */
-
-
-
-
-
-
-
 
 /*------------------ Header Calendario - Consejero ------------------ */
 /* -\* Usuario consejero - */
@@ -273,14 +263,9 @@ body .main-container header section.user-login .view-id-user_login .view-content
     padding-left: 10px;
 }
 @media screen and (max-width: 1024px) {
-        /*body .main-container header section.user-login, body .main-container #page-header section.Navegacion_Agenda, body .main-container #page-header .title-agenda-de-servicio, body.page-calendario-consejero .row aside .well, body .main-container .row section div.region.region-content {
-            margin-right: -15px;
-            margin-left: -15px;
-        }*/
     body .main-container header section.user-login .view-id-user_login .view-header, .view-content {
         display: flex;
         justify-content: center;
-        /*margin-bottom: 57px;*/
     }
     body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol {
         width: 187px;
@@ -315,11 +300,11 @@ body .main-container header section.user-login .view-id-user_login .view-header 
     }
 }
 
-/* -\* sub menu - */
-body .main-container header section.Navegacion_Agenda {
+/* -\* Menu Consejero - */
+section.Navegacion_Agenda {
     background: #000000;
 }
-body .main-container header section.Navegacion_Agenda ul.menu {
+section.Navegacion_Agenda ul.menu {
     width: 734px;
     list-style: none;
     margin: 0px;
@@ -334,11 +319,11 @@ body .main-container header section.Navegacion_Agenda ul.menu {
     float: right;
     margin-right: 11px;
 }
-body .main-container header section.Navegacion_Agenda ul.menu li {
+section.Navegacion_Agenda ul.menu li {
     border-right: 2px solid #000;
     border-bottom: 1px solid #9E9E9E;
 }
-body .main-container header section.Navegacion_Agenda ul.menu li a {
+section.Navegacion_Agenda ul.menu li a {
 color: #000;
     text-decoration: none;
     text-align: center;
@@ -356,17 +341,17 @@ color: #000;
     padding: 0px 73px;
     font-size: 16px;
 }
-body .main-container header section.Navegacion_Agenda ul.menu li a:hover {
+section.Navegacion_Agenda ul.menu li a:hover {
     background: #47AC4B !important;
     color: #fff;
 } 
-body .main-container header section.Navegacion_Agenda ul.menu li.active-trail.active a {
+section.Navegacion_Agenda ul.menu li.active-trail.active a {
     background: #47AC4B;
     color: white;
 }
 
 @media screen and (max-width: 1024px) {
-    body .main-container header section.Navegacion_Agenda ul.menu {
+    section.Navegacion_Agenda ul.menu {
         width: 100%;
         margin-right: 0px;
         background-color: #FFFFFF;
@@ -375,16 +360,16 @@ body .main-container header section.Navegacion_Agenda ul.menu li.active-trail.ac
         left: 0px;
         z-index: 1036;
     }
-    body .main-container header section.Navegacion_Agenda ul.menu li {
+    section.Navegacion_Agenda ul.menu li {
         width: 20%;
         border-right: 2px solid #9E9E9E;
     }
-    body .main-container header section.Navegacion_Agenda ul.menu li a {
+    section.Navegacion_Agenda ul.menu li a {
         width: auto;
     }
 }
 @media screen and (max-width: 768px) {
-    body .main-container header section.Navegacion_Agenda ul.menu li a {
+    section.Navegacion_Agenda ul.menu li a {
         padding: 0px 18%;
         font-size: 12px;
     }
@@ -442,8 +427,7 @@ body.page-calendario-consejero .row {
 body.page-calendario-consejero .row aside .well {
     background-color: #FFF;
     border: none;
-    box-shadow: none;
-    
+    box-shadow: none;   
 }
 body.page-calendario-consejero .row aside .well .Calendario_Contenedor {
     position: relative;
@@ -693,8 +677,8 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     font-size: 12px;
     border-top: 1px solid #808184;
 }
-/* -\* Calendario de Agenda Día - Semana - Mes  - */
 
+/* -\* Calendario de Agenda Día - Semana - Mes  - */
 /* Dia */
 .calendar-calendar .day-view .full td .inner div.calendar div {
     margin: 2px;
@@ -752,8 +736,6 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 .calendar-calendar .month-view .full td.single-day div.monthview span {
     display: none !important; 
 }
-
-/*------------------ End Calendario - Consejero ------------------ */
 
 /*------------------ Media Query ------------------ */
 @media screen and (max-width: 1024px) {
@@ -1172,9 +1154,8 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 /*.modal-dialog.node-teaser {
         width: 57% !important;
 }*/
+
 /*------------------ Modal - Eliminar Disponibilidad  ------------------ */
-
-
 .ctools-modal-dialog.modal-dialog.ctools-use-modal-processed.agenda-form .modal-header:before { 
     content: "";
     background: url("../img/andes.png")no-repeat;
@@ -1225,7 +1206,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     display: none;
 }
 
-/*------------------ Menu Buscar Citas - Historial Estudiante - Reportes TOR  ------------------ */
+/*------------------ Filtro - Buscar Citas - Historial Estudiante - Reportes TOR  ------------------ */
 /* -\* Buscar *\- */
 .views-exposed-form {
     display: flex;
@@ -1408,7 +1389,6 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     color : #231F20;
     font-size : 18px;
     font-family: lato;
-
 }
 .view-id-historial_estudiante_views .view-content .views-field .ui-state-default.ui-state-active {
     border-radius: 0px;
@@ -1431,7 +1411,6 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     background-size: contain;
     transform: rotate(-180deg);
 }
-
 .view-id-historial_estudiante_views .view-content .ui-corner-bottom div span:nth-child(1) {
     font-weight : bold;
     font-size : 20px;
@@ -1452,6 +1431,80 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     padding: 10px 0;
 }
 
+/*------------------ Estudiantes     ------------------ */
+/* -\* Menu Estudiante - */
+section.Navegacion_Estudiantes {
+    background: #000000;
+}
+section.Navegacion_Estudiantes ul.menu {
+    width: 734px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    justify-content: center;
+    background-color: white;
+    float: right;
+    margin-right: 11px;
+}
+section.Navegacion_Estudiantes ul.menu li {
+    border-right: 2px solid #000;
+    border-bottom: 1px solid #9E9E9E;
+}
+section.Navegacion_Estudiantes ul.menu li a {
+color: #000;
+    text-decoration: none;
+    text-align: center;
+    width: 74px;
+    min-height: 52px;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    align-items: center;
+     -ms-flex-align: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    padding: 0px 73px;
+    font-size: 16px;
+}
+section.Navegacion_Estudiantes ul.menu li a:hover {
+    background: #47AC4B !important;
+    color: #fff;
+} 
+section.Navegacion_Estudiantes ul.menu li.active-trail.active a {
+    background: #47AC4B;
+    color: white;
+}
+@media screen and (max-width: 1024px) {
+    section.Navegacion_Estudiantes ul.menu {
+        width: 100%;
+        margin-right: 0px;
+        background-color: #FFFFFF;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index: 1036;
+    }
+    section.Navegacion_Estudiantes ul.menu li {
+        width: 20%;
+        border-right: 2px solid #9E9E9E;
+    }
+    section.Navegacion_Estudiantes ul.menu li a {
+        width: auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    section.Navegacion_Estudiantes ul.menu li a {
+        padding: 0px 18%;
+        font-size: 12px;
+    }
+}
 
 
 

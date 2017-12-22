@@ -18,4 +18,4 @@ function agenda_views_pre_render(&$view, &$display_id, &$args) {
          }
      }
    }
-}
+} 

@@ -9,10 +9,18 @@ function agenda_block_info() {
     'info' => t('Request Modals'),
     'cache' => DRUPAL_NO_CACHE
   );
+
   $blocks['citas_ajax'] = array(
     'info' => t('Add citas ajax'),
     'cache' => DRUPAL_NO_CACHE
   );
+
+  $blocks['my_qoute'] = array(
+    'info' => t('My Qoute'),
+    'cache' => DRUPAL_NO_CACHE
+  );
+
+
  return $blocks;
 }
 
@@ -102,6 +110,9 @@ function agenda_block_view($delta = '') {
        $block['content'] = drupal_get_form('agenda_records_form');
       break;
 
+     case 'my_qoute':
+       $block['content'] = drupal_get_form('agenda_qoute_form');
+      break;
   }
   return $block;
 }
@@ -137,3 +148,5 @@ function modals_render(){
 
   return $block;
  }
+
+

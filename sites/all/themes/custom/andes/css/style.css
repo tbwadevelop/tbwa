@@ -259,6 +259,12 @@ body .main-container header section.user-login .view-id-user_login .view-content
     color: white;
     font-family: "lato";
 }
+body .main-container header section.user-login .view-id-user_login .view-content ul span a:hover, a:focus {
+    color: white;
+    text-decoration: none;
+    cursor: auto;
+}
+
 body .main-container header section.user-login .view-id-user_login .view-content ul .views-field-field-area {
     display: inline-flex;
     color: #fff;
@@ -1219,9 +1225,9 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     display: none;
 }
 
-/*------------------ Menu Citas   ------------------ */
+/*------------------ Menu Buscar Citas - Historial Estudiante - Reportes TOR  ------------------ */
 /* -\* Buscar *\- */
-.view-id-citas #views-exposed-form-citas-page {
+.views-exposed-form {
     display: flex;
         display: -webkit-box;
         display: -webkit-flex;
@@ -1232,10 +1238,10 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         -ms-flex-pack: center;
 }
 
-.view-id-citas #views-exposed-form-citas-page #edit-field-collec-nombre-value-wrapper {
+.views-exposed-form .views-exposed-widgets .views-exposed-widget {
     display: inline-flex
 }
-.view-id-citas #views-exposed-form-citas-page #edit-field-collec-nombre-value-wrapper label {
+.views-exposed-form .views-exposed-widgets label {
     position: relative;
     color: #4cae4c;
     word-break: break-all;
@@ -1245,7 +1251,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     font-size: 15px;
     font-family: lato;
 }
-.view-id-citas #views-exposed-form-citas-page #edit-field-collec-nombre-value-wrapper label::before {
+.views-exposed-form .views-exposed-widgets label::before {
     content: "";
     position: absolute;
     left: -11px;
@@ -1255,7 +1261,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     border-bottom: 10px solid transparent;
     border-left: 10px solid black;
 }
-.view-id-citas #views-exposed-form-citas-page #edit-field-collec-nombre-value-wrapper input {
+.views-exposed-form .views-exposed-widgets .views-widget input {
     border-radius: 0px;
     border: 1px solid #F5F1F1;
     background: #F5F1F1;
@@ -1264,35 +1270,38 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     width: 537px;
     height: 45px;
 }
-.view-id-citas #views-exposed-form-citas-page #edit-field-collec-nombre-value-wrapper input:focus{
+.views-exposed-form .views-exposed-widgets .views-widget input:focus{
     border-color: transparent;
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
     box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
 }
+.views-exposed-form .views-exposed-widgets .views-widget span {
+    display: none;
+}
 /* -\* Button - Buscar - Reiniciar *\- */
-.view-id-citas #views-exposed-form-citas-page button {
-    margin-top: 0em;
+.views-exposed-form .views-exposed-widgets .views-submit-button button, .views-reset-button button {
+    margin-top: 0px !important;
     border-radius: 0px;
     border:1px solid transparent;
     text-indent: -99999px;
     width: 53px;
     height: 52px;
 }
-.view-id-citas #views-exposed-form-citas-page button#edit-submit-citas {
-    background: url(../img/buscar.svg)no-repeat;
+.views-exposed-form .views-exposed-widgets .views-submit-button button {
+    background: url("../img/buscar.svg")no-repeat;
     background-size: 38px;
     background-position: 6px;
     background-color: #4cae4c;
 }
-.view-id-citas #views-exposed-form-citas-page button#edit-reset {
-    background: url(../img/reiniciar.png)no-repeat;
+.views-exposed-form .views-exposed-widgets .views-reset-button button {
+    background: url("../img/reiniciar.png")no-repeat;
     background-size: 38px;
     background-position: 6px;
     background-color: #929497;
 }
 
-/* -\* Tabla *\- */
+/* -\* Tabla de Citas  *\- */
 .view-id-citas .view-content table {
     width: 99%;
 }
@@ -1324,7 +1333,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     border-width: 0px 0px 0px 0px;
 }
 
-/* -\* Pginador *\- */
+/* -\* Pginador citas - Reportes TOR  *\- */
 .view-id-citas ul.pagination {
     position: relative;
 }
@@ -1357,120 +1366,91 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 }
 .view-id-citas ul.pagination li.next > a  {
     text-indent: -9999px;
-    background: url(../img/flecha.png)no-repeat;
+    background: url("../img/flecha.png")no-repeat;
     background-size: 11px;;
     background-position: 7px;
     transform: rotate(-89deg);
 } 
 .view-id-citas ul.pagination li.pager-last > a  {
     text-indent: -9999px;
-    background: url(../img/pager-last.svg)no-repeat;
+    background: url("../img/pager-last.svg")no-repeat;
     background-size: 16px;
     background-position: 6px;
 } 
 .view-id-citas ul.pagination li.prev > a  {
     text-indent: -9999px;
-    background: url(../img/flecha.png)no-repeat;
+    background: url("../img/flecha.png")no-repeat;
     background-size: 11px;;
     background-position: 7px;
     transform: rotate(89deg);
 } 
 .view-id-citas ul.pagination li.pager-first > a  {
     text-indent: -9999px;
-    background: url(../img/pager-last.svg)no-repeat;
+    background: url("../img/pager-last.svg")no-repeat;
     background-size: 16px;
     background-position: 6px;
     transform: rotate(177deg);
 }
 
 /*------------------ Menu Historial Estudiante    ------------------ */
-/* -\* Buscar *\- */
-.view-id-historial_estudiante_views #views-exposed-form-historial-estudiante-views-page {
-    display: flex;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
-        display: -ms-flexbox;
-    justify-content: center;
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-}
 
-.view-id-historial_estudiante_views #views-exposed-form-historial-estudiante-views-page #edit-uid-wrapper {
-    display: inline-flex
+/* -\* Acordion  *\- */
+.view-id-historial_estudiante_views .view-id-historial_estudiante {
+    width: 99%;
 }
-.view-id-historial_estudiante_views #views-exposed-form-historial-estudiante-views-page #edit-uid-wrapper label {
-    position: relative;
-    color: #4cae4c;
-    word-break: break-all;
-    width: 58px;
-    text-align: center;
-    margin: 13px 16px 0px 0px;
-    font-size: 15px;
-    font-family: lato;
-}
-.view-id-historial_estudiante_views #views-exposed-form-historial-estudiante-views-page #edit-uid-wrapper label::before {
-    content: "";
-    position: absolute;
-    left: -11px;
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid black;
-}
-.view-id-historial_estudiante_views #views-exposed-form-historial-estudiante-views-page #edit-uid-wrapper .views-widget input {
-    border-radius: 0px;
-    border: 1px solid #F5F1F1;
-    background: #F5F1F1;
-    -webkit-box-shadow: inset 0 1px 1px transparent;
-    box-shadow: inset 0 1px 1px transparent;
-    width: 537px;
-    height: 45px;
-}
-.view-id-historial_estudiante_views #views-exposed-form-historial-estudiante-views-page #edit-uid-wrapper .views-widget input:focus{
-    border-color: transparent;
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
-    box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
-}
-.view-id-historial_estudiante_views #views-exposed-form-historial-estudiante-views-page #edit-uid-wrapper .views-widget span {
+.view-id-historial_estudiante_views .view-content .views-field-uid span {
     display: none;
 }
-/* -\* Button - Buscar - Reiniciar *\- */
-.view-id-historial_estudiante_views #views-exposed-form-historial-estudiante-views-page button {
-    margin-top: 0em;
+.view-id-historial_estudiante_views .view-content .views-field .ui-state-default {
     border-radius: 0px;
-    border:1px solid transparent;
-    text-indent: -99999px;
-    width: 53px;
-    height: 52px;
+    border: 1px solid #808184;
+    background: #E6E7E8 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+    color : #231F20;
+    font-size : 18px;
+    font-family: lato;
+
 }
-.view-id-historial_estudiante_views #views-exposed-form-historial-estudiante-views-page button#edit-submit-historial-estudiante-views {
-    background: url(../img/buscar.svg)no-repeat;
-    background-size: 38px;
-    background-position: 6px;
-    background-color: #4cae4c;
+.view-id-historial_estudiante_views .view-content .views-field .ui-state-default.ui-state-active {
+    border-radius: 0px;
+    border: 1px solid #808184;
+    background: #808184 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
 }
-.view-id-historial_estudiante_views #views-exposed-form-historial-estudiante-views-page button#edit-reset {
-    background: url(../img/reiniciar.png)no-repeat;
-    background-size: 38px;
-    background-position: 6px;
-    background-color: #929497;
+.view-id-historial_estudiante_views .view-content .views-field .ui-state-default span.ui-accordion-header-icon {
+    position: absolute;
+    left: 95%;
+    top: 50%;
+    margin-top: -8px;
+}
+.view-id-historial_estudiante_views .view-content .views-field .ui-state-active .ui-icon { 
+    background: url("../img/flecha.png")no-repeat !important;
+    background-size: contain !important;
+    transform: rotate(0deg) !important;
+ }
+.view-id-historial_estudiante_views .view-content .views-field .ui-state-default .ui-icon {
+    background: url("../img/flecha.png")no-repeat;
+    background-size: contain;
+    transform: rotate(-180deg);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.view-id-historial_estudiante_views .view-content .ui-corner-bottom div span:nth-child(1) {
+    font-weight : bold;
+    font-size : 20px;
+    line-height : 19.75px;
+    color : #41B65B;
+    font-family: Lato;
+}
+.view-id-historial_estudiante_views .view-content .ui-corner-bottom div span:nth-child(2) {
+    display: inherit;
+    margin: 10px 0;
+}
+.view-id-historial_estudiante_views .view-content .ui-corner-bottom div, .ui-corner-bottom a, .ui-corner-bottom  .date-display-single{
+    font-family: Lato !important;
+    font-size : 20px !important;
+    color : #000000 !important;
+    text-decoration: none;
+    cursor: auto;
+    padding: 10px 0;
+}
 
 
 

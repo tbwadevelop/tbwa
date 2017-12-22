@@ -218,6 +218,19 @@ function agenda_theme_registry_alter(&$theme_registry) {
   }
 }
 
+
+/**
+ * Implementation of hook_views_api().
+ */
+function agenda_views_api() {
+    return array(
+     'api' => 3,
+     'path' => drupal_get_path('module', 'agenda') . '/views',
+   );   
+}
+
+
+
 /**
  * Callback function render obj(node) availability.
  */
@@ -230,6 +243,45 @@ function render_availability($js) {
   $node = node_load(arg(1));
   $contents = render(node_view($node, 'teaser', NULL));
   return ctools_modal_render(t('Disponibilidad'), $contents);
+}
+
+/**
+ * Callback function render new obj(node) availability.
+ */
+
+function request_callback($ajax){
+    if ($ajax) {
+     global $user;
+     ctools_include('node.pages', 'node', '');
+     ctools_include('modal');
+     ctools_include('ajax');
+
+     $node = (object) array(
+         'uid' => $user->uid,
+         'name' => (isset($user->name) ? $user->name : ''),
+         'type' => variable_get('content_type'),
+         'language' => LANGUAGE_NONE,
+     );
+
+     $form_state = array(
+         'ajax' => TRUE,
+         'title' => t('Creación de disponibilidad'),
+         'class' => array('add availability'),
+     );
+
+
+     $form_state['build_info']['args'] = array($node);
+     $output = ctools_modal_form_wrapper(variable_get('popup'), $form_state);
+
+     if (!empty($form_state['executed'])) {
+         $output = array();
+         $output[] = ctools_ajax_command_reload();
+     }
+    print ajax_render($output);
+    exit;
+  }else {
+      return drupal_get_form(variable_get('popup'));
+   }
 }
 
 /**
@@ -247,7 +299,7 @@ function edit_availability($js) {
 
        $form_state = array(
            'ajax' => TRUE,
-           'title' => t('Edit availability'),
+           'title' => t('Editar disponibilidad'),
        );
 
        $form_state['build_info']['args'] = array($node);
@@ -276,7 +328,7 @@ function delete_availability($js) {
       $form_state = array(
         'ajax' => TRUE,
         'nid' => arg(1),
-        'title' => t('Delete availability'),
+        'title' => t('Eliminar Disponibilidad'),
       );
 
       $output = ctools_modal_form_wrapper('agenda_form', $form_state);
@@ -293,52 +345,5 @@ function delete_availability($js) {
     }
 }
 
-/**
- * Callback function render new obj(node) availability.
- */
-
-function request_callback($ajax){
-    if ($ajax) {
-     global $user;
-     ctools_include('node.pages', 'node', '');
-     ctools_include('modal');
-     ctools_include('ajax');
-
-     $node = (object) array(
-         'uid' => $user->uid,
-         'name' => (isset($user->name) ? $user->name : ''),
-         'type' => variable_get('content_type'),
-         'language' => LANGUAGE_NONE,
-         'class' => array('jdcb1219'),
-     );
-
-     $form_state = array(
-         'ajax' => TRUE,
-         'title' => t('Creación de disponibilidad'),
-         'class' => array('add availability'),
-     );
 
 
-     $form_state['build_info']['args'] = array($node);
-     $output = ctools_modal_form_wrapper(variable_get('popup'), $form_state);
-
-     if (!empty($form_state['executed'])) {
-         $output = array();
-         $output[] = ctools_ajax_command_reload();
-     }
-    print ajax_render($output);
-    exit;
-  }else {
-      return drupal_get_form(variable_get('popup'));
-   }
-}
-
-/**
- * Implementation of hook_views_api().
- */
-function agenda_views_api() {
-    return array(
-     'api' => 3,
-     'path' => drupal_get_path('module', 'agenda') . '/views',
-   );   
-}

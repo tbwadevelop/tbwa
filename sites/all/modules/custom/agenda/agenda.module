@@ -5,6 +5,8 @@ include_once 'forms/agenda.forms.inc';
 require_once(DRUPAL_ROOT . "/modules/node/node.pages.inc");
 define('FIRST_POSITION', 0); 
 
+global $user;
+
 
 /**
  * Implements hook_init().
@@ -66,7 +68,7 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
    
     switch ($form_id) {
      case 'disponibilidad_node_form':
-       Global $user;
+     
        $form['title']['#required'] = FALSE;
        $current_path = explode("/", current_path());
        $path = array_shift($current_path);
@@ -107,9 +109,16 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
             '#markup' => l(t('Olvido su clave'), 'user/password'),
             '#attributes' => array('class' => array('info-link-login')),
           );          
-      break;      
+      break;
+
+      case 'user_profile_form':
+         if (!in_array('administrator', $user->roles)) {
+              unset($form['account']);
+              unset($form['picture']); 
+         }
+      break; 
       } 
-}
+ }
 
 /**
  * Implements hook_node_presave().
@@ -251,7 +260,7 @@ function render_availability($js) {
 
 function request_callback($ajax){
     if ($ajax) {
-     global $user;
+   
      ctools_include('node.pages', 'node', '');
      ctools_include('modal');
      ctools_include('ajax');
@@ -290,7 +299,7 @@ function request_callback($ajax){
 
 function edit_availability($js) {
    if ($js) {
-       global $user;
+     
        ctools_include('node.pages', 'node', '');
        ctools_include('modal');
        ctools_include('ajax');

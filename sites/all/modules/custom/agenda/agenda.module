@@ -5,8 +5,6 @@ include_once 'forms/agenda.forms.inc';
 require_once(DRUPAL_ROOT . "/modules/node/node.pages.inc");
 define('FIRST_POSITION', 0); 
 
-global $user;
-
 
 /**
  * Implements hook_init().
@@ -24,7 +22,6 @@ function agenda_init() {
 
 function agenda_menu() {
  $items = array();
-
  $items['request/%ctools_js'] = array(
     'title' => t('Create node api ctools'),
     'page callback' => 'request_callback',
@@ -65,10 +62,9 @@ function agenda_menu() {
  */
 
 function agenda_form_alter(&$form, &$form_state, $form_id) {
-   
     switch ($form_id) {
      case 'disponibilidad_node_form':
-     
+       Global $user;
        $form['title']['#required'] = FALSE;
        $current_path = explode("/", current_path());
        $path = array_shift($current_path);
@@ -95,10 +91,8 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
                 'external' => TRUE))
              );
       }
-
       break;
-      
-      case 'user_login':
+     case 'user_login':
           $form['info'] = array(
             '#type' => 'item',
             '#markup' => t('Las personas que no tengan usuario y clave uniandes pueden comunicarse con la Decanatura de Estudiantes para recibir atención personalizada, en el teléfono 339 49 49 Ext. 2207, de lunes a viernes en horario de 8:00 a.m a 5:00 p.m.'),
@@ -112,13 +106,13 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
       break;
 
       case 'user_profile_form':
-         if (!in_array('administrator', $user->roles)) {
-              unset($form['account']);
-              unset($form['picture']); 
-         }
-      break; 
+        if (!in_array('administrator', $user->roles)) {
+            /* unset($form['account']);
+             unset($form['picture']); */
+        }
+      break;
       } 
- }
+}
 
 /**
  * Implements hook_node_presave().
@@ -260,7 +254,7 @@ function render_availability($js) {
 
 function request_callback($ajax){
     if ($ajax) {
-   
+     global $user;
      ctools_include('node.pages', 'node', '');
      ctools_include('modal');
      ctools_include('ajax');
@@ -299,7 +293,7 @@ function request_callback($ajax){
 
 function edit_availability($js) {
    if ($js) {
-     
+       global $user;
        ctools_include('node.pages', 'node', '');
        ctools_include('modal');
        ctools_include('ajax');

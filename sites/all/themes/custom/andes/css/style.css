@@ -1283,42 +1283,42 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 }
 
 /* -\* Tabla de Citas  *\- */
-.view-id-citas .view-content table {
+ .view-content table {
     width: 99%;
 }
-.view-id-citas .view-content thead th {
+ .view-content thead th {
     color: #4cae4c;
     border-bottom: 2px solid transparent; 
 }
-.view-id-citas .view-content tbody {
+ .view-content tbody {
     background-color: #F5F1F1;
     padding: 10px;
 }
-.view-id-citas .view-content tbody tr {
-    background-color: #F5F1F1;
+ .view-content tbody tr {
+    background-color: #F5F1F1 !important;
 }
-.view-id-citas .view-content tbody tr td {
+ .view-content tbody tr td {
     border-width: 0px 1px 1px 1px;
     border-bottom-style: dashed;
     border-right-style: solid;
     border-color: #A6A8AB;
 }
-.view-id-citas .view-content tbody tr td:last-child {
+ .view-content tbody tr td:last-child {
     border-width: 0px 0px 1px 0px;
 }
 
-.view-id-citas .view-content tbody tr:last-child td {
+ .view-content tbody tr:last-child td {
     border-width: 0px 1px 0px 0px;
 }
-.view-id-citas .view-content tbody tr:last-child td:last-child {
+ .view-content tbody tr:last-child td:last-child {
     border-width: 0px 0px 0px 0px;
 }
 
 /* -\* Pginador citas - Reportes TOR  *\- */
-.view-id-citas ul.pagination {
+ ul.pagination {
     position: relative;
 }
-.view-id-citas ul.pagination::before {
+ ul.pagination::before {
     content: "";
     border-bottom: 1px solid #6D6E70;
     width: 397%;
@@ -1326,7 +1326,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     top: 15px;
     left: -504px;
 } 
-.view-id-citas ul.pagination::after {
+ ul.pagination::after {
     content: "";
     border-bottom: 1px solid #6D6E70;
     width: 397%;
@@ -1334,38 +1334,38 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     top: 15px;
     left: 164px;    
 } 
-.view-id-citas ul.pagination li.active span  {
+ ul.pagination li.active span  {
     color: #000;
     cursor: default;
     background-color: #fff;
     border-color: #000;
     border-radius: 0px;
 }
-.view-id-citas ul.pagination li a {
+ ul.pagination li a {
     color: black !important;
     border: 0px solid;
 }
-.view-id-citas ul.pagination li.next > a  {
+ ul.pagination li.next > a  {
     text-indent: -9999px;
     background: url("../img/flecha.png")no-repeat;
     background-size: 11px;;
     background-position: 7px;
     transform: rotate(-89deg);
 } 
-.view-id-citas ul.pagination li.pager-last > a  {
+ ul.pagination li.pager-last > a  {
     text-indent: -9999px;
     background: url("../img/pager-last.svg")no-repeat;
     background-size: 16px;
     background-position: 6px;
 } 
-.view-id-citas ul.pagination li.prev > a  {
+ ul.pagination li.prev > a  {
     text-indent: -9999px;
     background: url("../img/flecha.png")no-repeat;
     background-size: 11px;;
     background-position: 7px;
     transform: rotate(89deg);
 } 
-.view-id-citas ul.pagination li.pager-first > a  {
+ ul.pagination li.pager-first > a  {
     text-indent: -9999px;
     background: url("../img/pager-last.svg")no-repeat;
     background-size: 16px;
@@ -1545,11 +1545,28 @@ section.Navegacion_Estudiantes ul.menu li.active-trail.active a {
 }
 
 
+/* -\* Mis citas  - Estudiantes - */
 
+.filtar_citas label {
+    display: none;
+}
+.filtar_citas #edit-options-qoute {
+    width: 20%;
+    color: #231F20;
+    background-color: #fff;
+    background-image: url(../img/flecha.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 93% 10px;
+    border: 1px solid #ccc;
+    border-radius: 0px !important;
+    -webkit-appearance: none;
+    float: right;
+    appearance: none;  
+}
 
-
-
-
+select::-ms-expand { display: none; } select:disabled::-ms-expand { background: #f60; }
+select option:nth-child(even) { background-color: red; }
 
 
 

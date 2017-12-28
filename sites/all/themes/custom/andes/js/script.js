@@ -6,7 +6,20 @@
 	    	$('.page-user-edit #block-system-main #user-profile-form #edit-locale').remove();
 	    	$(".page-user-edit #user-profile-form .form-wrapper.form-group").addClass("col-lg-4 col-xs-6 col-sm-6");
 
+	    	//class de contenedor de todas las clases
+	    	$('body.not-front .main-container').removeClass("container");
+	    	$('body.not-front .main-container').addClass("container-fluid");
+			     	
+	        // Page service taxonomia 
+	    	if ( $(".page-calendario-estudiante #block-views-servicios-block-1").length ) {
+				var arg = window.location.href.charAt(window.location.href.length-1);
+				console.log(arg);
 
+				$( ".page-calendario-estudiante .tabs--primary li" ).each(function( index ) {
+				  console.log($(this));
+				  console.log( index + ": " + $( this ).text() );
+				});
+			}
 
 	    	$(window).load(function(){ $('#dvLoading').fadeOut(2000);});
 	    	$(window).load(function(){ $('.ctools-modal-loading').fadeOut(2000);});

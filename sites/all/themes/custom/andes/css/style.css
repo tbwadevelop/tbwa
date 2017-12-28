@@ -8,12 +8,10 @@
     display: inline-block;
 }
 
-.view-usuarios-agenda-de-servicios .views-exposed-form .views-widget-filter-uid {
+/*.view-usuarios-agenda-de-servicios .views-exposed-form .views-widget-filter-uid {
     float: left;
     width: 80%;
-}
-
-
+}*/
 
 #participants .form-group {
     margin-bottom: 15px;
@@ -25,10 +23,10 @@
     display: inline-block;
 }
 
-.view-usuarios-agenda-de-servicios .views-exposed-form .views-widget-filter-uid {
+/*.view-usuarios-agenda-de-servicios .views-exposed-form .views-widget-filter-uid {
     float: left;
     width: 80%;
-}
+}*/
 
 #block-agenda-citas-ajax h2.block-title {
     display: none;
@@ -188,7 +186,6 @@ body .main-container header  section h2.block-title {
 body .main-container header section.user-login {
     background-color: #000;
     padding-top: 58px;
-   
 } 
 body .main-container header section.user-login .view-id-user_login {
     display: flex;
@@ -262,6 +259,9 @@ body .main-container header section.user-login .view-id-user_login .view-content
     padding-left: 10px;
 }
 @media screen and (max-width: 1024px) {
+    body .main-container header section.user-login .view-id-user_login {
+        margin-bottom: 10px;
+    }
     body .main-container header section.user-login .view-id-user_login .view-header, .view-content {
         display: flex;
         justify-content: center;
@@ -556,9 +556,9 @@ body.page-calendario-consejero .row aside .well section.crear_disponibilidad .ho
 }
 
 /* -\* Button Mes - Semana - Dia - */
-body .main-container .row section {
+/*body .main-container .row section {
     padding-right: 0px;
-}
+}*/
 body .main-container .row section ol.breadcrumb,h1 {
     display: none; 
 }
@@ -647,7 +647,13 @@ body .main-container .row section div.region.region-content {
 body .main-container .row section div.region.region-content .view-id-consejero_calendar {
     position: relative;
 }
-
+body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header > a { 
+    color : #4C48A8;
+    text-decoration: none;
+}
+body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header > a:hover, .view-id-consejero_calendar .view-header > a:active, .view-id-consejero_calendar .view-header > a:focus { 
+    color: #8989CE;    
+}
 body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav ul {
     position: absolute;
     top: 0px;
@@ -1006,7 +1012,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 }
 
 
-/* -\* Calendario interno -Modal Crear Disponivilidad *\- */
+/* -\* Calendario interno - Modal Crear Disponivilidad *\- */
 div#ui-datepicker-div {
     border: 1px solid #666;
     background: white;
@@ -1083,6 +1089,49 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-actions button .glyphicon-refresh {
     display: none;
 }
+/*------------------ Citas - Creacion de una cita click modal  ------------------ */
+.informacion-citas {
+    width: 100%;
+    margin-bottom: 51px;
+    display: inline-flex;
+        display: -ms-inline-flexbox;
+        display: -webkit-inline-flex;
+    justify-content: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+}
+.informacion-citas > div {
+    padding: 0px 10px 0px 10px; 
+    border-right: 1px solid #929497;
+}
+.informacion-citas > div:nth-child(3) { 
+    border-right: 0px solid #929497;
+}
+.informacion-citas > div > span {
+    color: #4cae4c;
+    font-size: 15px;
+    font-family: lato;
+}
+
+.informacion-citas .field-content {
+    display: inline-flex;
+}
+.agendar_citas #js-ajax-elements-wrapper .form-wrapper .form-type-textfield input {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-color: red;
+    background-image: none;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    -webkit-appearance: button;
+}
+
+
+
+
+
 
 /*------------------ Modal - Disponibilidad calendario  ------------------ */
 .modal-dialog.node-teaser .modal-content {
@@ -1187,7 +1236,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     border: 1px solid #4cae4c;
     border-radius: 0px;
     color: black;
-    background: #ffff !important;
+    background-color: #ffff !important;
     padding: 4px 22px;
     font-size: 14px;
     font-weight: normal;
@@ -1215,9 +1264,20 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
 }
-
-.views-exposed-form .views-exposed-widgets .views-exposed-widget {
-    display: inline-flex
+.views-exposed-form .views-exposed-widgets {
+    width: 100%;
+    display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+    justify-content: center; 
+       -webkit-justify-content: center;
+        -ms-flex-pack: center;
+}
+.views-exposed-form .views-exposed-widgets > .views-exposed-widget:first-child {
+    display: inline-flex;
+   /* width: 80%;*/
 }
 .views-exposed-form .views-exposed-widgets label {
     position: relative;
@@ -1278,6 +1338,45 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     background-position: 6px;
     background-color: #929497;
 }
+@media screen and (max-width: 768px) {
+    .views-exposed-form .views-exposed-widgets > .views-exposed-widget:first-child {
+        width: 69%;
+    }
+    .views-exposed-form .views-exposed-widgets label {
+        width: 59px;
+        margin: 10px 6px 0px 0px;
+        font-size: 10px;
+    }
+    .views-exposed-form .views-exposed-widgets label::before {
+        left: -8px;
+        border-top: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-left: 7px solid black;
+    }
+    .views-exposed-form .views-exposed-widgets .views-widget input {
+        width: 100%;
+        height: 32px;
+    }
+    .views-exposed-form .views-exposed-widgets .views-submit-button button, .views-reset-button button {
+        width: 30px;
+        height: 30px;
+    }
+    .views-exposed-form .views-exposed-widget {
+        padding: 0.1em 0.5em 0 0;
+        margin-top: 10px;
+    }
+    .views-exposed-form .views-exposed-widgets .views-submit-button button {
+        background-size: 19px;
+        background-position: 5px;
+    }
+    .views-exposed-form .views-exposed-widgets .views-reset-button button {
+        background-size: 19px;
+        background-position: 5px;
+    }
+}
+
+
+
 
 /* -\* Tabla de Citas  *\- */
 .view-id-mis_citas .view-content table , .view-id-citas .view-content table {
@@ -1503,8 +1602,19 @@ section.Navegacion_Estudiantes ul.menu li.active-trail.active a {
     }
 }
 
-/* -\* Servicios - Estudiantes - */
+/* -\* Servicios - Estudiantes Home - */
+body.page-servicios-estudiante >.main-container {
+    padding: 0px;
+    margin: 0px;
+}
+body.page-servicios-estudiante .main-container .row > section {
+    padding: 0px;
+}
+/*.view-id-servicios ul {
+    -webkit-padding-start: 0px;
+}*/
 .view-id-servicios li {
+    /*background-color: red;*/
     list-style: none;
     margin-bottom: 103px;
     display: flex;
@@ -1545,7 +1655,7 @@ section.Navegacion_Estudiantes ul.menu li.active-trail.active a {
 }
 .view-id-servicios .views-field-php span.field-content {
     position: relative;
-    width: 87px;
+    width: 80px;
 }
 .view-id-servicios li:nth-child(n+7) .views-field-php span.field-content {
     width: 107px !important;
@@ -1577,6 +1687,45 @@ section.Navegacion_Estudiantes ul.menu li.active-trail.active a {
 .view-footer .text-center {
     margin-bottom: 85px;
 }
+@media screen and (max-width: 667px) {
+    .view-id-servicios ul {
+    -webkit-padding-start: 12px;
+    }
+    .view-id-servicios li {
+        padding: 0px;
+        border-right: 1px solid transparent;
+    }
+    .view-id-servicios .views-field-php {
+        margin-left: 0px;
+    }
+    .view-id-servicios .views-field-php a {
+    font-size: 14px;
+    }
+    .view-id-servicios li:nth-child(n+7) .views-field-php span.field-content {
+    width: 93px !important;
+}
+.view-id-servicios li .views-field-field-img-service img {
+    width: 48px;
+    height: 48px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* -\* Mis citas  - Estudiantes - */
 
@@ -1597,6 +1746,117 @@ section.Navegacion_Estudiantes ul.menu li.active-trail.active a {
     float: right;
     appearance: none;  
 }
+
+/* -\* Mis Datos  - Estudiantes - */
+body.page-user-edit .main-container .row section div.region.region-content {
+    border: 3px solid #808184;
+}
+fieldset.collapsible legend {
+    display: none;
+}
+fieldset.collapsible {
+    border: 1px solid transparent;
+    margin-bottom: 0px; 
+}
+fieldset.collapsible label {
+    font-family: lato;
+    font-weight : bold;
+    font-size : 20px;
+    color : #41B65B;
+}
+fieldset.collapsible input {
+    -webkit-appearance: button;
+    border-radius: 0px;
+    border: 1px solid #F5F1F1;
+    background-image: none !important;
+    background-color: #F5F1F1;
+    -webkit-box-shadow: inset 0px 0px 0px transparent;
+    box-shadow: inset 0px 0px 0px transparent;
+    width: 100% !important;
+}
+
+fieldset.collapsible select {
+    -webkit-appearance: menulist-button;
+    border-radius: 0px;
+    border: 1px solid #F5F1F1;
+    background-image: none !important;
+    background-color: #F5F1F1;
+    -webkit-box-shadow: inset 0px 0px 0px transparent;
+    box-shadow: inset 0px 0px 0px transparent;
+}
+fieldset.collapsible #edit-field-fecha-de-nacimiento .panel:last-child {
+    margin-bottom: 0;
+    border: 0px solid transparent;
+    background-color: transparent;
+    -webkit-box-shadow: 0 1px 0px transparent; 
+    box-shadow: 0 1px 0px transparent; 
+}
+fieldset.collapsible #edit-field-fecha-de-nacimiento .panel-body {
+    padding: 0px; 
+}
+fieldset.collapsible #edit-field-fecha-de-nacimiento .panel-body .container-inline-date > .form-item {
+    margin-bottom: 0px; 
+    width: 100%;
+}
+fieldset.collapsible #edit-field-fecha-de-nacimiento .panel-body .container-inline-date > .form-item > .date-padding {
+    padding: 0px; 
+    width: 100%;
+}
+fieldset.collapsible #edit-field-fecha-de-nacimiento .panel-body .container-inline-date > .form-item > .date-padding > div {
+    width: 100%;
+}
+fieldset.collapsible #edit-field-fecha-de-nacimiento .panel-body fieldset.date-combo .container-inline-date .date-padding {
+    padding: 0px; 
+}
+fieldset.collapsible#bootstrap-panel--2  > div {
+    background-color: #E8E8E8;
+}
+form#user-profile-form div#edit-actions {
+    width: 100%;
+    text-align: center;
+}
+form#user-profile-form div#edit-actions button {
+    padding: 6px 44px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    border-radius: 0px;
+}
+form#user-profile-form div#edit-actions button span {
+    display: none;
+}
+#__lpform_edit-field-nombre-und-0-value  {
+    display: none;
+}
+@media screen and (max-width: 1024px) {
+    fieldset.collapsible label {
+        font-size : 14px;
+    }
+     fieldset.collapsible#bootstrap-panel--2 label {
+        color : #231F20;
+     }
+    fieldset.collapsible#bootstrap-panel--2 input {
+    background-color: #FFFFFF;
+    }
+}
+@media screen and (max-width: 667px) {
+    fieldset.collapsible label {
+        font-size : 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

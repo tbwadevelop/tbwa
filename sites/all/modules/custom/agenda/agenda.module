@@ -347,6 +347,3 @@ function delete_availability($js) {
       return drupal_get_form('agenda_form');
     }
 }
-
-
-

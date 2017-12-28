@@ -62,9 +62,9 @@ function agenda_menu() {
  */
 
 function agenda_form_alter(&$form, &$form_state, $form_id) {
+    Global $user;
     switch ($form_id) {
      case 'disponibilidad_node_form':
-       Global $user;
        $form['title']['#required'] = FALSE;
        $current_path = explode("/", current_path());
        $path = array_shift($current_path);
@@ -106,10 +106,10 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
       break;
 
       case 'user_profile_form':
-        if (!in_array('administrator', $user->roles)) {
-            /* unset($form['account']);
-             unset($form['picture']); */
-        }
+          if(!user_access('administrator')) {
+            $form['account']['#access'] = FALSE;
+            $form['picture']['#access'] = FALSE;
+          }
       break;
       } 
 }

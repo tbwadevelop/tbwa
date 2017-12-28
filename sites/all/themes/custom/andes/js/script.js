@@ -14,13 +14,6 @@
 	        // Page service taxonomia 
 	    	if ( $(".page-calendario-estudiante #block-views-servicios-block-1").length ) {
 				var arg = window.location.href.charAt(window.location.href.length-1);
-
-				console.log(arg);
-
-				$( ".page-calendario-estudiante .tabs--primary li" ).each(function( index ) {
-				  console.log($(this));
-				  console.log( index + ": " + $( this ).text() );
-
 				$( ".page-calendario-estudiante .tabs--primary li" ).each(function( index ) {
 				   $(this).context.lastChild.href = $(this).context.lastChild.href.concat("/".concat(arg)); 
 				});

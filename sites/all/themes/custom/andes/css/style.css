@@ -245,7 +245,7 @@ body .main-container header section.user-login .view-id-user_login .view-content
 body .main-container header section.user-login .view-id-user_login .view-content ul {
     list-style: none;
 }
-body .main-container header section.user-login .view-id-user_login .view-content ul span, span a {
+body .main-container header section.user-login .view-id-user_login .view-content ul span, section.user-login .view-id-user_login .view-content ul span a{
     color: white;
     font-family: "lato";
 }
@@ -254,7 +254,6 @@ body .main-container header section.user-login .view-id-user_login .view-content
     text-decoration: none;
     cursor: auto;
 }
-
 body .main-container header section.user-login .view-id-user_login .view-content ul .views-field-field-area {
     display: inline-flex;
     color: #fff;
@@ -389,7 +388,6 @@ body .main-container header section.title-agenda-de-servicio  {
     height: 165px;
     background: #E8E8E8; 
 }
-
 body .main-container header section.title-agenda-de-servicio .imagen {
     height: 71px;
     width: 82px;
@@ -399,7 +397,6 @@ body .main-container header section.title-agenda-de-servicio .imagen {
 body .main-container header section.title-agenda-de-servicio h2 {
     margin: 0 auto;
 }
-
 @media screen and (max-width: 1024px) { 
     body .main-container header section.title-agenda-de-servicio h2 {
         width: 128px;
@@ -1509,14 +1506,33 @@ section.Navegacion_Estudiantes ul.menu li.active-trail.active a {
 /* -\* Servicios - Estudiantes - */
 .view-id-servicios li {
     list-style: none;
-    display: inline-flex;
     margin-bottom: 103px;
+    display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+    flex-direction: row-reverse;
+        -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+    justify-content: flex-end;
+            -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+    align-self: center;
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
 }
-.view-id-servicios li img {
+.view-id-servicios li {
+    border-right: 1px solid #BBBDBF;
+}
+.view-id-servicios li:nth-child(-3n+9) {
+    border-right: 0px solid #BBBDBF;
+}
+.view-id-servicios li .views-field-field-img-service img {
     width: 68px;
     height: 68px;
 }
-.view-id-servicios .views-field-name {
+.view-id-servicios .views-field-php {
     display: flex;
         display: -webkit-box;
         display: -webkit-flex;
@@ -1527,23 +1543,40 @@ section.Navegacion_Estudiantes ul.menu li.active-trail.active a {
         -webkit-align-items: center;
     margin-left: 10px;
 }
-.view-id-servicios .views-field-name:hover span::after {
-    content: "";
-    display: block;
-    width: 54px;
-    border: 3px solid #41B65B;
-    margin-top: 6px;
+.view-id-servicios .views-field-php span.field-content {
+    position: relative;
+    width: 87px;
+}
+.view-id-servicios li:nth-child(n+7) .views-field-php span.field-content {
+    width: 107px !important;
+}
+.view-id-servicios .views-field-php a {
+    text-decoration: none;
+    color : #6D6E70;
+    font-family: lato;
     font-weight: bold;
-    color : #000000;
-    font-size: 22px;
-}
-.view-id-servicios li {
-    border-right: 1px solid #BBBDBF;
-}
-.view-id-servicios li:nth-child(-3n+9) {
-    border-right: 0px solid #BBBDBF;
-}
+    font-size: 16px;
+    letter-spacing : -0.55px;
 
+}
+.view-id-servicios .views-field-php:hover span::after  {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 54px;
+    height: 3px;
+    border: 3px solid #41B65B;
+}
+.view-id-servicios .views-field-php:hover span a {
+    color : #000000;
+    font-weight: bold;
+    font-family: lato;
+    font-size: 16px;
+}   
+.view-footer .text-center {
+    margin-bottom: 85px;
+}
 
 /* -\* Mis citas  - Estudiantes - */
 

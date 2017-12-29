@@ -1116,7 +1116,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 .informacion-citas .field-content {
     display: inline-flex;
 }
-.agendar_citas #js-ajax-elements-wrapper .form-wrapper .form-type-textfield input {
+/*.agendar_citas #js-ajax-elements-wrapper .form-wrapper .form-type-textfield input {
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
@@ -1127,7 +1127,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     border-radius: 0px;
     -webkit-appearance: button;
 }
-
+*/
 
 
 

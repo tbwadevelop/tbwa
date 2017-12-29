@@ -65,6 +65,13 @@ function agenda_records_form($form, &$form_state) {
           '#size' => 10,
         ];
 
+        $form['field_container'][$delta]['motivo'] = [
+          '#type' => 'textfield',
+          '#title' => t('Motivo de consulta'),
+          '#size' => 10,
+        ];
+
+
         $form['field_container'][$delta]['remove_name'] = [
           '#type' => 'submit',
           '#value' => t('Cancelar Cita'),
@@ -127,9 +134,9 @@ function agenda_records_form_submit($form, &$form_state) {
   if (empty($nwrapper->field_profile->value())) {
      $nwrapper->field_profile->set($user->uid); $nwrapper->save();
       foreach ($form_state['values']['field_container'] as $key => $value) {
-         $uid = trim($value['uid']);
+         $uid = trim($value['uid']); $tid = trim($value['motivo']);
          if (is_numeric($uid)) {
-              agenda_save_users($uid,variable_get('nid'));
+              agenda_save_users($uid,variable_get('nid'),$tid);
               $users .='<div id="users-created">Usuario :'.$uid.'</div> <br>';
          }
       }
@@ -137,7 +144,7 @@ function agenda_records_form_submit($form, &$form_state) {
   return '<div id="js-ajax-elements-wrapper">Citas Asignadas Disponibilidad '.variable_get('nid').'</div>';
 }
 
-function agenda_save_users($uid, $nid){
+function agenda_save_users($uid, $nid, $tid){
      $node = node_load($nid);
      $user = user_load($uid);
      $uwrapper = entity_metadata_wrapper('user', $user);
@@ -148,7 +155,8 @@ function agenda_save_users($uid, $nid){
      $values['field_collec_codigo'][LANGUAGE_NONE][0]['value']   = $uwrapper->field_codigo->value();
      $values['field_collec_usuario'][LANGUAGE_NONE][0]['value']  = $uwrapper->field_email->value();
      $values['field_collec_numero_de_documento'][LANGUAGE_NONE][0]['value'] = $uwrapper->field_numero_de_documento->value();
-     $values['field_collec_uid'][LANGUAGE_NONE][0]['value']      = $user->uid;
+     $values['field_collec_motivo'][LANGUAGE_NONE][0]['tid']   = array($tid);
+     $values['field_collec_uid'][LANGUAGE_NONE][0]['value']    = $user->uid;
      $field_entity = entity_create('field_collection_item', $values);
      $field_entity->setHostEntity('node', $node);
      $field_entity->save();

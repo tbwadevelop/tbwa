@@ -635,6 +635,7 @@ body .main-container .row section ul.tabs--primary li.active a.active:before {
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
         border: 1px solid transparent;
 }
+
 /* -\* Menu Dia Semana Mes - Estudiante - */
 body.page-calendario-estudiante .main-container .row section ul.tabs--primary li:nth-child(1) {
     display: block;
@@ -1122,7 +1123,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 .informacion-citas .field-content {
     display: inline-flex;
 }
-/*.agendar_citas #js-ajax-elements-wrapper .form-wrapper .form-type-textfield input {
+.agendar_citas #js-ajax-elements-wrapper .form-wrapper .form-type-textfield input {
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
@@ -1133,7 +1134,6 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     border-radius: 0px;
     -webkit-appearance: button;
 }
-<<<<<<< HEAD
 .view-id-usuarios_agenda_de_servicios .view-content li {
     list-style: none;
 }
@@ -1164,9 +1164,6 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 
 
 
-=======
-*/
->>>>>>> d093f43ea01c70c36acf8ec507a39cb0c851e688
 
 
 

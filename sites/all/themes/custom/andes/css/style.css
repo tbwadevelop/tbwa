@@ -1285,7 +1285,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 .agendar_citas button#edit-submit {
     display: none;
 }
-.agendar_citas button#edit-field-container-add-name {
+.agendar_citas button.btn-success {
     padding: 6px 12px;
     border: 1px solid #5cb85c;
     background: #FFF;
@@ -1296,12 +1296,12 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     top: -73px;
 }
 @media screen and (max-width: 667px) {
-    .agendar_citas button#edit-field-container-add-name {
+    .agendar_citas button.btn-success {
         left: 43%;
     }
 }
 @media screen and (max-width: 375px) {
-    .agendar_citas button#edit-field-container-add-name {
+    .agendar_citas button.btn-success {
         left: 40%;
     }
 }

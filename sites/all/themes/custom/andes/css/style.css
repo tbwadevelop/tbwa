@@ -421,19 +421,19 @@ body.page-calendario-consejero .row {
 /*    padding: 22px;*/
     margin: auto;
 }
-body.page-calendario-consejero .row aside .well {
+ .row aside .well {
     background-color: #FFF;
     border: none;
     box-shadow: none;   
 }
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor {
+ .row aside .well .Calendario_Contenedor,.row aside .well .Calendario_Contenedor-estudiantes {
     position: relative;
 }
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header { 
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-header  { 
     color: #808184;
     font-size: 26px;
 } 
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar button.button-calendar {
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar button.button-calendar, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar button.button-calendar {
      position: absolute;
     background: url("../img/flecha.png");
     background-repeat: no-repeat;
@@ -449,59 +449,59 @@ body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-
     padding: 0px;
 }
 
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav { 
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-header nav { 
     display: inline-block;
     margin-top: 63px;
 }
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav .pagination >li > a { 
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav .pagination >li > a, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-header nav .pagination >li > a { 
     color: #000;
     background-color: transparent;
     border: none;
     font-size: 12px;
 }
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav .prev { 
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav .prev, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar  .view-header nav .prev { 
     position: absolute;
     top: 0px;
     left: 0px;
 }
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav h3 { 
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav h3, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar  .view-header nav h3 { 
     position: absolute;
     top:0px;
     left: 46px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav .next { 
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav .next, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar  .view-header nav .next { 
     position: absolute;
     top: 0px;
     left: 159px;
 }
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav h3 a { 
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav h3 a, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar   .view-header nav h3 a { 
     color: #000;
     font-family: "Myriad Pro";
 }
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr .mini-day-on {
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr .mini-day-on, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-content .calendar-calendar tr .mini-day-on {
     padding: 0px;
     text-align: center;
 }
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr .mini-day-on  a {    
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr .mini-day-on  a, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-content .calendar-calendar tr .mini-day-on  a {    
     color: #000;
     text-decoration: none;
 }
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr td.today {
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr td.today, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-content .calendar-calendar tr td.today {
     background-color: #4C48A8;
     color: white;
     text-align: center;
 }
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr td.today div a{
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr td.today div a, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-content .calendar-calendar tr td.today div a {
     color: white;
     text-decoration: none;
 }
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar td.has-no-events {
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar td.has-no-events, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-content .calendar-calendar td.has-no-events {
     text-align: center;
     color: black;
 } 
-body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar th.days {
+ .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar th.days, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar   .view-content .calendar-calendar th.days {
     background-color: transparent;
     color: #000;
     font-weight: normal;
@@ -554,7 +554,40 @@ body.page-calendario-consejero .row aside .well section.crear_disponibilidad .ho
     display: inline-block;
     margin-right: 10px;
 }
+/* -\* Button Crear Disponibilidad - Estudiantes */
 
+body .row aside .well section.info-citas-estudiantes {
+    width: 100%
+}
+body .row aside .well .info-citas-estudiantes h2.block-title {
+    display: none;
+}
+body .row aside .well section.info-citas-estudiantes .cupo-disponible , .cupo-lleno, .hoy {
+    display: inline-flex;
+    padding: 26px 0px 0px 0px;
+}
+
+body .row aside .well section.info-citas-estudiantes .cupo-disponible .caja-1 {
+    width: 25px;
+    height: 25px;
+    background-color: #F8A258;
+    display: inline-block;
+    margin-right: 10px;
+}
+body .row aside .well section.info-citas-estudiantes .cupo-lleno .caja-2 {
+    width: 25px;
+    height: 25px;
+    background-color: #D8EDD9;
+    display: inline-block;
+    margin-right: 10px;
+}
+body .row aside .well section.info-citas-estudiantes .hoy .caja-3 {
+    width: 25px;
+    height: 25px;
+    background-color: #4C48A8;
+    display: inline-block;
+    margin-right: 10px;
+}
 /* -\* Button Mes - Semana - Dia - */
 body .main-container .row section ol.breadcrumb,h1 {
     display: none; 
@@ -650,35 +683,62 @@ body .main-container .row section div.region.region-content {
     z-index: -100;
     margin-top: 37px;
 }
-body .main-container .row section div.region.region-content .view-id-consejero_calendar {
+body .main-container .row section div.region.region-content .view-id-consejero_calendar, body .main-container .row section div.region.region-content .view-id-estudiante_calendar {
     position: relative;
 }
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header > a { 
+body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header > a, body .main-container .row section div.region.region-content ..view-id-estudiante_calendar .view-header > a { 
     color : #4C48A8;
     text-decoration: none;
 }
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header > a:hover, .view-id-consejero_calendar .view-header > a:active, .view-id-consejero_calendar .view-header > a:focus { 
+body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header > a:hover, .view-id-consejero_calendar .view-header > a:active, .view-id-consejero_calendar .view-header > a:focus, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header > a:hover, .view-id-estudiante_calendar .view-header > a:active, .view-id-estudiante_calendar .view-header > a:focus { 
     color: #8989CE;    
 }
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav ul {
+body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav ul, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav ul {
     position: absolute;
     top: 0px;
     left: 0px;
 }
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav li.prev a, li.next a {
+body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav li.prev a, body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav li.next a, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav li.prev a, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav li.next a {
     color: #000;
     background-color: transparent;
     border: 1px solid transparent;
+    text-indent: -999px;
 }
 
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav h3 {
+body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav li.prev a, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav li.prev a {
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    transform: rotate(46deg);
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    margin-right: 27px;
+}
+body .main-container .row section div.region.region-content  .view-id-consejero_calendar .view-header nav li.next a, body .main-container .row section div.region.region-content  .view-id-estudiante_calendar .view-header nav li.next a {
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    transform: rotate(317deg);
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav li.next a:hover, body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav li.prev a:hover, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav li.next a:hover, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav li.prev a:hover {
+    color: #000 !important;
+    background-color: transparent !important;
+}
+
+body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav h3, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav h3 {
     margin-left: 150px;
     color: #808184;
     width: 321px;
     border-right: 2px solid #808184;
     font-size: 22px;
 }
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-content #header-container th {
+body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-content #header-container th, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-content #header-container th {
     border: 0px solid #ccc;
     background-color: #F9FAFB;
     color: #808081;
@@ -1149,6 +1209,10 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     border-radius: 0px;
     -webkit-appearance: button;
 }
+.view-id-usuarios_agenda_de_servicios .view-content ul {
+    background: #F5F1F1;
+    min-height: 11pc;
+}
 .view-id-usuarios_agenda_de_servicios .view-content li {
     list-style: none;
 }
@@ -1170,11 +1234,77 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     border-bottom-style: dashed;
     border-right-style: solid;
     border-color: #A6A8AB;
+    padding-bottom: 10px;
 }
-
-
-
-
+.view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(1n+5) {
+    padding-top: 10px;
+}
+.view-id-usuarios_agenda_de_servicios .view-content li > div select {
+    -webkit-appearance: button;
+    border-radius: 0px;
+    border: 1px solid #929497;
+    background-image: url(../img/flecha.png);
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position: 98% 7px;
+    background-color: #FFF;
+    -webkit-box-shadow: inset 0px 0px 0px transparent;
+    box-shadow: inset 0px 0px 0px transparent;
+    padding: 4px;
+    width: 150px;
+    outline: none;
+}
+@media screen and (max-width: 1024px) {
+    .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(n) {
+         display: flex;
+        flex-direction: column;
+        border-bottom-style: solid;
+        border-right-style: none;
+        border-width: 1px;
+        border-color: #A6A8AB;
+        width: 100%
+    }
+    .view-id-usuarios_agenda_de_servicios .view-content li > div:last-child {
+        border-bottom-style: none;
+    }
+    .view-id-usuarios_agenda_de_servicios .view-content li > div select {
+        width: 100%;
+    }
+    .view-id-usuarios_agenda_de_servicios .view-content li > div:last-child > span:first-child {
+        visibility: hidden;
+    }
+    .view-id-usuarios_agenda_de_servicios .view-content ul {
+        min-height: 26pc;
+        padding: 0px;
+    }
+}
+/* -\* Button Crear citas  *\- */
+.agendar_citas form {
+    position: relative;
+}
+.agendar_citas button#edit-submit {
+    display: none;
+}
+.agendar_citas button#edit-field-container-add-name {
+    padding: 6px 12px;
+    border: 1px solid #5cb85c;
+    background: #FFF;
+    color: black;
+    border-radius: 0px;
+    position: absolute;
+    left: 50%;
+    top: -73px;
+}
+@media screen and (max-width: 667px) {
+    .agendar_citas button#edit-field-container-add-name {
+        left: 43%;
+    }
+}
+@media screen and (max-width: 375px) {
+    .agendar_citas button#edit-field-container-add-name {
+        left: 40%;
+    }
+}
 
 
 
@@ -1737,9 +1867,11 @@ body.page-servicios-estudiante >.main-container {
 body.page-servicios-estudiante .main-container .row > section {
     padding: 0px;
 }
+body.page-servicios-estudiante .view-id-servicios li {
+      margin-bottom: 103px;
+}
 .view-id-servicios li {
     list-style: none;
-    margin-bottom: 103px;
     display: flex;
         display: -webkit-box;
         display: -webkit-flex;
@@ -1833,6 +1965,50 @@ body.page-servicios-estudiante .main-container .row > section {
     }
 }
 
+/* -\* Interna - Estudiantes Home - */
+.view-id-servicios .item-list {
+    background: #E8E8E8;
+}
+.view-id-servicios .item-list ul  {
+    margin: 0px;
+    padding: 0px;
+}
+li.icon-apo-estudiante {
+    border-right: 1px solid transparent;
+    flex-direction: row;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    justify-content: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+    align-items: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+    padding-bottom: 24px;
+    padding-top: 24px;
+}
+li.icon-apo-estudiante .views-field-name {
+    width: 150px;
+    margin-left: 10px;
+}
+li.icon-apo-estudiante .views-field-name span.field-content {
+    word-wrap: break-word;
+    font-family: lato;
+    font-size: 18px;
+    line-height: 0px;
+    letter-spacing: -0.72px;
+    color: #000000;
+    position: relative;
+}
+li.icon-apo-estudiante .views-field-name span.field-content::after  {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 54px;
+    height: 3px;
+    border: 3px solid #41B65B;
+}
 /* -\* Mis citas  - Estudiantes - */
 
 .filtar_citas label {
@@ -2028,7 +2204,7 @@ section#block-menu-menu-navegaci-n-agenda-cordinado ul.menu li.active-trail.acti
     }
 }
 
-
+/*------------------ Header Calendario - Consejero ------------------ */
 
 
 

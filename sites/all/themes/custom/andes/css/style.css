@@ -1172,8 +1172,13 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 }
 
 /*------------------ Citas - Creacion de una cita click modal  ------------------ */
+body.page-crear-citas section div.region.region-content {
+    border: 3px solid #808184;
+}
+/* -\* Informacion de la cita  *\- */
 .informacion-citas {
     width: 100%;
+    margin-top: 27px;
     margin-bottom: 51px;
     text-align: center;
     display: inline-flex;
@@ -1183,18 +1188,22 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
 }
+.informacion-citas .field-content {
+    display: inline-flex;
+}
 .informacion-citas > div {
     padding: 0px 10px 0px 10px; 
     border-right: 1px solid #929497;
     display: inline-flex;
 }
-.informacion-citas > div:nth-child(3) { 
+.informacion-citas > div:nth-child(4) { 
     border-right: 0px solid #929497;
 }
 .informacion-citas > div > span {
     color: #4cae4c;
     font-size: 15px;
     font-family: lato;
+    padding-right: 10px;
 }
 @media screen and (max-width: 1024px) {
     .informacion-citas > div {
@@ -1214,19 +1223,9 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         letter-spacing: -0.0px;
     }
 }
-.informacion-citas .field-content {
-    display: inline-flex;
-}
-.agendar_citas #js-ajax-elements-wrapper .form-wrapper .form-type-textfield input {
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    color: #555;
-    background-image: none;
-    border: 0px solid #ccc;
-    border-radius: 0px;
-    -webkit-appearance: button;
-}
+
+
+/* -\* Informacion del estudiante *\- */
 .view-id-usuarios_agenda_de_servicios .view-content ul {
     background: #F5F1F1;
     min-height: 11pc;
@@ -1245,13 +1244,14 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     color: #4cae4c;
     font-size: 15px;
     font-family: lato;
+    padding-right: 10px;
 }  
-
 .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(-n+4) {
     border-width: 0px 0px 1px 0px;
     border-bottom-style: dashed;
     border-right-style: solid;
     border-color: #A6A8AB;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(1n+5) {
@@ -1297,7 +1297,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     }
 }
 
-/* -\* Button Crear citas  *\- */
+/* -\* Button guardar  *\- */
 .agendar_citas form {
     position: relative;
 }
@@ -1305,18 +1305,36 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     display: none;
 }*/
 .agendar_citas button#edit-submit {
-    padding: 6px 12px;
+    padding: 6px 20px;
     border: 1px solid #5cb85c;
     background: #5cb85c;
     color: white;
     border-radius: 0px;
     position: absolute;
     top: 110%;
-    left: 50%;
+    left: 46%;
 }
 .agendar_citas button#edit-submit span {
     display: none;
 }
+
+/* -\* Button cancelar  *\- */
+.agendar_citas button#edit-cancelar {
+    padding: 6px 20px;
+    border: 1px solid #5cb85c;
+    background: #FFF;
+    color: black;
+    border-radius: 0px;
+    margin-bottom: 27px;
+    position: absolute;
+    top: 110%;
+    left: 52%;
+}
+.agendar_citas button#edit-cancelar  span {
+    display: none;
+}
+
+/* -\* Button Crear citas  *\- */
 .agendar_citas button.btn-success {
     padding: 6px 12px;
     border: 1px solid #5cb85c;
@@ -1330,6 +1348,9 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 .agendar_citas button .glyphicon-refresh {
     display: none;
 }
+.agendar_citas button span{
+    display: none;
+}
 @media screen and (max-width: 667px) {
     .agendar_citas button.btn-success {
         left: 43%;
@@ -1340,7 +1361,18 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         left: 40%;
     }
 }
+
 /* -\* citas - creadas   *\- */
+.agendar_citas #js-ajax-elements-wrapper .form-wrapper .form-type-textfield input {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-image: none;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    -webkit-appearance: button;
+}
 .agendar_citas #js-ajax-elements-wrapper .form-wrapper .container-inline + .container-inline label  {
    display: none;
 }
@@ -1433,6 +1465,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         width: 46%;
     }
 }
+
 /*------------------ Modal - Disponibilidad calendario  ------------------ */
 .modal-dialog.node-teaser .modal-content {
     border-radius: 0px;

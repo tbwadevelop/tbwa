@@ -54,6 +54,16 @@ function agenda_menu() {
       'type' => MENU_CALLBACK,
     );
 
+
+  $items['quotes-delete/%/%ctools_js'] = array(
+      'title' => t('Delete Quotes api ctools'),
+      'page callback' => 'quotes_delete',
+      'page arguments' => array(1),
+      'access callback' => TRUE,
+      'type' => MENU_CALLBACK,
+    );
+
+
    return $items;
 }
 
@@ -83,6 +93,7 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
             $form['field_lugar']['#access'] = FALSE;     
             $form['field_fecha']['#access'] = FALSE;     
             $form['field_encabezado']['#access'] = FALSE;
+            $form['field_historial_citas']['#access'] = FALSE;
           
           foreach ($form['field_citas_agenda']['und'] as $key => $value) {
               if ($value['#entity']->field_collec_uid['und'][FIRST_POSITION]['value'] != $_GET['sid']) {
@@ -107,6 +118,7 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
            $form['field_usuario']['#access'] = FALSE;
            $form['field_profile']['#access'] = FALSE;
            $form['field_citas_agenda']['#access'] = FALSE;
+           $form['field_historial_citas']['#access'] = FALSE;
            $form['actions']['cancel'] = array(
               '#markup' => l(t('Cancel'), '#',
                  array('attributes' => array('class' => 'ctools-close-modal'),
@@ -377,5 +389,35 @@ function delete_availability($js) {
     }
     else {
       return drupal_get_form('agenda_form');
+    }
+}
+
+
+/**
+ * Callback function delete node bundle (availability).
+ */
+
+function quotes_delete($js) {
+  if ($js) {
+      ctools_include('ajax');
+      ctools_include('modal');
+   
+      $form_state = array(
+        'ajax' => TRUE,
+        'nid' => arg(1),
+        'title' => t('Eliminar Cita'),
+      );
+
+      $output = ctools_modal_form_wrapper('quotes_delete_form', $form_state);
+      
+      if (!empty($form_state['ajax_commands'])) {
+        $output = $form_state['ajax_commands'];
+      }
+
+      print ajax_render($output);
+      drupal_exit();
+    }
+    else {
+      return drupal_get_form('quotes_delete_form');
     }
 }

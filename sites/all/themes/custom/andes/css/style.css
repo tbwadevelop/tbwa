@@ -349,7 +349,7 @@ section.Navegacion_Agenda ul.menu li.active-trail.active a {
     color: white;
 }
 
-/*@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     section.Navegacion_Agenda ul.menu {
         width: 100%;
         margin-right: 0px;
@@ -372,7 +372,7 @@ section.Navegacion_Agenda ul.menu li.active-trail.active a {
         padding: 0px 18%;
         font-size: 12px;
     }
-}*/
+}
 
 /* -\* Header agenda de servicio - */
 body .main-container header section.title-agenda-de-servicio  {
@@ -1171,85 +1171,69 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     display: none;
 }
 /*------------------ Citas - Creacion de una cita click modal  ------------------ */
-/* -\* Imfomacion *\- */
 .informacion-citas {
     width: 100%;
     margin-bottom: 51px;
-/*    display: inline-flex;
+    display: inline-flex;
         display: -ms-inline-flexbox;
         display: -webkit-inline-flex;
     justify-content: center;
         -webkit-justify-content: center;
-        -ms-flex-pack: center;*/
-    text-align: center;
+        -ms-flex-pack: center;
 }
 .informacion-citas > div {
     padding: 0px 10px 0px 10px; 
     border-right: 1px solid #929497;
     display: inline-flex;
 }
-.informacion-citas > div:nth-child(2n+4) { 
+.informacion-citas > div:nth-child(3) { 
     border-right: 0px solid #929497;
 }
 .informacion-citas > div > span {
     color: #4cae4c;
-    font-size: 14px;
+    font-size: 15px;
     font-family: lato;
-    padding-right: 5px;
 }
-/*.informacion-citas .field-content {
+
+.informacion-citas .field-content {
     display: inline-flex;
-}*/
-
-@media screen and (max-width: 1024px) {
-    .informacion-citas > div {
-        width: 34%;
-        border-right: 1px solid transparent;
-    }
 }
-@media screen and (max-width: 667px) {
-    .informacion-citas > div {
-        width: 49%;
-        border-right: 1px solid transparent;
-    }
-    .informacion-citas > div > div  {
-        font-size: 11px;
-        line-height: 17px;
-        text-align: left;
-        letter-spacing: -0.0px;
-    }
-
+.agendar_citas #js-ajax-elements-wrapper .form-wrapper .form-type-textfield input {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-color: red;
+    background-image: none;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    -webkit-appearance: button;
 }
-
-
-/* -\* Crear la cita *\- */
 .view-id-usuarios_agenda_de_servicios .view-content ul {
     background: #F5F1F1;
-    min-height: 9pc;
+    min-height: 11pc;
 }
 .view-id-usuarios_agenda_de_servicios .view-content li {
     list-style: none;
 }
 .view-id-usuarios_agenda_de_servicios .view-content li > div {
     display: inline-flex;
+
 }
 .view-id-usuarios_agenda_de_servicios .view-content li > div.views-field.views-field-uid {
     display: none;
-}
-.view-id-usuarios_agenda_de_servicios .view-content li > div > span {
-    padding-right: 10px;
 }
 .view-id-usuarios_agenda_de_servicios .view-content li > div > span:first-child {
     color: #4cae4c;
     font-size: 15px;
     font-family: lato;
 }  
+
 .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(-n+4) {
     border-width: 0px 0px 1px 0px;
     border-bottom-style: dashed;
     border-right-style: solid;
     border-color: #A6A8AB;
-    padding-top: 10px;
     padding-bottom: 10px;
 }
 .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(1n+5) {
@@ -1309,18 +1293,8 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     border-radius: 0px;
     position: absolute;
     left: 50%;
-    top: -63px;
+    top: -73px;
 }
-.agendar_citas button.btn-success:hover, .agendar_citas button.btn-success:active {
-    border: 1px solid #5cb85c;
-    background: #5cb85c;
-    color: #FFF;
-}
-.agendar_citas button .glyphicon-refresh {
-    display: none;
-}
-
-
 @media screen and (max-width: 667px) {
     .agendar_citas button.btn-success {
         left: 43%;
@@ -1331,63 +1305,11 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         left: 40%;
     }
 }
-/* -\* citas - creadas   *\- */
-.agendar_citas #js-ajax-elements-wrapper .container-inline {
-    display: flex;
-/*    justify-content: space-between;*/
-    border-width: 0px 0px 1px 0px;
-    border-bottom-style: dashed;
-    border-right-style: solid;
-    border-color: #A6A8AB;
-    text-align: center;
-    position: relative;
-  /*  background: rebeccapurple;*/
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(1) {
-    display: none;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(n) {
-    width: 25%;
-    /*border: 1px solid rebeccapurple;*/
-    margin-right: 10px;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline button {
-    padding: 6px 12px;
-    border: 1px solid #5cb85c;
-    background: #5cb85c; 
-    color: white;
-    border-radius: 0px;
-    height: 34px;
-    position: absolute;
-    left: 88%;
-    top: 20px;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline button span  {
-    display: none;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline input {
-    width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    color: #555;
-    border: 0px solid #ccc;
-    border-radius: 0px;
-    -webkit-appearance: button;
-    outline: none; 
-        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0 ,0);
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(1n+2) input {
-    border-right: 1px solid #A6A8AB;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(5)  {
-    display: none;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline span {
-    font-weight: bold;
-    height: 20px;
-}
+
+
+
+
+
 
 
 
@@ -1661,31 +1583,19 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 .view-id-mis_citas .view-content tbody tr:last-child td:last-child, .view-id-citas .view-content tbody tr:last-child td:last-child {
     border-width: 0px 0px 0px 0px;
 }
-.view-id-citas .view-content tbody tr td:last-child a {
-    text-decoration: none;
+.view-id-mis_citas .view-content tbody tr td:last-child, .view-id-citas .view-content tbody tr td:last-child a {
     color: #231F20;
-    border: 1px solid #41B65B;
-    font-size: 13px;
-    line-height: 14.09px;
-    padding: 0.3em 0.5em;
-    margin: 0px 4px;
-}
-.view-id-citas .view-content tbody tr td:last-child a:nth-child(2) {
     text-decoration: none;
-    color: #FFF;
-    background-color:  #41B65B;
+    padding: 0.3em 0.5em;
     border: 1px solid #41B65B;
     font-size: 13px;
     line-height: 14.09px;
-    padding: 0.3em 0.6em;
-    margin: 0px 4px;
 }
-/*.view-id-citas .view-content tbody tr td:last-child a:hover {
-    background: rgba(65, 182, 91, 0.53);
-    border: 1px solid rgba(65, 182, 91, 0.53);
+.view-id-mis_citas .view-content tbody tr td:last-child, .view-id-citas .view-content tbody tr td:last-child a:hover {
+    background: #41B65B;
+    border: 1px solid #41B65B;
     color: white;
-}*/
-
+}
 /* -\* Pginador citas - Reportes TOR  *\- */
 .text-center ul.pagination {
     position: relative;

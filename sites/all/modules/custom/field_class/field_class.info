@@ -1,0 +1,15 @@
+name = Field Class
+description = Add clase form entity drupal
+
+files[] = field_class.module
+dependencies[] = entity
+dependencies[] = field
+package = drupalbeer
+
+; Information added by Drupal.org packaging
+version = "7.x-1.4"
+core = "7.x"
+project = "drupalbeer"
+datestamp = "1470638340"
+
+

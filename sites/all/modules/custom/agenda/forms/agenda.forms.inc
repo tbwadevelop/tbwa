@@ -36,7 +36,7 @@ function agenda_records_form($form, &$form_state) {
         $form['field_container'][$delta] = [
           '#type' => 'container',
           '#attributes' => [
-            'class' => ['container-inline container'],
+            'class' => ['container-inline'],
           ],
           '#tree' => TRUE,
         ];
@@ -74,8 +74,6 @@ function agenda_records_form($form, &$form_state) {
 
         $form['field_container'][$delta]['remove_name'] = [
           '#type' => 'submit',
-          '#prefix' =>'<div id="disable-quote">',
-          '#suffix' => '</div>',
           '#value' => t('Cancelar Cita'),
           '#submit' => ['agenda_ajax_example_add_more_remove'],
           '#ajax' => [

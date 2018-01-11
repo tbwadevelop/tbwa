@@ -1170,21 +1170,18 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-actions button .glyphicon-refresh {
     display: none;
 }
+
 /*------------------ Citas - Creacion de una cita click modal  ------------------ */
 .informacion-citas {
     width: 100%;
     margin-bottom: 51px;
-<<<<<<< HEAD
-
     text-align: center;
-=======
     display: inline-flex;
         display: -ms-inline-flexbox;
         display: -webkit-inline-flex;
     justify-content: center;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
->>>>>>> 9885cf5ae70e6e8330b9eb1095d236d0b49521d4
 }
 .informacion-citas > div {
     padding: 0px 10px 0px 10px; 
@@ -1199,7 +1196,6 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     font-size: 15px;
     font-family: lato;
 }
-<<<<<<< HEAD
 @media screen and (max-width: 1024px) {
     .informacion-citas > div {
         width: 34%;
@@ -1217,8 +1213,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         text-align: left;
         letter-spacing: -0.0px;
     }
-=======
-
+}
 .informacion-citas .field-content {
     display: inline-flex;
 }
@@ -1227,12 +1222,10 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     padding: 6px 12px;
     font-size: 14px;
     color: #555;
-    background-color: red;
     background-image: none;
     border: 0px solid #ccc;
     border-radius: 0px;
     -webkit-appearance: button;
->>>>>>> 9885cf5ae70e6e8330b9eb1095d236d0b49521d4
 }
 .view-id-usuarios_agenda_de_servicios .view-content ul {
     background: #F5F1F1;
@@ -1334,13 +1327,9 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     left: 50%;
     top: -73px;
 }
-<<<<<<< HEAD
 .agendar_citas button .glyphicon-refresh {
     display: none;
 }
-
-=======
->>>>>>> 9885cf5ae70e6e8330b9eb1095d236d0b49521d4
 @media screen and (max-width: 667px) {
     .agendar_citas button.btn-success {
         left: 43%;
@@ -1351,7 +1340,6 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         left: 40%;
     }
 }
-<<<<<<< HEAD
 /* -\* citas - creadas   *\- */
 .agendar_citas #js-ajax-elements-wrapper .form-wrapper .container-inline + .container-inline label  {
    display: none;
@@ -1424,14 +1412,6 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     font-weight: bold;
     height: 20px;
 }
-=======
-
-
-
-
-
->>>>>>> 9885cf5ae70e6e8330b9eb1095d236d0b49521d4
-
 @media screen and (max-width: 1024px) {
     .agendar_citas #js-ajax-elements-wrapper .container-inline {
      display: inherit; 

@@ -1,7 +1,7 @@
 (function($) {
   Drupal.behaviors.agenda = {
     attach: function (context, settings) {
-    	var count = $('.form-group .form-inline.form-wrapper.form-group').length;
+    	var count = $('.container-inline.container.form-wrapper.form-group').length;
     	$.post( "/crear/"+settings.agenda.nodo+"/citas", function( data ) {
 			if ($(context).context) {
 				if ($(context).context.id == 'agenda-records-form') {

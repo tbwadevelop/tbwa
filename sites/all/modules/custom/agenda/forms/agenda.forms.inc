@@ -23,7 +23,7 @@ function agenda_records_form($form, &$form_state) {
 
   $form['field_container']['add_name'] = [
     '#type' => 'submit',
-    '#value' => t('Crear Cita'),
+    '#value' => t('Agregar'),
     '#submit' => ['agenda_ajax_example_add_more_add_one'],
     '#ajax' => [
       'callback' => 'agenda_ajax_example_add_more_add_one_callback',
@@ -36,7 +36,7 @@ function agenda_records_form($form, &$form_state) {
         $form['field_container'][$delta] = [
           '#type' => 'container',
           '#attributes' => [
-            'class' => ['container-inline'],
+            'class' => ['container-inline container'],
           ],
           '#tree' => TRUE,
         ];
@@ -75,6 +75,8 @@ function agenda_records_form($form, &$form_state) {
         $form['field_container'][$delta]['remove_name'] = [
           '#type' => 'submit',
           '#value' => t('Cancelar Cita'),
+          '#prefix' => '<div id="disable-quote"><label>Cancelar citas</label>',
+          '#suffix' => '</div>',
           '#submit' => ['agenda_ajax_example_add_more_remove'],
           '#ajax' => [
             'callback' => 'agenda_ajax_example_add_more_remove_callback',
@@ -90,9 +92,18 @@ function agenda_records_form($form, &$form_state) {
 
     $form['submit'] = [
       '#type' => 'submit',
-      '#value' => 'Submit',
+      '#value' => t('Save'),
       '#ajax' => [
         'callback' => 'agenda_records_form_submit',
+        'wrapper' => 'js-ajax-elements-wrapper',
+       ], 
+    ];
+
+    $form['cancelar'] = [
+      '#type' => 'submit',
+      '#value' => t('Cancel'),
+      '#ajax' => [
+        'callback' => 'agenda_records_cancel_submit',
         'wrapper' => 'js-ajax-elements-wrapper',
        ], 
     ];
@@ -226,4 +237,23 @@ function agenda_form_submit($form, &$form_state) {
   $form_state['ajax_commands'][] = ctools_modal_command_dismiss();
   $form_state['ajax_commands'][] = ctools_ajax_command_reload();
   return $form;
+}
+
+
+
+function agenda_records_cancel_submit($form, &$form_state) {
+  // $form = array();
+  // ctools_include('modal');
+  // ctools_include('ajax');
+  // $form_state['ajax_commands'][] = ctools_modal_command_dismiss();
+  // $form_state['ajax_commands'][] = ctools_ajax_command_reload();
+  // return $form;
+
+ctools_include('ajax');
+ctools_add_js('ajax-responder');
+// Path to redirect to
+$commands[] = ctools_ajax_command_redirect('crear/'.variable_get('nid').'/citas');
+// you can also use ctools_ajax_command_reload() –  xurshid29
+print ajax_render($commands);
+  return drupal_exit();
 }

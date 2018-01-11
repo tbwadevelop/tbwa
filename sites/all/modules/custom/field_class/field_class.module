@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Field class module hooks and main functionality.
+ *
+ * This module gives support to add HTML5 class
+ * attribute to field widget forms.
+ */
+
+/**
+ * Implements hook_field_form_field_ui_field_edit_form_alter().
+ */
+
+function field_class_form_field_ui_field_edit_form_alter(&$form, &$form_state) {
+  if (in_array($form['#instance']['widget']['type'], field_class_get_widget_types())) {
+    $settings = isset($form['#instance']) ? $form['#instance'] : array();
+
+    $form['instance']['class_wrapper']['class'] = array(
+      '#type' => 'textfield',
+      '#title' => t('class'),
+      '#description' => t('class value for this field instance.'),
+      '#default_value' => isset($settings['class']) ? $settings['class'] : '',
+      '#parents' => array('instance', 'class'),
+      '#maxlength' => 512,
+      '#states' => array(
+        'visible' => array(
+          ':input[name="instance[use_title_as_class]"]' => array('value' => 0),
+        )
+      )
+    );
+  }
+}
+
+/**
+ * Returns information about field widgets from hook_field_class_info().
+ *
+ * @return array
+ *   An array containing all the Field class available widgets
+ *   information.
+ */
+
+function field_class_get_widgets() {
+  $widgets = &drupal_static(__FUNCTION__);
+
+  if (!$widgets) {
+    $widgets = module_invoke_all('field_class_info');
+    $widgets = (is_array($widgets)) ? $widgets : array();
+  }
+
+  return $widgets;
+}
+
+/**
+ * Returns an array with names of all the class available widgets.
+ *
+ * @return array
+ *   Array containing all the Field class available widgets name.
+ */
+
+function field_class_get_widget_types() {
+  $widgets = field_class_get_widgets();
+  return array_keys($widgets);
+}
+
+/**
+ * Implements hook_field_class_info().
+ */
+
+function field_class_field_class_info() {
+  return array(
+    'text_textfield' => 'value',
+    'text_textarea' => 'value',
+    'text_textarea_with_summary' => 'summary',
+    'number' => 'value',
+    'email_textfield' => 'email',
+    'phone_textfield' => 'value',
+  );
+}

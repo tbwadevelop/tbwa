@@ -42,13 +42,13 @@
 
 /*------------------ Login ------------------ */
 body.not-logged-in .main-container .row > section {
-	width: 100%;
+    width: 100%;
     background: #E6E7E8;
     box-shadow: 15px 15px #F1F1F2;
     margin-top: 214px;
 }
 body.not-logged-in .main-container section h1.page-header {
-	width: 78%;
+    width: 78%;
     margin: 0 auto;
     text-align: center;
     border-bottom: 2px solid #808184;
@@ -102,12 +102,12 @@ body.not-logged-in .main-container section .region #block-system-main form#user-
     font-size: 15px;
 }
 body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-actions {
-	float: right;
-	margin-bottom: 46px;
+    float: right;
+    margin-bottom: 46px;
 }
 body.not-logged-in .main-container section .region #block-system-main form#user-login button {
-	background: #41B65B;
-	border-color: #41B65B;
+    background: #41B65B;
+    border-color: #41B65B;
     border-radius: 0px;
     color: white;
 }
@@ -1170,10 +1170,12 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-actions button .glyphicon-refresh {
     display: none;
 }
+
 /*------------------ Citas - Creacion de una cita click modal  ------------------ */
 .informacion-citas {
     width: 100%;
     margin-bottom: 51px;
+    text-align: center;
     display: inline-flex;
         display: -ms-inline-flexbox;
         display: -webkit-inline-flex;
@@ -1194,7 +1196,24 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     font-size: 15px;
     font-family: lato;
 }
-
+@media screen and (max-width: 1024px) {
+    .informacion-citas > div {
+        width: 34%;
+        border-right: 1px solid transparent;
+    }
+}
+@media screen and (max-width: 667px) {
+    .informacion-citas > div {
+        width: 49%;
+        border-right: 1px solid transparent;
+    }
+    .informacion-citas > div > div  {
+        font-size: 11px;
+        line-height: 17px;
+        text-align: left;
+        letter-spacing: -0.0px;
+    }
+}
 .informacion-citas .field-content {
     display: inline-flex;
 }
@@ -1203,7 +1222,6 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     padding: 6px 12px;
     font-size: 14px;
     color: #555;
-    background-color: red;
     background-image: none;
     border: 0px solid #ccc;
     border-radius: 0px;
@@ -1278,11 +1296,25 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         padding: 0px;
     }
 }
+
 /* -\* Button Crear citas  *\- */
 .agendar_citas form {
     position: relative;
 }
+/*.agendar_citas button#edit-submit {
+    display: none;
+}*/
 .agendar_citas button#edit-submit {
+    padding: 6px 12px;
+    border: 1px solid #5cb85c;
+    background: #5cb85c;
+    color: white;
+    border-radius: 0px;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+}
+.agendar_citas button#edit-submit span {
     display: none;
 }
 .agendar_citas button.btn-success {
@@ -1295,6 +1327,9 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     left: 50%;
     top: -73px;
 }
+.agendar_citas button .glyphicon-refresh {
+    display: none;
+}
 @media screen and (max-width: 667px) {
     .agendar_citas button.btn-success {
         left: 43%;
@@ -1305,15 +1340,99 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         left: 40%;
     }
 }
+/* -\* citas - creadas   *\- */
+.agendar_citas #js-ajax-elements-wrapper .form-wrapper .container-inline + .container-inline label  {
+   display: none;
+}
+.agendar_citas #js-ajax-elements-wrapper .container-inline {
+    display: flex;
+    border-width: 0px 0px 1px 0px;
+    border-bottom-style: dashed;
+    border-right-style: solid;
+    border-color: #A6A8AB;
+    text-align: center;
+    position: relative;
+}
+.agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(1) {
+    display: none;
+}
+.agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(n) {
+    width: 25%;
+    margin-right: 10px;
+}
+.agendar_citas #js-ajax-elements-wrapper .container-inline div#disable-quote {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    flex-direction: column;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+    justify-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+    align-items: center;
+}
+.agendar_citas #js-ajax-elements-wrapper .container-inline button {
+    padding: 6px 12px;
+    border: 1px solid #5cb85c;
+    background: #5cb85c; 
+    color: white;
+    border-radius: 0px;
+    width: 110px;
+    height: 34px;
+}
+.agendar_citas #js-ajax-elements-wrapper .container-inline button span  {
+    display: none;
+}
+.agendar_citas #js-ajax-elements-wrapper .container-inline label {
+   color: #5cb85c;
+}
+.agendar_citas #js-ajax-elements-wrapper .container-inline input {
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    -webkit-appearance: button;
+    outline: none; 
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0 ,0);
+}
+.agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(1n+2) input {
+    border-right: 1px solid #A6A8AB;
+}
+.agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(5)  {
+    display: none;
+}
+.agendar_citas #js-ajax-elements-wrapper .container-inline span {
+    font-weight: bold;
+    height: 20px;
+}
+@media screen and (max-width: 1024px) {
+    .agendar_citas #js-ajax-elements-wrapper .container-inline {
+     display: inherit; 
+    }
+    .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(n) {
+        width: 48%;
+        float: left;
+    }
+    .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(3) input{
+        border-right: 1px solid transparent;
+    }
+    .agendar_citas #js-ajax-elements-wrapper .form-wrapper .container-inline + .container-inline label  {
+       display: inherit;
+    }
+}
 
-
-
-
-
-
-
-
-
+@media screen and (max-width: 600px) {
+    .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(n) {
+        width: 46%;
+    }
+}
 /*------------------ Modal - Disponibilidad calendario  ------------------ */
 .modal-dialog.node-teaser .modal-content {
     border-radius: 0px;

@@ -23,7 +23,7 @@ function agenda_records_form($form, &$form_state) {
 
   $form['field_container']['add_name'] = [
     '#type' => 'submit',
-    '#value' => t('Agregar'),
+    '#value' => t('Crear Cita'),
     '#submit' => ['agenda_ajax_example_add_more_add_one'],
     '#ajax' => [
       'callback' => 'agenda_ajax_example_add_more_add_one_callback',

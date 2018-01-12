@@ -70,8 +70,23 @@ body.not-logged-in .main-container section .region #block-system-main form#user-
     width: 70%;
     position: relative;
 }
-body.not-logged-in .main-container section .region #block-system-main form#user-login .form-item-name  {
-    margin-top: 54px; 
+body.not-logged-in .main-container section .region #block-system-main form#user-login .form-item-name label {
+    width: 100%;
+    text-align: center;
+    font-family: Lato;
+    font-size: 48px;
+    line-height: 21.89px;
+    color: #000000;
+    margin: 0px;
+    font-weight: normal;
+    margin-bottom: 54px;
+}
+body.not-logged-in .main-container section .region #block-system-main form#user-login .form-item-name label::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    border-top: 2px solid #808184;
+    margin-top: 8px;
 }
 body.not-logged-in .main-container section .region #block-system-main form#user-login .form-item-pass  {
     margin-bottom: 72px; 
@@ -137,6 +152,14 @@ body.not-logged-in .main-container section .region #block-system-main form#user-
     }
     body.not-logged-in .main-container section .region #block-system-main form#user-login,body.not-logged-in .main-container section h1.page-header  {
         width: 100%;
+    }
+    body.not-logged-in .main-container section .region #block-system-main form#user-login .form-item-name label {
+        margin-bottom: 28px;
+        margin-top: 16px;
+        font-size: 30px;
+    }
+    body.not-logged-in .main-container section .region #block-system-main form#user-login .form-text {
+        background: #F5F1F1;
     }
     body.not-logged-in .main-container section .region #block-system-main form#user-login .form-item-pass {
         margin-bottom: 107px;
@@ -2406,10 +2429,9 @@ section#block-menu-menu-navegaci-n-agenda-cordinado ul.menu li.active-trail.acti
     }
 }
 
-/*------------------ Header Calendario - Consejero ------------------ */
+/*------------------ Menu citas  - Consejero ------------------ */
 
-
-
+/* -\* Nuevo comentario /*- */
 
 
 

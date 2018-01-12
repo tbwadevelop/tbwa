@@ -456,7 +456,35 @@ body.page-calendario-consejero .row {
  .row aside .well .Calendario_Contenedor,.row aside .well .Calendario_Contenedor-estudiantes {
     position: relative;
 }
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-header  { 
+.row aside .well .Calendario_Contenedor select ,.row aside .well .Calendario_Contenedor-estudiantes select {
+    -webkit-appearance: button;
+    border-radius: 0px;
+    border: 1px solid transparent;
+    background-color: #FFF;
+    -webkit-box-shadow: inset 0px 0px 0px transparent;
+    box-shadow: inset 0px 0px 0px transparent;
+    padding: 4px;
+    outline: none;
+    font-family: Lato Black;
+    font-size: 31px;
+    color: #808184;
+}
+.row aside .well .Calendario_Contenedor .view-header,.row aside .well .Calendario_Contenedor-estudiantes .view-header {
+    position: relative;
+} 
+.row aside .well .Calendario_Contenedor .view-header::before ,.row aside .well .Calendario_Contenedor-estudiantes .view-header::before  {
+    content: "";
+    background-image: url(../img/flecha.png);
+    background-repeat: no-repeat;
+    background-size: 17px;
+    /* background-position: 98% 7px; */
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 48px;
+    left: 32px;
+}
+/* .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-header  { 
     color: #808184;
     font-size: 26px;
 } 
@@ -474,7 +502,7 @@ body.page-calendario-consejero .row {
     border-style: solid;
     border-width: 0px;
     padding: 0px;
-}
+}*/
 
  .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-header nav { 
     display: inline-block;

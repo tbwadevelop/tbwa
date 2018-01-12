@@ -323,7 +323,7 @@ section.Navegacion_Agenda ul.menu li {
     border-bottom: 1px solid #9E9E9E;
 }
 section.Navegacion_Agenda ul.menu li a {
-color: #000;
+    color: #000;
     text-decoration: none;
     text-align: center;
     width: 74px;
@@ -339,6 +339,7 @@ color: #000;
     justify-content: center;
     padding: 0px 73px;
     font-size: 16px;
+    font-weight: bold;
 }
 section.Navegacion_Agenda ul.menu li a:hover {
     background: #47AC4B !important;
@@ -349,7 +350,7 @@ section.Navegacion_Agenda ul.menu li.active-trail.active a {
     color: white;
 }
 
-@media screen and (max-width: 1024px) {
+/*@media screen and (max-width: 1024px) {
     section.Navegacion_Agenda ul.menu {
         width: 100%;
         margin-right: 0px;
@@ -372,7 +373,7 @@ section.Navegacion_Agenda ul.menu li.active-trail.active a {
         padding: 0px 18%;
         font-size: 12px;
     }
-}
+}*/
 
 /* -\* Header agenda de servicio - */
 body .main-container header section.title-agenda-de-servicio  {
@@ -398,6 +399,9 @@ body .main-container header section.title-agenda-de-servicio h2 {
     margin: 0 auto;
 }
 @media screen and (max-width: 1024px) { 
+    body .main-container header section.title-agenda-de-servicio  {
+        background: #E8E8E8;
+    }
     body .main-container header section.title-agenda-de-servicio h2 {
         width: 128px;
         font-size: 23px;
@@ -465,20 +469,22 @@ body.page-calendario-consejero .row {
     left: 0px;
 }
  .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav h3, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar  .view-header nav h3 { 
-    position: absolute;
+   /* position: absolute;
     top:0px;
-    left: 46px;
+    left: 46px;*/
     margin-top: 0px;
     margin-bottom: 0px;
+    text-align: center;
 }
  .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav .next, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar  .view-header nav .next { 
     position: absolute;
     top: 0px;
-    left: 159px;
+    right: 0px;
 }
  .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav h3 a, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar   .view-header nav h3 a { 
     color: #000;
     font-family: "Myriad Pro";
+    text-decoration: none;
 }
  .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr .mini-day-on, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-content .calendar-calendar tr .mini-day-on {
     padding: 0px;
@@ -517,13 +523,19 @@ body.page-calendario-consejero .row aside .well .crear_disponibilidad h2.block-t
     display: none;
 }
 body.page-calendario-consejero .row aside .well section.crear_disponibilidad div#magical-modal-link {
-    margin-top: 38px;
-    text-align: center;
+      margin-top: 38px;
+    /* text-align: center; */
+    width: 100%;
+    height: 33px;
+    background: #47AC4B;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
 }
 body.page-calendario-consejero .row aside .well section.crear_disponibilidad div#magical-modal-link a {
     color: #FFF;
-    background: #47AC4B;
-    padding: 8px 38px;
+ /*   background: #47AC4B;
+    padding: 8px 38px;*/
 }
 body.page-calendario-consejero .row aside .well section.crear_disponibilidad div#magical-modal-link a .glyphicon-refresh {
     display: none;
@@ -708,8 +720,8 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav li.prev a, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav li.prev a {
     border-left: 2px solid black;
     border-bottom: 2px solid black;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     padding: 0;
     transform: rotate(46deg);
     border-top-left-radius: 0px !important;
@@ -719,8 +731,8 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 body .main-container .row section div.region.region-content  .view-id-consejero_calendar .view-header nav li.next a, body .main-container .row section div.region.region-content  .view-id-estudiante_calendar .view-header nav li.next a {
     border-right: 2px solid black;
     border-bottom: 2px solid black;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     padding: 0;
     transform: rotate(317deg);
     border-top-right-radius: 0px !important;
@@ -753,13 +765,13 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     margin: 2px;
 }
 .calendar-calendar .day-view .full .single-day .dayview {
-    background: #A1D3A1!important;
+    background: rgb(161, 211, 161)!important;
     color: black;
     border-radius: 0px !important;
     border: 1px solid #47ac4b9c !important;
     border-left: 10px solid #47AC4B !important
 }
-.view-id-consejero_calendar .calendar a.ctools-use-modal.ctools-use-modal-processed {
+.calendar a.ctools-use-modal.ctools-use-modal-processed {
     position: absolute;
     text-indent: -9999px;
     width: 100%;
@@ -770,14 +782,17 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     display: none !important; 
 }
 /* Semana*/
-.view-id-consejero_calendar .calendar-calendar .week-view .full div.single-day div.weekview {
-    background: #A1D3A1 !important;
+.calendar-calendar .week-view .full div.single-day div.weekview, .calendar-calendar .week-view .full div.single-day div.dayview {
+    background: rgb(161, 211, 161) !important;
     border-radius: 0px !important;
     border: 0px solid transparent;
     border-left: 10px solid #47AC4B !important;
     font-size: x-small !important;
     text-align: justify;
     word-break: break-all;
+}
+.calendar-calendar td .inner div.calendar div {
+    background: rgb(161, 211, 161) !important;
 }
 .calendar-calendar .week-view .full .single-day div.weekview span ,.cutoff{
     display: none !important; 
@@ -1172,8 +1187,13 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 }
 
 /*------------------ Citas - Creacion de una cita click modal  ------------------ */
+body.page-crear-citas section div.region.region-content {
+    border: 3px solid #808184;
+}
+/* -\* Informacion de la cita  *\- */
 .informacion-citas {
     width: 100%;
+    margin-top: 27px;
     margin-bottom: 51px;
     text-align: center;
     display: inline-flex;
@@ -1183,20 +1203,32 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         -webkit-justify-content: center;
         -ms-flex-pack: center;
 }
+.informacion-citas .field-content {
+    display: inline-flex;
+}
 .informacion-citas > div {
     padding: 0px 10px 0px 10px; 
     border-right: 1px solid #929497;
     display: inline-flex;
 }
-.informacion-citas > div:nth-child(3) { 
+.informacion-citas > div:nth-child(4) { 
     border-right: 0px solid #929497;
 }
 .informacion-citas > div > span {
     color: #4cae4c;
     font-size: 15px;
     font-family: lato;
+    padding-right: 10px;
 }
 @media screen and (max-width: 1024px) {
+    body.page-crear-citas section div.region.region-content {
+        border: 0px solid #808184;
+    }
+    .informacion-citas {
+        display: inherit;
+        float: left;
+        margin-bottom: 28px;
+    }
     .informacion-citas > div {
         width: 34%;
         border-right: 1px solid transparent;
@@ -1214,19 +1246,9 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         letter-spacing: -0.0px;
     }
 }
-.informacion-citas .field-content {
-    display: inline-flex;
-}
-.agendar_citas #js-ajax-elements-wrapper .form-wrapper .form-type-textfield input {
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    color: #555;
-    background-image: none;
-    border: 0px solid #ccc;
-    border-radius: 0px;
-    -webkit-appearance: button;
-}
+
+
+/* -\* Informacion del estudiante *\- */
 .view-id-usuarios_agenda_de_servicios .view-content ul {
     background: #F5F1F1;
     min-height: 11pc;
@@ -1236,7 +1258,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 }
 .view-id-usuarios_agenda_de_servicios .view-content li > div {
     display: inline-flex;
-
+    width: 30%;
 }
 .view-id-usuarios_agenda_de_servicios .view-content li > div.views-field.views-field-uid {
     display: none;
@@ -1245,13 +1267,14 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     color: #4cae4c;
     font-size: 15px;
     font-family: lato;
+    padding-right: 10px;
 }  
-
 .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(-n+4) {
     border-width: 0px 0px 1px 0px;
     border-bottom-style: dashed;
     border-right-style: solid;
     border-color: #A6A8AB;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(1n+5) {
@@ -1297,26 +1320,41 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     }
 }
 
-/* -\* Button Crear citas  *\- */
+/* -\* Button guardar  *\- */
 .agendar_citas form {
     position: relative;
 }
-/*.agendar_citas button#edit-submit {
-    display: none;
-}*/
 .agendar_citas button#edit-submit {
-    padding: 6px 12px;
+    padding: 6px 20px;
     border: 1px solid #5cb85c;
     background: #5cb85c;
     color: white;
     border-radius: 0px;
     position: absolute;
     top: 110%;
-    left: 50%;
+    left:  calc(46% - 1em);
 }
 .agendar_citas button#edit-submit span {
     display: none;
 }
+
+/* -\* Button cancelar  *\- */
+.agendar_citas button#edit-cancelar {
+    padding: 6px 20px;
+    border: 1px solid #5cb85c;
+    background: #FFF;
+    color: black;
+    border-radius: 0px;
+    margin-bottom: 27px;
+    position: absolute;
+    top: 110%;
+    left: 52%;
+}
+.agendar_citas button#edit-cancelar  span {
+    display: none;
+}
+
+/* -\* Button Crear citas  *\- */
 .agendar_citas button.btn-success {
     padding: 6px 12px;
     border: 1px solid #5cb85c;
@@ -1330,6 +1368,14 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 .agendar_citas button .glyphicon-refresh {
     display: none;
 }
+.agendar_citas button span{
+    display: none;
+}
+@media screen and (max-width: 1024px) {
+    .agendar_citas button.btn-success {
+        top: -60px;
+    }
+}
 @media screen and (max-width: 667px) {
     .agendar_citas button.btn-success {
         left: 43%;
@@ -1340,7 +1386,18 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         left: 40%;
     }
 }
+
 /* -\* citas - creadas   *\- */
+.agendar_citas #js-ajax-elements-wrapper .form-wrapper .form-type-textfield input {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: #555;
+    background-image: none;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    -webkit-appearance: button;
+}
 .agendar_citas #js-ajax-elements-wrapper .form-wrapper .container-inline + .container-inline label  {
    display: none;
 }
@@ -1433,6 +1490,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         width: 46%;
     }
 }
+
 /*------------------ Modal - Disponibilidad calendario  ------------------ */
 .modal-dialog.node-teaser .modal-content {
     border-radius: 0px;
@@ -1639,9 +1697,9 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         width: 69%;
     }
     .views-exposed-form .views-exposed-widgets label {
-        width: 59px;
+        width: 133px;
         margin: 10px 6px 0px 0px;
-        font-size: 10px;
+        font-size: 12px;
     }
     .views-exposed-form .views-exposed-widgets label::before {
         left: -8px;
@@ -1668,6 +1726,12 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     .views-exposed-form .views-exposed-widgets .views-reset-button button {
         background-size: 19px;
         background-position: 5px;
+    }
+}
+
+@media screen and (max-width: 586px) {
+    .views-exposed-form .views-exposed-widgets label {
+        font-size: 11px;
     }
 }
 
@@ -1702,19 +1766,25 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 .view-id-mis_citas .view-content tbody tr:last-child td:last-child, .view-id-citas .view-content tbody tr:last-child td:last-child {
     border-width: 0px 0px 0px 0px;
 }
-.view-id-mis_citas .view-content tbody tr td:last-child, .view-id-citas .view-content tbody tr td:last-child a {
+.view-id-mis_citas .view-content tbody tr td:last-child a, .view-id-citas .view-content tbody tr td:last-child a {
     color: #231F20;
     text-decoration: none;
     padding: 0.3em 0.5em;
     border: 1px solid #41B65B;
     font-size: 13px;
     line-height: 14.09px;
+    margin-right: 10px;
 }
-.view-id-mis_citas .view-content tbody tr td:last-child, .view-id-citas .view-content tbody tr td:last-child a:hover {
+/*.view-id-mis_citas .view-content tbody tr td:last-child, .view-id-citas .view-content tbody tr td:last-child a:nth-child(2) {
+    color: #FFF;
+    background: #41B65B;
+}*/
+.view-id-mis_citas .view-content tbody tr td:last-child a, .view-id-citas .view-content tbody tr td:last-child a:hover {
     background: #41B65B;
     border: 1px solid #41B65B;
     color: white;
 }
+
 /* -\* Pginador citas - Reportes TOR  *\- */
 .text-center ul.pagination {
     position: relative;
@@ -1815,7 +1885,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 
 /* -\* informacion estudiante - informacion de la cita  - */
 .ui-accordion .ui-accordion-content {
-    padding: 0px
+    padding: 1em 0px 0px 0px;
 }
 .views-row-last .ui-corner-bottom > div span:nth-child(1) {
     font-weight: bold;
@@ -1842,9 +1912,9 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 .views-row-last .ui-corner-bottom div[class*="col-"] > div {
     padding: 10px 0;
 }
-.ui-accordion .ui-accordion-content div[class*="col-"]:nth-child(1n+1) {
+/*.ui-accordion .ui-accordion-content div[class*="col-"]:nth-child(1n+1) {
     padding-left: 10px
-}
+}*/
 .ui-accordion .ui-accordion-content div.views-field-view {
     padding: 0px;
 }
@@ -1853,7 +1923,15 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     min-height: 23pc;
 }
 .views-row-last .ui-corner-bottom .views-field-view .views-row-last {
-    margin:15px 0 0px 0;
+    margin:15px 0px 0px 0px;
+}
+.views-row-last .ui-corner-bottom .views-field-view .views-row-last .views-field.views-field-nothing {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+    display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+    align-items: center;
 }
 .views-row-last .ui-corner-bottom .views-field-view .views-row-last div {
     padding-left: 10px
@@ -2129,7 +2207,12 @@ li.icon-apo-estudiante .views-field-name span.field-content::after  {
     border: 3px solid #41B65B;
 }
 /* -\* Mis citas  - Estudiantes - */
-
+body.page-mis-citas .row {
+    border: 3px solid #808184;
+}
+.filtar_citas .form-group {
+    margin-bottom: 0px;
+}
 .filtar_citas label {
     display: none;
 }
@@ -2145,7 +2228,7 @@ li.icon-apo-estudiante .views-field-name span.field-content::after  {
     border-radius: 0px !important;
     -webkit-appearance: none;
     float: right;
-    appearance: none;  
+    margin-bottom: 27px;
 }
 
 /* -\* Mis Datos  - Estudiantes - */

@@ -79,8 +79,6 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
        $current_path = explode("/", current_path());
        $path = array_shift($current_path);
 
-       
-
         if (arg(0) == 'node' && is_numeric(arg(1)) && arg(2) == 'edit' 
              && !user_access('administrator') && is_numeric($_GET['sid'])
           ) {
@@ -137,6 +135,9 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
       }
       break;
      case 'user_login':
+         $form['name']['#title'] = t('Ingresar');
+         $form['pass']['#title'] = '';
+         $form['name']['#required'] = FALSE;
           $form['info'] = array(
             '#type' => 'item',
             '#markup' => t('Las personas que no tengan usuario y clave uniandes pueden comunicarse con la Decanatura de Estudiantes para recibir atención personalizada, en el teléfono 339 49 49 Ext. 2207, de lunes a viernes en horario de 8:00 a.m a 5:00 p.m.'),
@@ -148,7 +149,6 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
             '#attributes' => array('class' => array('info-link-login')),
           );          
       break;
-
       case 'user_profile_form':
           if(!user_access('administrator')) {
             $form['account']['#access'] = FALSE;

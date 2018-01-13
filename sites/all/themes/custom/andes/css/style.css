@@ -457,7 +457,9 @@ body.page-calendario-consejero .row {
     position: relative;
 }
 .row aside .well .Calendario_Contenedor select ,.row aside .well .Calendario_Contenedor-estudiantes select {
-    -webkit-appearance: button;
+    -moz-appearance: none; 
+    -webkit-appearance: none;
+    appearance: none;
     border-radius: 0px;
     border: 1px solid transparent;
     background-color: #FFF;
@@ -468,6 +470,9 @@ body.page-calendario-consejero .row {
     font-family: Lato Black;
     font-size: 31px;
     color: #808184;
+}
+.row aside .well .Calendario_Contenedor select > option  {
+    color: red;
 }
 .row aside .well .Calendario_Contenedor .view-header,.row aside .well .Calendario_Contenedor-estudiantes .view-header {
     position: relative;
@@ -988,7 +993,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
         height: 21px;
     }
     body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav, body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .month-view, body.page-calendario-consejero .row aside .well section.crear_disponibilidad {
-        transform: translateX(-110%);
+       /* transform: translateX(-110%);*/
         z-index: 1;
         background-color: white;
     }
@@ -1087,7 +1092,9 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form .form-control {
     border: 1px solid black;
     border-radius: 1px !important;
-    -webkit-appearance: button;
+    -moz-appearance: none; 
+    -webkit-appearance: none;
+    appearance: none;
     background-image: url(../img/flecha.png);
     background-position: 97% center;
     background-repeat: no-repeat;
@@ -1135,7 +1142,9 @@ input[type=radio] {
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 15px;
+    -moz-appearance: caret; 
     -webkit-appearance: caret;
+    appearance: caret;
     color: #FFF;
     overflow: hidden;
     width: 12px;
@@ -1182,7 +1191,9 @@ div#ui-datepicker-div .ui-datepicker-header .ui-icon-circle-triangle-e {
     transform: rotate(269deg);
 }
 div#ui-datepicker-div .ui-datepicker-header .ui-datepicker-month, .ui-datepicker-year {
+    -moz-appearance: inherit; 
     -webkit-appearance: inherit;
+    appearance: inherit;
     border: 1px solid transparent;
     background: white;
     font-family: Lato;
@@ -1332,7 +1343,9 @@ body.page-crear-citas section div.region.region-content {
     padding-top: 10px;
 }
 .view-id-usuarios_agenda_de_servicios .view-content li > div select {
-    -webkit-appearance: button;
+    -moz-appearance: none; 
+    -webkit-appearance: none;
+    appearance: none;
     border-radius: 0px;
     border: 1px solid #929497;
     background-image: url(../img/flecha.png);
@@ -1447,7 +1460,9 @@ body.page-crear-citas section div.region.region-content {
     background-image: none;
     border: 0px solid #ccc;
     border-radius: 0px;
-    -webkit-appearance: button;
+    -moz-appearance: none; 
+    -webkit-appearance: none;
+    appearance: none;
 }
 .agendar_citas #js-ajax-elements-wrapper .form-wrapper .container-inline + .container-inline label  {
    display: none;
@@ -1505,7 +1520,9 @@ body.page-crear-citas section div.region.region-content {
     color: #555;
     border: 0px solid #ccc;
     border-radius: 0px;
-    -webkit-appearance: button;
+    -moz-appearance: none; 
+    -webkit-appearance: none;
+    appearance: none;
     outline: none; 
         -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0 ,0);
@@ -2277,7 +2294,9 @@ body.page-mis-citas .row {
     background-position: 93% 10px;
     border: 1px solid #ccc;
     border-radius: 0px !important;
+    -moz-appearance: none; 
     -webkit-appearance: none;
+    appearance: none;
     float: right;
     margin-bottom: 27px;
 }
@@ -2300,7 +2319,9 @@ fieldset.collapsible label {
     color : #41B65B;
 }
 fieldset.collapsible input {
-    -webkit-appearance: button;
+    -moz-appearance: none; 
+    -webkit-appearance: none;
+    appearance: none;
     border-radius: 0px;
     border: 1px solid #F5F1F1;
     background-image: none !important;
@@ -2311,7 +2332,9 @@ fieldset.collapsible input {
 }
 
 fieldset.collapsible select {
+    -moz-appearance: menulist-button; 
     -webkit-appearance: menulist-button;
+    appearance: menulist-button;
     border-radius: 0px;
     border: 1px solid #F5F1F1;
     background-image: none !important;

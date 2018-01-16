@@ -10,7 +10,6 @@ define('FIRST_POSITION', 0);
  * Implements hook_init().
  */
 function agenda_init() {
-   
    Global $base_url;
    drupal_add_js(array('agenda' => array('dominio' => $base_url)), array('type' => 'setting'));
    drupal_add_js(drupal_get_path('module', 'agenda') . '/js/request.js');

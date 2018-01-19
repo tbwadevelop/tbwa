@@ -75,6 +75,7 @@
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
+  <div class="loader"></div>
     <div class="navbar-header">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -115,6 +116,13 @@
 </header>
 
 <div class="main-container <?php print $container_class; ?>">
+
+<div id="loader-1">
+        <span class="uno"></span><span class="dos"></span><span class="tres"></span><span class="cuatro"></span><span class="cinco"></span>
+    <br>
+  <p>CARGANDO</p>
+</div>
+
 
   <header role="banner" id="page-header">
     <?php if (!empty($site_slogan)): ?>

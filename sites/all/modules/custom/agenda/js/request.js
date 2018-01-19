@@ -2,8 +2,14 @@
 	Drupal.behaviors.request = {
 	    attach: function (context, settings) {
 
+		$(window).load(function(){
+		    $('.loader').fadeOut(500);
+		});
+
+
+
 	  	$('.view-id-user_login .views-field-name .field-content').each(function (index, value) { 
-		  $("<h2> "+$('.view-id-user_login .views-label.views-label-name').text()+" "+$(this).context.innerText+"</h2>" ).appendTo( ".date-views-pager.clearfix.date-nav-wrapper" );
+		  $("<h2> "+$('.view-id-user_login .views-label.views-label-name').text()+" "+$(this).context.innerText+"</h2>" ).appendTo(".view-display-id-page_3 .date-views-pager.clearfix.date-nav-wrapper" );
 		});
 	     	$('.mini tr').each(function(){
 	     		$(this).find('td').each(function(){

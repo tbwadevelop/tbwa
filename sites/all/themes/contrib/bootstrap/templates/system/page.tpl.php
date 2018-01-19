@@ -116,14 +116,6 @@
 </header>
 
 <div class="main-container <?php print $container_class; ?>">
-
-<div id="loader-1">
-        <span class="uno"></span><span class="dos"></span><span class="tres"></span><span class="cuatro"></span><span class="cinco"></span>
-    <br>
-  <p>CARGANDO</p>
-</div>
-
-
   <header role="banner" id="page-header">
     <?php if (!empty($site_slogan)): ?>
       <p class="lead"><?php print $site_slogan; ?></p>

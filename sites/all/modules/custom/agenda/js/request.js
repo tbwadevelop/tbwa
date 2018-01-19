@@ -2,16 +2,10 @@
 	Drupal.behaviors.request = {
 	    attach: function (context, settings) {
 
-<<<<<<< HEAD
 		$(window).load(function(){
 		    $('.loader').fadeOut(500);
 		});
 
-
-
-	  	$('.view-id-user_login .views-field-name .field-content').each(function (index, value) { 
-		  $("<h2> "+$('.view-id-user_login .views-label.views-label-name').text()+" "+$(this).context.innerText+"</h2>" ).appendTo(".view-display-id-page_3 .date-views-pager.clearfix.date-nav-wrapper" );
-=======
 		if ($(".main-container .date-views-pager h2").length == false){
 		  	$('.view-id-user_login .views-field-name .field-content').each(function (index, value) { 
 			  $("<h2> "+$('.view-id-user_login .views-label.views-label-name').text()+" "+$(this).context.innerText+"</h2>" ).appendTo(".view-display-id-page_3 .date-views-pager.clearfix.date-nav-wrapper");
@@ -22,7 +16,6 @@
 			var params = $(this).context.href.split("-");
 		 	var arg = params[1].split("/");
 		 	$('.date-views-pager h3 a').text($( ".date-views-pager h3 a" ).text() + ' '+ arg[2]);
->>>>>>> 92687612399380401234b11a8769df838bf9051c
 		});
 
      	$('.mini tr').each(function(){

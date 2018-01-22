@@ -1202,7 +1202,7 @@ div#ui-datepicker-div .ui-datepicker-header .ui-icon-circle-triangle-e {
     background-size: contain;
     transform: rotate(269deg);
 }
-div#ui-datepicker-div .ui-datepicker-header .ui-datepicker-month, .ui-datepicker-year {
+div#ui-datepicker-div .ui-datepicker-header .ui-datepicker-month, div#ui-datepicker-div .ui-datepicker-header .ui-datepicker-year {
     -moz-appearance: inherit; 
     -webkit-appearance: inherit;
     appearance: inherit;

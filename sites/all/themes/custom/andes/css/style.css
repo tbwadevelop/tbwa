@@ -805,7 +805,19 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     width: 321px;
     border-right: 2px solid #808184;
     font-size: 22px;
+    display: inline-block;
 }
+
+
+body .main-container  .date-views-pager h2 {
+    display: inline-block;
+    margin-left: 150px;
+    color: #a1d3a1;
+    width: 321px;
+    font-size: 22px;
+}
+
+
 body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-content #header-container th, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-content #header-container th {
     border: 0px solid #ccc;
     background-color: #F9FAFB;
@@ -2483,6 +2495,16 @@ section#block-menu-menu-navegaci-n-agenda-cordinado ul.menu li.active-trail.acti
 /*------------------ Menu citas  - Consejero ------------------ */
 
 /* -\* Nuevo comentario /*- */
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(http://loadinggif.com/images/image-selection/3.gif) 50% 50% no-repeat rgb(182, 181, 181);
+}
 
 
 

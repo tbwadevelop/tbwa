@@ -244,6 +244,7 @@ body .main-container header section.user-login .view-id-user_login .view-header 
     padding-top: 6px;
     color: white;
     font-family: "lato";
+    line-height: 15px;
 }
 body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol h2 {
     margin: 0px;
@@ -442,21 +443,70 @@ body .main-container header section.title-agenda-de-servicio h2 {
 }
 
 /*------------------ Row Calendario ------------------ */
+/* -\* Selec Calendario -/* - */
+.dropdown {
+    border: 1px solid transparent !important;
+}
+.dropdown:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0) !important;
+}
+.dropdown .selected  {
+    font-family: Lato Black;
+    font-size: 31px !important;
+    color: #808184 !important;
+}
+.dropdown .carat {
+    right: 111px !important;
+    top: 53px !important;
+    margin-top: -10px !important;
+    border: none !important;
+    border-bottom: 2px solid black !important;
+    border-right: 2px solid black !important;
+    border-top: none !important;
+    width: 15px;
+    height: 15px;
+    transform: rotate(44deg);
+}
+.dropdown.open div {
+    width: 113px;
+}
+/*.dropdown.open .carat {
+    right: 12px !important;
+    top: 50% !important;
+    margin-top: -4px !important;
+    transform: rotate(225deg);
+}*/
+.dropdown ul {
+    background: #47AC4B;
+    -webkit-padding-start: 0px;
+}
+.dropdown li {
+    color: white !important;
+    text-align: center;
+    padding: 4px 12px;
+}
+.dropdown li.active {
+    font-weight: 700;
+    color: rgba(224, 224, 224, 0.95) !important;
+}
+.dropdown li.focus {
+    background: rgba(222, 222, 222, 0.44) !important;
+}
+
 /* -\* Calendario contenedor  - */
 body.page-calendario-consejero .row {
     border: 3px solid #808184;
-/*    padding: 22px;*/
     margin: auto;
 }
- .row aside .well {
+body .main-container .row aside .well {
     background-color: #FFF;
     border: none;
     box-shadow: none;   
 }
- .row aside .well .Calendario_Contenedor,.row aside .well .Calendario_Contenedor-estudiantes {
+body .main-container .row aside .well section:nth-child(1) {
     position: relative;
 }
-.row aside .well .Calendario_Contenedor select ,.row aside .well .Calendario_Contenedor-estudiantes select {
+body .main-container .row aside .well section:nth-child(1)  select {
     -moz-appearance: none; 
     -webkit-appearance: none;
     appearance: none;
@@ -471,116 +521,176 @@ body.page-calendario-consejero .row {
     font-size: 31px;
     color: #808184;
 }
-.row aside .well .Calendario_Contenedor select > option  {
-    color: red;
-}
-.row aside .well .Calendario_Contenedor .view-header,.row aside .well .Calendario_Contenedor-estudiantes .view-header {
+/*.row aside .well .Calendario_Contenedor .view-header ,.row aside .well .Calendario_Contenedor-estudiantes .view-header {
     position: relative;
-} 
-.row aside .well .Calendario_Contenedor .view-header::before ,.row aside .well .Calendario_Contenedor-estudiantes .view-header::before  {
-    content: "";
-    background-image: url(../img/flecha.png);
-    background-repeat: no-repeat;
-    background-size: 17px;
-    /* background-position: 98% 7px; */
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    top: 48px;
-    left: 32px;
-}
-/* .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-header  { 
-    color: #808184;
-    font-size: 26px;
-} 
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar button.button-calendar, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar button.button-calendar {
-     position: absolute;
-    background: url("../img/flecha.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 13px;
-    height: 19px;
-    top: 39px;
-    left: 41px;
-    border-color: transparent;
-    border-radius: 0px;
-    border-style: solid;
-    border-width: 0px;
-    padding: 0px;
-}*/
-
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-header nav { 
+} */
+body .main-container .row aside .well section:nth-child(1) nav { 
     display: inline-block;
     margin-top: 63px;
 }
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav .pagination >li > a, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-header nav .pagination >li > a { 
+body .main-container .row aside .well section:nth-child(1) nav .pagination > li > a { 
     color: #000;
     background-color: transparent;
     border: none;
     font-size: 12px;
 }
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav .prev, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar  .view-header nav .prev { 
+body .main-container .row aside .well section:nth-child(1) nav li.prev{ 
     position: absolute;
     top: 0px;
     left: 0px;
 }
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav h3, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar  .view-header nav h3 { 
-   /* position: absolute;
-    top:0px;
-    left: 46px;*/
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: center;
-}
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav .next, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar  .view-header nav .next { 
+
+body .main-container .row aside .well section:nth-child(1) nav li.next { 
     position: absolute;
     top: 0px;
     right: 0px;
 }
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav h3 a, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar   .view-header nav h3 a { 
+body .main-container .row aside .well section:nth-child(1) nav h3 { 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+body .main-container .row aside .well section:nth-child(1) nav h3 a { 
     color: #000;
     font-family: "Myriad Pro";
     text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+
 }
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr .mini-day-on, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-content .calendar-calendar tr .mini-day-on {
+body .main-container .row aside .well section:nth-child(1) .calendar-calendar tr .mini-day-on {
     padding: 0px;
     text-align: center;
 }
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr .mini-day-on  a, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-content .calendar-calendar tr .mini-day-on  a {    
+body .main-container .row aside .well section:nth-child(1) .calendar-calendar tr .mini-day-on  a {    
     color: #000;
     text-decoration: none;
 }
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr td.today, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-content .calendar-calendar tr td.today {
+body .main-container .row aside .well section:nth-child(1) .calendar-calendar tr td.today {
     background-color: #4C48A8;
     color: white;
     text-align: center;
 }
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar tr td.today div a, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-content .calendar-calendar tr td.today div a {
+body .main-container .row aside .well section:nth-child(1) .calendar-calendar tr td.today div a {
     color: white;
     text-decoration: none;
 }
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar td.has-no-events, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar .view-content .calendar-calendar td.has-no-events {
+body .main-container .row aside .well section:nth-child(1) .calendar-calendar td.has-no-events {
     text-align: center;
     color: black;
 } 
- .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .calendar-calendar th.days, .row aside .well .Calendario_Contenedor-estudiantes .view-id-estudiante_calendar   .view-content .calendar-calendar th.days {
+body .main-container .row aside .well section:nth-child(1) .calendar-calendar th.days {
     background-color: transparent;
     color: #000;
     font-weight: normal;
     border: 1px solid transparent;
 }
+@media screen and (max-width: 1024px) {
+    /* -\* Calendario contenedor  - */
+    body.page-calendario-consejero .row {
+        padding: 0px;
+        margin: 0px;
+        border: none;
+    }
+    body.page-calendario-consejero .row aside {
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    body.page-calendario-consejero .row .well {
+        padding: 0px;
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header {
+        width: 100%;
+        background-color: #47AC4B;
+        height: 85px;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .date-calendar-today {
+        font-size: 17px;
+        color: white;
+        order: 2;  
+        position: absolute;
+        left: 110px;
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar button.button-calendar {
+        background: url(../img/Menu.png)no-repeat;
+        background-size: 27px;
+        border-color: transparent;
+        border-radius: 0px;
+        border-width: 0px;
+        padding: 0px;
+        width: 44px;
+        height: 25px;
+        margin: 0px 10px;
+        order: 3;
+        top: 30px;
+        left: 0;
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav {
+        order: 1;
+        background-color: white;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 75%;
+        margin: 0 auto;
+        height: 58px;
+        border-right: 3px solid #BBBDBF;
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav .prev {
+        top: 17px;
+        left: 15%;
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav .next {
+         top: 17px;
+        left: 80%;
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav h3 {
+        top: 17px;
+        left: 41%;
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .month-view {
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        background: red;
+        border-right: 3px solid #BBBDBF;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        z-index: 1;
+    }
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .month-view table {
+        width: 76%;
+    }
 
+    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .date-nav-wrapper::before {
+        content: "+";
+        font-size: 40px;
+        -ms-transform: rotate(50deg);
+        -webkit-transform: rotate(50deg);
+        transform: rotate(43deg);
+        position: absolute;
+        top: 0px;
+        left: 93%;
+        margin: 0px;
+        padding: 0px;
+        color: black;
+    }
+}
 
 /* -\* Button Crear Disponibilidad - */
-body.page-calendario-consejero .row aside .well section.crear_disponibilidad {
+body .main-container .row aside .well section:nth-child(2).crear_disponibilidad {
     width: 100%
 }
-body.page-calendario-consejero .row aside .well .crear_disponibilidad h2.block-title {
+body .main-container .row aside .well section:nth-child(2).crear_disponibilidad h2.block-title {
     display: none;
 }
-body.page-calendario-consejero .row aside .well section.crear_disponibilidad div#magical-modal-link {
-      margin-top: 38px;
-    /* text-align: center; */
+body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link {
+    margin-top: 38px;
     width: 100%;
     height: 33px;
     background: #47AC4B;
@@ -588,42 +698,40 @@ body.page-calendario-consejero .row aside .well section.crear_disponibilidad div
     align-items: center;
     display: inline-flex;
 }
-body.page-calendario-consejero .row aside .well section.crear_disponibilidad div#magical-modal-link a {
+body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link a {
     color: #FFF;
- /*   background: #47AC4B;
-    padding: 8px 38px;*/
 }
-body.page-calendario-consejero .row aside .well section.crear_disponibilidad div#magical-modal-link a .glyphicon-refresh {
+body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link a .glyphicon-refresh {
     display: none;
 }
-body.page-calendario-consejero .row aside .well section.crear_disponibilidad .cupo-disponible , .cupo-lleno, .hoy {
+body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-disponible , .cupo-lleno, .hoy {
     display: inline-flex;
     padding: 26px 0px 0px 0px;
 }
 
-body.page-calendario-consejero .row aside .well section.crear_disponibilidad .cupo-disponible .caja-1 {
+body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-disponible .caja-1 {
     width: 25px;
     height: 25px;
     background-color: #47AC4B;
     display: inline-block;
     margin-right: 10px;
 }
-body.page-calendario-consejero .row aside .well section.crear_disponibilidad .cupo-lleno .caja-2 {
+body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-lleno .caja-2 {
     width: 25px;
     height: 25px;
     background-color: #6D6E70;
     display: inline-block;
     margin-right: 10px;
 }
-body.page-calendario-consejero .row aside .well section.crear_disponibilidad .hoy .caja-3 {
+body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .hoy .caja-3 {
     width: 25px;
     height: 25px;
     background-color: #4C48A8;
     display: inline-block;
     margin-right: 10px;
 }
-/* -\* Button Crear Disponibilidad - Estudiantes */
 
+/* -\* Button Crear Disponibilidad - Estudiantes */
 body .row aside .well section.info-citas-estudiantes {
     width: 100%
 }
@@ -746,111 +854,93 @@ body.page-calendario-estudiante .main-container .row section ul.tabs--primary li
 }
 
 /* -\* Calendario de Agenda Fecha - consejero  - */
-body .main-container .row section div.region.region-content {
+body .main-container .row > section div.region.region-content {
     clear: both;
     z-index: -100;
     margin-top: 37px;
 }
-body .main-container .row section div.region.region-content .view-id-consejero_calendar, body .main-container .row section div.region.region-content .view-id-estudiante_calendar {
+body .main-container .row > section div.region.region-content div.view {
     position: relative;
 }
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header > a, body .main-container .row section div.region.region-content ..view-id-estudiante_calendar .view-header > a { 
+body .main-container .row > section div.region.region-content div.view .view-header > a { 
     color : #4C48A8;
     text-decoration: none;
 }
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header > a:hover, .view-id-consejero_calendar .view-header > a:active, .view-id-consejero_calendar .view-header > a:focus, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header > a:hover, .view-id-estudiante_calendar .view-header > a:active, .view-id-estudiante_calendar .view-header > a:focus { 
+body .main-container .row > section div.region.region-content div.view .view-header > a:hover, body .main-container .row > section div.region.region-content div.view .view-header > a:active, body .main-container .row > section div.region.region-content div.view .view-header > a:focus { 
     color: #8989CE;    
 }
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav ul, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav ul {
+body .main-container .row > section div.region.region-content div.view .view-header nav ul {
     position: absolute;
     top: 0px;
     left: 0px;
 }
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav li.prev a, body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav li.next a, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav li.prev a, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav li.next a {
+body .main-container .row > section div.region.region-content div.view .view-header nav li a {
     color: #000;
     background-color: transparent;
-    border: 1px solid transparent;
-    text-indent: -999px;
-}
-
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav li.prev a, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav li.prev a {
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
+    border: none;
+    text-indent: -9999%;
+    border-left: 2px solid black !important;
+    border-bottom: 2px solid black !important;
     width: 10px;
     height: 10px;
     padding: 0;
+}
+body .main-container .row > section div.region.region-content div.view .view-header nav li.prev a {
     transform: rotate(46deg);
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
     margin-right: 27px;
 }
-body .main-container .row section div.region.region-content  .view-id-consejero_calendar .view-header nav li.next a, body .main-container .row section div.region.region-content  .view-id-estudiante_calendar .view-header nav li.next a {
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    width: 10px;
-    height: 10px;
-    padding: 0;
-    transform: rotate(317deg);
+body .main-container .row > section div.region.region-content div.view .view-header nav li.next a {
+    transform: rotate(224deg);
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
 }
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav li.next a:hover, body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav li.prev a:hover, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav li.next a:hover, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav li.prev a:hover {
+body .main-container .row > section div.region.region-content div.view .view-header nav li.next a:hover, body .main-container .row > section div.region.region-content div.view .view-header nav li.prev a:hover {
     color: #000 !important;
     background-color: transparent !important;
 }
-
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header nav h3, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-header nav h3 {
-    margin-left: 150px;
+body .main-container .row > section div.region.region-content div.view .view-header h3 {
+    margin-left: 66px;
+    padding-right: 20px;
     color: #808184;
-    width: 321px;
+    width: auto;
     border-right: 2px solid #808184;
     font-size: 22px;
-    display: inline-block;
+    float: left;
 }
-
-
-body .main-container  .date-views-pager h2 {
-    display: inline-block;
-    margin-left: 150px;
+body .main-container .row > section div.region.region-content div.view .view-header h2 {
+    padding-left: 20px;
     color: #a1d3a1;
-    width: 321px;
+    width: auto;
     font-size: 22px;
-}
-
-
-body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-content #header-container th, body .main-container .row section div.region.region-content .view-id-estudiante_calendar .view-content #header-container th {
-    border: 0px solid #ccc;
-    background-color: #F9FAFB;
-    color: #808081;
-    font-weight: normal;
-    font-size: 12px;
-    border-top: 1px solid #808184;
+    float: left;
 }
 
 /* -\* Calendario de Agenda Día - Semana - Mes  - */
 /* Dia */
-.calendar-calendar .day-view .full td .inner div.calendar div {
+body .main-container .row > section div.region.region-content div.view .view-content .calendar-calendar .day-view .full td .inner div.calendar div {
     margin: 2px;
 }
-.calendar-calendar .day-view .full .single-day .dayview {
+body .main-container .row > section div.region.region-content div.view .view-content .calendar-calendar .day-view .full .single-day .dayview {
     background: rgb(161, 211, 161)!important;
     color: black;
     border-radius: 0px !important;
     border: 1px solid #47ac4b9c !important;
     border-left: 10px solid #47AC4B !important
 }
-.calendar a.ctools-use-modal.ctools-use-modal-processed {
+body .main-container .row > section div.region.region-content div.view .view-content .calendar a.ctools-use-modal.ctools-use-modal-processed {
     position: absolute;
     text-indent: -9999px;
     width: 100%;
     height: 100%;
     background: transparent;
 }
-.calendar-calendar .day-view .full .single-day div.dayview span ,.cutoff{
+body .main-container .row > section div.region.region-content div.view .view-content .calendar-calendar .day-view .full .single-day div.dayview span ,.cutoff{
     display: none !important; 
 }
 /* Semana*/
-.calendar-calendar .week-view .full div.single-day div.weekview, .calendar-calendar .week-view .full div.single-day div.dayview {
+body .main-container .row > section div.region.region-content div.view .view-content .calendar-calendar .week-view .full div.single-day div.weekview, body .main-container .row > section div.region.region-content div.view .view-content .calendar-calendar .week-view .full div.single-day div.dayview {
     background: rgb(161, 211, 161) !important;
     border-radius: 0px !important;
     border: 0px solid transparent;
@@ -859,15 +949,24 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     text-align: justify;
     word-break: break-all;
 }
-.calendar-calendar td .inner div.calendar div {
+body .main-container .row > section div.region.region-content div.view .view-content .calendar-calendar td .inner div.calendar div {
     background: rgb(161, 211, 161) !important;
 }
-.calendar-calendar .week-view .full .single-day div.weekview span ,.cutoff{
+body .main-container .row > section div.region.region-content div.view .view-content .calendar-calendar .week-view .full .single-day div.weekview span ,.cutoff{
     display: none !important; 
 }
 
+body .main-container .row > section div.region.region-content div.view .view-content #header-container th {
+    border: 0px solid #ccc;
+    background-color: #F9FAFB;
+    color: #808081;
+    font-weight: normal;
+    font-size: 12px;
+    border-top: 1px solid #808184;
+}
+
 /* Mes */
-.calendar-calendar .month-view .full th.days {
+body .main-container .row > section div.region.region-content div.view .view-content .calendar-calendar .month-view .full th.days {
     background-color: #F9FAFB;
     color: #808081;
     font-weight: normal;
@@ -891,100 +990,6 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
 
 /*------------------ Media Query ------------------ */
 @media screen and (max-width: 1024px) {
-    /* -\* Calendario contenedor  - */
-    body.page-calendario-consejero .row {
-        padding: 0px;
-        margin: 0px;
-        border: none;
-    }
-    body.page-calendario-consejero .row aside {
-        margin: 0px !important;
-        padding: 0px !important;
-    }
-    body.page-calendario-consejero .row aside .well {
-        padding: 0px;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header {
-        width: 100%;
-        background-color: #47AC4B;
-        height: 85px;
-        display: flex;
-        align-items: center;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .date-calendar-today {
-        font-size: 17px;
-        color: white;
-        order: 2;  
-        position: absolute;
-        left: 110px;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar button.button-calendar {
-        background: url(../img/Menu.png)no-repeat;
-        background-size: 27px;
-        border-color: transparent;
-        border-radius: 0px;
-        border-width: 0px;
-        padding: 0px;
-        width: 44px;
-        height: 25px;
-        margin: 0px 10px;
-        order: 3;
-        top: 30px;
-        left: 0;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav {
-        order: 1;
-        background-color: white;
-        position: absolute;
-        top: 0px;
-        left: 0;
-        width: 75%;
-        margin: 0 auto;
-        height: 58px;
-        border-right: 3px solid #BBBDBF;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav .prev {
-        top: 17px;
-        left: 15%;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav .next {
-         top: 17px;
-        left: 80%;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav h3 {
-        top: 17px;
-        left: 41%;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .month-view {
-        width: 75%;
-        display: flex;
-        justify-content: center;
-        background: red;
-        border-right: 3px solid #BBBDBF;
-        position: absolute;
-        top: 58px;
-        left: 0;
-        z-index: 1;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .month-view table {
-        width: 76%;
-    }
-
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .date-nav-wrapper::before {
-        content: "+";
-        font-size: 40px;
-        -ms-transform: rotate(50deg);
-        -webkit-transform: rotate(50deg);
-        transform: rotate(43deg);
-        position: absolute;
-        top: 0px;
-        left: 93%;
-        margin: 0px;
-        padding: 0px;
-        color: black;
-    }
     /* -\* Button Crear Disponibilidad - */
      body.page-calendario-consejero .row aside .well section.crear_disponibilidad {
         width: 76.6%;
@@ -1006,7 +1011,7 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     }
     body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav, body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .month-view, body.page-calendario-consejero .row aside .well section.crear_disponibilidad {
        /* transform: translateX(-110%);*/
-        z-index: 1;
+        z-index: 2;
         background-color: white;
     }
     body.page-calendario-consejero .row aside .well section.crear_disponibilidad div#magical-modal-link a {
@@ -1061,7 +1066,6 @@ body .main-container .row section div.region.region-content .view-id-consejero_c
     width: calc(78.2% + 4px);
     }
 }
-/*------------------ Media Query ------------------ */
 
 /*------------------ Modal - Crear Disponibilidad  ------------------ */
 /*.backdrop-default {
@@ -2145,7 +2149,13 @@ body.page-servicios-estudiante .main-container .row > section {
     padding: 0px;
 }
 body.page-servicios-estudiante .view-id-servicios li {
-      margin-bottom: 103px;
+    margin-bottom: 103px;
+    display: inline-flex;
+        display: -ms-inline-flexbox;
+        display: -webkit-inline-flex;
+    justify-content: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
 }
 .view-id-servicios li {
     list-style: none;
@@ -2158,7 +2168,7 @@ body.page-servicios-estudiante .view-id-servicios li {
         -webkit-flex-direction: row-reverse;
         -ms-flex-direction: row-reverse;
     justify-content: flex-end;
-            -webkit-justify-content: flex-end;
+        -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
     align-self: center;
         -webkit-align-content: center;
@@ -2199,9 +2209,8 @@ body.page-servicios-estudiante .view-id-servicios li {
     font-weight: bold;
     font-size: 16px;
     letter-spacing : -0.55px;
-
 }
-.view-id-servicios .views-field-php:hover span::after  {
+.view-id-servicios li:hover .views-field-php span::after  {
     content: "";
     position: absolute;
     bottom: -10px;
@@ -2210,12 +2219,16 @@ body.page-servicios-estudiante .view-id-servicios li {
     height: 3px;
     border: 3px solid #41B65B;
 }
-.view-id-servicios .views-field-php:hover span a {
+.view-id-servicios li:hover  span a {
     color : #000000;
     font-weight: bold;
     font-family: lato;
     font-size: 16px;
-}   
+}
+.view-id-servicios li:hover img {
+    -webkit-filter: brightness();
+    filter: brightness();
+}
 .view-footer .text-center {
     margin-bottom: 85px;
 }

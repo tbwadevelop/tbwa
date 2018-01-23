@@ -1,6 +1,50 @@
 (function ($) {
 	Drupal.behaviors.request = {
 	    attach: function (context, settings) {
+
+//	    var mes = $('.view-header .dropdown .selected span').text();
+
+		$( ".view-consejero-calendar .wrapper" ).click(function() {
+			// console.log("entra");
+		 //  console.log($(this).context.innerText);
+		   // var mes = $(this).context.innerText;
+		   // console.log(mes);
+		   // console.log($(this).context.outerText);
+
+		   var mes = $('.view-header .dropdown .selected').text();
+
+				switch(mes) {
+				    case 'Enero':
+				    	break;
+				    case 'Febrero':
+				        break;
+				    case 'Marzo':
+				        break;
+				    case 'Mayo':
+				        break;				        
+				    case 'Junio':
+				        $(".date-views-pager .pagination .next a").attr("href", "http://w.tbwa.com/calendario-consejero/diario?mini=2017-05");
+				        window.location.href = "http://w.tbwa.com/calendario-consejero/diario?mini=2017-06";
+				       break;				
+				    case 'Julio':
+				        break;				
+				    case 'Agosto':
+				        break;	
+				    case 'Septiembre':
+				        break;	
+				    case 'Octubre':
+				        break;	
+				    case 'Noviembre':
+				        break;	
+				    case 'Diciembre':
+				        break;					        
+				}
+		});
+
+
+
+
+	    	
 	    // Loader Animation.	
 		$(window).load(function(){
 		    $('.loader').fadeOut(500);
@@ -42,10 +86,16 @@
 		 })
 
 
+			$(document).ready(function(){
+			       $('.view-header .dropdown .selected').text('Junio');
+			});
+
+
 
 
 	    }
   	};
 }(jQuery));
+
 
 

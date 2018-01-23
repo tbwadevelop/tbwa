@@ -2,19 +2,19 @@
 	<?php ctools_include('modal'); ctools_include('ajax'); ?>
 
 	<div class="create meeting">
-	<?php  print(l(t('Create meeting'), 'crear/'.arg(1).'/citas')); ?>
+	<?php  print(l(t('Crear  disponibilidad'), 'crear/'.arg(1).'/citas')); ?>
 	</div>
 
 	<div class="edit availability">
 	<?php 
-	print(l(t('Edit availability'), 'availability-edit/'.arg(1).'/nojs', 
+	print(l(t('Editar disponibilidad'), 'availability-edit/'.arg(1).'/nojs', 
 	      array('attributes' => array('class' => 'ctools-use-modal'))));
 	?>
 	</div>
 
 	<div class="delete availability">
 	<?php 
-	print(l(t('Delete availability'), 'availability-delete/'.arg(1).'/nojs', 
+	print(l(t('Eliminar disponibilidad'), 'availability-delete/'.arg(1).'/nojs', 
 	      array('attributes' => array('class' => 'ctools-use-modal'))));
 	?>
 	</div>

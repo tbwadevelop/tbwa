@@ -2,49 +2,81 @@
 	Drupal.behaviors.request = {
 	    attach: function (context, settings) {
 
-//	    var mes = $('.view-header .dropdown .selected span').text();
-
+		var url = new URL(window.location.href);
+		var c = url.searchParams.get("mini");
+		
 		$( ".view-consejero-calendar .wrapper" ).click(function() {
-			// console.log("entra");
-		 //  console.log($(this).context.innerText);
-		   // var mes = $(this).context.innerText;
-		   // console.log(mes);
-		   // console.log($(this).context.outerText);
-
-		   var mes = $('.view-header .dropdown .selected').text();
-
-				switch(mes) {
+			var mes = $(".dropdown .active").text();
+			switch($('.view-header .dropdown .selected').text()) {
 				    case 'Enero':
-				    	break;
+				    	if (mes == 'Enero' && c != null) {
+				    		setTimeout(function(){ window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-01"; 
+				    		}, 3000);
+					    }
+					break;
 				    case 'Febrero':
-				        break;
+					    if (mes == 'Febrero') {
+					    	window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-02";
+					    }
+				    break;
 				    case 'Marzo':
-				        break;
+					    if (mes == 'Marzo') {
+					    	 window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-03";
+					    }	 
+				    break;
+				    case 'Abril':
+					    if (mes == 'Abril') {
+					    	window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-04"; 	 
+					    }
+				    break;
 				    case 'Mayo':
-				        break;				        
+				    	if (mes == 'Mayo') {
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-05";
+				    	}
+	 
+				    break;				        
 				    case 'Junio':
-				        $(".date-views-pager .pagination .next a").attr("href", "http://w.tbwa.com/calendario-consejero/diario?mini=2017-05");
-				        window.location.href = "http://w.tbwa.com/calendario-consejero/diario?mini=2017-06";
-				       break;				
+				    	if (mes == 'Junio') {
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-06";
+				    	}      
+				   break;				
 				    case 'Julio':
-				        break;				
+				    	if (mes == 'Julio') {
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-07";
+				    	}
+	 
+				    break;				
 				    case 'Agosto':
-				        break;	
+				    	if (mes == 'Agosto') {
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-08";
+				    	}
+	 
+				    break;	
 				    case 'Septiembre':
-				        break;	
+				    	if (mes == 'Septiembre') {
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-09";
+				    	}
+	 
+				    break;	
 				    case 'Octubre':
-				        break;	
+				    	if (mes == 'Octubre') {
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-10";
+				    	}
+	 
+				    break;	
 				    case 'Noviembre':
-				        break;	
+				    	if (mes == 'Noviembre') {
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-11";
+				    	}
+	 
+				    break;	
 				    case 'Diciembre':
-				        break;					        
+				    	if (mes == 'Diciembre') {
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-12";
+				    	}
+				    break;					        
 				}
 		});
-
-
-
-
-	    	
 	    // Loader Animation.	
 		$(window).load(function(){
 		    $('.loader').fadeOut(500);
@@ -85,14 +117,11 @@
 		     })
 		 })
 
-
-			$(document).ready(function(){
-			       $('.view-header .dropdown .selected').text('Junio');
-			});
-
-
-
-
+			 $(document).ready(function(){
+			 	var titulo = $(".date-views-pager h3 a").text();
+			 	var month_now = titulo.split(" ");
+			 	$('.view-header .dropdown .selected').text(month_now[0]);
+			 });
 	    }
   	};
 }(jQuery));

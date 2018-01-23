@@ -374,30 +374,6 @@ section.Navegacion_Agenda ul.menu li.active-trail.active a {
     color: white;
 }
 
-/*@media screen and (max-width: 1024px) {
-    section.Navegacion_Agenda ul.menu {
-        width: 100%;
-        margin-right: 0px;
-        background-color: #FFFFFF;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        z-index: 1036;
-    }
-    section.Navegacion_Agenda ul.menu li {
-        width: 20%;
-        border-right: 2px solid #9E9E9E;
-    }
-    section.Navegacion_Agenda ul.menu li a {
-        width: auto;
-    }
-}
-@media screen and (max-width: 768px) {
-    section.Navegacion_Agenda ul.menu li a {
-        padding: 0px 18%;
-        font-size: 12px;
-    }
-}*/
 
 /* -\* Header agenda de servicio - */
 body .main-container header section.title-agenda-de-servicio  {
@@ -578,6 +554,7 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar tr
 body .main-container .row aside .well section:nth-child(1) .calendar-calendar td.has-no-events {
     text-align: center;
     color: black;
+    padding: 0px 0px 0px 0px;
 } 
 body .main-container .row aside .well section:nth-child(1) .calendar-calendar th.days {
     background-color: transparent;
@@ -585,7 +562,7 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
     font-weight: normal;
     border: 1px solid transparent;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
     /* -\* Calendario contenedor  - */
     body.page-calendario-consejero .row {
         padding: 0px;
@@ -599,7 +576,7 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
     body.page-calendario-consejero .row .well {
         padding: 0px;
     }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header {
+    body .main-container .row aside .well section:nth-child(1) .view-header {
         width: 100%;
         background-color: #47AC4B;
         height: 85px;
@@ -608,14 +585,14 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
         flex-direction: row-reverse;
         justify-content: flex-end;
     }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .date-calendar-today {
+ /*   body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .date-calendar-today {
         font-size: 17px;
         color: white;
         order: 2;  
         position: absolute;
         left: 110px;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar button.button-calendar {
+    }*/
+    /*body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar button.button-calendar {
         background: url(../img/Menu.png)no-repeat;
         background-size: 27px;
         border-color: transparent;
@@ -628,8 +605,8 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
         order: 3;
         top: 30px;
         left: 0;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav {
+    }*/
+    body .main-container .row aside .well section:nth-child(1) nav {
         order: 1;
         background-color: white;
         position: absolute;
@@ -640,19 +617,19 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
         height: 58px;
         border-right: 3px solid #BBBDBF;
     }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav .prev {
-        top: 17px;
-        left: 15%;
+    body .main-container .row aside .well section:nth-child(1) nav li.prev {
+        top: 19px;
+        left: 12%;
     }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav .next {
-         top: 17px;
-        left: 80%;
+    body .main-container .row aside .well section:nth-child(1) nav li.next {
+         top: 19px;
+        left: 78%;
     }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav h3 {
-        top: 17px;
-        left: 41%;
+    body .main-container .row aside .well section:nth-child(1) nav h3 {
+        margin-top: 20px;
+        margin-bottom: auto;
     }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .month-view {
+    body .main-container .row aside .well section:nth-child(1)  .view-content .month-view {
         width: 75%;
         display: flex;
         justify-content: center;
@@ -663,11 +640,11 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
         left: 0;
         z-index: 1;
     }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .month-view table {
+    body .main-container .row aside .well section:nth-child(1) .view-content .month-view table {
         width: 76%;
     }
 
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .date-nav-wrapper::before {
+    body .main-container .row aside .well section:nth-child(1) nav.date-nav-wrapper::before {
         content: "+";
         font-size: 40px;
         -ms-transform: rotate(50deg);
@@ -708,7 +685,6 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
     display: inline-flex;
     padding: 26px 0px 0px 0px;
 }
-
 body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-disponible .caja-1 {
     width: 25px;
     height: 25px;
@@ -730,7 +706,43 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
     display: inline-block;
     margin-right: 10px;
 }
-
+@media screen and (max-width: 1024px) {
+    body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link {
+        background: transparent;
+    }
+}
+@media screen and (max-width: 991px) {
+    body .main-container .row aside .well section:nth-child(2).crear_disponibilidad {
+        width: 76.6% !important;
+        background: gray;
+        border-right: 3px solid #BBBDBF;
+        position: absolute;
+        top: 182px;
+        left: -15px;
+        z-index: 1;
+    }
+    body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-disponible, .cupo-lleno, .hoy {
+        justify-content: center;
+        align-items: center;
+        font-size: 12px
+    }
+    body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-disponible .caja-1, .cupo-lleno .caja-2, .hoy .caja-3 {
+        width: 21px;
+        height: 21px;
+    }
+    body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad {
+       /* transform: translateX(-110%);*/
+        z-index: 2;
+        background-color: white;
+    }
+    body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link a {
+        padding: 8px 13%;
+        font-size: 14px;
+    } 
+    body .main-container .row section div.region.region-content {
+        margin: 0px;
+    }
+}
 /* -\* Button Crear Disponibilidad - Estudiantes */
 body .row aside .well section.info-citas-estudiantes {
     width: 100%
@@ -862,6 +874,8 @@ body .main-container .row > section div.region.region-content {
 body .main-container .row > section div.region.region-content div.view {
     position: relative;
 }
+
+/* -\* Enlace ir a hoy - */
 body .main-container .row > section div.region.region-content div.view .view-header > a { 
     color : #4C48A8;
     text-decoration: none;
@@ -869,6 +883,22 @@ body .main-container .row > section div.region.region-content div.view .view-hea
 body .main-container .row > section div.region.region-content div.view .view-header > a:hover, body .main-container .row > section div.region.region-content div.view .view-header > a:active, body .main-container .row > section div.region.region-content div.view .view-header > a:focus { 
     color: #8989CE;    
 }
+@media screen and (max-width: 1024px) {
+    body .main-container .row > section div.region.region-content div.view .view-header > a {
+        color: white;
+        position: absolute;
+        left: 89%;
+        top: -114px;
+        width: 47px;
+    }
+}
+@media screen and (max-width: 768px) {
+    body .main-container .row > section div.region.region-content div.view .view-header > a {
+        left: 84%;
+    }
+}  
+
+/* -\* Flechas calendario - */
 body .main-container .row > section div.region.region-content div.view .view-header nav ul {
     position: absolute;
     top: 0px;
@@ -900,6 +930,8 @@ body .main-container .row > section div.region.region-content div.view .view-hea
     color: #000 !important;
     background-color: transparent !important;
 }
+
+/* -\* Flechas y nombre consejero - */
 body .main-container .row > section div.region.region-content div.view .view-header h3 {
     margin-left: 66px;
     padding-right: 20px;
@@ -986,85 +1018,6 @@ body .main-container .row > section div.region.region-content div.view .view-con
 }
 .calendar-calendar .month-view .full td.single-day div.monthview span {
     display: none !important; 
-}
-
-/*------------------ Media Query ------------------ */
-@media screen and (max-width: 1024px) {
-    /* -\* Button Crear Disponibilidad - */
-     body.page-calendario-consejero .row aside .well section.crear_disponibilidad {
-        width: 76.6%;
-        background: gray;
-        border-right: 3px solid #BBBDBF;
-        position: absolute;
-        top: 186px;
-        left: -15px;
-        z-index: 1;
-    }
-     body.page-calendario-consejero .row aside .well section.crear_disponibilidad .cupo-disponible, .cupo-lleno, .hoy {
-        justify-content: center;
-        align-items: center;
-        font-size: 12px
-    }
-    body.page-calendario-consejero .row aside .well section.crear_disponibilidad .cupo-disponible .caja-1, .cupo-lleno .caja-2, .hoy .caja-3 {
-        width: 21px;
-        height: 21px;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-header nav, body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar  .view-content .month-view, body.page-calendario-consejero .row aside .well section.crear_disponibilidad {
-       /* transform: translateX(-110%);*/
-        z-index: 2;
-        background-color: white;
-    }
-    body.page-calendario-consejero .row aside .well section.crear_disponibilidad div#magical-modal-link a {
-        padding: 8px 13%;
-    } 
-    body .main-container .row section div.region.region-content {
-        margin: 0px;
-    }
-    /* -\* Enlace ir a hoy - */
-    body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header .today-now a {
-        color: white;
-        position: absolute;
-        left: 117%;
-        top: -75px;
-        width: 47px;
-    }
-}
-@media screen and (max-width: 768px) {
-    body .main-container .row section div.region.region-content .view-id-consejero_calendar .view-header .today-now a {
-        left: 84%;
-    }  
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .date-calendar-today {
-        left: 50px;
-    }  
-}
-@media screen and (max-width: 674px) {
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav .prev {
-        left: 7%;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav .next {
-        left: 77%;
-    }
-    body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .view-header nav h3 {
-        left: calc(38% - 1em);
-    }
-}
-
-
-@media screen and (max-width: 991px ) {
-    body.page-calendario-consejero .row aside .well section.crear_disponibilidad {
-    width: calc(78.2% + 0.1%);
-    }
-}
-@media screen and (max-width: 667px ) {
-    body.page-calendario-consejero .row aside .well section.crear_disponibilidad {
-    width: calc(78.2% + 2px);
-    }
-}
-
-@media screen and (max-width: 375px ) {
-    body.page-calendario-consejero .row aside .well section.crear_disponibilidad {
-    width: calc(78.2% + 4px);
-    }
 }
 
 /*------------------ Modal - Crear Disponibilidad  ------------------ */

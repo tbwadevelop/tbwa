@@ -1,17 +1,14 @@
 (function ($) {
 	Drupal.behaviors.request = {
 	    attach: function (context, settings) {
-
 		var url = new URL(window.location.href);
-		var c = url.searchParams.get("mini");
-		
 		$( ".view-consejero-calendar .wrapper" ).click(function() {
 			var mes = $(".dropdown .active").text();
 			switch($('.view-header .dropdown .selected').text()) {
 				    case 'Enero':
-				    	if (mes == 'Enero' && c != null) {
+				    	if (mes == 'Enero' && url.searchParams.get("mini") != null) {
 				    		setTimeout(function(){ window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario?mini=2018-01"; 
-				    		}, 3000);
+				    		}, 2000);
 					    }
 					break;
 				    case 'Febrero':

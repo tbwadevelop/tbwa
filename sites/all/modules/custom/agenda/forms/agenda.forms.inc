@@ -5,9 +5,11 @@ function agenda_records_form($form, &$form_state) {
 
  if (is_numeric(arg(1))) {
      $node = node_load(arg(1));
-     variable_set('nid', $node->nid);
-     $wrapper = entity_metadata_wrapper('node', $node);
-     variable_set('cupo', $wrapper->field_cupo->value());
+    if ($node->type == 'disponibilidad') {
+         variable_set('nid', $node->nid);
+         $wrapper = entity_metadata_wrapper('node', $node);
+         variable_set('cupo', $wrapper->field_cupo->value());
+    }
   } 
 
   $form['field_container'] = [

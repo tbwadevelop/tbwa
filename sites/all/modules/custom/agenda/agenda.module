@@ -168,12 +168,14 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
  */
 
 function agenda_node_presave($node) {
-   $node->title = $node->name . " - " . date('m-d-Y',$node->created);
-   $wrapper = entity_metadata_wrapper('node', $node);
-   $date = $wrapper->field_fecha->value();
-   $time = date_format(date_create($date['value']), 'g:i A') . ' - ' . date_format(date_create($date['value2']), 'g:i A'); 
-   $service = $wrapper->field_tipo_de_servicio->value()->name;
-   $wrapper->field_operaciones->set($time . ' ' . $service); 
+  if ($node->type == 'disponibilidad') {
+     $node->title = $node->name . " - " . date('m-d-Y',$node->created);
+     $wrapper = entity_metadata_wrapper('node', $node);
+     $date = $wrapper->field_fecha->value();
+     $time = date_format(date_create($date['value']), 'g:i A') . ' - ' . date_format(date_create($date['value2']), 'g:i A'); 
+     $service = $wrapper->field_tipo_de_servicio->value()->name;
+     $wrapper->field_operaciones->set($time . ' ' . $service); 
+  }
 }
 
 /**

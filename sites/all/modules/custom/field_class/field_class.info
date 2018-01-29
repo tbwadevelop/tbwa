@@ -9,7 +9,7 @@ package = drupalbeer
 ; Information added by Drupal.org packaging
 version = "7.x-1.4"
 core = "7.x"
-project = "drupalbeer"
+project = "TBWA"
 datestamp = "1470638340"
 
 

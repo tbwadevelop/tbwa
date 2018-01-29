@@ -1,5 +1,12 @@
 <?php 
 
+
+define('FPC', 0); 
+define('FCT', 1); 
+define('FCA', 2); 
+define('FCC', 3); 
+
+
 // Form  for created quotes 
 function agenda_records_form($form, &$form_state) {
 

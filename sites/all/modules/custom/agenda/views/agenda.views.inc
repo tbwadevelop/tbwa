@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_views_pre_view().
  */
-function agenda_views_pre_render(&$view, &$display_id, &$args) {
+function agenda_views_pre_render(&$view) {
    if ($view->name == 'mis_citas') {
      foreach ($view->result as $key => $value) {
          $date_disponibilidad = explode("to", $value->field_field_fecha_1[FIRST_POSITION]['rendered']['#markup']);
@@ -18,4 +18,4 @@ function agenda_views_pre_render(&$view, &$display_id, &$args) {
          }
      }
    }
-} 
+}

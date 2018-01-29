@@ -38,6 +38,9 @@ dependencies[] = field_class
 dependencies[] = features
 dependencies[] = role_export
 
+; Add a style sheet for all media
+stylesheets[all][] = css/style.css
+
 package = TBWA
 ; Information added by Drupal.org packaging script on 2016-08-08 danilo
 version = "7.x-1.4"

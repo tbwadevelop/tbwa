@@ -669,14 +669,15 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
 body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link {
     margin-top: 38px;
     width: 100%;
-    height: 33px;
-    background: #47AC4B;
-    justify-content: center;
-    align-items: center;
     display: inline-flex;
 }
 body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link a {
     color: #FFF;
+    background: #47AC4B;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 4px;
 }
 body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link a .glyphicon-refresh {
     display: none;
@@ -706,12 +707,14 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
     display: inline-block;
     margin-right: 10px;
 }
-@media screen and (max-width: 1024px) {
-    body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link {
-        background: transparent;
-    }
-}
+
 @media screen and (max-width: 991px) {
+        body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link {
+        background: transparent;
+        justify-content: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+    }
     body .main-container .row aside .well section:nth-child(2).crear_disponibilidad {
         width: 76.6% !important;
         background: gray;
@@ -738,6 +741,7 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
     body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link a {
         padding: 8px 13%;
         font-size: 14px;
+        width: 80%;
     } 
     body .main-container .row section div.region.region-content {
         margin: 0px;
@@ -2461,7 +2465,6 @@ section#block-menu-menu-navegaci-n-agenda-cordinado ul.menu li.active-trail.acti
 /*------------------ Menu citas  - Consejero ------------------ */
 
 /* -\* Nuevo comentario /*- */
-
 .loader {
     position: fixed;
     left: 0px;
@@ -2472,12 +2475,43 @@ section#block-menu-menu-navegaci-n-agenda-cordinado ul.menu li.active-trail.acti
     background: url(http://loadinggif.com/images/image-selection/3.gif) 50% 50% no-repeat rgb(182, 181, 181);
 }
 
-
-
-
-
-
-
+/*------------------ button informacion citas - Consejero ------------------ */
+body.page-node-edit.node-type-disponibilidad .row {
+    border: 3px solid #808184;
+    margin: auto;
+}
+body.page-node-edit section .field-name-field-tipo-de-servicio {
+    width: 42%;
+}
+body.page-node-edit section .form-item.form-type-select.form-group {
+    display: flex;
+}
+body.page-node-edit section form.node-disponibilidad-form > label {
+     line-height: 2.1em;
+    font-family: Lato;
+    font-size: 20px;
+}
+body.page-node-edit section .field-name-field-tipo-de-servicio label {
+    color: #41B65B;
+}
+body.page-node-edit section form.node-disponibilidad-form select {
+     -moz-appearance: button; 
+    -webkit-appearance: button;
+    appearance: button;
+    border-radius: 0px;
+    border: 1px solid #FFF;
+    background-image: none !important;
+    background-color: #FFF;
+    -webkit-box-shadow: inset 0px 0px 0px transparent;
+    box-shadow: inset 0px 0px 0px transparent;
+    width: auto;
+    height: 41px;
+    font-family: Lato;
+    font-size: 20px;
+}
+body.page-node-edit section #edit-field-tipo-de-servicio select {
+    color: #41B65B;
+}
 
 
 

@@ -295,21 +295,13 @@ body .main-container header section.user-login .view-id-user_login .view-content
 body .main-container header section.user-login .view-id-user_login .view-content ul {
     list-style: none;
 }
-body .main-container header section.user-login .view-id-user_login .view-content ul span, section.user-login .view-id-user_login .view-content ul span a{
+body .main-container header section.user-login .view-id-user_login .view-content ul span {
     color: white;
     font-family: "lato";
 }
-body .main-container header section.user-login .view-id-user_login .view-content ul span a:hover, a:focus {
-    color: white;
-    text-decoration: none;
-    cursor: auto;
-}
-body .main-container header section.user-login .view-id-user_login .view-content ul .views-field-field-area {
+body .main-container header section.user-login .view-id-user_login .view-content ul li div > div {
     display: inline-flex;
     color: #fff;
-}
-body .main-container header section.user-login .view-id-user_login .view-content ul .views-field-field-area .field-content {
-    padding-left: 10px;
 }
 @media screen and (max-width: 1024px) {
     body .main-container header section.user-login .view-id-user_login {
@@ -357,7 +349,7 @@ section.Navegacion_Agenda {
     background: #000000;
 }
 section.Navegacion_Agenda ul.menu {
-    width: 734px;
+   /* width: 734px;*/
     list-style: none;
     margin: 0px;
     padding: 0px;
@@ -449,18 +441,18 @@ body .main-container header section.title-agenda-de-servicio h2 {
 
 /*------------------ Row Calendario ------------------ */
 /* -\* Selec Calendario -/* - */
-.dropdown {
+.Calendario_Contenedor .dropdown {
     border: 1px solid transparent !important;
 }
-.dropdown:hover {
+.Calendario_Contenedor .dropdown:hover {
     box-shadow: 0 0 5px rgba(0,0,0,0) !important;
 }
-.dropdown .selected  {
+.Calendario_Contenedor .dropdown .selected  {
     font-family: Lato Black;
     font-size: 31px !important;
     color: #808184 !important;
 }
-.dropdown .carat {
+.Calendario_Contenedor .dropdown .carat {
     right: 111px !important;
     top: 53px !important;
     margin-top: -10px !important;
@@ -472,29 +464,29 @@ body .main-container header section.title-agenda-de-servicio h2 {
     height: 15px;
     transform: rotate(44deg);
 }
-.dropdown.open div {
+.Calendario_Contenedor .dropdown.open div {
     width: 113px;
 }
-/*.dropdown.open .carat {
+/*.Calendario_Contenedor .dropdown.open .carat {
     right: 12px !important;
     top: 50% !important;
     margin-top: -4px !important;
     transform: rotate(225deg);
 }*/
-.dropdown ul {
+.Calendario_Contenedor .dropdown ul {
     background: #47AC4B;
     -webkit-padding-start: 0px;
 }
-.dropdown li {
+.Calendario_Contenedor .dropdown li {
     color: white !important;
     text-align: center;
     padding: 4px 12px;
 }
-.dropdown li.active {
+.Calendario_Contenedor .dropdown li.active {
     font-weight: 700;
     color: rgba(224, 224, 224, 0.95) !important;
 }
-.dropdown li.focus {
+.Calendario_Contenedor .dropdown li.focus {
     background: rgba(222, 222, 222, 0.44) !important;
 }
 
@@ -711,7 +703,7 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
 body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link a .glyphicon-refresh {
     display: none;
 }
-body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-disponible , .cupo-lleno, .hoy {
+body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-disponible, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad  .cupo-lleno, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad  .hoy {
     display: inline-flex;
     padding: 26px 0px 0px 0px;
 }
@@ -783,7 +775,7 @@ body .row aside .well section.info-citas-estudiantes {
 body .row aside .well .info-citas-estudiantes h2.block-title {
     display: none;
 }
-body .row aside .well section.info-citas-estudiantes .cupo-disponible , .cupo-lleno, .hoy {
+body .row aside .well section.info-citas-estudiantes .cupo-disponible ,body .row aside .well section.info-citas-estudiantes .cupo-lleno, body .row aside .well section.info-citas-estudiantes .hoy {
     display: inline-flex;
     padding: 26px 0px 0px 0px;
 }
@@ -1107,6 +1099,35 @@ body .main-container .row > section div.region.region-content div.view .view-con
     outline: 0;
     -webkit-box-shadow: inset 0 1px 1px rgba(13, 13, 13, 0.25), 0 0 8px rgb(192, 196, 198);
     box-shadow: inset 0 1px 1px rgba(13, 13, 13, 0.25), 0 0 8px rgb(192, 196, 198);
+}
+/* -\* fecha y hora *\- */
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form.node-disponibilidad-form #edit-field-fecha fieldset.panel {
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+} 
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-field-fecha fieldset.panel div#bootstrap-panel-body {
+    display: inline-flex;
+    margin: 0px;
+    padding: 0px !important;
+}
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-field-fecha fieldset.date-combo .container-inline-date > .start-date-wrapper.form-item {
+    padding: 0px;
+    margin-top: 14px;
+}
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-field-fecha fieldset.panel div#bootstrap-panel-body div.date-no-float.start-date-wrapper .date-padding {
+    padding: 0px;
+}
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-field-fecha fieldset.date-combo .container-inline-date > .start-date-wrapper.form-item .form-type-textfield:nth-child(2) {
+    width: 100%;
+}
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-field-fecha fieldset.date-combo .container-inline-date > .start-date-wrapper.form-item .form-type-textfield:nth-child(2) input {
+    width: 96%;
+}
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-field-fecha fieldset.panel div#bootstrap-panel-body div.date-no-float.end-date-wrapper label {
+    margin: 0px;
+}
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-field-fecha fieldset.panel div#bootstrap-panel-body div.date-no-float.end-date-wrapper .date-padding{
+    padding: 0px;
 }
 
 /* -\* checkbox *\- */
@@ -1690,7 +1711,7 @@ body.page-crear-citas section div.region.region-content {
         -ms-flex-pack: center;
 }
 .views-exposed-form .views-exposed-widgets {
-    width: 100%;
+  /*  width: 100%;*/
     display: flex;
         display: -webkit-box;
         display: -webkit-flex;
@@ -2057,7 +2078,7 @@ section.Navegacion_Estudiantes {
     background: #000000;
 }
 section.Navegacion_Estudiantes ul.menu {
-    width: 592px;
+    /*width: 592px;*/
     list-style: none;
     margin: 0px;
     padding: 0px;
@@ -2422,7 +2443,7 @@ section#block-menu-menu-navegaci-n-agenda-cordinado {
     background: #000000;
 }
 section#block-menu-menu-navegaci-n-agenda-cordinado ul.menu {
-    width: 296px;
+   /* width: 296px;*/
     list-style: none;
     margin: 0px;
     padding: 0px;

@@ -224,12 +224,12 @@ function agenda_form($form, &$form_state) {
  
   $form['from'] = array(
    '#type'=> 'item',
-   '#markup' => t('¿Are you sure you want to delete? ').$form_state["nid"],
+   '#markup' => t('Seguro que desea eliminar la disponibilidad'),
  );
 
   $form['submit'] = array(
     '#type' => 'submit',
-    '#value' => t('Delete'),
+    '#value' => t('Aceptar'),
   );
   return $form;
 }

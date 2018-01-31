@@ -11,9 +11,11 @@ define('FIRST_POSITION', 0);
  */
 function agenda_init() {
    Global $base_url;
+
    drupal_add_js(array('agenda' => array('dominio' => $base_url)), array('type' => 'setting'));
    drupal_add_js(drupal_get_path('module', 'agenda') . '/js/request.js');
-    if (current_path() == 'calendario-consejero/diario') {
+   
+   if (current_path() == 'calendario-consejero/diario') {
       drupal_add_js(drupal_get_path('module', 'agenda') . '/js/agenda.js');
     }
 }
@@ -100,7 +102,7 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
             $form['field_historial_citas']['#access'] = FALSE;
           
           foreach ($form['field_citas_agenda']['und'] as $key => $value) {
-              if ($value['#entity']->field_collec_uid['und'][FIRST_POSITION]['value'] != $_GET['sid']) {
+              if (is_array($value) && isset($value['#entity']->field_collec_uid)) {
                     unset($form['field_citas_agenda']['und'][$key]);
               }else{
                 if (is_numeric($key)) {
@@ -383,7 +385,7 @@ function delete_availability($js) {
       $form_state = array(
         'ajax' => TRUE,
         'nid' => arg(1),
-        'title' => t('Eliminar Disponibilidad'),
+        'title' => t('Eliminar'),
       );
 
       $output = ctools_modal_form_wrapper('agenda_form', $form_state);

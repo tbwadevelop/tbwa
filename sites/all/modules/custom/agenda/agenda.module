@@ -1,20 +1,16 @@
 <?php
-
 include_once 'blocks/agenda.block.inc';
 include_once 'forms/agenda.forms.inc';
 require_once(DRUPAL_ROOT . "/modules/node/node.pages.inc");
 define('FIRST_POSITION', 0); 
-
 
 /**
  * Implements hook_init().
  */
 function agenda_init() {
    Global $base_url;
-
    drupal_add_js(array('agenda' => array('dominio' => $base_url)), array('type' => 'setting'));
    drupal_add_js(drupal_get_path('module', 'agenda') . '/js/request.js');
-   
    if (current_path() == 'calendario-consejero/diario') {
       drupal_add_js(drupal_get_path('module', 'agenda') . '/js/agenda.js');
     }

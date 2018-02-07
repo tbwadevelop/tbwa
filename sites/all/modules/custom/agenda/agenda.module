@@ -79,40 +79,45 @@ function agenda_form_alter(&$form, &$form_state, $form_id) {
     Global $user;
     switch ($form_id) {
      case 'disponibilidad_node_form':
-       $form['title']['#required'] = FALSE;
-       $current_path = explode("/", current_path());
-       $path = array_shift($current_path);
-
-        if (arg(0) == 'node' && is_numeric(arg(1)) && arg(2) == 'edit' 
-             && !user_access('administrator') && is_numeric($_GET['sid'])
-          ) {
-            $form['title']['#access'] = FALSE;
-            $form['field_operaciones']['#access'] = FALSE;
-            $form['field_usuario']['#access'] = FALSE;
-            $form['field_profile']['#access'] = FALSE;
-            $form['field_repeticion']['#access'] = FALSE;
-            $form['field_cupo']['#access'] = FALSE;
-            $form['field_lugar']['#access'] = FALSE;     
-            $form['field_fecha']['#access'] = FALSE;     
-            $form['field_encabezado']['#access'] = FALSE;
-            $form['field_historial_citas']['#access'] = FALSE;
-          
-          foreach ($form['field_citas_agenda']['und'] as $key => $value) {
-              if (is_array($value) && isset($value['#entity']->field_collec_uid)) {
-                    unset($form['field_citas_agenda']['und'][$key]);
-              }else{
-                if (is_numeric($key)) {
-                   unset($form['field_citas_agenda']['und'][$key]['field_collec_nombre']); 
-                   unset($form['field_citas_agenda']['und'][$key]['field_collec_apellido']); 
-                   unset($form['field_citas_agenda']['und'][$key]['field_collec_codigo']); 
-                   unset($form['field_citas_agenda']['und'][$key]['field_collec_uid']); 
-                   unset($form['field_citas_agenda']['und'][$key]['field_collec_usuario']); 
-                   unset($form['field_citas_agenda']['und'][$key]['field_collec_numero_de_documento']);
-                }
-              }           
+         $form['title']['#required'] = FALSE;
+         $current_path = explode("/", current_path());
+         $path = array_shift($current_path);
+         if (arg(0) == 'node' && is_numeric(arg(1)) && arg(2) == 'edit' && !user_access('administrator') && is_numeric($_GET['sid'])) {
+              $form['title']['#access'] = FALSE;
+              $form['field_operaciones']['#access'] = FALSE;
+              $form['field_usuario']['#access'] = FALSE;
+              $form['field_profile']['#access'] = FALSE;
+              $form['field_repeticion']['#access'] = FALSE;
+              $form['field_cupo']['#access'] = FALSE;
+              $form['field_lugar']['#access'] = FALSE;     
+              $form['field_fecha']['#access'] = FALSE;     
+              $form['field_encabezado']['#access'] = FALSE;
+               $form['field_citas_agenda']['und']['add_more']['#access'] = FALSE;
+             foreach ($form['field_citas_agenda']['und'] as $key => $value) {
+                 if (is_array($value) && isset($value['#entity']->field_collec_uid) && $form['field_citas_agenda']['und'][$key]['#entity']->field_collec_uid['und'][0]['value'] == $_GET['sid']) {
+                      $form['field_citas_agenda']['und'][$key]['field_collec_nombre']['#access'] = FALSE;
+                      $form['field_citas_agenda']['und'][$key]['field_collec_apellido']['#access'] = FALSE;
+                      $form['field_citas_agenda']['und'][$key]['field_collec_codigo']['#access'] = FALSE;
+                      $form['field_citas_agenda']['und'][$key]['field_collec_uid']['#access'] = FALSE;
+                      $form['field_citas_agenda']['und'][$key]['field_collec_usuario']['#access'] = FALSE;
+                      $form['field_citas_agenda']['und'][$key]['field_collec_numero_de_documento']['#access'] = FALSE; 
+                      $form['field_citas_agenda']['und'][$key]['remove_button'] = FALSE;
+                  }else if (is_numeric($key)){
+                      $form['field_citas_agenda']['und'][$key]['field_collec_nombre']['#access'] = FALSE;
+                      $form['field_citas_agenda']['und'][$key]['field_collec_apellido']['#access'] = FALSE;
+                      $form['field_citas_agenda']['und'][$key]['field_collec_codigo']['#access'] = FALSE;
+                      $form['field_citas_agenda']['und'][$key]['field_collec_uid']['#access'] = FALSE;
+                      $form['field_citas_agenda']['und'][$key]['field_collec_usuario']['#access'] = FALSE;
+                      $form['field_citas_agenda']['und'][$key]['field_collec_numero_de_documento']['#access'] = FALSE; 
+                      $form['field_citas_agenda']['und'][$key]['field_collec_motivo']['#access'] = FALSE; 
+                      $form['field_citas_agenda']['und'][$key]['field_tipo_de_atencion']['#access'] = FALSE; 
+                      $form['field_citas_agenda']['und'][$key]['field_collec_asistencia']['#access'] = FALSE;
+                      $form['field_citas_agenda']['und'][$key]['field_render_view_estudiante']['#access'] = FALSE;
+                      $form['field_citas_agenda']['und'][$key]['field_comentario_cita']['#access'] = FALSE;       
+                      $form['field_citas_agenda']['und'][$key]['remove_button'] = FALSE;
+                  }         
+             }
           }
-          
-        }
 
        if ($path == 'request' || $path == 'availability-edit') {
            $form['title']['#access'] = FALSE;
@@ -175,7 +180,7 @@ function agenda_node_presave($node) {
      $service = $wrapper->field_tipo_de_servicio->value()->name;
      $wrapper->field_operaciones->set($time . ' ' . $service); 
   }
-}
+} 
 
 /**
  * Implements hook_field_formatter_info().

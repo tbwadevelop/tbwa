@@ -1944,7 +1944,7 @@ body.page-crear-citas section div.region.region-content {
 }
 
 /* -\* Acordion  *\- */
-.ui-accordion-header.ui-state-default {
+/*.ui-accordion-header.ui-state-default {
     border-radius: 0px;
     border: 1px solid #808184;
     background: #E6E7E8 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
@@ -1956,7 +1956,7 @@ body.page-crear-citas section div.region.region-content {
     border-radius: 0px;
     border: 1px solid #808184;
     background: #808184 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
-}
+}*/
 .ui-accordion-header.ui-state-default span.ui-accordion-header-icon {
     position: absolute !important;
     left: 95% !important;

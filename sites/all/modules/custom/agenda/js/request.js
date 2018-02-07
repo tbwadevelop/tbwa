@@ -255,10 +255,9 @@
      		  $(this).context.innerHTML = '<div class="month mini-day-on"> <a href="'+Drupal.settings.agenda.dominio+'/calendario-estudiante/'+res[1]+'-'+res[2]+'-'+res[3]+'/diario/'+tid+'">'+$(this).context.innerText+'</a></div>';
 		     })
 		 })
-     	// Add default month in select dropdrown.	
+     		 // Add default month in select dropdrown.	
 			 $(document).ready(function(){
-			 	var titulo = $(".date-views-pager h3 a").text();
-			 	var month_now = titulo.split(" ");
+			 	var month_now = $(".date-views-pager h3 a").text().split(" ");
 			 	$('.view-header .dropdown .selected').text(month_now[0]);
 			 });
 		}

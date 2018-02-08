@@ -1970,6 +1970,7 @@ body.page-crear-citas section div.region.region-content {
     top: 50% !important;
     margin-top: -8px !important;
 }
+
 .ui-accordion-header.ui-state-default .ui-icon {
     background: url("../img/flecha.png")no-repeat;
     background-size: contain;
@@ -1980,7 +1981,13 @@ body.page-crear-citas section div.region.region-content {
     background-size: contain !important;
     transform: rotate(0deg) !important;
  }
-
+.ui-accordion-header.ui-state-default.ui-state-default {
+    background: #E6E7E8;
+    border-radius: 0px;
+}
+.ui-accordion-header.ui-state-default.ui-state-active {
+    background: #808184;
+}
 /* -\* informacion estudiante - informacion de la cita  - */
 .ui-accordion .ui-accordion-content {
     padding: 1em 0px 0px 0px;
@@ -2533,19 +2540,21 @@ body.page-node-edit.node-type-disponibilidad .row {
 }
 body.page-node-edit section .field-name-field-tipo-de-servicio {
     width: 42%;
+    margin: 0pc;
 }
 body.page-node-edit section .form-item.form-type-select.form-group {
     display: flex;
 }
-body.page-node-edit section form.node-disponibilidad-form > label {
-     line-height: 2.1em;
-    font-family: Lato;
-    font-size: 20px;
-}
+
 body.page-node-edit section .field-name-field-tipo-de-servicio label {
     color: #41B65B;
+    line-height: 1.6em;
+    font-size: 20px;
+    font-weight: normal;
 }
-
+body.page-node-edit section form {
+    position: relative;
+}
 body.page-node-edit section form.node-disponibilidad-form select {
      -moz-appearance: button; 
     -webkit-appearance: button;
@@ -2557,13 +2566,194 @@ body.page-node-edit section form.node-disponibilidad-form select {
     -webkit-box-shadow: inset 0px 0px 0px transparent;
     box-shadow: inset 0px 0px 0px transparent;
     width: auto;
-    height: 41px;
     font-family: Lato;
     font-size: 20px;
-}
-body.page-node-edit section #edit-field-tipo-de-servicio select {
     color: #41B65B;
+    padding: 0px 0px 0px 3px;
+    margin: 0px;
+    height: 28px;
 }
+
+body.page-node-edit section #edit-field-citas-agenda .tabledrag-toggle-weight-wrapper {
+    display: none;
+}
+body.page-node-edit section #edit-field-citas-agenda .field-label, body.page-node-edit section #edit-field-citas-agenda .field-multiple-drag {
+    display: none;
+}
+
+body.page-node-edit section #edit-field-citas-agenda table#field-citas-agenda-values tr.draggable td:nth-child(2) {
+    background: #FFF;
+    border-top: 1px solid transparent;
+}
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-motivo label {
+    font-size: 20px;
+    line-height: 1.6em;
+    font-weight: normal;
+}
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-motivo select {
+    -moz-appearance: button; 
+    -webkit-appearance: button;
+    appearance: button;
+    border-radius: 0px;
+    border: 1px solid #FFF;
+    background-image: none !important;
+    background-color: #FFF;
+    -webkit-box-shadow: inset 0px 0px 0px transparent;
+    box-shadow: inset 0px 0px 0px transparent;
+    width: auto;
+    font-family: Lato;
+    font-size: 20px;
+    color: black;
+    padding: 0px 0px 0px 3px;
+    margin: 0px;
+    height: 28px;
+}
+@media screen and (max-width: 1024px) {
+    body.page-node-edit section .field-name-field-tipo-de-servicio label, body.page-node-edit section form.node-disponibilidad-form select {
+        font-size: 14px;
+    }
+    body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-motivo label, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-motivo select {
+        font-size: 14px;
+    }
+    body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-motivo label,body.page-node-edit section .field-name-field-tipo-de-servicio label {
+        line-height: 2em;
+    }
+}
+
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-type-radios > label,body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-type-radios > label {
+    display: none;
+}
+
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios div:first-child, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios div:first-child{
+    display: none;
+}
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios {
+    display: flex;
+} 
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios div:nth-child(2) , body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios div:nth-child(2) {
+    margin-right: 10px
+} 
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion  {
+    position: absolute;
+    right: 1%;
+    top: 15px;
+}
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia {
+    position: absolute;
+    right: 1%;
+    top: 53px;
+}
+@media screen and (max-width:  1024px){
+    body.page-node-edit section #edit-field-citas-agenda div.form-radios label span {
+        font-size: 11px;
+    }
+    body.page-node-edit section #edit-field-citas-agenda table#field-citas-agenda-values {
+        border-color: transparent;
+    }   
+    body.page-node-edit section #edit-field-citas-agenda  div.table-responsive {
+            border: transparent;
+    }
+}
+
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-comentario-cita div.textarea-processed textarea {
+    border: 1px solid #58595B;
+    border-radius: 0px;
+}
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-comentario-cita div.textarea-processed div.grippie, body.page-node-edit section #edit-field-citas-agenda .field-name-field-comentario-cita fieldset.filter-wrapper  {
+    display: none;
+}
+
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-php {
+    width: 100%;
+    font-family: Lato;
+    font-size: 24px;
+    line-height: 21px;
+    color: #47AC4B;
+    padding: 20px 0px 30px 0px;
+}
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content {
+    padding: 1em 2.2em;
+}
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div{
+    float: left;
+    width: 25%;
+    display: inline-flex;
+}
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-comentario-cita, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-comentario-cita > span {
+    width: 100%;
+    display: block;
+}
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-comentario-cita > span {
+    padding: 10px 0px;
+    border-top: 1px solid #231F20;
+}
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-comentario-cita .field-content {
+    width: 100%;
+    border: 2px solid #808184;
+    padding: 20px;
+}
+
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha-1, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-tipo-de-servicio, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-collec-motivo {
+    font-family: Myriad Pro;
+    font-size: 16px;
+    line-height: 18.07px;
+    padding-bottom: 20px;
+}
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content div div.field-content {
+    padding-left: 10px;
+}
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div:last-child {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha-1, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-tipo-de-servicio, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-collec-motivo {
+        font-size: 14px;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha-1 {
+        width: 51%;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-tipo-de-servicio{
+        width: 50%;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-collec-motivo {
+        width: 50%;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-comentario-cita .field-content p {
+        margin: 0px;
+        font-size: 13px;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-php {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

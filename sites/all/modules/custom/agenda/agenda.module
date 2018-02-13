@@ -11,6 +11,12 @@ function agenda_init() {
    Global $base_url;
    drupal_add_js(array('agenda' => array('dominio' => $base_url)), array('type' => 'setting'));
    drupal_add_js(drupal_get_path('module', 'agenda') . '/js/request.js');
+
+   drupal_add_js(array('agenda' => array('dominio' => $base_url)), array('type' => 'setting'));
+   drupal_add_js(drupal_get_path('module', 'agenda') . '/js/active.js');
+
+
+
    if (current_path() == 'calendario-consejero/diario') {
       drupal_add_js(drupal_get_path('module', 'agenda') . '/js/agenda.js');
     }
@@ -416,7 +422,7 @@ function quotes_delete($js) {
       $form_state = array(
         'ajax' => TRUE,
         'nid' => arg(1),
-        'title' => t('Eliminar Cita'),
+        'title' => t('Cancelar'),
       );
 
       $output = ctools_modal_form_wrapper('quotes_delete_form', $form_state);

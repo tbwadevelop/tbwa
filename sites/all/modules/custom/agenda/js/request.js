@@ -1,8 +1,7 @@
 (function ($) {
 	Drupal.behaviors.request = {
 	    attach: function (context, settings) {
-
-	    	// add class edit entity user
+			// add class edit entity user
 	    	$('.page-user-edit #block-system-main #user-profile-form #edit-locale').remove();
 	    	$(".page-user-edit #user-profile-form .form-wrapper.form-group").addClass("col-lg-4 col-xs-6 col-sm-6");
 

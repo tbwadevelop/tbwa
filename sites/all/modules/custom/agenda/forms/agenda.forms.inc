@@ -251,18 +251,35 @@ function agenda_form_submit($form, &$form_state) {
 
 
 function agenda_records_cancel_submit($form, &$form_state) {
-  // $form = array();
-  // ctools_include('modal');
-  // ctools_include('ajax');
-  // $form_state['ajax_commands'][] = ctools_modal_command_dismiss();
-  // $form_state['ajax_commands'][] = ctools_ajax_command_reload();
-  // return $form;
+  ctools_include('ajax');
+  ctools_add_js('ajax-responder');
+  // Path to redirect to
+  $commands[] = ctools_ajax_command_redirect('crear/'.variable_get('nid').'/citas');
+  // you can also use ctools_ajax_command_reload() –  xurshid29
+  print ajax_render($commands);
+    return drupal_exit();
+}
 
-ctools_include('ajax');
-ctools_add_js('ajax-responder');
-// Path to redirect to
-$commands[] = ctools_ajax_command_redirect('crear/'.variable_get('nid').'/citas');
-// you can also use ctools_ajax_command_reload() –  xurshid29
-print ajax_render($commands);
-  return drupal_exit();
+
+
+function quotes_delete_form($form, &$form_state){
+  $form = array();
+ 
+  $form['from'] = array(
+   '#type'=> 'item',
+   '#markup' => t('Seguro que deseas cancelar la cita'),
+ );
+
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Aceptar'),
+  );
+  return $form;  
+}
+
+function quotes_delete_form_submit($form, &$form_state){
+    entity_delete('field_collection_item', array($form_state['nid']));
+    $form_state['ajax_commands'][] = ctools_modal_command_dismiss();
+    $form_state['ajax_commands'][] = ctools_ajax_command_reload();
+    return $form;
 }

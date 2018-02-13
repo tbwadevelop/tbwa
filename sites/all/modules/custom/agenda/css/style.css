@@ -1,3 +1,20 @@
+@font-face {
+    font-family: "Lato Bold";
+    src: url('../fonts/Lato-Bold.ttf');
+}
+@font-face {
+    font-family: "Lato Light";
+    src: url('../fonts/Lato-Light.ttf');
+}
+@font-face {
+    font-family: "Lato Black";
+    src: url('../fonts/Lato-Black.ttf');
+}
+@font-face {
+    font-family: "Lato Regular";
+    src: url('../fonts/Lato-Regular.ttf');
+}
+
 .calendar.dayview.empy {
     background: #a6d8a6!important;
 }
@@ -18,7 +35,8 @@
 
 .view-usuarios-agenda-de-servicios .views-exposed-form .views-widget-filter-uid {
     float: left;
-    width: 80%;
+    /* width: 80%; */
+    padding: .5em 1em 0 0;
 }
 
 #block-agenda-citas-ajax {
@@ -73,7 +91,8 @@
 body.not-logged-in .main-container .row > section {
     width: 100%;
     background: #E6E7E8;
-    box-shadow: 15px 15px #F1F1F2;
+    -webkit-box-shadow: 15px 15px #F1F1F2;
+            box-shadow: 15px 15px #F1F1F2;
     margin-top: 214px;
 }
 body.not-logged-in .main-container section h1.page-header {
@@ -90,10 +109,10 @@ body.not-logged-in .main-container section .region #block-system-main  {
     width: 100%;
     display: flex;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 body.not-logged-in .main-container section .region #block-system-main form#user-login  {
     width: 70%;
@@ -174,7 +193,8 @@ body.not-logged-in .main-container section .region #block-system-main form#user-
 
 @media screen and (max-width: 64em) { /*1024*/
     body.not-logged-in .main-container .row > section {
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
         width: 81%;
         margin-left: 9.5%;
         margin-top: 90px;
@@ -240,6 +260,8 @@ body .main-container header section.user-login {
     padding-top: 58px;
 } 
 body .main-container header section.user-login .view-id-user_login {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 body .main-container header section.user-login .view-id-user_login .view-header  {
@@ -268,19 +290,21 @@ body .main-container header section.user-login .view-id-user_login .view-header 
     background-size: contain;
 }
 body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol p {
-    font-size: 19px;
     margin: 0;
     padding-top: 6px;
-    color: white;
-    font-family: "lato";
-    line-height: 15px;
+    font-family: "Lato Light";
+    font-size : 17px;
+    line-height : 18.91px;
+    color : #FFFFFF;
 }
 body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol h2 {
     margin: 0px;
-    font-size: 23px;
     padding-bottom: 10px;
-    color: white;
-    font-family: "lato";
+    font-family : Lato Bold;
+    font-weight : bold;
+    font-size : 22px;
+    line-height : 17.2px;
+    color : #FFFFFF;
 }
 body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol h2::before {
     content: "";
@@ -296,10 +320,14 @@ body .main-container header section.user-login .view-id-user_login .view-content
     list-style: none;
 }
 body .main-container header section.user-login .view-id-user_login .view-content ul span {
-    color: white;
-    font-family: "lato";
+    color: #FFFFFF;
+    font-family: "Lato Light";
+    font-size: 18px;
+    line-height: 0px;
 }
 body .main-container header section.user-login .view-id-user_login .view-content ul li div > div {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     color: #fff;
 }
@@ -308,8 +336,12 @@ body .main-container header section.user-login .view-id-user_login .view-content
         margin-bottom: 10px;
     }
     body .main-container header section.user-login .view-id-user_login .view-header, section.user-login .view-id-user_login .view-content {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
     body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol {
         width: 187px;
@@ -353,12 +385,12 @@ section.Navegacion_Agenda ul.menu {
     list-style: none;
     margin: 0px;
     padding: 0px;
-    display: flex;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
-    justify-content: center;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: white;
     float: right;
     margin-right: 11px;
@@ -368,23 +400,26 @@ section.Navegacion_Agenda ul.menu li {
     border-bottom: 1px solid #9E9E9E;
 }
 section.Navegacion_Agenda ul.menu li a {
-    color: #000;
+  
     text-decoration: none;
     text-align: center;
     width: 74px;
-    min-height: 52px;
-    display: flex;
+    min-height: 62px;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
-    align-items: center;
-     -ms-flex-align: center;
-    -webkit-align-items: center;
-    justify-content: center;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0px 73px;
-    font-size: 16px;
-    font-weight: bold;
+    font-family: Lato Black;
+    font-size: 22px;
+    font-weight: normal;
+    color: #231F20;
+
 }
 section.Navegacion_Agenda ul.menu li a:hover {
     background: #47AC4B !important;
@@ -392,7 +427,7 @@ section.Navegacion_Agenda ul.menu li a:hover {
 } 
 section.Navegacion_Agenda ul.menu li.active-trail.active a {
     background: #47AC4B;
-    color: white;
+    color : #FFFFFF;
 }
 
 
@@ -400,11 +435,12 @@ section.Navegacion_Agenda ul.menu li.active-trail.active a {
 body .main-container header section.title-agenda-de-servicio  {
     display: flex;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+            align-items: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
     height: 165px;
@@ -418,6 +454,10 @@ body .main-container header section.title-agenda-de-servicio .imagen {
 }
 body .main-container header section.title-agenda-de-servicio h2 {
     margin: 0 auto;
+    font-family: 'Lato Regular';
+    font-size : 47px;
+    line-height : 49.84px;
+    color : #000000;
 }
 @media screen and (max-width: 1024px) { 
     body .main-container header section.title-agenda-de-servicio  {
@@ -445,12 +485,16 @@ body .main-container header section.title-agenda-de-servicio h2 {
     border: 1px solid transparent !important;
 }
 .Calendario_Contenedor .dropdown:hover {
-    box-shadow: 0 0 5px rgba(0,0,0,0) !important;
+    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0) !important;
+            box-shadow: 0 0 5px rgba(0,0,0,0) !important;
 }
 .Calendario_Contenedor .dropdown .selected  {
     font-family: Lato Black;
     font-size: 31px !important;
     color: #808184 !important;
+}
+.Calendario_Contenedor .dropdown .selected:after  {
+   box-shadow: inset 0px 0px 0px 0px #fff;
 }
 .Calendario_Contenedor .dropdown .carat {
     right: 111px !important;
@@ -462,7 +506,8 @@ body .main-container header section.title-agenda-de-servicio h2 {
     border-top: none !important;
     width: 15px;
     height: 15px;
-    transform: rotate(44deg);
+    -webkit-transform: rotate(44deg);
+            transform: rotate(44deg);
 }
 .Calendario_Contenedor .dropdown.open div {
     width: 113px;
@@ -498,7 +543,8 @@ body.page-calendario-consejero .row {
 body .main-container .row aside .well {
     background-color: #FFF;
     border: none;
-    box-shadow: none;   
+    -webkit-box-shadow: none;
+            box-shadow: none;   
 }
 body .main-container .row aside .well section:nth-child(1) {
     position: relative;
@@ -601,10 +647,19 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
         width: 100%;
         background-color: #47AC4B;
         height: 85px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
     }
  /*   body.page-calendario-consejero .row aside .well .Calendario_Contenedor .view-id-consejero_calendar .date-calendar-today {
         font-size: 17px;
@@ -628,7 +683,9 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
         left: 0;
     }*/
     body .main-container .row aside .well section:nth-child(1) nav {
-        order: 1;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
         background-color: white;
         position: absolute;
         top: 0px;
@@ -652,8 +709,12 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
     }
     body .main-container .row aside .well section:nth-child(1)  .view-content .month-view {
         width: 75%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
         background: red;
         border-right: 3px solid #BBBDBF;
         position: absolute;
@@ -668,7 +729,6 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
     body .main-container .row aside .well section:nth-child(1) nav.date-nav-wrapper::before {
         content: "+";
         font-size: 40px;
-        -ms-transform: rotate(50deg);
         -webkit-transform: rotate(50deg);
         transform: rotate(43deg);
         position: absolute;
@@ -690,20 +750,26 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
 body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link {
     margin-top: 38px;
     width: 100%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
 }
 body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link a {
-    color: #FFF;
     background: #47AC4B;
     width: 100%;
     text-align: center;
     text-decoration: none;
     padding: 4px;
+    font-family: Lato Light;
+    font-size: 13px;
+    color: #FFFFFF;
 }
 body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link a .glyphicon-refresh {
     display: none;
 }
 body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-disponible, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad  .cupo-lleno, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad  .hoy {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     padding: 26px 0px 0px 0px;
 }
@@ -713,6 +779,9 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
     background-color: #47AC4B;
     display: inline-block;
     margin-right: 10px;
+    font-family: Lato Light;
+    font-size: 13px;
+    color: #231F20;
 }
 body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-lleno .caja-2 {
     width: 25px;
@@ -732,7 +801,8 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
 @media screen and (max-width: 991px) {
         body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link {
         background: transparent;
-        justify-content: center;
+        -webkit-box-pack: center;
+                justify-content: center;
             -ms-flex-pack: center;
             -webkit-justify-content: center;
     }
@@ -746,8 +816,12 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
         z-index: 1;
     }
     body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-disponible, .cupo-lleno, .hoy {
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         font-size: 12px
     }
     body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-disponible .caja-1, .cupo-lleno .caja-2, .hoy .caja-3 {
@@ -776,6 +850,8 @@ body .row aside .well .info-citas-estudiantes h2.block-title {
     display: none;
 }
 body .row aside .well section.info-citas-estudiantes .cupo-disponible ,body .row aside .well section.info-citas-estudiantes .cupo-lleno, body .row aside .well section.info-citas-estudiantes .hoy {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     padding: 26px 0px 0px 0px;
 }
@@ -806,9 +882,16 @@ body .main-container .row section ol.breadcrumb,h1 {
     display: none; 
 }
 body .main-container .row section ul.tabs--primary {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     list-style: none;
     background-color: transparent;
     border-bottom: 0px solid #ddd;
@@ -843,14 +926,17 @@ body .main-container .row section ul.tabs--primary li:nth-child(1) {
     display: none;
 }
 body .main-container .row section ul.tabs--primary li a {
-    color: #000;
     padding: 0px !important;
     margin: 0px;
     cursor: pointer !important;
     display: block !important;
     border-radius: 0px !important;
+    border: 0px;
     text-align: left;
     width: 56px;
+    font-family : Lato Regular;
+    font-size : 15px;
+    color : #231F20;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     color: #555;
@@ -874,6 +960,8 @@ body .main-container .row section ul.tabs--primary li.active a.active:before {
     position: absolute;
     top: 5px;
     right: 48px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     width: 12px;
     height: 12px;
@@ -902,6 +990,8 @@ body .main-container .row > section div.region.region-content div.view {
 
 /* -\* Enlace ir a hoy - */
 body .main-container .row > section div.region.region-content div.view .view-header > a { 
+    font-family : Lato Black;
+    font-size : 15px;
     color : #4C48A8;
     text-decoration: none;
 }
@@ -941,13 +1031,15 @@ body .main-container .row > section div.region.region-content div.view .view-hea
     padding: 0;
 }
 body .main-container .row > section div.region.region-content div.view .view-header nav li.prev a {
-    transform: rotate(46deg);
+    -webkit-transform: rotate(46deg);
+            transform: rotate(46deg);
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
     margin-right: 27px;
 }
 body .main-container .row > section div.region.region-content div.view .view-header nav li.next a {
-    transform: rotate(224deg);
+    -webkit-transform: rotate(224deg);
+            transform: rotate(224deg);
     border-top-right-radius: 0px !important;
     border-bottom-right-radius: 0px !important;
 }
@@ -960,17 +1052,20 @@ body .main-container .row > section div.region.region-content div.view .view-hea
 body .main-container .row > section div.region.region-content div.view .view-header h3 {
     margin-left: 66px;
     padding-right: 20px;
-    color: #808184;
     width: auto;
     border-right: 2px solid #808184;
-    font-size: 22px;
+    font-family : Lato Regular;
+    font-size : 24px;
+    color : #808081;
     float: left;
 }
 body .main-container .row > section div.region.region-content div.view .view-header h2 {
     padding-left: 20px;
-    color: #a1d3a1;
     width: auto;
-    font-size: 22px;
+    font-family : Lato;
+    font-size : 24px;
+    line-height : 21px;
+    color : #47AC4B;
     float: left;
 }
 
@@ -978,6 +1073,9 @@ body .main-container .row > section div.region.region-content div.view .view-hea
 /* Dia */
 body .main-container .row > section div.region.region-content div.view .view-content .calendar-calendar .day-view .full td .inner div.calendar div {
     margin: 2px;
+    font-family: Lato Regular;
+    font-size: 12px;
+    color: #231F20;
 }
 body .main-container .row > section div.region.region-content div.view .view-content .calendar-calendar .day-view .full .single-day .dayview {
     background: rgb(161, 211, 161)!important;
@@ -1055,24 +1153,28 @@ body .main-container .row > section div.region.region-content div.view .view-con
 .modal-content {
     border-radius: 0px;
 }
-.modal-header {
+.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed  .modal-header {
     text-align: center;
     border-bottom: 1px solid transparent;
 }
 .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed .modal-header h4 {
-    color: #41B65B;
+    font-family: Lato Bold;
+    font-weight: bold;
     font-size: 21px;
+    color: #41B65B;
 }
 .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content {
     width: 70% !important;
     margin: 0 auto;
 }
 .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form .consejero, .date {
-    font-weight: normal;
-    font-size: 18px;
+    font-family : Lato Bold;
+    font-weight : bold;
+    font-size : 18px;
+    line-height : 18px;
+    color : #231F20;
     padding: 5px 0px 5px 9px;
     background: #D8EDD9;
-    font-family: lato;
 }
 .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form .date {
     background-color: white;
@@ -1106,6 +1208,8 @@ body .main-container .row > section div.region.region-content div.view .view-con
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
 } 
 .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-field-fecha fieldset.panel div#bootstrap-panel-body {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     margin: 0px;
     padding: 0px !important;
@@ -1132,6 +1236,8 @@ body .main-container .row > section div.region.region-content div.view .view-con
 
 /* -\* checkbox *\- */
 .modal-body #edit-field-repeticion .form-radios {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-content: space-around;
         -ms-flex-pack: distribute;
@@ -1188,8 +1294,10 @@ div.form-radios .radio span::before {
     background-color: #fff;
     left: -1px;
     top: -2px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border: 1px solid black;
+    -webkit-transition: border-color .2s;
     transition: border-color .2s;
 }
 
@@ -1201,6 +1309,7 @@ div.form-radios .radio span::after {
   left: -28px;
   top: 2px;
   background: transparent;
+  -webkit-transition: color .2s;
   transition: color .2s;
 }
 input[type="radio"]:checked  {
@@ -1230,12 +1339,14 @@ div#ui-datepicker-div .ui-datepicker-header {
 div#ui-datepicker-div .ui-datepicker-header .ui-icon-circle-triangle-w {
     background: url(../img/flecha.png) no-repeat;
     background-size: contain;
-    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
 }
 div#ui-datepicker-div .ui-datepicker-header .ui-icon-circle-triangle-e {
       background: url(../img/flecha.png) no-repeat;
     background-size: contain;
-    transform: rotate(269deg);
+    -webkit-transform: rotate(269deg);
+            transform: rotate(269deg);
 }
 div#ui-datepicker-div .ui-datepicker-header .ui-datepicker-month, div#ui-datepicker-div .ui-datepicker-header .ui-datepicker-year {
     -moz-appearance: inherit; 
@@ -1265,9 +1376,15 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 
 /* -\* Button - guardar - cancelar  *\- */
 .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed #modal-content form #edit-actions a {
     border: 1px solid #4cae4c;
@@ -1305,19 +1422,25 @@ body.page-crear-citas section div.region.region-content {
     margin-top: 27px;
     margin-bottom: 51px;
     text-align: center;
+    display: -webkit-inline-box;
     display: inline-flex;
         display: -ms-inline-flexbox;
         display: -webkit-inline-flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
 }
 .informacion-citas .field-content {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
 }
 .informacion-citas > div {
     padding: 0px 10px 0px 10px; 
     border-right: 1px solid #929497;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
 }
 .informacion-citas > div:nth-child(4) { 
@@ -1366,6 +1489,8 @@ body.page-crear-citas section div.region.region-content {
     list-style: none;
 }
 .view-id-usuarios_agenda_de_servicios .view-content li > div {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     width: 30%;
 }
@@ -1408,8 +1533,13 @@ body.page-crear-citas section div.region.region-content {
 }
 @media screen and (max-width: 1024px) {
     .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(n) {
+         display: -webkit-box;
+         display: -ms-flexbox;
          display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         border-bottom-style: solid;
         border-right-style: none;
         border-width: 1px;
@@ -1515,6 +1645,8 @@ body.page-crear-citas section div.region.region-content {
    display: none;
 }
 .agendar_citas #js-ajax-elements-wrapper .container-inline {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border-width: 0px 0px 1px 0px;
     border-bottom-style: dashed;
@@ -1532,17 +1664,18 @@ body.page-crear-citas section div.region.region-content {
 }
 .agendar_citas #js-ajax-elements-wrapper .container-inline div#disable-quote {
         display: -ms-flexbox;
-        display: -webkit-flex;
+    display: -webkit-box;
     display: flex;
-        -webkit-flex-direction: column;
         -ms-flex-direction: column;
-    flex-direction: column;
-        -webkit-justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
         -ms-flex-pack: center;
-    justify-content: center;
-        -webkit-align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
         -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
 }
 .agendar_citas #js-ajax-elements-wrapper .container-inline button {
     padding: 6px 12px;
@@ -1609,7 +1742,8 @@ body.page-crear-citas section div.region.region-content {
 /*------------------ Modal - Disponibilidad calendario  ------------------ */
 .modal-dialog.node-teaser .modal-content {
     border-radius: 0px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .5));
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .5));
 }
@@ -1621,25 +1755,33 @@ body.page-crear-citas section div.region.region-content {
     width: 2em;
     height: 2em;
     background-color: white;
-    transform: rotate(46deg);
+    -webkit-transform: rotate(46deg);
+            transform: rotate(46deg);
 }
 .modal-dialog.node-teaser .modal-content #modal-content {
     width: 99% !important;
 }
 .modal-dialog.node-teaser .modal-content .modal-header h4#modal-title {
-    color: #41B65B;
-    font-size: 18px;
+    font-family : Lato Bold;
+    font-weight : bold;
+    font-size : 18px;
+    color : #41B65B;
+    text-align: center;
+
 }
 .modal-dialog.node-teaser .modal-content #modal-content article header, .field-name-field-fecha .field-label ,.field-name-field-operaciones .field-label, footer {
     display: none;
 }
 
-.modal-dialog.node-teaser .modal-content #modal-content article .field-label, .field-items, .field-items a {
+.modal-dialog.node-teaser .modal-content #modal-content article .field-label, .modal-dialog.node-teaser .modal-content #modal-content article .field-name-field-tipo-de-servicio .field-items .field-item.even a {
     font-family: Lato;
     font-size: 13px;
     color: #231F20;
+    pointer-events: none; 
 }
 .modal-dialog.node-teaser .modal-content #modal-content article .field-name-field-fecha, article .field-name-field-lugar, article .field-name-field-tipo-de-servicio {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     width: 100%;
     border: 1px solid #E4F7E4;
@@ -1649,9 +1791,14 @@ body.page-crear-citas section div.region.region-content {
 .modal-dialog.node-teaser .modal-content #modal-content article .field-name-field-cupo {
     background-color: transparent;
     margin: 10px 0px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
 }
 
 .modal-dialog.node-teaser .modal-content #modal-content article .operation-node {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
 }
 .modal-dialog.node-teaser .modal-content #modal-content article .operation-node .create, .edit, .delete {
@@ -1662,13 +1809,24 @@ body.page-crear-citas section div.region.region-content {
     text-decoration: none;
     width: 105px !important;
     min-height: 35px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Lato;
-    font-size: 11px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border: 2px solid#41B65B;
     padding: 0px 21px;
+    font-family: Lato Regular;
+    font-size: 11px;
+    line-height: 12px;
+    color : #231F20;
+}
+.modal-dialog.node-teaser .modal-content #modal-content article footer {
+    display: none;
 }
 
 /*------------------ Modal - Eliminar Disponibilidad  ------------------ */
@@ -1692,10 +1850,19 @@ body.page-crear-citas section div.region.region-content {
     padding: 0px 15px 15px;
 }
 .ctools-modal-dialog.modal-dialog.ctools-use-modal-processed.agenda-form #modal-content form#agenda-form div:nth-child(1){
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .ctools-modal-dialog.modal-dialog.ctools-use-modal-processed.agenda-form #modal-content form#agenda-form #edit-from {
     font-size : 14px;
@@ -1727,10 +1894,9 @@ body.page-crear-citas section div.region.region-content {
 .views-exposed-form {
     display: flex;
         display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
         display: -ms-flexbox;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
 }
@@ -1738,30 +1904,34 @@ body.page-crear-citas section div.region.region-content {
   /*  width: 100%;*/
     display: flex;
         display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
         display: -ms-flexbox;
-    justify-content: center; 
+    -webkit-box-pack: center;
+            justify-content: center; 
        -webkit-justify-content: center;
         -ms-flex-pack: center;
 }
 .views-exposed-form .views-exposed-widgets > .views-exposed-widget:first-child {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
 }
 .views-exposed-form .views-exposed-widgets label {
     position: relative;
-    color: #4cae4c;
     word-break: break-all;
-    width: 58px;
+    width: 69px;
     text-align: center;
-    margin: 13px 16px 0px 0px;
-    font-size: 15px;
-    font-family: lato;
+    margin: 8px 16px 0px 0px;
+    font-family: Lato Regular;
+    font-size: 20px;
+    line-height: 28.75px;
+    color: #4cae4c;
+    
 }
 .views-exposed-form .views-exposed-widgets label::before {
     content: "";
     position: absolute;
-    left: -11px;
+    left: -22px;
+    top: 4px;
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
@@ -1794,6 +1964,10 @@ body.page-crear-citas section div.region.region-content {
     text-indent: -99999px;
     width: 53px;
     height: 52px;
+}
+.views-exposed-form .views-exposed-widget {
+    float: none;
+    padding: .5em 1em 0 0;
 }
 .views-exposed-form .views-exposed-widgets .views-submit-button button {
     background: url("../img/buscar.svg")no-repeat;
@@ -1854,6 +2028,15 @@ body.page-crear-citas section div.region.region-content {
 .view-id-mis_citas .view-content table , .view-id-citas .view-content table {
     width: 99%;
 }
+.view-id-mis_citas .view-content table , .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th {
+    text-align: center;
+    font-family : Lato Regular; 
+    font-size : 14px;
+    line-height : 15px;
+}
+.view-id-mis_citas .view-content table , .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th:nth-child(3),table.table > thead:first-child > tr:first-child > th:nth-child(4),table.table > thead:first-child > tr:first-child > th:nth-child(5) {
+    width: 135px;
+}
 .view-id-mis_citas .view-content thead th, .view-id-citas .view-content thead th {
     color: #4cae4c;
     border-bottom: 2px solid transparent; 
@@ -1886,18 +2069,29 @@ body.page-crear-citas section div.region.region-content {
     text-decoration: none;
     padding: 0.3em 0.5em;
     border: 1px solid #41B65B;
+    font-family: Lato Regular;
     font-size: 13px;
     line-height: 14.09px;
     margin-right: 10px;
 }
-/*.view-id-mis_citas .view-content tbody tr td:last-child, .view-id-citas .view-content tbody tr td:last-child a:nth-child(2) {
+.view-id-mis_citas .view-content tbody tr td:last-child, .view-id-citas .view-content tbody tr td:last-child a:nth-child(2) {
     color: #FFF;
     background: #41B65B;
-}*/
+}
 .view-id-mis_citas .view-content tbody tr td:last-child a, .view-id-citas .view-content tbody tr td:last-child a:hover {
     background: #41B65B;
     border: 1px solid #41B65B;
     color: white;
+}
+.view-id-mis_citas .view-content tbody tr td:last-child a, .view-id-citas .view-content table.table > tbody > tr > td {
+    text-align: center;
+    font-family : Lato Regular;
+    font-size : 12px;
+    line-height : 19.75px;
+    color : #231F20;
+}
+.view-id-mis_citas .view-content tbody tr td:last-child a, .view-id-citas .view-content table.table > tbody > tr > td:last-child {
+    padding: 0px;
 }
 
 /* -\* Pginador citas - Reportes TOR  *\- */
@@ -1936,7 +2130,8 @@ body.page-crear-citas section div.region.region-content {
     background: url("../img/flecha.png")no-repeat;
     background-size: 11px;;
     background-position: 7px;
-    transform: rotate(-89deg);
+    -webkit-transform: rotate(-89deg);
+            transform: rotate(-89deg);
 } 
 .text-center ul.pagination li.pager-last > a  {
     text-indent: -9999px;
@@ -1949,14 +2144,16 @@ body.page-crear-citas section div.region.region-content {
     background: url("../img/flecha.png")no-repeat;
     background-size: 11px;;
     background-position: 7px;
-    transform: rotate(89deg);
+    -webkit-transform: rotate(89deg);
+            transform: rotate(89deg);
 } 
 .text-center ul.pagination li.pager-first > a  {
     text-indent: -9999px;
     background: url("../img/pager-last.svg")no-repeat;
     background-size: 16px;
     background-position: 6px;
-    transform: rotate(177deg);
+    -webkit-transform: rotate(177deg);
+            transform: rotate(177deg);
 }
 
 /*------------------ Menu Historial Estudiante    ------------------ */
@@ -1974,12 +2171,14 @@ body.page-crear-citas section div.region.region-content {
 .ui-accordion-header.ui-state-default .ui-icon {
     background: url("../img/flecha.png")no-repeat;
     background-size: contain;
-    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
 }
 .ui-accordion-header.ui-state-active .ui-icon { 
     background: url("../img/flecha.png")no-repeat !important;
     background-size: contain !important;
-    transform: rotate(0deg) !important;
+    -webkit-transform: rotate(0deg) !important;
+            transform: rotate(0deg) !important;
  }
 .ui-accordion-header.ui-state-default.ui-state-default {
     background: #E6E7E8;
@@ -2030,11 +2229,11 @@ body.page-crear-citas section div.region.region-content {
 }
 .views-row-last .ui-corner-bottom .views-field-view .views-row-last .views-field.views-field-nothing {
         display: -ms-flexbox;
-        display: -webkit-flex;
+    display: -webkit-box;
     display: flex;
-        -webkit-align-items: center;
         -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
 }
 .views-row-last .ui-corner-bottom .views-field-view .views-row-last div {
     padding-left: 10px
@@ -2057,6 +2256,8 @@ body.page-crear-citas section div.region.region-content {
     margin: 15px 0px 26px 10px;
 }
 .history-con .views-field-field-fecha, .history-con .views-field-field-fecha-1, .history-con .views-field-field-tipo-de-servicio, .history-con .views-field-field-collec-motivo  {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
 }
 .history-con .views-field-field-fecha span.views-label-field-fecha, .history-con .views-field-field-fecha-1 span.views-label-field-fecha-1, .history-con .views-field-field-tipo-de-servicio span.views-label-field-tipo-de-servicio, .history-con .views-field-field-collec-motivo span.views-label-field-collec-motivo {
@@ -2092,10 +2293,10 @@ section.Navegacion_Estudiantes ul.menu {
     padding: 0px;
     display: flex;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: white;
     float: right;
     margin-right: 11px;
@@ -2112,13 +2313,14 @@ color: #000;
     min-height: 52px;
     display: flex;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
      -ms-flex-align: center;
     -webkit-align-items: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0px 73px;
     font-size: 16px;
 }
@@ -2165,10 +2367,12 @@ body.page-servicios-estudiante .main-container .row > section {
 }
 body.page-servicios-estudiante .view-id-servicios li {
     margin-bottom: 103px;
+    display: -webkit-inline-box;
     display: inline-flex;
         display: -ms-inline-flexbox;
         display: -webkit-inline-flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
 }
@@ -2176,16 +2380,17 @@ body.page-servicios-estudiante .view-id-servicios li {
     list-style: none;
     display: flex;
         display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
         display: -ms-flexbox;
-    flex-direction: row-reverse;
-        -webkit-flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+            flex-direction: row-reverse;
         -ms-flex-direction: row-reverse;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+            justify-content: flex-end;
         -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
         -webkit-align-content: center;
         -ms-flex-line-pack: center;
 }
@@ -2202,10 +2407,9 @@ body.page-servicios-estudiante .view-id-servicios li {
 .view-id-servicios .views-field-php {
     display: flex;
         display: -webkit-box;
-        display: -webkit-flex;
-        display: -moz-box;
         display: -ms-flexbox;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
         -ms-flex-align: center;
         -webkit-align-items: center;
     margin-left: 10px;
@@ -2280,13 +2484,16 @@ body.page-servicios-estudiante .view-id-servicios li {
 }
 li.icon-apo-estudiante {
     border-right: 1px solid transparent;
-    flex-direction: row;
-        -webkit-flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
         -ms-flex-direction: row;
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
         -webkit-justify-content: center;
         -ms-flex-pack: center;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
         -ms-flex-align: center;
         -webkit-align-items: center;
     padding-bottom: 24px;
@@ -2457,10 +2664,10 @@ section#block-menu-menu-navegaci-n-agenda-cordinado ul.menu {
     padding: 0px;
     display: flex;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: white;
     float: right;
     margin-right: 11px;
@@ -2477,13 +2684,14 @@ color: #000;
     min-height: 52px;
     display: flex;
     display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
     display: -ms-flexbox;
-    align-items: center;
+    -webkit-box-align: center;
+            align-items: center;
      -ms-flex-align: center;
     -webkit-align-items: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0px 73px;
     font-size: 16px;
 }
@@ -2543,6 +2751,8 @@ body.page-node-edit section .field-name-field-tipo-de-servicio {
     margin: 0pc;
 }
 body.page-node-edit section .form-item.form-type-select.form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -2628,6 +2838,8 @@ body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-a
     display: none;
 }
 body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 } 
 body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios div:nth-child(2) , body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios div:nth-child(2) {
@@ -2677,6 +2889,8 @@ body.page-node-edit section form.node-disponibilidad-form .field-name-field-hist
 body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div{
     float: left;
     width: 25%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
 }
 body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-comentario-cita, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-comentario-cita > span {

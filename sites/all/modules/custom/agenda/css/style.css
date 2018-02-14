@@ -2029,13 +2029,14 @@ body.page-crear-citas section div.region.region-content {
 .view-id-mis_citas .view-content table , .view-id-citas .view-content table {
     width: 99%;
 }
-.view-id-mis_citas .view-content table , .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th {
+.view-id-mis_citas .view-content table ,.view-id-citas .view-content table > thead:first-child > tr:first-child > th, .view-id-mis_citas .view-content table > thead:first-child > tr:first-child > th  {
     text-align: center;
     font-family : Lato Regular; 
     font-size : 14px;
     line-height : 15px;
+    vertical-align: text-top; 
 }
-.view-id-mis_citas .view-content table , .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th:nth-child(3),table.table > thead:first-child > tr:first-child > th:nth-child(4),table.table > thead:first-child > tr:first-child > th:nth-child(5) {
+.view-id-citas .view-content table.table > thead:first-child > tr:first-child > th.views-field-field-collec-numero-de-documento, .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th.views-field-field-collec-nombre, .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th.views-field-field-collec-apellido {
     width: 135px;
 }
 .view-id-mis_citas .view-content thead th, .view-id-citas .view-content thead th {
@@ -2092,7 +2093,7 @@ body.page-crear-citas section div.region.region-content {
     color : #231F20;
 }
 .view-id-mis_citas .view-content tbody tr td:last-child a, .view-id-citas .view-content table.table > tbody > tr > td:last-child {
-    padding: 0px;
+    padding: 10px 0px;
 }
 
 /* -\* Pginador citas - Reportes TOR  *\- */
@@ -2607,7 +2608,7 @@ fieldset.collapsible #edit-field-fecha-de-nacimiento .panel-body .container-inli
 fieldset.collapsible #edit-field-fecha-de-nacimiento .panel-body fieldset.date-combo .container-inline-date .date-padding {
     padding: 0px; 
 }
-fieldset.collapsible#bootstrap-panel--2  > div {
+form#user-profile-form > div > fieldset#bootstrap-panel--3 > div.collapse.in {
     background-color: #E8E8E8;
 }
 form#user-profile-form div#edit-actions {

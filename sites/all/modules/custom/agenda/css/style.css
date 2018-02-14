@@ -329,7 +329,9 @@ body .main-container header section.user-login .view-id-user_login .view-content
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    color: #fff;
+    color: #FFFFFF;
+    font-family: "Lato Light";
+    font-size: 18px;
 }
 @media screen and (max-width: 1024px) {
     body .main-container header section.user-login .view-id-user_login {
@@ -1926,6 +1928,7 @@ body.page-crear-citas section div.region.region-content {
     font-size: 20px;
     line-height: 28.75px;
     color: #4cae4c;
+    font-weight: normal;
     
 }
 .views-exposed-form .views-exposed-widgets label::before {
@@ -1947,6 +1950,9 @@ body.page-crear-citas section div.region.region-content {
     box-shadow: inset 0 1px 1px transparent;
     width: 537px;
     height: 45px;
+    font-family: Lato Light;
+    font-size: 20px;
+    color: #000000;
 }
 .views-exposed-form .views-exposed-widgets .views-widget input:focus{
     border-color: transparent;
@@ -1975,13 +1981,19 @@ body.page-crear-citas section div.region.region-content {
     background-size: 38px;
     background-position: 6px;
     background-color: #4cae4c;
+    outline: none;
 }
 .views-exposed-form .views-exposed-widgets .views-reset-button button {
     background: url("../img/reiniciar.png")no-repeat;
     background-size: 38px;
     background-position: 6px;
     background-color: #929497;
+    outline: none;
 }
+.views-exposed-form .views-exposed-widgets .views-submit-button button:hover ,.views-exposed-form .views-exposed-widgets .views-reset-button button:hover { 
+        opacity: 0.5;
+}
+
 @media screen and (max-width: 768px) {
     .views-exposed-form .views-exposed-widgets > .views-exposed-widget:first-child {
         width: 69%;
@@ -2186,41 +2198,66 @@ body.page-crear-citas section div.region.region-content {
     background: #E6E7E8;
     border-radius: 0px;
 }
+
+.ui-accordion-header.ui-state-default.ui-state-default a span {
+    font-family: Lato Bold;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: #231F20;
+}
 .ui-accordion-header.ui-state-default.ui-state-active {
     background: #808184;
+}
+.ui-accordion-header.ui-state-default.ui-state-active a span {
+    color : #FFFFFF;
 }
 /* -\* informacion estudiante - informacion de la cita  - */
 .ui-accordion .ui-accordion-content {
     padding: 1em 0px 0px 0px;
 }
 .views-row-last .ui-corner-bottom > div span:nth-child(1) {
+    font-family: Lato Bold;
     font-weight: bold;
     font-size: 20px;
     line-height: 19.75px;
-    color: #41B65B;
-    font-family: Lato;
+    color : #41B65B;
+    
 }
 .views-row-last .ui-corner-bottom > div span:nth-child(2) {
     display: inherit;
     margin: 10px 0;
+    font-family: Lato Light;
+    font-size : 20px;
+    color : #000000;
 }
 .views-row-last .ui-corner-bottom > div > div  span.date-display-single {
     font-size: 100%;
+    font-family: Lato Light;
+    font-size: 20px;
+    color: #000000;
 } 
 .views-row-last .ui-corner-bottom div[class*="col-"], .views-row-last .ui-corner-bottom a, .views-row-last .ui-corner-bottom .date-display-single {
-    font-family: Lato !important;
-    color : #000000 !important;
+    font-family : Lato Light;
+    font-size: 20px;
+    color: #000000;
     text-decoration: none;
+   /*  pointer-events: none; */
     cursor: auto;
-
     height: 87px;
 }
 .views-row-last .ui-corner-bottom div[class*="col-"] > div {
     padding: 10px 0;
+    font-family : Lato Light;
+    font-size : 20px;
+    color : #000000;
 }
 
 .ui-accordion .ui-accordion-content div.views-field-view {
     padding: 0px;
+}
+.ui-accordion .ui-accordion-content div.views-field-uid {
+    display: none;
 }
 .views-row-last .ui-corner-bottom .views-field-view .views-row-last {
     background: #E8E8E8;
@@ -2241,11 +2278,16 @@ body.page-crear-citas section div.region.region-content {
     padding-left: 10px
 }
 .views-row-last .ui-corner-bottom .views-field-view .views-row-last div span {
+    font-family : Lato Bold;
+    font-weight : bold;
+    font-size : 20px;
+    line-height : 19.75px;
     color : #231F20;
 }
 .views-row-last .ui-corner-bottom .views-field-view .views-row-last div div {
-    font-size: 14px;
-    margin: 10px 0px;
+    font-family : Lato Light;
+    font-size : 20px;
+    color : #000000;
 }
 
 
@@ -2308,11 +2350,10 @@ section.Navegacion_Estudiantes ul.menu li {
     border-bottom: 1px solid #9E9E9E;
 }
 section.Navegacion_Estudiantes ul.menu li a {
-color: #000;
     text-decoration: none;
     text-align: center;
     width: 74px;
-    min-height: 52px;
+    min-height: 62px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2323,7 +2364,11 @@ color: #000;
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0px 73px;
-    font-size: 16px;
+    font-family: Lato Black;
+    font-size: 22px;
+    font-weight: normal;
+    color: #231F20;
+
 }
 section.Navegacion_Estudiantes ul.menu li a:hover {
     background: #47AC4B !important;

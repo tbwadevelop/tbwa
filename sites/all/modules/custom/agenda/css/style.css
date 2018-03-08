@@ -78,8 +78,11 @@
 .alert.alert-block.alert-danger.messages.error {
    /* display: none;*/
 }
-
-/*------------------ Login ------------------ */
+/*
+//------------------------------------------------------------------------------
+//------------------------------ Login -------------------------------
+//------------------------------------------------------------------------------ 
+*/
 body.not-logged-in .main-container .row > section {
     width: 100%;
     background: #E6E7E8;
@@ -136,6 +139,8 @@ body.not-logged-in .main-container section .region #block-system-main form#user-
     border-radius: 0px;
     width: 96%;
     height: 46px;
+    font-family: Lato Light;
+    font-size: 20px;
 }
 body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-info {
     position: absolute;
@@ -241,8 +246,11 @@ body.not-logged-in .main-container section .region #block-system-main form#user-
         font-size: 12px
     }
 }
-
-/*------------------ Header Calendario - Consejero ------------------ */
+/*
+//------------------------------------------------------------------------------
+// ------------------------------- Consejero ---------------------------------
+//------------------------------------------------------------------------------ 
+*/
 /* -\* Usuario consejero - */
 body .main-container header  section h2.block-title {
   display: none;
@@ -255,16 +263,17 @@ body .main-container header section.user-login .view-id-user_login {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0px;
 }
 body .main-container header section.user-login .view-id-user_login .view-header  {
     border-right: 1px solid white;
 }
 body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol {
-    width: 219px;
+    width: 210px;
 }
 body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .consejero, .estudiante , .administrator {
-    width: 61px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     float: left;
     margin: 0px 10px 0px 10px;
 }
@@ -303,7 +312,7 @@ body .main-container header section.user-login .view-id-user_login .view-header 
     border-bottom: 5px solid #41B65B;
     width: 62px;
     position: absolute;
-    top: 192px;
+    top: 184px;
 }
 body .main-container header section.user-login .view-id-user_login .view-content .item-list {
     padding: 0px;
@@ -317,7 +326,7 @@ body .main-container header section.user-login .view-id-user_login .view-content
 }
 body .main-container header section.user-login .view-id-user_login .view-content ul span {
     color: #FFFFFF;
-    font-family: "Lato Light";
+    font-family: "Lato Bold";
     font-size: 15px;
     line-height: 0px;
 }
@@ -326,7 +335,7 @@ body .main-container header section.user-login .view-id-user_login .view-content
     display: -ms-inline-flexbox;
     display: inline-flex;
     color: #FFFFFF;
-    font-family: "Lato Light";
+    font-family: "Lato Bold";
     font-size: 15px;
 }
 @media screen and (max-width: 1024px) {
@@ -374,10 +383,10 @@ body .main-container header section.user-login .view-id-user_login .view-header 
     }
 }
 /* -\* Menu Consejero - */
-section.Navegacion_Agenda {
+section.block.block-menu {
     background: #000000;
 }
-section.Navegacion_Agenda ul.menu {
+section.block.block-menu ul.menu {
     list-style: none;
     margin: 0px;
     padding: 0px;
@@ -391,11 +400,11 @@ section.Navegacion_Agenda ul.menu {
     float: right;
     margin-right: 11px;
 }
-section.Navegacion_Agenda ul.menu li {
+section.block.block-menu ul.menu li {
     border-right: 2px solid #000;
     border-bottom: 1px solid #9E9E9E;
 }
-section.Navegacion_Agenda ul.menu li a {
+section.block.block-menu ul.menu li a {
     text-decoration: none;
     text-align: center;
     width: 0px;
@@ -415,11 +424,11 @@ section.Navegacion_Agenda ul.menu li a {
     font-weight: normal;
     color: #231F20;
 }
-section.Navegacion_Agenda ul.menu li a:hover {
+section.block.block-menu ul.menu li a:hover {
     background: #47AC4B !important;
     color: #fff;
 } 
-section.Navegacion_Agenda ul.menu li.active-trail.active a {
+section.block.block-menu ul.menu li.active-trail.active a {
     background: #47AC4B;
     color : #FFFFFF;
 }
@@ -445,12 +454,20 @@ body .main-container header section.title-agenda-de-servicio .imagen {
     background: url(../img/agenda_servicios.png)no-repeat;
     background-size: contain;
 }
-body .main-container header section.title-agenda-de-servicio h2 {
+body .main-container header section.title-agenda-de-servicio .contenedor {
+    margin-left: 20px;
+}
+body .main-container header section.title-agenda-de-servicio .contenedor h2 {
     margin: 0 auto;
-    font-family: 'Lato Regular';
-    font-size : 47px;
-    line-height : 49.84px;
+    font-size : 40px;
+    line-height : 41.84px;
     color : #000000;
+}
+body .main-container header section.title-agenda-de-servicio .contenedor > h2 {
+    font-family: 'Lato Regular';
+}
+body .main-container header section.title-agenda-de-servicio .contenedor > h2 + h2 {
+    font-family: 'Lato Bold';
 }
 @media screen and (max-width: 1024px) { 
     body .main-container header section.title-agenda-de-servicio  {
@@ -474,24 +491,25 @@ body .main-container header section.title-agenda-de-servicio h2 {
 
 /*------------------ Row Calendario ------------------ */
 /* -\* Selec Calendario -/* - */
-.Calendario_Contenedor .dropdown {
+body.sidebar-first .dropdown {
     border: 1px solid transparent !important;
     width: 182px;
 }
-.Calendario_Contenedor .dropdown:hover {
+body.sidebar-first .dropdown:hover {
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0) !important;
             box-shadow: 0 0 5px rgba(0,0,0,0) !important;
 }
-.Calendario_Contenedor .dropdown .selected  {
+body.sidebar-first .dropdown .selected  {
     font-family: Lato Black;
     font-size: 31px !important;
     color: #808184 !important;
+    text-transform: uppercase;  
 }
-.Calendario_Contenedor .dropdown .selected:after  {
+body.sidebar-first .dropdown .selected:after  {
    -webkit-box-shadow: inset 0px 0px 0px 0px #fff;
            box-shadow: inset 0px 0px 0px 0px #fff;
 }
-.Calendario_Contenedor .dropdown .carat {
+body.sidebar-first .dropdown .carat {
     left: 30% !important;
     top: 53px !important;
     margin-top: -10px !important;
@@ -504,29 +522,23 @@ body .main-container header section.title-agenda-de-servicio h2 {
     -webkit-transform: rotate(44deg);
             transform: rotate(44deg);
 }
-.Calendario_Contenedor .dropdown.open div {
+body.sidebar-first .dropdown.open div {
     width: 113px;
 }
-/*.Calendario_Contenedor .dropdown.open .carat {
-    right: 12px !important;
-    top: 50% !important;
-    margin-top: -4px !important;
-    transform: rotate(225deg);
-}*/
-.Calendario_Contenedor .dropdown ul {
+body.sidebar-first .dropdown ul {
     background: #47AC4B;
     -webkit-padding-start: 0px;
 }
-.Calendario_Contenedor .dropdown li {
+body.sidebar-first .dropdown li {
     color: white !important;
     text-align: center;
     padding: 4px 12px;
 }
-.Calendario_Contenedor .dropdown li.active {
+body.sidebar-first .dropdown li.active {
     font-weight: 700;
     color: rgba(224, 224, 224, 0.95) !important;
 }
-.Calendario_Contenedor .dropdown li.focus {
+body.sidebar-first .dropdown li.focus {
     background: rgba(222, 222, 222, 0.44) !important;
 }
 
@@ -587,11 +599,14 @@ body .main-container .row aside .well section:nth-child(1) nav h3 {
 }
 body .main-container .row aside .well section:nth-child(1) nav h3 a { 
     color: #000;
-    font-family: "Myriad Pro";
+    font-family : Lato Bold;
+    font-weight : bold;
+    font-size : 15px;
+    letter-spacing : 1.5px;
     text-decoration: none;
     pointer-events: none;
     cursor: default;
-
+    text-transform: uppercase;  
 }
 body .main-container .row aside .well section:nth-child(1) .calendar-calendar tr .mini-day-on {
     padding: 0px;
@@ -1049,14 +1064,16 @@ body .main-container .row div.region.region-content > section div.view .view-hea
     font-family : Lato Regular;
     font-size : 24px;
     color : #808081;
+    font-weight: normal;
     float: left;
 }
 body .main-container .row div.region.region-content > section div.view .view-header h2 {
     padding-left: 20px;
     width: auto;
-    font-family : Lato;
+    font-family : Lato Regular;
     font-size : 24px;
     line-height : 21px;
+    font-weight: normal;
     color : #47AC4B;
     float: left;
 }
@@ -1274,47 +1291,7 @@ input[type=radio] {
     top: -1px;
     z-index: 10
 }
-/* Base styles radio buton */
-/* .radio input[type="radio"], .radio input[type="checkbox"]{
-  display: none;
-}
-div.form-radios .radio  label.control-label {
-  position: relative;
-}
-div.form-radios .radio span::before, div.form-radios .radio span::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-div.form-radios .radio span::before {
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    left: -1px;
-    top: -2px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border: 1px solid black;
-    -webkit-transition: border-color .2s;
-    transition: border-color .2s;
-}
-
-div.form-radios .radio span::after {
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 15px;
-  left: -28px;
-  top: 2px;
-  background: transparent;
-  -webkit-transition: color .2s;
-  transition: color .2s;
-}
-input[type="radio"]:checked  {
-  background: #26ca28;
-} */
+/* radio buton && checkbox  */
 .radio label, .checkbox label { 
     padding-left: 25px !important;
 }
@@ -1342,7 +1319,6 @@ input[type="radio"]:checked  {
   background-color: white;
 }
 
-
 /* -\* caja - fecha *\- */
 #edit-field-fecha fieldset {
     border-color: transparent;
@@ -1351,19 +1327,16 @@ input[type="radio"]:checked  {
     display: none;
 }
 
-
 /* -\* Calendario interno - Modal Crear Disponivilidad *\- */
 div#ui-datepicker-div {
     border: 1px solid #666;
     background: white;
     border-radius: 0px;
 }
-
 div#ui-datepicker-div .ui-datepicker-header {
     border: 1px solid transparent;
     background: white;
 }
-
 div#ui-datepicker-div .ui-datepicker-header .ui-icon-circle-triangle-w {
     background: url(../img/flecha.png) no-repeat;
     background-size: contain;
@@ -1514,9 +1487,12 @@ body.page-crear-citas section div.region.region-content {
 .view-id-usuarios_agenda_de_servicios .view-content ul {
     background: #F5F1F1;
     min-height: 11pc;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 .view-id-usuarios_agenda_de_servicios .view-content li {
     list-style: none;
+
 }
 .view-id-usuarios_agenda_de_servicios .view-content li > div {
     display: -webkit-inline-box;
@@ -1598,15 +1574,19 @@ body.page-crear-citas section div.region.region-content {
 .agendar_citas form {
     position: relative;
 }
+.agendar_citas form > div {
+    text-align: center;
+}
 .agendar_citas button#edit-submit {
     padding: 6px 20px;
     border: 1px solid #5cb85c;
     background: #5cb85c;
     color: white;
     border-radius: 0px;
-    position: absolute;
+    margin-right: 10px;
+    /* position: absolute;
     top: 110%;
-    left:  calc(46% - 1em);
+    left:  calc(46% - 1em); */
 }
 .agendar_citas button#edit-submit span {
     display: none;
@@ -1619,17 +1599,17 @@ body.page-crear-citas section div.region.region-content {
     background: #FFF;
     color: black;
     border-radius: 0px;
-    margin-bottom: 27px;
-    position: absolute;
+    /* margin-bottom: 27px; */
+    /* position: absolute;
     top: 110%;
-    left: 52%;
+    left: 52%; */
 }
 .agendar_citas button#edit-cancelar  span {
     display: none;
 }
 
 /* -\* Button Crear citas  *\- */
-.agendar_citas button.btn-success {
+.agendar_citas div#js-ajax-elements-wrapper button.btn-success{
     padding: 6px 12px;
     border: 1px solid #5cb85c;
     background: #FFF;
@@ -2365,89 +2345,19 @@ body.page-crear-citas section div.region.region-content {
     font-size: 18px;
     color: #000000;
 }
-
-/*------------------ Estudiantes     ------------------ */
+/*
+//------------------------------------------------------------------------------
+//------------------------------ Estudiantes -------------------------------
+//------------------------------------------------------------------------------
+*/
 /* -\* Menu Estudiante - */
-section.Navegacion_Estudiantes {
-    background: #000000;
+section#block-menu-menu-navegaci-n-agenda-estudiant ul.menu li a {
+    width: auto;
+    padding: 0px 34px;
 }
-section.Navegacion_Estudiantes ul.menu {
-    /*width: 592px;*/
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background-color: white;
-    float: right;
-    margin-right: 11px;
-}
-section.Navegacion_Estudiantes ul.menu li {
-    border-right: 2px solid #000;
-    border-bottom: 1px solid #9E9E9E;
-}
-section.Navegacion_Estudiantes ul.menu li a {
-    text-decoration: none;
-    text-align: center;
-    width: 74px;
-    min-height: 62px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0px 73px;
-    font-family: Lato Black;
-    font-size: 22px;
-    font-weight: normal;
-    color: #231F20;
-
-}
-section.Navegacion_Estudiantes ul.menu li a:hover {
-    background: #47AC4B !important;
-    color: #fff;
-} 
-section.Navegacion_Estudiantes ul.menu li.active-trail.active a {
-    background: #47AC4B;
-    color: white;
-}
-@media screen and (max-width: 1024px) {
-    section.Navegacion_Estudiantes ul.menu {
-        width: 100%;
-        margin-right: 0px;
-        background-color: #FFFFFF;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        z-index: 1036;
-    }
-    section.Navegacion_Estudiantes ul.menu li {
-        width: 20%;
-        border-right: 2px solid #9E9E9E;
-    }
-    section.Navegacion_Estudiantes ul.menu li a {
-        width: auto;
-    }
-}
-@media screen and (max-width: 768px) {
-    section.Navegacion_Estudiantes ul.menu li a {
-        padding: 0px 18%;
-        font-size: 12px;
-    }
-}
-
 /* -\* Servicios - Estudiantes Home - */
-body.page-servicios-estudiante >.main-container {
-    padding: 0px;
-    margin: 0px;
+body.page-servicios-estudiante .main-container section.title-agenda-de-servicio {
+     border-bottom: 1px solid #BBBDBF;
 }
 body.page-servicios-estudiante .main-container .row > section {
     padding: 0px;
@@ -2556,6 +2466,10 @@ body.page-servicios-estudiante .view-id-servicios li {
 }
 
 /* -\* Interna - Estudiantes Home - */
+body.sidebar-first.page-calendario-estudiante .main-container .row {
+    border: 3px solid #808184;
+    margin: auto;
+}
 .view-id-servicios .item-list {
     background: #E8E8E8;
 }

@@ -5,6 +5,7 @@
 	    	$('.page-user-edit #block-system-main #user-profile-form #edit-locale').remove();
 	    	$(".page-user-edit #user-profile-form .form-wrapper.form-group").addClass("col-lg-4 col-xs-6 col-sm-6");
 
+<<<<<<< HEAD
 	    	//contenerdor de consejero home que oxupe toda la pantalla
 	    	$('body.page-calendario-consejero.page-calendario-consejero-diario aside').removeClass("col-sm-3").addClass("col-lg-3 col-md-3 col-sm-12 col-xs-12");
 	    	$('body.page-calendario-consejero.page-calendario-consejero-diario .row > section').removeClass("col-sm-9").addClass("col-lg-9 col-md-9 col-sm-12 col-xs-12");
@@ -12,6 +13,19 @@
 	    	//contenerdor de estudiante home 
 	    	$('body.page-calendario-estudiante aside').removeClass("col-sm-3").addClass("col-lg-3 col-md-3 col-sm-12 col-xs-12");
 	    	$('body.page-calendario-estudiante .row > section').removeClass("col-sm-9").addClass("col-lg-9 col-md-9 col-sm-12 col-xs-12");
+=======
+	    	//contenerdor de consejero home // change dimencion table
+	    	$('body.page-calendario-consejero.page-calendario-consejero-diario aside').removeClass("col-sm-3");
+	    	$('body.page-calendario-consejero.page-calendario-consejero-diario aside').addClass("col-lg-3 col-md-3 col-sm-12 col-xs-12");
+	    	$('body.page-calendario-consejero.page-calendario-consejero-diario .row > section').removeClass("col-sm-9");
+	    	$('body.page-calendario-consejero.page-calendario-consejero-diario .row > section').addClass("col-lg-9 col-md-9 col-sm-12 col-xs-12");
+
+	    	// //contenerdor de estudiante home 
+	    	$('body.page-calendario-estudiante aside').removeClass("col-sm-3");
+	    	$('body.page-calendario-estudiante aside').addClass("col-lg-3 col-md-3 col-sm-12 col-xs-12");
+	    	$('body.page-calendario-estudiante .row > section').removeClass("col-sm-9");
+	    	$('body.page-calendario-estudiante .row > section').addClass("col-lg-9 col-md-9 col-sm-12 col-xs-12");
+>>>>>>> 365f14ab8f60e1619317306adb15d682dbb7ccc4
 			     	
 
 	        // Page service taxonomia (calendar estudiante) 

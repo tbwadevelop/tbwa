@@ -271,7 +271,7 @@ body .main-container header section.user-login .view-id-user_login .view-header 
 body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol {
     width: 210px;
 }
-body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .consejero, .estudiante , .administrator {
+body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .consejero, .estudiante , .administrator ,.cordinador {
     width: 50px;
     height: 50px;
     float: left;
@@ -285,6 +285,10 @@ body .main-container header section.user-login .view-id-user_login .view-header 
     background: url(../img/estudiante.png)no-repeat;
     background-size: contain;
     background-position-x: 13px;
+}
+body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .cordinador {
+    background: url(../img/cordinador.png)no-repeat;
+    background-size: contain;
 }
 body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .administrator {
     background: url(../img/administrator.png)no-repeat;
@@ -355,33 +359,64 @@ body .main-container header section.user-login .view-id-user_login .view-content
     }   
 }
 
-@media screen and (max-width: 674px) {
+@media screen and (max-width: 640px) {
+    body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol {
+        width: 144px;
+    } 
     body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .consejero {
-        width: 50px;
-        height: 47px;
-        margin: 10px 10px 0px 20px;
+        width: 37px;
+        margin: 5px 9px 0px 12px;
     }
     body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol p {
         font-size: 14px;
-        padding-top: 15px;
+        padding-top: 3px;
     }
     body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol h2 {
-        font-size: 18px;
+        font-size: 14px;
     }
     body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol h2::before {
         width: 48px;
+        top: 175px;
     }
     body .main-container header section.user-login .view-id-user_login .view-content ul {
         padding: 0px;
+    }
+    body .main-container header section.user-login .view-id-user_login .view-content ul li {
+        -webkit-padding-start: 20px;
+        -webkit-margin-before: 0em;
+        -webkit-margin-after: 0em;
+    }
+    body .main-container header section.user-login .view-id-user_login .view-content span {
+        font-size: 11px !important;
+    }
+    body .main-container header section.user-login .view-id-user_login .view-content ul li div > div {
+        font-size: 11px;
     }    
 }
+
 @media screen and (max-width: 320px) {
-body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .consejero {
-        width: 50px;
-        height: 47px;
-        margin: 10px 10px 0px 10px;
+    body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol {
+        width: 135px;
+    }
+    body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol .consejero {
+        width: 37px;
+        margin: 5px 9px 0px 5px;
+    }
+    body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol p {
+        font-size: 14px;
+    }
+    body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol h2 {
+        font-size: 13px;
+        -webkit-margin-before: -0.2em;
+    }
+    body .main-container header section.user-login .view-id-user_login .view-header .container-user-rol h2::before {
+        width: 45px;
+    }
+    body .main-container header section.user-login .view-id-user_login .view-content ul li {
+        -webkit-padding-start: 7px;
     }
 }
+
 /* -\* Menu Consejero - */
 section.block.block-menu {
     background: #000000;
@@ -396,18 +431,18 @@ section.block.block-menu ul.menu {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: white;
     float: right;
     margin-right: 11px;
 }
 section.block.block-menu ul.menu li {
+    background-color: white;
     border-right: 2px solid #000;
     border-bottom: 1px solid #9E9E9E;
 }
 section.block.block-menu ul.menu li a {
     text-decoration: none;
     text-align: center;
-    width: 0px;
+    width: 133px;
     min-height: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -431,6 +466,30 @@ section.block.block-menu ul.menu li a:hover {
 section.block.block-menu ul.menu li.active-trail.active a {
     background: #47AC4B;
     color : #FFFFFF;
+}
+@media screen and (max-width: 991px ) {
+    section.block.block-menu {
+        border: none;
+    }
+    section.block.block-menu ul.menu {
+        float: none;
+        width: 100%;
+        margin-right: 0px;
+        border: none;
+    }
+    section.block.block-menu ul.menu li {
+        width: 100%;
+        border: none;
+        border-right: 1px solid #000;
+    }
+    section.block.block-menu ul.menu li:last-child {
+        border-right: none;
+    }
+    section.block.block-menu ul.menu li a {
+        width: 100%;
+        padding: 0px 17%;
+        font-size: 1rem;
+    }
 }
 
 
@@ -469,30 +528,37 @@ body .main-container header section.title-agenda-de-servicio .contenedor > h2 {
 body .main-container header section.title-agenda-de-servicio .contenedor > h2 + h2 {
     font-family: 'Lato Bold';
 }
-@media screen and (max-width: 1024px) { 
+
+@media screen and (max-width: 991px) { 
     body .main-container header section.title-agenda-de-servicio  {
         background: #E8E8E8;
+        height: 111px;
     }
     body .main-container header section.title-agenda-de-servicio h2 {
-        width: 128px;
-        font-size: 23px;
+        width: 130px;
+        font-size: 23px !important;
+        line-height: 25.84px !important;
     }
     body .main-container #page-header .title-agenda-de-servicio .imagen {
         height: 39px;
         width: 47px;
     }
-    body.page-calendario-consejero .row aside .well section.crear_disponibilidad div#magical-modal-link a {
-        color: #FFF;
-        background: #47AC4B;
-        padding: 8px 8%;
+}
+@media screen and (max-width: 640px) { 
+    body .main-container header section.title-agenda-de-servicio .contenedor {
+        margin-left: 0px;
     }
-
+    body .main-container header section.title-agenda-de-servicio h2 {
+        width: 100px;
+        font-size: 18px !important;
+        line-height: 19.84px !important;
+    }
 }
 
 /*------------------ Row Calendario ------------------ */
 /* -\* Selec Calendario -/* - */
 body.sidebar-first .dropdown {
-    border: 1px solid transparent !important;
+    border: none !important;
     width: 182px;
 }
 body.sidebar-first .dropdown:hover {
@@ -542,11 +608,44 @@ body.sidebar-first .dropdown li.focus {
     background: rgba(222, 222, 222, 0.44) !important;
 }
 
+@media screen and (max-width: 991px) {
+    body.sidebar-first .wrapper {
+        margin-left: 114px;
+    }
+    body.sidebar-first .dropdown {
+        background: #47AC4B;
+    }
+    body.sidebar-first .dropdown .selected {
+        color: #FFFF !important;
+        font-family: Lato Bold;
+        font-size: 24px !important;
+        text-transform: initial;
+    }
+    body.sidebar-first .dropdown .carat {
+        left: 30% !important;
+        top: 53px !important;
+        border: none !important;
+        border-bottom: none !important;
+        border-right: none !important;
+        border-top: none !important;
+        width: 15px;
+        height: 15px;
+        -webkit-transform: none;
+                transform: none);
+    }
+    
+}
+
+
+
 /* -\* Calendario contenedor  - */
 body.page-calendario-consejero .row {
     border: 3px solid #808184; 
     margin: auto;
 }
+body .main-container .row aside {
+    padding: 0px;
+}  
 body .main-container .row aside .well {
     background-color: #FFF;
     border: none;
@@ -643,17 +742,14 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
         margin: 0px;
         border: none;
     }
-    body.page-calendario-consejero .row aside {
-        margin: 0px !important;
-        padding: 0px !important;
-    }
     body.page-calendario-consejero .row .well {
         padding: 0px;
+        margin: 0px;
     }
     body .main-container .row aside .well section:nth-child(1) .view-header {
         width: 100%;
         background-color: #47AC4B;
-        height: 85px;
+        height: 72px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -835,7 +931,7 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
         height: 21px;
     }
     body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad {
-       /* transform: translateX(-110%);*/
+        /* transform: translateX(-110%); */
         z-index: 2;
         background-color: white;
     }
@@ -996,7 +1092,7 @@ body .main-container .row > section div.region.region-content div.view {
 
 /* -\* Enlace ir a hoy - */
 body .main-container .row section div.region.region-content > section div.view .view-header > a { 
-    font-family : Lato Black;
+    font-family : Lato Bold;
     font-size : 15px;
     color : #4C48A8;
     text-decoration: none;
@@ -1004,13 +1100,21 @@ body .main-container .row section div.region.region-content > section div.view .
 body .main-container .row section div.region.region-content > section div.view .view-header > a:hover, body .main-container .row section div.region.region-content > section div.view .view-header > a:active, body .main-container .row section div.region.region-content > section div.view .view-header > a:focus { 
     color: #8989CE;    
 }
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 991px) {
+    body .main-container .row section div.region.region-content > section div.view .view-header > a:hover, body .main-container .row section div.region.region-content > section div.view .view-header > a:active, body .main-container .row section div.region.region-content > section div.view .view-header > a:focus {
+        color: white;
+    }
+    body .main-container.container  {
+        width: 100% !important;
+        padding: 0px;
+    }
     body .main-container .row section div.region.region-content > section div.view .view-header > a {
         color: white;
         position: absolute;
         left: 89%;
-        top: -114px;
-        width: 47px;
+        top: -87px;
+        width: 51px;
     }
 }
 @media screen and (max-width: 768px) {

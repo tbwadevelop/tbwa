@@ -1183,6 +1183,25 @@ body .main-container .row div.region.region-content > section div.view .view-hea
 }
 
 /* -\* Calendario de Agenda Día - Semana - Mes  - */
+/* Marco Dia & semana */
+.day-view .header-body-divider, .week-view .header-body-divider {
+    display: none;
+}
+.day-view #multi-day-container, .week-view #multi-day-container {
+    height: 40px !important;
+    border-bottom: none !important;
+}
+.day-view #multi-day-container .calendar-agenda-hour span, .week-view #multi-day-container .calendar-agenda-hour span {
+    display: none;
+}
+.day-view #single-day-container table.full tr td.first div, .week-view #single-day-container table.full tr td.first div  {
+    text-align: center;
+    font-family : Lato Regular;
+    color : #808081;
+}
+.day-view #single-day-container table.full tr td.first div span.calendar-ampm, .week-view #single-day-container table.full tr td.first div span.calendar-ampm {
+    margin: 0px 3px;
+}
 /* Dia */
 body .main-container .row div.region.region-content > section div.view .view-content .calendar-calendar .day-view .full td .inner div.calendar div {
     margin: 2px;
@@ -1195,7 +1214,9 @@ body .main-container .row div.region.region-content > section div.view .view-con
     color: black;
     border-radius: 0px !important;
     border: 1px solid #47ac4b9c !important;
-    border-left: 10px solid #47AC4B !important
+    border-left: 10px solid #47AC4B !important;
+    width: 100% !important;
+    margin: 0px;
 }
 body .main-container .row div.region.region-content > section div.view .view-content .calendar a.ctools-use-modal.ctools-use-modal-processed {
     position: absolute;
@@ -1207,6 +1228,8 @@ body .main-container .row div.region.region-content > section div.view .view-con
 body .main-container .row div.region.region-content > section div.view .view-content .calendar-calendar .day-view .full .single-day div.dayview span ,.cutoff{
     display: none !important; 
 }
+/* Marco semana */
+
 /* Semana*/
 body .main-container .row div.region.region-content > section div.view .view-content .calendar-calendar .week-view .full div.single-day div.weekview, body .main-container .row div.region.region-content > section div.view .view-content .calendar-calendar .week-view .full div.single-day div.dayview {
     background: rgb(161, 211, 161) !important;
@@ -1223,7 +1246,6 @@ body .main-container .row div.region.region-content > section div.view .view-con
 body .main-container .row div.region.region-content > section div.view .view-content .calendar-calendar .week-view .full .single-day div.weekview span ,.cutoff{
     display: none !important; 
 }
-
 body .main-container .row div.region.region-content > section div.view .view-content #header-container th {
     border: 0px solid #ccc;
     background-color: #F9FAFB;
@@ -1254,6 +1276,15 @@ body .main-container .row div.region.region-content > section div.view .view-con
 }
 .calendar-calendar .month-view .full td.single-day div.monthview span {
     display: none !important; 
+}
+.month-view tr div.month.day {
+    float: left;
+    font-family : Lato Regular;
+    font-size : 21px;
+    color : #808081;
+}
+.month-view tr td .inner div.day a {
+    color : black;
 }
 
 /*------------------ Modal - Crear Disponibilidad  ------------------ */

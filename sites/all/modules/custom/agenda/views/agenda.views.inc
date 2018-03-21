@@ -36,3 +36,14 @@ function agenda_views_pre_render(&$view) {
          break;
     }
 }
+
+/**
+ * Implementation of hook_views_pre_view().
+ */
+function agenda_views_pre_view(&$view, &$display_id, &$args) {
+     $date = arg(2);
+     if ($view->name == 'consejero_calendar' && $view->current_display == 'block_1' && isset($date)){
+         $filtro = explode("-", $date);
+         $view->display_handler->options['arguments']['date_argument']['default_argument_options']['argument'] = $filtro[0] . '-' .$filtro[1];
+    }
+}

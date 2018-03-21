@@ -2406,6 +2406,11 @@ body.page-crear-citas section div.region.region-content {
 .ui-accordion-header.ui-state-default.ui-state-active a span {
     color : #FFFFFF;
 }
+@media screen and (max-width: 640px) {
+    .ui-accordion-header.ui-state-default span.ui-accordion-header-icon {
+        left: 90% !important;
+    }
+}
 /* -\* informacion estudiante - informacion de la cita  - */
 .ui-accordion .ui-accordion-content {
     padding: 1em 0px 0px 0px;
@@ -2430,13 +2435,13 @@ body.page-crear-citas section div.region.region-content {
     font-family: Lato Light;
     font-size: 20px;
     color: #000000;
+    font-weight: normal;
 } 
 .views-row-last .ui-corner-bottom div[class*="col-"], .views-row-last .ui-corner-bottom a, .views-row-last .ui-corner-bottom .date-display-single {
     font-family : Lato Light;
     font-size: 20px;
     color: #000000;
     text-decoration: none;
-   /*  pointer-events: none; */
     cursor: auto;
     height: 87px;
 }
@@ -2446,7 +2451,6 @@ body.page-crear-citas section div.region.region-content {
     font-size : 20px;
     color : #000000;
 }
-
 .ui-accordion .ui-accordion-content div.views-field-view {
     padding: 0px;
 }
@@ -2461,12 +2465,8 @@ body.page-crear-citas section div.region.region-content {
     margin:15px 0px 0px 0px;
 }
 .views-row-last .ui-corner-bottom .views-field-view .views-row-last .views-field.views-field-nothing {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
 }
 .views-row-last .ui-corner-bottom .views-field-view .views-row-last div {
     padding-left: 10px
@@ -2483,7 +2483,89 @@ body.page-crear-citas section div.region.region-content {
     font-size : 20px;
     color : #000000;
 }
-
+@media screen and (max-width: 640px) {
+    .views-row-last .ui-corner-bottom > div span:nth-child(1) {
+        font-size: 18px;
+    }
+    .views-row-last .ui-corner-bottom > div span:nth-child(2) {
+        font-size: 14px;
+    }
+    .views-row-last .ui-corner-bottom div[class*="col-"] > div {
+        font-size: 14px;
+    }
+    .views-row-last .ui-corner-bottom a {
+        font-size: 14px;
+    }
+    .views-row-last .ui-corner-bottom > div > div span.date-display-single {
+        font-size: 14px;
+    }
+    .views-row-last .ui-corner-bottom .views-field-view .views-row-last div span {
+        font-size: 14px;
+    }
+    .views-row-last .ui-corner-bottom .views-field-view .views-row-last div div {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 460px) {
+    .views-row-last .ui-corner-bottom > div span:nth-child(1) {
+        font-size: 11px;
+    }
+    .views-row-last .ui-corner-bottom > div span:nth-child(2) {
+        font-size: 11px;
+        margin: 3px 0;
+    }
+    .views-row-last .ui-corner-bottom div[class*="col-"] > div {
+        font-size: 11px;
+        padding: 3px 0;
+    }
+    .views-row-last .ui-corner-bottom a {
+        font-size: 11px;
+    }
+    .views-row-last .ui-corner-bottom > div > div span.date-display-single {
+        font-size: 11px;
+    }
+    .views-row-last .ui-corner-bottom .views-field-view .views-row-last div span {
+        font-size: 11px;
+    }
+    .views-row-last .ui-corner-bottom .views-field-view .views-row-last div div {
+        font-size: 11px;
+    }
+    .views-row-last .ui-corner-bottom div[class*="col-"] {
+        height: 50px;
+        background: 
+        /* padding: 0px; */
+    }
+    .views-row-last .ui-corner-bottom .views-field-view .views-row-last {
+        min-height: 27vh;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .views-row-last .ui-corner-bottom > div span:nth-child(1) {
+        font-size: 8px;
+    }
+    .views-row-last .ui-corner-bottom > div span:nth-child(2) {
+        font-size: 7px;
+    }
+    .views-row-last .ui-corner-bottom div[class*="col-"] > div {
+        font-size: 7px;
+    }
+    .views-row-last .ui-corner-bottom a {
+        font-size: 7px;
+    }
+    .views-row-last .ui-corner-bottom > div > div span.date-display-single {
+        font-size: 7px;
+    }
+    .views-row-last .ui-corner-bottom .views-field-view .views-row-last div span {
+        font-size: 7px;
+    }
+    .views-row-last .ui-corner-bottom .views-field-view .views-row-last div div {
+        font-size: 7px;
+    }
+    body.page-node-edit section #edit-field-citas-agenda table#field-citas-agenda-values tr.draggable td {
+        white-space: normal;
+    }
+}
 
 /* -\* History de la cita-\* */
 .history-con .views-field-php {
@@ -2957,7 +3039,9 @@ body.page-node-edit section #edit-field-citas-agenda .tabledrag-toggle-weight-wr
 body.page-node-edit section #edit-field-citas-agenda .field-label, body.page-node-edit section #edit-field-citas-agenda .field-multiple-drag {
     display: none;
 }
-
+body.page-node-edit section #edit-field-citas-agenda table#field-citas-agenda-values tr.draggable td {
+    padding: 0px;
+}
 body.page-node-edit section #edit-field-citas-agenda table#field-citas-agenda-values tr.draggable td:nth-child(2) {
     background: #FFF;
     border-top: 1px solid transparent;
@@ -3000,7 +3084,6 @@ body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-mo
 body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-type-radios > label,body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-type-radios > label {
     display: none;
 }
-
 body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios div:first-child, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios div:first-child{
     display: none;
 }
@@ -3022,9 +3105,9 @@ body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-as
     right: 1%;
     top: 53px;
 }
-@media screen and (max-width:  1024px){
-    body.page-node-edit section #edit-field-citas-agenda div.form-radios label span {
-        font-size: 11px;
+@media screen and (max-width:  991px) {
+    body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia {
+        position: initial;
     }
     body.page-node-edit section #edit-field-citas-agenda table#field-citas-agenda-values {
         border-color: transparent;
@@ -3032,7 +3115,20 @@ body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-as
     body.page-node-edit section #edit-field-citas-agenda  div.table-responsive {
             border: transparent;
     }
+    body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios {
+        justify-content: center;
+        flex-direction: row-reverse;
+    }
+    body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios label, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios label {
+        margin-right: 15px;
+    }
 }
+@media screen and (max-width:  640px) {
+    body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios label, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios label {
+        font-size: 13px;
+    }
+}
+
 
 body.page-node-edit section #edit-field-citas-agenda .field-name-field-comentario-cita div.textarea-processed textarea {
     border: 1px solid #58595B;
@@ -3072,6 +3168,7 @@ body.page-node-edit section form.node-disponibilidad-form .field-name-field-hist
     width: 100%;
     border: 2px solid #808184;
     padding: 20px;
+    font-family: Lato Light;
 }
 
 body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha-1, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-tipo-de-servicio, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-collec-motivo {
@@ -3081,7 +3178,7 @@ body.page-node-edit section form.node-disponibilidad-form .field-name-field-hist
     padding-bottom: 20px;
 }
 body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content div div.field-content {
-    padding-left: 10px;
+    padding-left: 3px;
 }
 body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div:last-child {
     display: none;
@@ -3109,6 +3206,12 @@ body.page-node-edit section form.node-disponibilidad-form .field-name-field-hist
     }
 }
 
+@media screen and (max-width: 640px) {
+    body.page-node-edit section #edit-field-citas-agenda .field-name-field-comentario-cita div.textarea-processed textarea {
+        height: 151px;
+    }
+    
+}
 
 
 /*---- imagen de modal carnet -----*/

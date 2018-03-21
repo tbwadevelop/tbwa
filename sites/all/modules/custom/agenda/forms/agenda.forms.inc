@@ -184,17 +184,25 @@ function agenda_save_users($uid, $nid, $tid){
 
 
 function agenda_qoute_form($form, &$form_state){
+
+  $form['back'] = array(
+      '#type'=> 'item',
+      '#prefix' => '<div class="coment-mobil">',
+      '#markup' => '<input type="button" value="Back" onclick="goBack()"><span>Citas</span>',
+      '#suffix' => '</div>',
+  );
+
   $form['options_qoute'] = [
       '#type'          => 'select',
       '#title'         => t('Project status'),
       '#default_value' => variable_get('options_qoute'),
       '#options'       => [
-        FPC => t('Filtrar por'),     // Filtra Por Citas
-        FCT => t('Todas las citas'), // Full Citas Totales
-        FCA => t('Citas abiertas'),  // Full Citas Abiertas
-        FCC => t('Citas cerradas'),  // Full Citas Cerradas
+        FPC => t('Filtrar por'),
+        FCT => t('Todas las citas'), 
+        FCA => t('Citas abiertas'),  
+        FCC => t('Citas cerradas'),  
       ],
-      // Define the onChange like so:
+
       '#attributes'    => [
         'onChange' => 'this.form.submit();',
       ],

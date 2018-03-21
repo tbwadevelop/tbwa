@@ -37,6 +37,7 @@ dependencies[] = libraries
 dependencies[] = field_class
 dependencies[] = features
 dependencies[] = role_export
+dependencies[] = multiblock
 
 ; Add a style sheet for all media
 stylesheets[all][] = css/style.css

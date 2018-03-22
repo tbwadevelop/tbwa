@@ -566,8 +566,8 @@ body.sidebar-first .dropdown:hover {
 }
 body.sidebar-first .dropdown .selected  {
     font-family: Lato Black;
-    font-size: 31px !important;
-    color: #808184 !important;
+    font-size: 26px;
+    color: #808184 ;
     text-transform: uppercase;  
 }
 body.sidebar-first .dropdown .selected:after  {
@@ -940,7 +940,7 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
         width: 80%;
     } 
     body .main-container .row section div.region.region-content {
-        margin: 0px;
+        margin: 0px !important;
     }
 }
 /* -\* Button Crear Disponibilidad - Estudiantes */
@@ -2797,6 +2797,69 @@ body.page-mis-citas .row {
     float: right;
     margin-bottom: 27px;
 }
+.coment-mobil {
+    display: none;
+}
+@media screen and (max-width: 991px) {
+    .coment-mobil {
+        display: flex;
+        align-items: center;
+        background: #47AC4B;
+        color: white;
+        height: 73px;
+        font-family: Lato Regular;
+        font-size: 30px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .coment-mobil input {
+        background: #47AC4B;
+        text-indent: -9999px;
+        overflow: hidden;
+        width: 24px;
+        border: none;
+        background-image: url(../img/flecha-blanca.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: 50%;
+        margin-left: 16px;
+        margin-right: 18px;
+        padding: 0px;
+        border-radius: 0px;
+    }
+    .filtar_citas #edit-options-qoute {
+        position: relative;
+        right: 0px;
+        top: -51px;
+        background-color: #47AC4B;
+        background-image: url(../img/punto-horizontales.svg);
+        background-size: 4%;
+        background-position: 95%;
+        border: none;
+        transition: none;
+        box-shadow: none;
+        color: white;
+        font-size: 23px;
+        margin-bottom: 0px;
+        padding: 0px 12px;
+        width: 191px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .coment-mobil {
+        font-size: 20px;
+    }
+    .coment-mobil input {
+        width: 17px;
+        margin-left: 14px;
+        margin-right: 5px;
+    }
+    .filtar_citas #edit-options-qoute {
+        font-size: 20px;
+        background-position: 99%;
+        width: 159px;
+    }
+}
 
 /* -\* Mis Datos  - Estudiantes - */
 body.page-user-edit .main-container .row section div.region.region-content {
@@ -2991,6 +3054,10 @@ section#block-menu-menu-navegaci-n-agenda-cordinado ul.menu li.active-trail.acti
 }
 
 /*------------------ button informacion citas - Consejero ------------------ */
+body.page-node-edit section .field-name-field-encabezado .consejero, body.page-node-edit section .field-name-field-encabezado .date {
+    display: none
+
+}
 body.page-node-edit.node-type-disponibilidad .row {
     border: 3px solid #808184;
     margin: auto;
@@ -3081,17 +3148,29 @@ body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-mo
     }
 }
 
-body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-type-radios > label,body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-type-radios > label {
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-type-radios > label {
     display: none;
 }
 body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios div:first-child, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios div:first-child{
     display: none;
 }
-body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios {
-    display: -webkit-box;
-    display: -ms-flexbox;
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-type-radios  {
     display: flex;
 } 
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-type-radios > label {
+    line-height: 0.6;
+    margin-right: 10px;
+}
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-type-radios div.form-radios {
+    display: flex;
+    flex-direction: row-reverse;
+}
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-type-radios div.form-radios div.form-type-radio:last-child {
+    margin-right: 10px;
+}
+body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios label span, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios label span {
+    font-family: Lato Regular;
+}
 body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios div:nth-child(2) , body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios div:nth-child(2) {
     margin-right: 10px
 } 
@@ -3113,11 +3192,13 @@ body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-as
         border-color: transparent;
     }   
     body.page-node-edit section #edit-field-citas-agenda  div.table-responsive {
-            border: transparent;
+        border: transparent;
     }
-    body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios {
+    body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-type-radios {
         justify-content: center;
-        flex-direction: row-reverse;
+    }
+    body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios label span, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios label span {
+        font-family: Lato Bold;
     }
     body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios label, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios label {
         margin-right: 15px;
@@ -3126,6 +3207,9 @@ body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-as
 @media screen and (max-width:  640px) {
     body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios label, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios label {
         font-size: 13px;
+    }
+    body.page-node-edit section #edit-field-citas-agenda .field-name-field-tipo-de-atencion div.form-radios label, body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-asistencia div.form-radios label {
+        margin-right: 0px;
     }
 }
 

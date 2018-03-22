@@ -216,13 +216,7 @@
 		});
 		// Add User and Rold to Date(Today). 
 		
-			$('.view-id-user_login .views-field-name .field-content').each(function (index, value) { 
-			// $("<h2> "+$('.view-id-user_login .views-label.views-label-name').text()+" "+$(this).context.innerText+"</h2>" ).appendTo("#block-system-main .date-views-pager.clearfix.date-nav-wrapper");
-
-			
-		 });
-
-	//	$(('.view-id-user_login .views-field-name .field-content').text()).appendTo(".date-nav-wrapper");
+		$('<h2> '+$('.views-field-name .field-content').text()+'</h2>').appendTo('.view-display-id-page_3 .clearfix.date-nav-wrapper');
 
 		
 		// Add Year to Month Calendar (Consejero)

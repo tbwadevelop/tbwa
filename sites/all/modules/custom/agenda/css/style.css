@@ -140,6 +140,8 @@ body.not-logged-in .main-container section .region #block-system-main form#user-
     height: 46px;
     font-family: Lato Light;
     font-size: 20px;
+    transition: none;
+    box-shadow: none;
 }
 body.not-logged-in .main-container section .region #block-system-main form#user-login #edit-info {
     position: absolute;
@@ -466,7 +468,23 @@ section.block.block-menu ul.menu li.active-trail.active a {
     background: #47AC4B;
     color : #FFFFFF;
 }
+footer.footer {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100% !important;
+    display: none;
+}
+footer.footer h2 {
+    display: none;
+}
 @media screen and (max-width: 991px ) {
+    footer.footer { 
+        display: initial;
+    }
+    body div.main-container section.block.block-menu {
+        display: none;
+    }
     section.block.block-menu {
         border: none;
     }
@@ -487,7 +505,15 @@ section.block.block-menu ul.menu li.active-trail.active a {
     section.block.block-menu ul.menu li a {
         width: 100%;
         padding: 0px 17%;
-        font-size: 1rem;
+        font-size: 2rem;
+        min-height: 59px;
+    }
+}
+@media screen and (max-width: 640px ) {
+    section.block.block-menu ul.menu li a {
+        font-size: 1.2rem;
+        min-height: 43px;
+        padding: 0px 11%;
     }
 }
 
@@ -641,6 +667,7 @@ body.sidebar-first .dropdown li.focus {
 body.page-calendario-consejero .row {
     border: 3px solid #808184; 
     margin: auto;
+        min-height: 32pc;
 }
 body .main-container .row aside {
     padding: 0px;
@@ -1085,8 +1112,13 @@ body .main-container .row > section div.region.region-content {
     z-index: -100;
     margin-top: 37px;
 }
-body .main-container .row > section div.region.region-content div.view {
+/* body .main-container .row > section div.region.region-content div.view {
     position: relative;
+} */
+body .main-container .row > section div.region.region-content div.view div.view-header p {
+    margin: 0px 0px 20px 50px;
+    font-family: Lato Bold;
+    font-size: 18px;
 }
 
 /* -\* Enlace ir a hoy - */
@@ -1111,8 +1143,8 @@ body .main-container .row section div.region.region-content > section div.view .
     body .main-container .row section div.region.region-content > section div.view .view-header > a {
         color: white;
         position: absolute;
-        left: 89%;
-        top: -87px;
+        right: 58px;
+        top: -47px;
         width: 51px;
     }
 }
@@ -1183,7 +1215,7 @@ body .main-container .row div.region.region-content > section div.view .view-hea
 
 /* -\* Calendario de Agenda Día - Semana - Mes  - */
 /* Marco Dia & semana */
-.day-view .header-body-divider, .week-view .header-body-divider {
+.day-view .header-body-divider, .week-view .header-body-divider, .day-view .single-day-footer-processed {
     display: none;
 }
 .day-view #multi-day-container, .week-view #multi-day-container {
@@ -2212,7 +2244,8 @@ body.page-crear-citas section div.region.region-content {
     vertical-align: text-top; 
 }
 .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th.views-field-field-collec-numero-de-documento, .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th.views-field-field-collec-nombre, .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th.views-field-field-collec-apellido {
-    width: 135px;
+    width: 93px; /* 135px */
+    white-space: initial;
 }
 .view-id-mis_citas .view-content thead th, .view-id-citas .view-content thead th {
     color: #4cae4c;
@@ -2264,6 +2297,7 @@ body.page-crear-citas section div.region.region-content {
     font-size : 12px;
     line-height : 19.75px;
     color : #231F20;
+    padding: 5px 8px;
 }
 .view-id-mis_citas .view-content tbody tr td:last-child a, .view-id-citas .view-content table.table > tbody > tr > td:last-child {
     padding: 10px 0px;
@@ -3053,10 +3087,9 @@ section#block-menu-menu-navegaci-n-agenda-cordinado ul.menu li.active-trail.acti
     background: url(http://loadinggif.com/images/image-selection/3.gif) 50% 50% no-repeat rgb(182, 181, 181);
 }
 
-/*------------------ button informacion citas - Consejero ------------------ */
+/*------------------ informacion cita - Consejero ------------------ */
 body.page-node-edit section .field-name-field-encabezado .consejero, body.page-node-edit section .field-name-field-encabezado .date {
     display: none
-
 }
 body.page-node-edit.node-type-disponibilidad .row {
     border: 3px solid #808184;
@@ -3294,10 +3327,76 @@ body.page-node-edit section form.node-disponibilidad-form .field-name-field-hist
     body.page-node-edit section #edit-field-citas-agenda .field-name-field-comentario-cita div.textarea-processed textarea {
         height: 151px;
     }
-    
 }
-
-
+/*---- Button informacion cita  -----*/
+body.page-node-edit section form.node-disponibilidad-form div.field-name-field-historial-citas div.view-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    margin-top: 50px;
+}
+body.page-node-edit section form.node-disponibilidad-form div.field-name-field-historial-citas div.view-footer a {
+    padding: .5em 1em;
+    border: 1px solid #41B65B;
+    color: black;
+    text-decoration: none;
+    font-family: Lato Regular;
+    color : #231F20;
+}
+body.page-node-edit section form.node-disponibilidad-form div.field-name-field-historial-citas div.view-footer a:hover {
+    opacity: 0.5;
+}
+body.page-node-edit section form.node-disponibilidad-form div#edit-actions {
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+}
+body.page-node-edit section form.node-disponibilidad-form div#edit-actions button {
+    background-color: #41B65B;
+    border: #41B65B;
+    border-radius: 0px;
+    font-family: Lato Regular;
+    color: #FFFFFF;
+    padding: .5em 1.6em;
+}
+body.page-node-edit section form.node-disponibilidad-form div#edit-actions button:hover {
+    opacity: 0.5;
+}
+body.page-node-edit section form.node-disponibilidad-form div#edit-actions button span { 
+    display: none;
+}
+@media screen and (max-width: 991px) {
+    body.page-node-edit section form.node-disponibilidad-form div#edit-actions {
+        top: 15px;
+        left: auto;
+        right: 0px;
+    }
+    body.page-node-edit section form.node-disponibilidad-form div#edit-actions button { 
+        text-indent: -999999px;
+        overflow: hidden;
+        background-image: url(../img/guardar.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+    }
+    body.page-node-edit section form.node-disponibilidad-form div.field-name-field-historial-citas div.view-footer div.botoon-cancel-quote {
+        position: absolute;
+        top: 18px;
+        right: 73px;
+    }
+    body.page-node-edit section form.node-disponibilidad-form div.field-name-field-historial-citas div.view-footer div.botoon-cancel-quote a {
+        background-color: #41B65B;
+        color: white;
+        text-indent: -99999px;
+        overflow: hidden;
+        display: block;
+        background-image: url(../img/pendiente.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+        border: none;
+    }
+}
 /*---- imagen de modal carnet -----*/
 div#__lpform_edit-field-lugar-und-0-value {
     display: none;

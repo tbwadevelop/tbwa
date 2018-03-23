@@ -216,13 +216,16 @@
 		});
 		// Add User and Rold to Date(Today). 
 		
-		$('<h2> '+$('.views-field-name .field-content').text()+'</h2>').appendTo('.view-display-id-page_3 .clearfix.date-nav-wrapper');
+		if ($(".cotainer-name-user ").length == false) {
+		 	$('<h2 class="cotainer-name-user"> '+$('.views-field-name .field-content').text()+'</h2>').appendTo('#block-system-main .view .clearfix.date-nav-wrapper');
+		}
 
-		
 		// Add Year to Month Calendar (Consejero)
 		$( ".page-calendario-consejero .date-views-pager h3 a" ).attr( "src", function() {
+			console.log("entra consejero");
 			var params = $(this).context.href.split("-");
 		 	var arg = params[1].split("/");
+		 	console.log(arg);
 		 	$('.page-calendario-consejero .date-views-pager h3 a').text($( ".page-calendario-consejero .date-views-pager h3 a" ).text() + ' '+ arg[2]);
 		});
 

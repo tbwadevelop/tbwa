@@ -221,16 +221,15 @@
 		}
 
 		// Add Year to Month Calendar (Consejero)
-		$( ".page-calendario-consejero .date-views-pager h3 a" ).attr( "src", function() {
-			console.log("entra consejero");
+		$( ".date-nav-wrapper h3 a" ).attr( "src", function() {
 			var params = $(this).context.href.split("-");
 		 	var arg = params[1].split("/");
-		 	console.log(arg);
-		 	$('.page-calendario-consejero .date-views-pager h3 a').text($( ".page-calendario-consejero .date-views-pager h3 a" ).text() + ' '+ arg[2]);
+		 	$('.page-calendario-consejero .clearfix.date-nav-wrapper h3 a').text($( ".page-calendario-consejero .clearfix.date-nav-wrapper h3 a" ).text() + ' '+ arg[2]);
 		});
 
 		// Add Year to Month Calendar (Estudiante)
 		$( ".page-calendario-estudiante .date-views-pager h3 a" ).attr( "src", function() {
+
 			var params = $(this).context.href.split("-");
 			var arg = params[3].split("/");
 			if (arg[2]) {

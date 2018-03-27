@@ -1587,74 +1587,90 @@ body.page-crear-citas section div.region.region-content {
     border: 3px solid #808184;
 }
 /* -\* Informacion de la cita  *\- */
-.informacion-citas {
+.view-id-informacion_disponibilidad .informacion-citas {
     width: 100%;
-    margin-top: 27px;
-    margin-bottom: 51px;
     text-align: center;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-
+    justify-content: center;
 }
-.informacion-citas .field-content {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
+.view-id-informacion_disponibilidad .informacion-citas .field-content {
     display: inline-flex;
+    text-align: left;
 }
-.informacion-citas > div {
-    padding: 0px 10px 0px 10px; 
+.view-id-informacion_disponibilidad .informacion-citas > div {
     border-right: 1px solid #929497;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
+    padding: 0px 10px 0px 10px;
 }
-.informacion-citas > div:nth-child(4) { 
+.view-id-informacion_disponibilidad .informacion-citas > div:nth-child(4) { 
     border-right: 0px solid #929497;
 }
-.informacion-citas > div > span {
+.view-id-informacion_disponibilidad .informacion-citas > div > span {
     color: #4cae4c;
     font-size: 15px;
     font-family: lato;
-    padding-right: 10px;
+    padding-right: 5px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
     body.page-crear-citas section div.region.region-content {
         border: 0px solid #808184;
     }
-    .informacion-citas {
-        display: inherit;
-        float: left;
-        margin-bottom: 28px;
+    body.page-crear-citas div.main-container div.row {
+        margin: auto;
     }
-    .informacion-citas > div {
-        width: 34%;
+    .view-id-informacion_disponibilidad .informacion-citas {
+        margin-top: 10px;
+        display: block;
+        margin-bottom: 28px;
+        width: 100%;
+        height: 6pc;
+    }
+    .view-id-informacion_disponibilidad .informacion-citas > div {
+        width: 37%;
         border-right: 1px solid transparent;
+        float: left;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-bottom: 5px;
+        padding: 0px;
+    }
+    .view-id-informacion_disponibilidad .informacion-citas > div > span {
+        text-align: left;
+    }
+    .view-id-informacion_disponibilidad .informacion-citas > div > div  {
+        text-align: left;
+        height: 18px;
     }
 }
-@media screen and (max-width: 667px) {
-    .informacion-citas > div {
-        width: 49%;
+@media screen and (max-width: 640px) {
+    .view-id-informacion_disponibilidad .informacion-citas > div {
         border-right: 1px solid transparent;
+        width: 40%;
+        margin-left: 8%;
+            margin-bottom: 12px;
     }
-    .informacion-citas > div > div  {
+    .view-id-informacion_disponibilidad .informacion-citas > div > span {
         font-size: 11px;
-        line-height: 17px;
-        text-align: left;
+        padding-right: 4px;
+    }
+    .view-id-informacion_disponibilidad .informacion-citas > div > div  {
+        font-size: 12px;
+        line-height: 14px;
         letter-spacing: -0.0px;
     }
 }
+
 
 
 /* -\* Informacion del estudiante *\- */
 .view-id-usuarios_agenda_de_servicios .view-content ul {
     background: #F5F1F1;
     min-height: 11pc;
-    margin-left: 15px;
-    margin-right: 15px;
+    /* margin-left: 15px;
+    margin-right: 15px; */    
+    -webkit-padding-start: 0px;
+    margin: 0 auto;
+
 }
 .view-id-usuarios_agenda_de_servicios .view-content li {
     list-style: none;
@@ -1703,18 +1719,10 @@ body.page-crear-citas section div.region.region-content {
     width: 150px;
     outline: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
     .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(n) {
-
-        display: -webkit-box;
-
-        display: -ms-flexbox;
-
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        flex-direction: column;
         border-bottom-style: solid;
         border-right-style: none;
         border-width: 1px;
@@ -1736,10 +1744,10 @@ body.page-crear-citas section div.region.region-content {
     }
 }
 
-/* -\* Button guardar  *\- */
-.agendar_citas form {
+/* -\* Button guardar - Button cancelar  *\- */
+/* .agendar_citas form {
     position: relative;
-}
+} */
 .agendar_citas form > div {
     text-align: center;
 }
@@ -1750,28 +1758,50 @@ body.page-crear-citas section div.region.region-content {
     color: white;
     border-radius: 0px;
     margin-right: 10px;
-    /* position: absolute;
-    top: 110%;
-    left:  calc(46% - 1em); */
 }
 .agendar_citas button#edit-submit span {
     display: none;
 }
-
-/* -\* Button cancelar  *\- */
 .agendar_citas button#edit-cancelar {
     padding: 6px 20px;
     border: 1px solid #5cb85c;
     background: #FFF;
     color: black;
     border-radius: 0px;
-    /* margin-bottom: 27px; */
-    /* position: absolute;
-    top: 110%;
-    left: 52%; */
 }
 .agendar_citas button#edit-cancelar  span {
     display: none;
+}
+@media screen and (max-width: 991px) {
+    .agendar_citas button#edit-submit {
+        position: absolute;
+        top: 21px;
+        right: 60px;
+        left: auto;
+        text-indent: -999999px;
+        overflow: hidden;
+        background-image: url(../img/guardar.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+        padding: 6px 16px;
+        border: none;
+        margin: 0px;
+    }
+    .agendar_citas button#edit-cancelar {
+        position: absolute;
+        top: 21px;
+        right: 14px;
+        text-indent: -999999px;
+        overflow: hidden;
+        background-image: url(../img/cancelar-x.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: transparent;
+        padding: 6px 16px;
+        border: none;
+        margin: 0px;
+    }
 }
 
 /* -\* Button Crear citas  *\- */
@@ -1781,9 +1811,10 @@ body.page-crear-citas section div.region.region-content {
     background: #FFF;
     color: black;
     border-radius: 0px;
-    position: absolute;
-    left: 50%;
-    top: -73px;
+    /* position: absolute;
+    left: 45%;
+    bottom: 44px;
+    top: auto; */
 }
 .agendar_citas button .glyphicon-refresh {
     display: none;
@@ -1899,6 +1930,9 @@ body.page-crear-citas section div.region.region-content {
 @media screen and (max-width: 1024px) {
     .agendar_citas #js-ajax-elements-wrapper .container-inline {
      display: inherit; 
+    }
+    .agendar_citas #js-ajax-elements-wrapper .container-inline div input {
+        text-align: center;
     }
     .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(n) {
         width: 48%;
@@ -3246,7 +3280,7 @@ body.page-node-edit section #edit-field-citas-agenda .field-name-field-collec-as
     }
 }
 
-
+/*------------------ Historial citas ------------------ */
 body.page-node-edit section #edit-field-citas-agenda .field-name-field-comentario-cita div.textarea-processed textarea {
     border: 1px solid #58595B;
     border-radius: 0px;
@@ -3266,12 +3300,18 @@ body.page-node-edit section form.node-disponibilidad-form .field-name-field-hist
 body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content {
     padding: 1em 2.2em;
 }
-body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div{
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div {
     float: left;
-    width: 25%;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
     display: inline-flex;
+}
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha, .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha-1, .field-name-field-historial-citas div.ui-accordion-content .views-field-field-collec-motivo {
+    width: 20%
+}
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-tipo-de-servicio {
+    width: 40%
+}
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content  div.views-field-nothing {
+    display: none;
 }
 body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-comentario-cita, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-comentario-cita > span {
     width: 100%;
@@ -3287,9 +3327,8 @@ body.page-node-edit section form.node-disponibilidad-form .field-name-field-hist
     padding: 20px;
     font-family: Lato Light;
 }
-
-body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha-1, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-tipo-de-servicio, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-collec-motivo {
-    font-family: Myriad Pro;
+body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div {
+    font-family: Lato Regular;
     font-size: 16px;
     line-height: 18.07px;
     padding-bottom: 20px;
@@ -3300,32 +3339,62 @@ body.page-node-edit section form.node-disponibilidad-form .field-name-field-hist
 body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div:last-child {
     display: none;
 }
-
-@media screen and (max-width: 1024px) {
-    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha-1, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-tipo-de-servicio, body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-collec-motivo {
-        font-size: 14px;
+@media screen and (max-width: 1200px) {
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content >div  {                   
+        font-size: 14px !important;
     }
-    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha-1 {
-        width: 51%;
+}
+@media screen and (max-width: 991px) {
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content {
+        padding: 1em 15px;
     }
-    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-tipo-de-servicio{
-        width: 50%;
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content  div.views-field-nothing {
+        display: initial;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content  div.views-field-nothing span {
+        font-size: 24px ;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-php > span {
+        font-size: 24px !important;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div > span {
+        font-family: Lato Bold;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div > div {
+        font-family: Lato Light;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha-1, .field-name-field-historial-citas div.ui-accordion-content .views-field-field-fecha {
+        width: 49% !important;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-tipo-de-servicio {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
     }
     body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-collec-motivo {
-        width: 50%;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
     }
     body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-field-comentario-cita .field-content p {
         margin: 0px;
         font-size: 13px;
     }
-    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content .views-field-php {
-        font-size: 16px;
-    }
+
 }
 
 @media screen and (max-width: 640px) {
     body.page-node-edit section #edit-field-citas-agenda .field-name-field-comentario-cita div.textarea-processed textarea {
         height: 151px;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div {
+        padding-bottom: 3px;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div > span {
+        font-size: 13px;
+    }
+    body.page-node-edit section form.node-disponibilidad-form .field-name-field-historial-citas div.ui-accordion-content > div > div {
+        font-size: 11px;
     }
 }
 /*---- Button informacion cita  -----*/

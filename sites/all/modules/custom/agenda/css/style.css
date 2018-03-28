@@ -935,7 +935,7 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
                 justify-content: center;
     }
     body .main-container .row aside .well section:nth-child(2).crear_disponibilidad {
-        width: 76.6% !important;
+        width: 76.6%;
         background: gray;
         border-right: 3px solid #BBBDBF;
         position: absolute;
@@ -2375,7 +2375,7 @@ body.page-crear-citas section div.region.region-content {
     }
 }
 /* -\* Pginador citas - Reportes TOR  *\- */
-.text-center::before {
+.view-content + .text-center::before {
     content: "";
     border-bottom: 1px solid #6D6E70;
     width: 100%;

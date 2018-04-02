@@ -224,7 +224,11 @@
 		$( ".date-nav-wrapper h3 a" ).attr( "src", function() {
 			var params = $(this).context.href.split("-");
 		 	var arg = params[1].split("/");
-		 	$('.page-calendario-consejero .clearfix.date-nav-wrapper h3 a').text($( ".page-calendario-consejero .clearfix.date-nav-wrapper h3 a" ).text() + ' '+ arg[2]);
+		 	
+		 	if ($( ".page-calendario-consejero .clearfix.date-nav-wrapper h3 a" ).text().split(' ').length <2) {
+		 		$('.page-calendario-consejero .clearfix.date-nav-wrapper h3 a').text($( ".page-calendario-consejero .clearfix.date-nav-wrapper h3 a" ).text() + ' '+ arg[2]);
+		 	}
+
 		});
 
 		// Add Year to Month Calendar (Estudiante)
@@ -256,8 +260,8 @@
 		 })
      		 // Add default month in select dropdrown Select Month.	
 			 $(document).ready(function(){
-			 	var month_now = $(".view-header .date-nav-wrapper h3 a").text();
-			 	$('.view-header .dropdown .selected').text(month_now);
+			 	var result = $(".view-header .date-nav-wrapper h3 a").text().split(' ');
+			 	$('.view-header .dropdown .selected').text(result[0]);
 			 });
 		}
   	};

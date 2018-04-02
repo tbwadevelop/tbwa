@@ -3,7 +3,7 @@
 	    attach: function (context, settings) {
 	    	
 	    	// add class user student menu my data
-	    	 $(".page-user-edit #user-profile-form .form-wrapper.form-group").addClass("col-lg-4 col-xs-6 col-sm-6");
+	    	$(".page-user-edit #user-profile-form .form-wrapper.form-group").addClass("col-lg-4 col-xs-6 col-sm-6");
 
 	    	//contenerdor de consejero home que oxupe toda la pantalla
 	    	$('body.page-calendario-consejero.page-calendario-consejero-diario aside').removeClass("col-sm-3").addClass("col-lg-3 col-md-3 col-sm-12 col-xs-12");
@@ -21,17 +21,6 @@
 	    	$('body.page-calendario-estudiante aside').removeClass("col-sm-3").addClass("col-lg-3 col-md-3 col-sm-12 col-xs-12");
 	    	$('body.page-calendario-estudiante .row > section').removeClass("col-sm-9").addClass("col-lg-9 col-md-9 col-sm-12 col-xs-12");
 
-	    	//button of add studen create appointment
-	    	// $('body.page-crear-citas section.agendar_citas form div#js-ajax-elements-wrapper button#edit-field-container-add-name').appendTo('body.page-crear-citas section#block-system-main ul li');
-    		// $('body.page-crear-citas section#block-system-main ul li button').click(function(){
-		    //     if($('body.page-crear-citas section#block-system-main ul li').find("body.page-crear-citas section#block-system-main ul li button").length){
-		    //         alert('Si existe');
-		    //     }else{
-		    //         alert('No existe');
-		    //     }
-		    // });
-		    // 
-		  
 		    //Tamaño de cajas móvil consejero calendario y  button crear disponibilidad 
 			$(window).ready(function() {
 			    checkSize();
@@ -43,8 +32,6 @@
 					$("body div div.row aside.col-lg-3.col-md-3.col-sm-12.col-xs-12 div.region-sidebar-first section.crear_disponibilidad").width(uno + 15);
 				}
 			}			
-		
-
 	        // Page service taxonomia (calendar estudiante) 
 	    	if ( $(".page-calendario-estudiante #block-views-servicios-block-1").length ) {
 	    		var tid = window.location.href.charAt(window.location.href.length-1);

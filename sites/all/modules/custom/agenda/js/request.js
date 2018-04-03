@@ -228,7 +228,7 @@
 		// Add User and Rold to Date(Today). 
 		
 		if ($(".cotainer-name-user ").length == false) {
-		 	$('<h2 class="cotainer-name-user"> '+$('.views-field-name .field-content').text()+'</h2>').appendTo('#block-system-main .view .clearfix.date-nav-wrapper');
+		 	 $('<h2 class="cotainer-name-user"> '+$('.view-user-login .views-field-name .field-content').text()+'</h2>').appendTo('#block-system-main .view .clearfix.date-nav-wrapper');
 		}
 
 		// Add Year to Month Calendar (Consejero)
@@ -243,17 +243,16 @@
 		});
 
 		// Add Year to Month Calendar (Estudiante)
-		$( ".page-calendario-estudiante .date-views-pager h3 a" ).attr( "src", function() {
-
+		$( ".page-calendario-estudiante .date-nav-wrapper h3 a" ).attr( "src", function() {
 			var params = $(this).context.href.split("-");
 			var arg = params[3].split("/");
-			if (arg[2]) {
-			 	$('.page-calendario-estudiante .date-views-pager h3 a').text($( ".page-calendario-estudiante .date-views-pager h3 a" ).text() + ' '+ arg[2]);
-			}else{
-				var monthm = $(".view-display-id-page_4 .view-header .date-views-pager h3").text().split(" ");
-				$('.page-calendario-estudiante .date-views-pager h3 a').text($( ".page-calendario-estudiante .date-views-pager h3 a" ).text() + ' '+ monthm[1]);
+			if ($( ".page-calendario-estudiante .date-nav-wrapper h3 a").text().split(' ').length <2) {
+			 	$('.page-calendario-estudiante .date-nav-wrapper h3 a').text($( ".page-calendario-estudiante .date-nav-wrapper h3 a" ).text() + ' '+ arg[2]);
 			}
 		});
+
+
+
 		// Add link to days for block calendar (Consejero)
      	$('.page-calendario-consejero .mini tr').each(function(){
      		$(this).find('td').each(function(){

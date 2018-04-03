@@ -75,8 +75,7 @@ $index = 0;
          <div class="view-item view-item-<?php print $view->name ?>">
           <?php  
               $node = node_load($item->id); $wrapper = entity_metadata_wrapper('node', $node);
-              $cupo = $wrapper->field_cupo->value(); $users = count($wrapper->field_usuario->value());
-              $classes = ($cupo == $users) ? "full" : "empy"; 
+              $classes = ($wrapper->field_cupo->value() == count($wrapper->field_citas_agenda->value())) ? "full" : "empy";
           ?>
           <div class="calendar <?php print $item->granularity; ?>view <?php print($classes); ?>">
             <?php print theme('calendar_stripe_stripe', array('item' => $item)); ?>
@@ -99,7 +98,3 @@ $index = 0;
         </div>
       </div>
 <?php endif; ?>
-
-
-
-

@@ -441,7 +441,8 @@ function quotes_delete($js) {
         'nid' => arg(1),
         'title' => t('Cancelar'),
       );
-
+      
+     
       $output = ctools_modal_form_wrapper('quotes_delete_form', $form_state);
       
       if (!empty($form_state['ajax_commands'])) {

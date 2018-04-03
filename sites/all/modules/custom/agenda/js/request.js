@@ -33,7 +33,7 @@
 				}
 			}
 			//Crear Citas 
-			$('body div div section div #block-agenda-citas-ajax form#agenda-records-form div div#js-ajax-elements-wrapper').prependTo('body div div section div #block-agenda-citas-ajax form#agenda-records-form');
+			$('body.page-crear-citas section#block-agenda-citas-ajax form#agenda-records-form div div#js-ajax-elements-wrapper').prependTo('body.page-crear-citas section#block-agenda-citas-ajax form#agenda-records-form');
 
 
 					

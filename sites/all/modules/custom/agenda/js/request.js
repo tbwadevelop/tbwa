@@ -246,8 +246,16 @@
 		$( ".page-calendario-estudiante .date-nav-wrapper h3 a" ).attr( "src", function() {
 			var params = $(this).context.href.split("-");
 			var arg = params[3].split("/");
-			if ($( ".page-calendario-estudiante .date-nav-wrapper h3 a").text().split(' ').length <2) {
-			 	$('.page-calendario-estudiante .date-nav-wrapper h3 a').text($( ".page-calendario-estudiante .date-nav-wrapper h3 a" ).text() + ' '+ arg[2]);
+			var mes = params[2].split("/");
+			if (mes[1] != 'mensual') {
+				if ($( ".page-calendario-estudiante .date-nav-wrapper h3 a").text().split(' ').length <2) {
+				 	$('.page-calendario-estudiante .date-nav-wrapper h3 a').text($( ".page-calendario-estudiante .date-nav-wrapper h3 a" ).text() + ' '+ arg[2]);
+				}		
+			}
+			if (mes[1] == 'mensual') {
+				if ($( ".page-calendario-estudiante .date-nav-wrapper h3 a").text().split(' ').length <2) { 
+				 	$('.page-calendario-estudiante .date-nav-wrapper h3 a').text($( ".page-calendario-estudiante .date-nav-wrapper h3 a" ).text() + ' ' + mes[2]);
+				}			
 			}
 		});
 

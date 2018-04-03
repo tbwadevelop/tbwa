@@ -5,6 +5,7 @@ define('FPC', 0);
 define('FCT', 1); 
 define('FCA', 2); 
 define('FCC', 3); 
+define('FCP', 4);
 
 
 // Form  for created quotes 
@@ -200,7 +201,8 @@ function agenda_qoute_form($form, &$form_state){
         FPC => t('Filtrar por'),
         FCT => t('Todas las citas'), 
         FCA => t('Citas abiertas'),  
-        FCC => t('Citas cerradas'),  
+        FCC => t('Citas cerradas'),
+        FCP => t('Citas pendientes'), 
       ],
 
       '#attributes'    => [

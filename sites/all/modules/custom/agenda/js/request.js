@@ -21,7 +21,7 @@
 	    	$('body.page-calendario-estudiante aside').removeClass("col-sm-3").addClass("col-lg-3 col-md-3 col-sm-12 col-xs-12");
 	    	$('body.page-calendario-estudiante .row > section').removeClass("col-sm-9").addClass("col-lg-9 col-md-9 col-sm-12 col-xs-12");
 
-		    //Tamaño de cajas móvil consejero calendario y  button crear disponibilidad 
+		    //Tamaño de cajas móvil consejero calendario y button crear disponibilidad 
 			$(window).ready(function() {
 			    checkSize();
 			    $(window).resize(checkSize);
@@ -31,7 +31,12 @@
 					var uno = $("body div div aside div #block-views-consejero-calendar-block-1 div div.view-content div.calendar-calendar div.month-view").width();
 					$("body div div.row aside.col-lg-3.col-md-3.col-sm-12.col-xs-12 div.region-sidebar-first section.crear_disponibilidad").width(uno + 15);
 				}
-			}			
+			}
+			//Crear Citas 
+			$('body div div section div #block-agenda-citas-ajax form#agenda-records-form div div#js-ajax-elements-wrapper').prependTo('body div div section div #block-agenda-citas-ajax form#agenda-records-form');
+
+
+					
 	        // Page service taxonomia (calendar estudiante) 
 	    	if ( $(".page-calendario-estudiante #block-views-servicios-block-1").length ) {
 	    		var tid = window.location.href.charAt(window.location.href.length-1);

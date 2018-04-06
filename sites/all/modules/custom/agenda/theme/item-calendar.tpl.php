@@ -85,7 +85,7 @@ $index = 0;
                 <?php if ($index++ == 0 && (isset($item->continuation) && $item->continuation)) : ?>
                 <div class="continuation">&laquo;</div>
                 <?php endif;?>
-                <?php print $field; ?>
+                <?php print $field; ?> 
               <?php endforeach; ?>
             </div>  
             <?php if (isset($item->continues) && $item->continues) : ?>

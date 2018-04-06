@@ -2,37 +2,41 @@
 	Drupal.behaviors.request = {
 	    attach: function (context, settings) {
 	    	
-	    	// add class user student menu my data
-	    	$(".page-user-edit #user-profile-form .form-wrapper.form-group").addClass("col-lg-4 col-xs-6 col-sm-6");
-
-	    	//contenerdor de consejero home que oxupe toda la pantalla
-	    	$('body.page-calendario-consejero.page-calendario-consejero-diario aside').removeClass("col-sm-3").addClass("col-lg-3 col-md-3 col-sm-12 col-xs-12");
-	    	$('body.page-calendario-consejero.page-calendario-consejero-diario .row > section').removeClass("col-sm-9").addClass("col-lg-9 col-md-9 col-sm-12 col-xs-12");
+	    	//contenerdor de consejero home (filtro dia )// change dimencion table
+	    	$('body.sidebar-first.page-calendario-consejero aside').removeClass("col-sm-3").addClass("col-lg-3 col-md-3 col-sm-12 col-xs-12");
+	    	$('body.sidebar-first.page-calendario-consejero .row > section').removeClass("col-sm-9").addClass("col-lg-9 col-md-9 col-sm-12 col-xs-12");
 
 	    	//contenerdor de estudiante home 
 	    	$('body.page-calendario-estudiante aside').removeClass("col-sm-3").addClass("col-lg-3 col-md-3 col-sm-12 col-xs-12");
 	    	$('body.page-calendario-estudiante .row > section').removeClass("col-sm-9").addClass("col-lg-9 col-md-9 col-sm-12 col-xs-12");
 
-	    	//contenerdor de consejero home // change dimencion table
-	    	$('body.page-calendario-consejero.page-calendario-consejero-diario aside').removeClass("col-sm-3").addClass("col-lg-3 col-md-3 col-sm-12 col-xs-12");
-	    	$('body.page-calendario-consejero.page-calendario-consejero-diario .row > section').removeClass("col-sm-9").addClass("col-lg-9 col-md-9 col-sm-12 col-xs-12");
-
-	    	// //contenerdor de estudiante home 
-	    	$('body.page-calendario-estudiante aside').removeClass("col-sm-3").addClass("col-lg-3 col-md-3 col-sm-12 col-xs-12");
-	    	$('body.page-calendario-estudiante .row > section').removeClass("col-sm-9").addClass("col-lg-9 col-md-9 col-sm-12 col-xs-12");
+	    	// add class user student menu my data
+	    	$(".page-user-edit #user-profile-form .form-wrapper.form-group").addClass("col-lg-4 col-xs-6 col-sm-6");
 
 		    //Tamaño de cajas móvil consejero calendario y button crear disponibilidad 
 			$(window).ready(function() {
+				MenuDespliege();
 			    checkSize();
 			    $(window).resize(checkSize);
+			    
 			});
-			function checkSize(){
+			function checkSize() {
 				if ($(window).width() <= 991) {
 					var uno = $("body div div aside div #block-views-consejero-calendar-block-1 div div.view-content div.calendar-calendar div.month-view").width();
 					$("body div div.row aside.col-lg-3.col-md-3.col-sm-12.col-xs-12 div.region-sidebar-first section.crear_disponibilidad").width(uno + 15);
 				}
 			}
-			//Crear Citas 
+			//flujo de menu consejero 
+			function MenuDespliege() {
+				$("body .view-consejero-calendar section div.wrapper button#cbox2" ).click(function() {
+					$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad").css({"transform": "translatex(0px)","transition":" all 0.5s linear"}); 
+				});
+				$("body .main-container .row aside .well section:nth-child(1) nav").prepend("<div class='cerrar_modal text-right'><button type='button' id='cerrar'>x</button></div>");
+				$("body .main-container .row aside .well section:nth-child(1) nav div.cerrar_modal button#cerrar" ).click(function() {
+					$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad").css({"transform": "translatex(-110%)"}); 
+				});
+			}
+			//Crear Citas cambiar orden 
 			$('body.page-crear-citas section#block-agenda-citas-ajax form#agenda-records-form div div#js-ajax-elements-wrapper').prependTo('body.page-crear-citas section#block-agenda-citas-ajax form#agenda-records-form');
 
 

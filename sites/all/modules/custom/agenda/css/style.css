@@ -482,9 +482,9 @@ footer.footer h2 {
     footer.footer { 
         display: initial;
     }
-    body div.main-container section.block.block-menu {
+   /*  body div.main-container section.block.block-menu {
         display: none;
-    }
+    } */
     section.block.block-menu {
         border: none;
     }
@@ -581,6 +581,47 @@ body .main-container header section.title-agenda-de-servicio .contenedor > h2 + 
 }
 
 /*------------------ Row Calendario ------------------ */
+
+/* -\* buttom  sanduche  -/* - */
+body .view-consejero-calendar section div.wrapper {
+    display: flex;
+    align-items: center;
+}
+@media screen and (min-width: 992px){
+    body .view-consejero-calendar section div.wrapper button#cbox2,body .main-container .row aside .well section:nth-child(1) nav div.cerrar_modal button#cerrar  {
+        display: none;
+    }
+}
+body .view-consejero-calendar section div.wrapper button#cbox2{
+    background: url(../img/Menu.png) no-repeat;
+    background-size: 27px;
+    border-color: transparent;
+    border-radius: 0px;
+    border-width: 0px;
+    padding: 0px;
+    width: 25px;
+    height: 25px;
+}
+@media screen and (max-width: 991px) {
+    body.sidebar-first .wrapper {
+        margin-left: 21px;
+    }
+     body .main-container .row aside .well section:nth-child(1) nav div.cerrar_modal {
+        margin: 0px;
+        padding: 0px;
+     }
+    body .main-container .row aside .well section:nth-child(1) nav div.cerrar_modal button#cerrar {
+        border-radius: 0px;
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        margin: 0px;
+        padding: 0px;
+        vertical-align: text-top;
+        width: 22px;
+        height: 22px;
+    }
+}
 /* -\* Selec Calendario -/* - */
 body.sidebar-first .dropdown {
     border: none !important;
@@ -634,9 +675,6 @@ body.sidebar-first .dropdown li.focus {
 }
 
 @media screen and (max-width: 991px) {
-    body.sidebar-first .wrapper {
-        margin-left: 114px;
-    }
     body.sidebar-first .dropdown {
         background: #47AC4B;
     }
@@ -833,7 +871,7 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
         left: 78%;
     }
     body .main-container .row aside .well section:nth-child(1) nav h3 {
-        margin-top: 20px;
+        margin-top: -6px;
         margin-bottom: auto;
     }
     body .main-container .row aside .well section:nth-child(1)  .view-content .month-view {
@@ -853,19 +891,6 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
     }
     body .main-container .row aside .well section:nth-child(1) .view-content .month-view table {
         width: 76%;
-    }
-
-    body .main-container .row aside .well section:nth-child(1) nav.date-nav-wrapper::before {
-        content: "+";
-        font-size: 40px;
-        -webkit-transform: rotate(50deg);
-        transform: rotate(43deg);
-        position: absolute;
-        top: 0px;
-        left: 93%;
-        margin: 0px;
-        padding: 0px;
-        color: black;
     }
 }
 
@@ -957,7 +982,7 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
         height: 21px;
     }
     body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad {
-        /* transform: translateX(-110%); */
+        transform: translateX(-110%);
         z-index: 2;
         background-color: white;
     }
@@ -1041,7 +1066,7 @@ body .main-container .row section ul.tabs--primary:before {
     right: 20px;
     z-index: -1;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
     body .main-container .row section ul.tabs--primary {
         display: none;
     }
@@ -3039,16 +3064,16 @@ form#user-profile-form div#edit-actions button span {
 #__lpform_edit-field-nombre-und-0-value  {
     display: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
     fieldset.collapsible label {
         font-size : 14px;
     }
-     fieldset.collapsible#bootstrap-panel--2 label {
+    /*  fieldset.collapsible#bootstrap-panel--2 label {
         color : #231F20;
      }
     fieldset.collapsible#bootstrap-panel--2 input {
     background-color: #FFFFFF;
-    }
+    } */
 }
 @media screen and (max-width: 667px) {
     fieldset.collapsible label {

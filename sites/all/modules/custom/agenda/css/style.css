@@ -328,6 +328,7 @@ body .main-container header section.user-login .view-id-user_login .view-content
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     -webkit-padding-start: 30px;
+     -moz-padding-start: 30px;
 }
 body .main-container header section.user-login .view-id-user_login .view-content ul span {
     color: #FFFFFF;
@@ -384,6 +385,7 @@ body .main-container header section.user-login .view-id-user_login .view-content
     }
     body .main-container header section.user-login .view-id-user_login .view-content ul li {
         -webkit-padding-start: 20px;
+         -moz-padding-start: 20px;
         -webkit-margin-before: 0em;
         -webkit-margin-after: 0em;
     }
@@ -415,6 +417,7 @@ body .main-container header section.user-login .view-id-user_login .view-content
     }
     body .main-container header section.user-login .view-id-user_login .view-content ul li {
         -webkit-padding-start: 7px;
+         -moz-padding-start: 7px;
     }
 }
 
@@ -660,6 +663,7 @@ body.sidebar-first .dropdown.open div {
 body.sidebar-first .dropdown ul {
     background: #47AC4B;
     -webkit-padding-start: 0px;
+    -moz-padding-start: 0px;
 }
 body.sidebar-first .dropdown li {
     color: white !important;
@@ -1716,6 +1720,7 @@ body.page-crear-citas section div.region.region-content {
     background: #F5F1F1;
     min-height: 10pc;  
     -webkit-padding-start: 0px;
+    -moz-padding-start: 0px;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
      margin: 0 5%;
@@ -2818,6 +2823,7 @@ body.page-servicios-estudiante .view-id-servicios li {
 @media screen and (max-width: 667px) {
     .view-id-servicios ul {
     -webkit-padding-start: 12px;
+     -moz-padding-start: 12px;
     }
     .view-id-servicios li {
         padding: 0px;

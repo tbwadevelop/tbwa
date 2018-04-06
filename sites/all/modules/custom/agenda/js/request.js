@@ -29,12 +29,26 @@
 			//flujo de menu consejero 
 			function MenuDespliege() {
 				$("body .view-consejero-calendar section div.wrapper button#cbox2" ).click(function() {
-					$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad").css({"transform": "translatex(0px)","transition":" all 0.5s linear"}); 
+					$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, #block-agenda-modals").css({"transform": "translatex(0px)","transition":" all 0.5s linear"}); 
 				});
 				$("body .main-container .row aside .well section:nth-child(1) nav").prepend("<div class='cerrar_modal text-right'><button type='button' id='cerrar'>x</button></div>");
-				$("body .main-container .row aside .well section:nth-child(1) nav div.cerrar_modal button#cerrar" ).click(function() {
-					$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad").css({"transform": "translatex(-110%)"}); 
+				$("body .main-container .row aside .well section:nth-child(1) nav div.cerrar_modal button#cerrar").click(function() {
+					$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, #block-agenda-modals").css({"transform": "translatex(-110%)"}); 
 				});
+
+
+
+
+				$("body .main-container .row aside .well section:nth-child(1) nav li.next a span").click(function() {
+					 alert( "Hello");
+					$("body .main-container .row aside .well section:nth-child(1) .view-content .month-view").css({"transform": "translatex(0px)"}); 
+				});
+
+
+
+				// if ($(window).width() <= 991) {
+
+				// }
 			}
 			//Crear Citas cambiar orden 
 			$('body.page-crear-citas section#block-agenda-citas-ajax form#agenda-records-form div div#js-ajax-elements-wrapper').prependTo('body.page-crear-citas section#block-agenda-citas-ajax form#agenda-records-form');

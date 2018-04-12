@@ -35,7 +35,6 @@ dependencies[] = menu_token
 dependencies[] = menu_import
 dependencies[] = libraries
 dependencies[] = field_class
-dependencies[] = features
 dependencies[] = role_export
 dependencies[] = multiblock
 

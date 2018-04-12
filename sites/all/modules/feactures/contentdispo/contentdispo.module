@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ContentDispo feature.
+ */
+
+include_once 'contentdispo.features.inc';

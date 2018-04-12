@@ -886,7 +886,7 @@ body .main-container .row aside .well section:nth-child(1) .calendar-calendar th
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-        background: red;
+        background: white;
         border-right: 3px solid #BBBDBF;
         position: absolute;
         top: 58px;
@@ -959,13 +959,11 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
 @media screen and (max-width: 991px) {
         body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link {
         background: transparent;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
+        justify-content: center;
     }
     body .main-container .row aside .well section:nth-child(2).crear_disponibilidad {
         width: 76.6%;
-        background: gray;
+        background: white;
         border-right: 3px solid #BBBDBF;
         position: absolute;
         top: 182px;
@@ -973,23 +971,22 @@ body .main-container .row aside .well section:nth-child(2).crear_disponibilidad 
         z-index: 1;
     }
     body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-disponible, .cupo-lleno, .hoy {
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
+        justify-content: center;
+        align-items: center;
         font-size: 12px
     }
     body .main-container .row aside .well section:nth-child(2).crear_disponibilidad .cupo-disponible .caja-1, .cupo-lleno .caja-2, .hoy .caja-3 {
         width: 21px;
         height: 21px;
     }
-    body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad {
+
+/*     body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, body .main-container .row aside .well section:nth-child(2).crear_disponibilidad {
         transform: translateX(-110%);
         z-index: 2;
-        background-color: white;
-    }
+    } */
+    /* body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .month-view, #block-agenda-modals {
+        display: none !important;
+    } */
     body .main-container .row aside .well section:nth-child(2).crear_disponibilidad div#magical-modal-link a {
         padding: 8px 13%;
         font-size: 14px;
@@ -1379,10 +1376,14 @@ body .main-container .row div.region.region-content > section div.view .view-con
 .modal-content {
     border-radius: 0px !important;
 }
-.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed {
+#modalContent {
+    top: 0px !important;
+    left: 0px !important;
+}
+/* .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed {
     width: 409.636px !important;
     height: 585.889px !important;
-}
+} */
 .modal-dialog.node-disponibilidad-form.ctools-use-modal-processed .modal-header {
     text-align: center;
     border-bottom: 1px solid transparent;
@@ -2606,7 +2607,60 @@ body.page-crear-citas section div.region.region-content {
     font-size : 20px;
     color : #000000;
 }
+@media screen and (max-width: 768px) {
+    .views-row-last .ui-corner-bottom > div span:nth-child(2) {
+    padding: 10px 0;
+    margin: 0px;
+    }
+    .views-row-last .ui-corner-bottom div[class*="col-"] {
+        height: auto;
+    }
+    .views-row-last .ui-corner-bottom div[class*="col-"] span:last-child {
+        background-color: #F5F1F1;
+        padding-left: 5px;
+    }
+    .views-row-last .ui-corner-bottom div[class*="col-"] div {
+        background: #F5F1F1;
+         padding-left: 5px;
+    }
+}
 @media screen and (max-width: 640px) {
+    .views-row-last .ui-corner-bottom > div span:nth-child(1) {
+        font-size: 14px;
+    }
+    .views-row-last .ui-corner-bottom > div span:nth-child(2) {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+    .views-row-last .ui-corner-bottom div[class*="col-"] > div {
+        font-size: 14px;
+    }
+    .views-row-last .ui-corner-bottom a {
+        font-size: 14px;
+    }
+    .views-row-last .ui-corner-bottom > div > div span.date-display-single {
+        font-size: 14px;
+    }
+    .views-row-last .ui-corner-bottom .views-field-view .views-row-last div span {
+        font-size: 14px;
+    }
+    .views-row-last .ui-corner-bottom .views-field-view .views-row-last div div {
+        font-size: 14px;
+    }
+    .views-row-last .ui-corner-bottom div[class*="col-"] {
+        width: 100%;
+        height: auto;
+    }
+    .views-row-last .ui-corner-bottom div[class*="col-"] span:last-child {
+        background-color: #F5F1F1;
+        padding-left: 5px;
+    }
+    .views-row-last .ui-corner-bottom div[class*="col-"] div {
+        background: #F5F1F1;
+         padding-left: 5px;
+    }
+}
+/*@media screen and (max-width: 640px) {
     .views-row-last .ui-corner-bottom > div span:nth-child(1) {
         font-size: 18px;
     }
@@ -2629,7 +2683,7 @@ body.page-crear-citas section div.region.region-content {
         font-size: 14px;
     }
 }
-@media screen and (max-width: 460px) {
+ @media screen and (max-width: 460px) {
     .views-row-last .ui-corner-bottom > div span:nth-child(1) {
         font-size: 11px;
     }
@@ -2656,7 +2710,6 @@ body.page-crear-citas section div.region.region-content {
     .views-row-last .ui-corner-bottom div[class*="col-"] {
         height: 50px;
         background: 
-        /* padding: 0px; */
     }
     .views-row-last .ui-corner-bottom .views-field-view .views-row-last {
         min-height: 27vh;
@@ -2688,7 +2741,7 @@ body.page-crear-citas section div.region.region-content {
     body.page-node-edit section #edit-field-citas-agenda table#field-citas-agenda-values tr.draggable td {
         white-space: normal;
     }
-}
+} */
 
 /* -\* History de la cita-\* */
 .history-con .views-field-php {
@@ -3526,6 +3579,8 @@ body.page-node-edit section form.node-disponibilidad-form div#edit-actions butto
 div#__lpform_edit-field-lugar-und-0-value {
     display: none;
 }
+
+
 
 
 

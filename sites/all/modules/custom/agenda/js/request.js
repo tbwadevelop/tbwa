@@ -19,6 +19,8 @@
 				modalDisponibilidad();
 			    checkSize();
 			    $(window).resize(checkSize);
+			    $(window).resize(button);
+
 			    
 			});
 			function checkSize() {
@@ -28,29 +30,30 @@
 				}
 			}
 		
-
+			$("body .main-container .row aside .well section:nth-child(1) nav").prepend("<div class='cerrar_modal text-right'><button type='button' id='cerrar'>x</button></div>");
 			function closeBurger() { 
-				if ($(window).width() <= 991) {
-					$("body .main-container .row aside .well section:nth-child(1) nav").prepend("<div class='cerrar_modal text-right'><button type='button' id='cerrar'>x</button></div>");
-					// $("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, #block-agenda-modals").hide();
-					$("button#cbox2").click(function(e) {
-						//movimiento deslizante
-						$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .month-view, #block-agenda-modals").slideToggle("slow", function() {
-							$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, #block-agenda-modals").show();		
-							//next
-							// $("body .main-container .row aside .well section:nth-child(1) nav li.next a span ").click(function() {
-							// 	e.preventDefault();
-							// });
-						});
+				// $("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, #block-agenda-modals").hide();
+				$("button#cbox2").click(function(e) {
+					//movimiento deslizante
+					$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .month-view, #block-agenda-modals").slideToggle("slow", function() {
+						$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, #block-agenda-modals").show();		
+						//next
+						// $("body .main-container .row aside .well section:nth-child(1) nav li.next a span ").click(function() {
+						// 	e.preventDefault();
+						// });
 					});
+				});
 
-					//button close
-					$("button#cerrar").click(function() {
-						$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .month-view, #block-agenda-modals").hide();
-					});
+				//button close
+				$("button#cerrar").click(function() {
+					$("body div div aside div div.view div.view-header nav.clearfix.date-nav-wrapper,body div div aside div div.view div.view-content div div.month-view, #block-agenda-modals").hide();
+				});
+			}
+			function button() { 
+				if ($(window).width() >= 991) {
+					$("body div div aside div div.view div.view-header nav.clearfix.date-nav-wrapper,body div div aside div div.view div.view-content div div.month-view, #block-agenda-modals").show();
 				}
 			}
-
 			function modalDisponibilidad () {
 				if ($(window).width() <= 991) {
 					$("div#magical-modal-link a").click(function(event) {

@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
     font-family: "Lato Bold";
     src: url('../fonts/Lato-Bold.ttf');
 }
@@ -14,7 +14,7 @@
     font-family: "Lato Regular";
     src: url('../fonts/Lato-Regular.ttf');
 }
-
+ */
 /* .calendar.dayview.empy {
     background: #a6d8a6!important;
 } */
@@ -1552,19 +1552,19 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 } */
 
 /*------------------ Citas - Creacion de una cita click modal  ------------------ */
-body.page-crear-citas section div.region.region-content {
+/* body.page-crear-citas section div.region.region-content {
     border: 3px solid #808184;
-}
+} */
 /* -\* Informacion de la cita  *\- */
-.view-id-informacion_disponibilidad .informacion-citas {
+/* .view-id-informacion_disponibilidad .informacion-citas {
     width: 100%;
     text-align: center;
     display: inline-flex;
     justify-content: center;
     margin-top: 40px;
     margin-bottom: 40px;
-}
-.view-id-informacion_disponibilidad .informacion-citas .field-content {
+} */
+/* .view-id-informacion_disponibilidad .informacion-citas .field-content {
     display: inline-flex;
     text-align: left;
 }
@@ -1572,17 +1572,17 @@ body.page-crear-citas section div.region.region-content {
     border-right: 1px solid #929497;
     display: inline-flex;
     padding: 0px 10px 0px 10px;
-}
-.view-id-informacion_disponibilidad .informacion-citas > div:nth-child(4) { 
+} */
+/* .view-id-informacion_disponibilidad .informacion-citas > div:nth-child(4) { 
     border-right: 0px solid #929497;
-}
-.view-id-informacion_disponibilidad .informacion-citas > div > span {
+} */
+/* .view-id-informacion_disponibilidad .informacion-citas > div > span {
     color: #4cae4c;
     font-size: 15px;
     font-family: lato;
     padding-right: 5px;
-}
-@media screen and (max-width: 991px) {
+} */
+/* @media screen and (max-width: 991px) {
     body.page-crear-citas section div.region.region-content {
         border: 0px solid #808184;
     }
@@ -1591,8 +1591,9 @@ body.page-crear-citas section div.region.region-content {
     }
     .view-id-informacion_disponibilidad .informacion-citas {
         margin-top: 10px;
-        display: block;
+        
         margin-bottom: 28px;
+        dis: block;
         width: 100%;
         height: 6pc;
     }
@@ -1629,7 +1630,7 @@ body.page-crear-citas section div.region.region-content {
         line-height: 14px;
         letter-spacing: -0.0px;
     }
-}
+} */
 
 
 
@@ -2090,22 +2091,22 @@ body.page-crear-citas section div.region.region-content {
 
 /*------------------ Filtro - Buscar Citas - Historial Estudiante - Reportes TOR  ------------------ */
 /* -\* Buscar *\- */
-.views-exposed-form {
+/* .views-exposed-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-}
-.views-exposed-form .views-exposed-widgets {
+} */
+/* .views-exposed-form .views-exposed-widgets {
     display: flex;
     justify-content: center; 
-}
-.views-exposed-form .views-exposed-widgets > .views-exposed-widget:first-child {
+} */
+/* .views-exposed-form .views-exposed-widgets > .views-exposed-widget:first-child {
     display: inline-flex;
-}
-.views-exposed-form .views-exposed-widgets label {
+} */
+/* .views-exposed-form .views-exposed-widgets label {
     position: relative;
     word-break: break-all;
     width: 69px;
@@ -2117,8 +2118,8 @@ body.page-crear-citas section div.region.region-content {
     color: #4cae4c;
     font-weight: normal;
     text-align: left;
-}
-.views-exposed-form .views-exposed-widgets label::before {
+}*/
+/*  .views-exposed-form .views-exposed-widgets label::before {
     content: "";
     position: absolute;
     left: -22px;
@@ -2128,8 +2129,8 @@ body.page-crear-citas section div.region.region-content {
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 10px solid black;
-}
-.views-exposed-form .views-exposed-widgets .views-widget input {
+} */
+/* .views-exposed-form .views-exposed-widgets .views-widget input {
     border-radius: 0px;
     border: 1px solid #F5F1F1;
     background: #F5F1F1;
@@ -2142,51 +2143,46 @@ body.page-crear-citas section div.region.region-content {
     font-family: Lato Light;
     font-size: 20px;
     color: #000000;
-}
-.views-exposed-form .views-exposed-widgets .views-widget input:focus{
-    border-color: transparent;
-    outline: 0;
-    -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
-    box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
-}
+} */
+/* .views-exposed-form .views-exposed-widgets .views-widget input
 .views-exposed-form .views-exposed-widgets .views-widget span {
     display: none;
-}
+} */
 /* -\* Button - Buscar - Reiniciar *\- */
-.views-exposed-form .views-exposed-widgets .views-submit-button button, .views-reset-button button {
+/* .views-exposed-form .views-exposed-widgets .views-submit-button button, .views-reset-button button {
     margin-top: 0px !important;
     border-radius: 0px;
     border:1px solid transparent;
     text-indent: -99999px;
     width: 53px;
     height: 52px;
-}
-.views-exposed-form .views-exposed-widget {
+} */
+/* .views-exposed-form .views-exposed-widget {
     float: none;
-}
-.views-exposed-form .views-exposed-widgets .views-submit-button button {
+} */
+/* .views-exposed-form .views-exposed-widgets .views-submit-button button {
     background: url("../img/buscar.svg")no-repeat;
     background-size: 38px;
     background-position: 6px;
     background-color: #4cae4c;
     outline: none;
-}
-.views-exposed-form .views-exposed-widgets .views-reset-button button {
+} */
+/* .views-exposed-form .views-exposed-widgets .views-reset-button button {
     background: url("../img/reiniciar.png")no-repeat;
     background-size: 38px;
     background-position: 6px;
     background-color: #929497;
     outline: none;
-}
-.views-exposed-form .views-exposed-widgets .views-submit-button button:hover ,.views-exposed-form .views-exposed-widgets .views-reset-button button:hover { 
+} */
+/* .views-exposed-form .views-exposed-widgets .views-submit-button button:hover ,.views-exposed-form .views-exposed-widgets .views-reset-button button:hover { 
         opacity: 0.5;
-}
+} */
 
 @media screen and (max-width: 991px) {
-    .views-exposed-form .views-exposed-widgets > .views-exposed-widget:first-child {
+    /* .views-exposed-form .views-exposed-widgets > .views-exposed-widget:first-child {
         width: 69%;
-    }
-    .views-exposed-form .views-exposed-widgets label {
+    } */
+    /* .views-exposed-form .views-exposed-widgets label {
         margin: 10px 6px 0px 0px;
         font-size: 14px;
         line-height: 17px;
@@ -2196,34 +2192,34 @@ body.page-crear-citas section div.region.region-content {
         border-top: 7px solid transparent;
         border-bottom: 7px solid transparent;
         border-left: 7px solid black;
-    }
-    .views-exposed-form .views-exposed-widgets .views-widget input {
+    } */
+    /* .views-exposed-form .views-exposed-widgets .views-widget input {
         width: 100%;
         height: 32px;
-    }
-    .views-exposed-form .views-exposed-widgets .views-submit-button button, .views-reset-button button {
+    } */
+/*     .views-exposed-form .views-exposed-widgets .views-submit-button button, .views-reset-button button {
         width: 30px;
         height: 30px;
-    }
-    .views-exposed-form .views-exposed-widget {
+    } */
+    /* .views-exposed-form .views-exposed-widget {
         padding: 0em 0.3em 0 0 !important;
         margin-top: 10px;
     }
     .views-exposed-form .views-reset-button {
         padding: 0em 0em 0 0;
         margin-top: 10px;
-    }
-    .views-exposed-form .views-exposed-widgets .views-submit-button button {
+    } */
+    /* .views-exposed-form .views-exposed-widgets .views-submit-button button {
         background-size: 19px;
         background-position: 5px;
     }
     .views-exposed-form .views-exposed-widgets .views-reset-button button {
         background-size: 19px;
         background-position: 5px;
-    }
+    } */
 }
 
-@media screen and (max-width: 640px) {
+/* @media screen and (max-width: 640px) {
     .views-exposed-form .views-exposed-widgets > .views-exposed-widget:first-child {
         width: 80%;
     }
@@ -2236,7 +2232,7 @@ body.page-crear-citas section div.region.region-content {
     .views-exposed-form .views-exposed-widgets label {
         width: 110px;
     }
-}
+} */
 
 
 /* -\* Tabla de Citas  *\- */

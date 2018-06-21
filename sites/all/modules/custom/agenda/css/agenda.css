@@ -1991,4 +1991,253 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
   display: none;
 }
 
+/* 
+//------------------------------------------------------------------------------
+// Creacion Citas
+//------------------------------------------------------------------------------  
+*/
+.page-crear-citas .main-container {
+  padding: 0px;
+}
+
+.page-crear-citas .main-container .region-content {
+  padding: 0px;
+}
+
+.page-crear-citas .main-container h1.page-header {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .region-content {
+    border: 3px solid #9E9E9E;
+  }
+}
+
+/* ------| Informacion |----- */
+.page-crear-citas .informacion-disponibilidad .view-content .informacion-citas {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: left;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .fecha, .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .hora {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding: 0px 10px 0px 10px;
+}
+
+.page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .fecha > span, .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .hora > span {
+  color: #4cae4c;
+  font-size: 15px;
+  font-family: lato;
+  padding-right: 5px;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .fecha, .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .hora {
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    border-right: 1px solid #9E9E9E;
+  }
+}
+
+.page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .lugar, .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .servicio {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding: 0px 10px 0px 10px;
+}
+
+.page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .lugar > span, .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .servicio > span {
+  color: #4cae4c;
+  font-size: 15px;
+  font-family: lato;
+  padding-right: 5px;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .lugar, .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .servicio {
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    border-right: 1px solid #9E9E9E;
+  }
+}
+
+.page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .servicio {
+  border-right: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    text-align: center;
+  }
+}
+
+/* ------| Buscador |----- */
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0em 0.3em 0 0 !important;
+  margin-top: 10px;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 69%;
+  margin-left: 15px;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper label {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper label {
+    display: block;
+    position: relative;
+    word-break: break-all;
+    width: 69px;
+    text-align: center;
+    margin: 8px 16px 0px 0px;
+    font-family: "Lato Regular";
+    font-size: 20px;
+    line-height: 28.75px;
+    color: #41B65B;
+    font-weight: normal;
+    text-align: left;
+  }
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper label::before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 4px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid black;
+  }
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper .input-group input#edit-uid {
+  width: 100%;
+  height: 32px;
+  font-family: "Lato Light";
+  font-size: 20px;
+  color: #000000;
+  border-radius: 0px;
+  border: 1px solid #F5F1F1;
+  background: #F5F1F1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper .input-group input#edit-uid :focus {
+  border-color: transparent;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
+          box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper .input-group input#edit-uid {
+    width: 537px;
+    height: 45px;
+  }
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper .input-group span {
+  display: none;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper .dropdown ul {
+  border-radius: 0px;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper {
+    width: auto;
+  }
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-submit-button button, .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-reset-button button {
+  width: 30px;
+  height: 30px;
+  text-indent: -99999px;
+  margin-top: 0px !important;
+  border-radius: 0px;
+  border: 1px solid transparent;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-submit-button button:hover, .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-reset-button button:hover {
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-submit-button button, .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-reset-button button {
+    width: 53px;
+    height: 52px;
+  }
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-submit-button button {
+  background: url("../img/buscar.svg") no-repeat;
+  background-size: 19px;
+  background-position: 5px;
+  background-color: #4cae4c;
+  outline: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-submit-button button {
+    background-size: 38px;
+    background-position: 6px;
+  }
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-reset-button button {
+  background: url("../img/reiniciar.png") no-repeat;
+  background-size: 19px;
+  background-position: 5px;
+  background-color: #929497;
+  outline: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-reset-button button {
+    background-size: 38px;
+    background-position: 6px;
+  }
+}
+
 /*# sourceMappingURL=agenda.css.map */

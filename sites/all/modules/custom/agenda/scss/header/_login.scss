@@ -1,0 +1,133 @@
+/*
+//------------------------------------------------------------------------------
+// Login
+//------------------------------------------------------------------------------  
+*/
+form#user-login {
+  padding: 0px 1rem;
+  @include respond-to('tablet-lg') {
+    form#user-login {
+      padding: 0px 1rem;
+    }
+  }
+  > div {
+    background: cornsilk;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #E6E7E8;
+    box-shadow: none;
+  }
+  @include respond-to('tablet-lg') {
+    > div {
+      
+      box-shadow: 15px 15px #F1F1F2;
+    }
+  }
+  .form-type-textfield, .form-type-password  {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 1 100%;
+  }
+  .form-type-textfield input#edit-name,.form-type-password input#edit-pass {
+    width: 90%;
+    margin: 0 auto;
+    background: $white;
+    border-radius: 0px;
+    height: 46px;
+    font-family: Lato Light;
+    font-size: 20px;
+    transition: none;
+    box-shadow: none;
+  }
+ @include respond-to('tablet-lg') {
+    .form-type-textfield input#edit-name,.form-type-password input#edit-pass {
+      width: 70%;
+    }
+  }
+  .form-type-textfield input:-webkit-autofill ,.form-type-password input:-webkit-autofill {
+    background-color: $white !important;
+  }
+  .form-type-textfield {
+    label {
+      text-align: center;
+      font-family: Lato;
+      font-size: 48px;
+      line-height: 21.89px;
+      color: $black;
+      margin: 0px;
+      font-weight: normal;
+      margin-top: 37px;
+      margin-bottom: 54px;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 86%;
+        border-top: 2px solid #808184;
+        margin-top: 8px;
+      }
+    }
+  }
+  div#edit-info {
+    display: none;
+  }
+  @include respond-to('tablet-lg') {
+    div#edit-info {
+      flex: 2 1 20%;
+      font-size: 11px;
+      font-family: "Lato Italic";
+      margin-left: 45px;
+      display: block;
+    }
+  }
+  div#edit-enlace {
+    display: flex;
+    flex: 0 1 50%;
+    justify-content: flex-end;
+    padding-right: 16px;
+    height: 36px;
+    margin: 0px;
+    margin-bottom: 22px;
+    a{
+      font-family : Lato;
+      font-size : 15px;
+      color : $black;
+    }
+  }
+  @include respond-to('tablet-lg') {
+  div#edit-enlace {
+      flex: 0 1 25%;
+      justify-content: center;
+      align-items: center;
+      padding: 0px; 
+      a {
+        font-family: Lato Light;
+        font-size: 15px;
+        color: $black;
+      }
+    }
+  }
+  div#edit-actions {
+    display: flex;
+    flex: 0 1 50%;
+    justify-content: flex-start;
+    padding-left: 16px;
+    margin-bottom: 22px;
+    button#edit-submit {
+      background: #41B65B;
+      border-color: #41B65B;
+      border-radius: 0px;
+      font-family : Lato Regular;
+      font-size : 15px;
+      color: $white;
+    }
+  }
+  @include respond-to('tablet-lg') {
+    div#edit-actions {
+      flex: 0 1 21%;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0px; 
+    }
+  }
+}

@@ -1,0 +1,502 @@
+/*
+//------------------------------------------------------------------------------
+// Modal Crear Disponibilidad 
+//------------------------------------------------------------------------------
+*/
+.page-calendario-consejero {
+	.modal-dialog.node-disponibilidad-form.ctools-use-modal-processed {
+    width: 100% !important;
+    .modal-content {
+		  border-radius: 0px !important;
+			.modal-header {
+		    text-align: center;
+		    border-bottom: 1px solid transparent;
+		    .modal-title {
+		    	font-family: $lato-Bold;
+					font-weight: bold;
+					font-size: 1.6rem;
+					color: $green;
+		    }
+		    @include respond-to('tablet-lg') { 
+					.modal-title {
+						font-size: 1.8rem;
+			    }
+		    }
+			}
+			.modal-body {
+				/* width: 70% !important; */
+		    margin: 0 auto;
+		    padding: 0px;
+		    form {
+		    	//titulo Encabezado
+		    	#edit-field-encabezado {
+			    	.consejero {
+					    font-family: Lato Regular;
+					    font-weight: bold;
+					    font-size: 1.4rem;
+					    color: $black;
+					    padding: 5px 0px 5px 29px;
+					    background-color: rgba($green, 0.25);
+						}
+						.date {
+					    font-family: $lato-regular;
+					    font-weight: bold;
+					    font-size: 1.4rem;
+					    color: $black;
+					    margin-left: 27px;
+					    margin-top: 10px;
+						}
+						@include respond-to('tablet-lg') {
+							.date {
+						    margin-left: 68px;
+							}
+						}
+					}
+					//Tipo de Servicio
+					#edit-field-tipo-de-servicio {
+						width: 98%;
+   					.form-type-select { 
+   						margin: 0px 10px;
+   					  label {
+   							display: none;
+	   					}
+	   					.form-control{
+						    border: 1px solid black;
+						    border-radius: 1px !important;
+						    appearance: none;
+						    background-image: url(../img/flecha.png);
+						    background-position: 97% center;
+						    background-repeat: no-repeat;
+						    background-size: 14px;
+						    &:focus {
+						    	border-color: #000;
+	    						outline: 0;
+	    						box-shadow: inset 0 1px 1px rgba(13, 13, 13, 0.25), 0 0 8px rgb(192, 196, 198);
+						    }
+							}
+						}
+					}
+					@include respond-to('tablet-lg') {
+						#edit-field-tipo-de-servicio {
+							width: 71%;
+							margin: 0 auto;
+						}
+					}
+					//Fecha y Hora
+					#edit-field-fecha {
+						width: 98%;
+   					.panel {
+   						box-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+   						border-color: transparent;
+   						legend {
+   							display: none;
+   						}
+   						.panel-body {
+						    display: inline-flex;
+						    margin: 0px;
+						    padding: 0px !important;
+						    .start-date-wrapper, .end-date-wrapper {
+						    	.form-type-date-popup {
+						    		padding: 0px;
+								    margin: 0px;
+								    > label {
+								    	display: none;
+								    }
+								    .date-padding {
+								    	padding: 0px 10px 15px;
+											.form-item {
+												width: 100%;
+												label {
+													display: none;
+												}
+												input {
+													width: 100%;
+											    border: 1px solid black;
+											    border-radius: 1px !important;
+											    appearance: none;
+											    background-image: url(../img/flecha.png);
+											    background-position: 97% center;
+											    background-repeat: no-repeat;
+											    background-size: 14px;
+											    &:focus {
+											    	border-color: #000;
+						    						outline: 0;
+						    						box-shadow: inset 0 1px 1px rgba(13, 13, 13, 0.25), 0 0 8px rgb(192, 196, 198);
+											    }
+												}
+												&:nth-child(2) {
+													input {
+														margin-top: 22px;
+													}
+												}
+											}
+										}
+									}
+						    }
+							}
+   					}
+					}
+					@include respond-to('tablet-lg') {
+						#edit-field-fecha {
+							width: 71%;
+							margin: 0 auto;
+						}
+					}
+					//Lugar
+					#edit-field-lugar {
+						width: 98%;
+   					margin-bottom: 15px;
+   					#field-lugar-add-more-wrapper {
+   						margin: 0px 10px;
+	   					.form-item {
+								width: 100%;
+								label {
+									display: none;
+								}
+								input {
+									width: 100%;
+									border: 1px solid black;
+							    border-radius: 1px !important;
+							    appearance: none;
+								}
+	   					}
+	   				}
+					}
+					@include respond-to('tablet-lg') {
+						#edit-field-lugar {
+							width: 71%;
+							margin: 0 auto;
+							margin-bottom: 15px;
+						}
+					}
+					//Cupo
+					#edit-field-cupo {
+						width: 98%;
+   					margin-bottom: 15px;
+   					#field-cupo-add-more-wrapper {
+   						margin: 0px 10px;
+	   					.form-item {
+								width: 100%;
+								label {
+									display: none;
+								}
+								input {
+									width: 100%;
+									border: 1px solid black;
+							    border-radius: 1px !important;
+							    appearance: none;
+								}
+	   					}
+	   				}
+					}
+					@include respond-to('tablet-lg') {
+						#edit-field-cupo {
+							width: 71%;
+							margin: 0 auto;
+						}
+					}
+					//Repeticion 
+					#edit-field-repeticion {
+						width: 98%;
+   					margin-bottom: 15px;
+   					.form-type-radios{
+   						> label {
+   							font-family: $lato-regular;
+							  font-size: 1.6rem;
+							  color: $black;
+							  font-weight: normal;
+							  margin: 10px 10px 20px;
+   						}
+   						.form-radios {
+   							display: flex;
+        				justify-content: space-around;
+        				.form-item {
+        					&:nth-child(1) {
+        						display: none;
+        					}
+      						label {
+      							font-family: $lato-regular;
+									  font-size: 1.4rem;
+									  color: $black;
+      							padding-left: 25px !important;
+      							input[type="radio"] {
+									   display: none;
+										}
+										input[type="radio"] {
+										  width: 18px;
+										  height: 19px;
+										  display: inline-block;
+										  background-color: #fff;
+										  box-sizing: border-box;
+										  border: 1px solid black;
+										  border-radius: 0px;
+										  transition: border-color .2s;
+										  appearance: button;
+										  margin: 0px;
+    									margin-left: -26px;
+										}
+										input[type="radio"]:checked {
+										  background: url(../img/punto.svg);
+										  background-size: 100% 100%;
+										  background-repeat: no-repeat;
+										  background-color: white;
+										}
+      						}
+        				}
+   						}
+   					}
+					}
+					@include respond-to('tablet-lg') {
+						#edit-field-repeticion {
+							width: 71%;
+							margin: 0 auto;
+						}
+					}
+					//Botones 
+					#edit-actions {
+						width: 98%;
+   					display: flex;
+            flex-direction: row-reverse;
+        		justify-content: space-around;
+        		margin-bottom: 15px;
+        		a {
+					    border: 1px solid $green;
+					    color: black;
+					    background-color: $white;
+					    padding: 4px 22px;
+					    font-size: 14px;
+					    font-weight: normal;
+					   	letter-spacing: 0.6px;
+					    text-align: center;
+					    text-decoration: none;
+					    cursor: pointer;
+					    &:hover, :focus {
+								background-color: $green;
+								color: $white;
+					    } 
+						}
+						button {
+							height: 31px;
+					    font-size: 14px;
+					    border-radius: 0px;
+					    color: black;
+					    letter-spacing: 0.6px;
+					    background: transparent;
+					    padding: 0px 27px !important;
+					    span, .glyphicon-refresh {
+							  display: none;
+							}
+							&:hover, :focus {
+								background-color: $green;
+								color: $white;
+								border-color: $green;
+					    } 
+						}
+					}
+					@include respond-to('tablet-lg') {
+						#edit-actions {
+							width: 71%;
+							margin: 0 auto;
+							margin-bottom: 15px;
+						}
+					}
+		    }
+			}
+		}
+	}
+}
+/* ------| Calendario Miniatura Crear Disponibilidad |----- */
+div#ui-datepicker-div {
+	border: 1px solid #666;
+  background: white;
+  border-radius: 0px;
+  .ui-datepicker-header {
+    border: 1px solid transparent;
+    background: white;
+    .ui-icon-circle-triangle-w {
+			background: url(../img/flecha.png) no-repeat;
+			background-size: contain;
+      transform: rotate(90deg);
+		}
+		.ui-icon-circle-triangle-e {
+      background: url(../img/flecha.png) no-repeat;
+    	background-size: contain;
+      transform: rotate(269deg);
+		}
+		.ui-datepicker-month, .ui-datepicker-year {
+	    appearance: inherit;
+	    border: 1px solid transparent;
+	    background: white;
+	    font-family: $lato-regular;
+	    font-size: 15px;
+	    font-weight: normal;
+		}
+	}
+	.ui-datepicker-calendar {
+		th {
+	    font-weight: normal;
+	    font-size: 13px;
+		}
+		td {
+			a {
+		    border: 1px solid transparent;
+		    background: white;
+		    color: #000;
+		    text-align: center;
+		    &.ui-state-highlight  {
+			    border: 1px solid #4C48A8;
+			    background: #4C48A8;
+			    color: white;
+				}
+	  	}  
+		}
+	}
+}
+/*
+//------------------------------------------------------------------------------
+// Modal Disponibilidad, Crear Cita, Editar Disponibilidad, Eliminar Disponibilidad   
+//------------------------------------------------------------------------------
+*/
+.page-calendario-consejero .modal-dialog.node-teaser  {
+	width: 321.163px !important;
+  height: 220.805px !important;
+	.modal-content {
+	  border-radius: 0px;
+	  box-sizing: border-box;
+	  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, .5));
+		&::before {
+		    content: "";
+		    position: absolute;
+		    top: 18px;
+		    left: -9px;
+		    width: 2em;
+		    height: 2em;
+		    background-color: white;
+		    transform: rotate(46deg);
+		}
+		.modal-header {
+		  border-bottom: none;
+			h4#modal-title {
+			  font-family : Lato Bold;
+			  font-weight : bold;
+			  font-size : 18px;
+			  color : #41B65B;
+			  text-align: center;
+			}
+		}
+		.modal-body {
+			article {
+				background-color: rgba($green, 0.25);
+				header {
+					display: none;
+				}
+				//fecha
+				.field-name-field-fecha {
+					display: inline-flex;
+				  width: 100%;
+				  .field-label {
+						display: none;
+				  }
+				  .date-display-single {
+				  	display: flex;
+    				flex-direction: column;
+    				font-family: $lato-regular;
+				    font-size: 14px;
+				    color: $black;
+						padding-left: 13px;
+				  }
+				}
+				//lugar
+				.field-name-field-lugar {
+					display: inline-flex;
+			    width: 100%;
+			    .field-label {
+						font-family: $lato-regular;
+				    font-size: 14px;
+				    color: $black; 
+						padding-left: 13px;
+			    }
+			    .even {
+			    	font-family: $lato-regular;
+				    font-size: 14px;
+				    color: $black;
+						padding-left: 2px;
+			    }
+				}
+				//tipo de servicio
+				.field-name-field-tipo-de-servicio {
+					display: inline-flex;
+			    width: 100%;
+			    .field-label {
+						font-family: $lato-regular;
+				    font-size: 14px;
+				    color: $black; 
+						padding-left: 13px;
+			    }
+			    .even {
+			    	a {
+				    	font-family: $lato-regular;
+					    font-size: 14px;
+					    color: $black;
+					    pointer-events: none; 
+							padding-left: 2px;
+						}
+			    }
+				}
+				//cupos
+				.field-name-field-cupo {
+					display: inline-flex;
+					width: 100%;
+					background-color: $white;
+			    padding: 10px 0px;
+			    .field-label {
+						font-family: $lato-Bold;
+				    font-size: 14px;
+				    color: $black; 
+						padding-left: 13px;
+			    }
+			    .even {
+			    	font-family: $lato-Bold;
+				    font-size: 14px;
+				    color: $black;
+			    }
+				}
+				//botones
+				.field-name-field-operaciones{
+					background-color: $white;
+					.field-label {
+						display: none;
+					}
+					.operation-node {
+					  display: inline-flex;
+					  .create, .edit, .delete {
+					  	margin: 2px;
+					  	a {
+						    text-align: center;
+						    text-decoration: none;
+						    width: 94px;
+						    min-height: 35px;
+						    display: flex;
+					      justify-content: center;
+					      align-items: center;
+						    border: 2px solid#41B65B;
+						    padding: 0px 21px;
+						    font-family: Lato Regular;
+						    font-size: 11px;
+						    line-height: 12px;
+						    color: $black;
+						    &:hover, :focus {
+						    	background-color: $green;
+						    	color: $white;
+						    }
+							}
+						}
+					}
+				}
+				footer {
+					display: none;
+				}
+			}
+		}
+	}
+}

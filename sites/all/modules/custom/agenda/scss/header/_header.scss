@@ -1,0 +1,275 @@
+/*
+//------------------------------------------------------------------------------
+// Informacion user 
+//------------------------------------------------------------------------------ 
+*/
+.user-agenda {
+	background-color: $black;
+	float: left;
+	width: 100%;
+	padding-top: 27px;
+  padding-bottom: 27px;
+	.block-title {
+		display: none;
+	}
+	.view-user-login {
+		display: table;
+		padding: 0;
+		width: 100%;
+		.view-header {
+			border-right: 1px solid $white;
+			display: table-cell;
+    	width: 45%;
+			.container-user-rol {
+				display: block;
+				.consejero, .estudiante, .cordinador {
+					width: 50px;
+					height: 50px;
+					float: left;
+					margin: 0px 10px;
+				}
+				.consejero {
+					background: url(../img/consejero.png)no-repeat;
+					background-size: contain;
+				}
+				.estudiante {
+					background: url(../img/estudiante.png)no-repeat;
+					background-size: contain;
+					background-position-x: 13px;
+				}
+				.cordinador {
+					background: url(../img/cordinador.png)no-repeat;
+					background-size: contain;
+				}
+				p {
+					margin: 0px;
+					padding-top: 6px;
+					font-family: "Lato Light";
+					font-size: 17px;
+					color: $white;
+				}
+				h2 {
+					margin: 0px;
+					padding-bottom: 10px;
+					font-family: Lato Bold;
+					font-weight: bold;
+					font-size: 14px;
+					line-height: 17.2px;
+					color: $white;
+					&::before {
+						content: "";
+						border-bottom: 5px solid $green;
+						width: 62px;
+						position: absolute;
+						top: 150px;
+					}
+				}
+				@include respond-to('tablet-lg') {
+					h2 {
+						font-size: 22px;
+					}
+				}
+			}
+		}
+		@include respond-to('phablet') {
+  		.view-header {
+  			width: 25%;
+  		}
+  	}
+		.view-content {
+			display: table-cell;
+    	width: 50%;
+			.item-list {
+				padding: 0px;
+				ul {
+					list-style: none;
+					margin: 0px;
+					-webkit-margin-before: 0em;
+					-webkit-margin-after: 0em;
+					-webkit-padding-start: 10px;
+					-moz-padding-start: 10px;
+					span {
+						color: $white;
+						font-family: "Lato Bold";
+						font-size: 0.7rem;
+					}
+					@include respond-to('phablet') {
+						span {
+							font-size: 1rem;
+						}
+					}
+					.views-field-field-carrera {
+				    display: inline-flex;
+				    color: $white;
+				    font-family: "Lato Bold";
+				    font-size: 0.7rem;
+				    .field-content {
+				    	padding-left: 5px;
+				    }
+				    @include respond-to('phablet') {
+							.field-content {
+								font-size: 1rem;
+							}
+						}
+					}
+				}
+				@include respond-to('phablet') {
+					ul  {
+						-webkit-padding-start: 30px;
+						-moz-padding-start: 30px;
+					}
+				}
+			}
+		}
+		@include respond-to('tablet-lg') {
+  		.view-content {
+  			width: 75%;
+  		}
+  	}
+	}
+} 
+/*
+//------------------------------------------------------------------------------
+// Nvegacion Agenda
+//------------------------------------------------------------------------------
+*/
+.navegacion-agenda  {
+	background: $black;
+	.block-title {
+		display: none;
+	}
+	.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    float: none;
+    width: 100%;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    
+    li {
+      border: none;
+      border-right: 1px solid $black;
+    	background-color: white;
+    	border-bottom: 1px solid $gray;
+    	flex: 1 1 0px;
+    	a {
+		    display: flex;
+        align-items: center;
+        justify-content: center;
+		    font-family: "Lato Black";
+		    font-size: 0.6rem;
+		    font-weight: normal;
+		    color: $black;
+		    text-align: center;
+		    text-decoration: none;
+		    height: 100%;
+		    &:hover {
+		    	background: $green-l !important;
+    			color: $white;
+		    }
+			}
+			@include respond-to('phablet') {
+				a {
+	        min-height: 46px;
+		    }
+			}
+			@include respond-to('tablet') {
+				a {
+	        font-size: 0.9rem
+		    }
+			}
+			@include respond-to('tablet-lg') {
+				a {
+	        width: 133px;
+	        padding: 0px 58px;
+		    }
+			}
+			&.active-trail.active a {
+		    background: $green-l;
+		    color: $white;
+			}
+			&:last-child {
+				border-right: none;
+			}
+    }
+   	@include respond-to('tablet-lg') {
+			li {
+				border-right: 2px solid $black;
+				flex: initial;
+			}
+    }
+	}
+	@include respond-to('tablet-lg') {
+		.menu {
+			float: right;
+			margin-right: 11px;
+			justify-content: flex-end;
+		}
+	}
+}
+/*
+//------------------------------------------------------------------------------
+// Agenda de servicios
+//------------------------------------------------------------------------------
+*/
+.title-agenda-de-servicio {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80px;
+	background-color: $gray-l;
+	.block-title {
+		display: none;
+	}
+	.imagen {
+    height: 39px;
+    width: 47px;
+    background: url(../img/agenda_servicios.png)no-repeat;
+    background-size: contain;
+	}
+	@include respond-to('tablet-lg') {
+		.imagen {
+			height: 71px;
+		  width: 82px;
+		}
+	}
+	.contenedor {
+    margin-left: 0px;
+    h2 {
+    	width: 100px;
+    	font-family: "Lato Regular";
+      font-size: 18px;
+      line-height: 19.84px;
+    	margin: 0 auto;
+	    color: $black;
+    }
+    @include respond-to('tablet-lg') {
+			h2 {
+				width: 251px;
+		    font-size : 47px;
+  			line-height : 49.84px;
+	    }
+    }
+		>h2 + h2 {
+			font-family: "Lato Bold";
+		}
+	}
+	@include respond-to('tablet-lg') {
+		.contenedor {
+			margin-left: 20px;
+		}
+	}
+}
+@include respond-to('phablet') {
+	.title-agenda-de-servicio {
+			height: 111px;
+	}
+}
+@include respond-to('tablet-lg') {
+	.title-agenda-de-servicio {
+			height: 165px;
+			background-color: $white;
+	}
+}

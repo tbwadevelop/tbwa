@@ -4,7 +4,6 @@ sites/*/settings*.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-<<<<<<< HEAD
 
 # Packages #
 ############
@@ -19,5 +18,10 @@ sites/*/private
 *.tar
 *.zip
 *.tgz
-=======
->>>>>>> 365f14ab8f60e1619317306adb15d682dbb7ccc4
+
+.sass-cache
+sites/all/modules/custom/agenda/node_modules
+sites/all/modules/custom/agenda/node_modules/*
+/sites/all/modules/custom/agenda/node_modules
+/sites/all/modules/custom/agenda/node_modules/*
+/sites/all/modules/custom/agenda/styleguide/*

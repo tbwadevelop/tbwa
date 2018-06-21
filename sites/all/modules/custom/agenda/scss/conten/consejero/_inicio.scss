@@ -1,0 +1,759 @@
+/* 
+//------------------------------------------------------------------------------
+// Region region-sidebar-first
+//------------------------------------------------------------------------------  
+*/
+.page-calendario-consejero {
+	> .main-container {
+		padding: 0px;
+	}
+	.row {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    aside {
+			padding: 0px;
+		}
+	}
+	@include respond-to('tablet-lg') {
+		.row {
+			border: 3px solid $gray-tree; 
+			margin: auto;
+			min-height: 32pc;
+		}
+	}
+}
+
+.page-calendario-consejero {
+	.region-sidebar-first {
+		background-color: $white;
+		border: none;
+		box-shadow: none; 
+		padding: 0px;
+		margin: 0px;
+		.Calendario_Contenedor {
+			position: relative;
+			.calendar-miniature {
+				.view-header {
+					width: 100%;
+	        background-color: #47AC4B;
+	        height: 72px;
+	        display: flex;
+	        align-items: center;
+	        flex-direction: row-reverse;
+	        justify-content: flex-end;
+	        #cbox2 {
+				    background: url(../img/Menu.png) no-repeat;
+				    background-size: 27px;
+				    border-color: transparent;
+				    border-radius: 0px;
+				    border-width: 0px;
+				    padding: 0px;
+				    width: 25px;
+				    height: 25px;
+					}
+					@include respond-to('tablet-lg') {
+						#cbox2 {
+							display: none;
+						}
+					}
+					//select Meses 
+					.wrapper {
+						display: flex;
+    				align-items: center;
+						.dropdown {
+							border: none !important;
+	    				width: 182px;
+	    				background-color: transparent;
+	    				color: $white;
+	    				&:hover {
+	    					box-shadow: 0 0 5px rgba(0,0,0,0) !important;
+	    				}
+	    				&.open {
+	    					div {
+								  width: 113px;
+								}
+	    				}
+	    				.selected {
+	    					font-family: "Lato Black";
+							  font-size: 26px;
+							  color: $white;
+							  text-transform: uppercase;
+	    					&:after {
+									box-shadow: inset 0px 0px 0px 0px #fff;
+	    					}
+	    				}
+	    				@include respond-to('tablet-lg') { 
+	    					.selected {
+									color: $gray-tree;
+								}
+							}
+							@include respond-to('tablet-lg') { 
+		    				.carat {
+							    left: 30% !important;
+							    top: 43px !important;
+							    margin-top: -10px !important;
+							    border: none !important;
+							    border-bottom: 2px solid black !important;
+							    border-right: 2px solid black !important;
+							    border-top: none !important;
+							    width: 15px;
+							    height: 15px;
+							    transform: rotate(44deg);
+								}
+							}
+							ul {
+								background: $green-secundary;
+						    -webkit-padding-start: 0px;
+						    -moz-padding-start: 0px;
+						    li {
+						    	color: $white !important;
+							    text-align: center;
+							    padding: 4px 12px;
+						    	&.active {
+								    font-weight: 700;
+								    color: rgba(224, 224, 224, 0.95) !important;
+									}
+									&.focus {
+									  background: rgba(222, 222, 222, 0.44) !important;
+									}
+						    }
+							}
+						}
+						@include respond-to('tablet-lg') { 
+							.dropdown {
+								background-color: $white ;
+							}
+						}
+					}
+					//Paguinador y Mes 
+					.date-nav-wrapper {
+				    width: 76.6%;
+				    position: absolute;
+				    top: 0px;
+				    left: 0;
+				    display: inline-block;
+				    margin: 0 auto;
+				    height: 58px;
+				    border-right: 3px solid #BBBDBF;
+				    background-color: white;
+    				li {
+    					a {
+								color: #000;
+						    background-color: transparent;
+						    border: none;
+						    font-size: 12px;
+    					}
+    					&.prev {
+								position: absolute;
+								top: 19px;
+ 						  	left: 12%;
+    					}
+    					&.next {
+								position: absolute;
+								top: 19px;
+    						left: 78%;
+    					}
+    				}
+    				@include respond-to('tablet-lg') { 
+							li {
+								&.prev {
+							    top: 0px;
+							    left: 0px;
+								}
+								&.next {
+									top: 0px;
+									right: 0px;
+	    					}
+							}
+    				}
+    				h3 {
+    					text-align: center;
+    					a {
+								color: #000;
+								font-family : Lato Bold;
+								font-weight : bold;
+								font-size : 15px;
+								letter-spacing : 1.5px;
+								text-decoration: none;
+								pointer-events: none;
+								cursor: default;
+								text-transform: uppercase; 
+    					}
+    				}
+    				@include respond-to('tablet-lg') { 
+							h3 {
+								margin-top: 0px;
+					    	margin-bottom: 0px;
+							}
+    				}
+					}
+					@include respond-to('tablet-lg') { 
+						.date-nav-wrapper {
+							margin-top: 63px;
+							position: relative;
+					    width: 100%;
+					    border: none;
+					    height: auto;
+						}
+					}
+				}
+				@include respond-to('tablet-lg') { 
+					.view-header {
+						background-color: transparent;
+						display: initial;
+					}
+				}
+				//calendario
+				.view-content {	
+					.calendar-calendar {
+						.month-view {
+							width: 76.6%;
+							position: absolute;
+			        top: 58px;
+			        left: 0;
+			        display: flex;
+			        justify-content: center;
+			        background: white;
+			        border-right: 3px solid #BBBDBF;
+			        z-index: 2;
+							table {
+								width: 76%;
+								th {
+									background-color: transparent;
+							    color: #000;
+							    font-weight: normal;
+							    border: 1px solid transparent;
+								}
+								td {
+									&.mini {
+										a {
+								    	color: #000;
+  										text-decoration: none;
+								    }
+									}
+									&.has-no-events {
+								    text-align: center;
+								    color: black;
+								    padding: 0px 0px 0px 0px;
+								    .mini-day-on {
+									    padding: 0px;
+									    text-align: center;
+										}
+									}
+									&.today {
+								    background-color: #4C48A8;
+								    color: white;
+								    text-align: center;
+								    a {
+											color: white;
+    									text-decoration: none;
+								    }
+									}
+								}
+							}
+							@include respond-to('tablet-lg') { 
+								table {
+									width: 100%;
+								}
+							}
+						}
+						@include respond-to('tablet-lg') { 
+							.month-view {
+							width: 100%;
+							position: initial;
+							display: block;
+							border: none; 
+							}
+						}
+					}
+				}
+			}
+		}
+		//Button Crear Disponibilidad 
+		.crear_disponibilidad {
+				width: 76.6%;
+        background: white;
+        border-right: 3px solid #BBBDBF;
+        position: absolute;
+        top: 194px;
+        z-index: 2;
+			.block-title {
+				display: none;
+			}
+			#magical-modal-link {
+		    margin-top: 38px;
+		    width: 100%;
+		    display: inline-flex;
+        justify-content: center;
+        background: transparent;
+		    a {
+			    width: 80%;
+			    font-family: Lato Light;
+			  	font-size: 14px;
+			    color: #FFFFFF;
+			    text-align: center;
+			    text-decoration: none;
+			    padding: 8px 13%;
+			    background: #47AC4B;
+			    .glyphicon-refresh {
+					  display: none;
+					}
+				}
+				@include respond-to('tablet-lg') {
+					a { 
+						width: 100%;
+						padding: 4px;
+						font-size: 13px;
+					}
+				}
+			}
+			.cupo-disponible, .cupo-lleno, .hoy {
+				display: inline-flex;
+				justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    		padding-top: 20px;
+			}
+			@include respond-to('tablet-lg') {
+				.cupo-disponible, .cupo-lleno, .hoy {
+					justify-content: flex-start;
+				}
+			}
+			.cupo-disponible .caja-1 {
+		    width: 25px;
+		    height: 25px;
+		    background-color: #47AC4B;
+		    display: inline-block;
+		    margin-right: 10px;
+		    font-family: $lato-Light;
+		    font-size: 13px;
+		    color: $black;
+			}
+			.cupo-lleno .caja-2 {
+		    width: 25px;
+		    height: 25px;
+		    background-color: #6D6E70;
+		    display: inline-block;
+		    margin-right: 10px;
+			}
+			.hoy .caja-3 {
+		    width: 25px;
+		    height: 25px;
+		    background-color: #4C48A8;
+		    display: inline-block;
+		    margin-right: 10px;
+		    margin-bottom: 15px;
+			}
+			@include respond-to('tablet-lg') {
+				.hoy .caja-3 {
+					margin-bottom: 0px;
+				}
+			}
+		}
+		@include respond-to('tablet-lg') {
+			.crear_disponibilidad  {
+				width: 100%;
+				border: none;
+				position: initial;
+			}
+		}
+	}
+	@include respond-to('tablet-lg') { 
+		.well {
+		  padding: 19px;
+		}
+	}
+}
+
+/*
+//------------------------------------------------------------------------------
+// region contain region-content
+//------------------------------------------------------------------------------
+*/
+
+/* ------| Menu Dia, Semana, Mes |----- */
+.page-calendario-consejero {
+	.element-invisible,.breadcrumb,.page-header {
+		display: none;
+	}
+	ul.tabs--primary {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    list-style: none;
+    background-color: transparent;
+    border-bottom: 0px solid #ddd;
+    width: 25px;
+    position: relative;
+    position: absolute;
+    right: 41px;
+    z-index: 1;
+    margin-top: 34px;
+		&:before {
+	    content: "";
+	    width: 23px;
+	    height: 75px;
+	    border-radius: 28px;
+	    border: 2px solid #808184;
+	    position: absolute;
+	    top: -6px;
+	    right: 20px;
+	    z-index: -1;
+		}
+	 li {
+    	left: 40px;
+			&:nth-child(1) {
+		    display: none;
+			}
+			a {
+		    padding: 0px !important;
+		    margin: 0px;
+		    cursor: pointer !important;
+		    display: block !important;
+		    border-radius: 0px !important;
+		    border: 0px;
+		    text-align: left;
+		    width: 56px;
+		    font-family: $lato-regular;
+		    font-size : 15px;
+		    color : $black;
+			}
+			&.active {
+				a ,	a:focus, a:hover {
+			    color: #555;
+			    background-color: $white;
+			    border-bottom-color: transparent;
+			    border: 1px solid transparent;
+			  }
+			}
+			&.active  {
+				a.active {
+			    color: $green !important;
+			    background: transparent;
+			    &:before {
+				    content: "";
+				    margin-right: 16px;
+				    color: $green;
+				    background-color: #E8E8E8;
+				    background-image: url("../img/punto.png");
+				    background-size: cover;
+				    background-repeat: no-repeat;
+				    position: absolute;
+				    top: 5px;
+				    right: 48px;
+				    display: -webkit-inline-box;
+				    display: -ms-inline-flexbox;
+				    display: inline-flex;
+				    width: 12px;
+				    height: 12px;
+					}
+			  }
+			}
+		}
+	}
+}
+
+/* ------| region-content |----- */
+.page-calendario-consejero {
+	.region-content {
+    clear: both;
+    z-index: -100;
+    margin-top: 37px;
+		.calendar-contain {
+			.view-header {
+				//button ir a hoy
+				> a {
+					position: absolute;
+	        right: 58px;
+	        top: -47px;
+	        width: 51px;
+					font-family: $lato-Bold;
+			    font-size: 15px;
+			    color: $white;
+			    text-decoration: none;
+				}
+				@include respond-to('tablet-lg') { 
+			    > a { 
+						color: $purple;
+						position: initial;
+						&:hover ,:active, :focus {
+							color: rgba($purple, 0.75);
+			    	}
+		    	}
+		    }
+		    //paguinadores
+		    .pagination {
+					position: absolute;
+			    top: 0px;
+			    left: 0px;
+			    li { 
+			    	a  {
+			    		color: #000;
+					    background-color: transparent;
+					    border: none;
+					    text-indent: -9999%;
+					    overflow: hidden;
+					    border-left: 2px solid black !important;
+					    border-bottom: 2px solid black !important;
+					    width: 10px;
+					    height: 10px;
+					    padding: 0;
+			    	}
+			    	&.prev {
+			    		a {
+		            transform: rotate(46deg);
+						    border-top-left-radius: 0px !important;
+						    border-bottom-left-radius: 0px !important;
+						    margin-right: 27px;
+			    		}
+			    	}
+			    	&.next a {
+					    transform: rotate(224deg);
+					    border-top-right-radius: 0px !important;
+					    border-bottom-right-radius: 0px !important;
+						}
+						&:hover {
+							color: #000 !important;
+	    				background-color: transparent !important;
+						}
+			    }
+		    }
+		    //fecha calendario
+		    h3 {
+			    margin-left: 66px;
+			    padding-right: 20px;
+			    width: auto;
+			    border-right: 2px solid #808184;
+			    font-family: $lato-regular;
+			    font-size : 24px;
+			    color : #808081;
+			    font-weight: normal;
+			    float: left;
+				}
+				//nombre del consejero
+				.cotainer-name-user {
+					padding-left: 20px;
+					width: auto;
+					font-family: $lato-regular;
+					font-size : 24px;
+					line-height : 21px;
+					font-weight: normal;
+					color : #47AC4B;
+					float: left;
+				}
+			}
+			.view-content {
+			//Día
+				.day-view {
+					.header-body-divider,	.single-day-footer-processed {
+						display: none
+					}
+					#multi-day-container {
+						height: 40px !important;
+    				border-bottom: none !important;
+    				.full {
+  						.calendar-agenda-hour { 
+  							span {
+							  	display: none;
+							  }
+							}
+    				}
+					}
+					#single-day-container {
+						.full {
+							td {
+								color: $black;
+								padding: 0px !important;
+							}
+							.first {
+								div {
+									text-align: center;
+							    font-family: $lato-regular;
+							    color : #808081;
+							    .calendar-ampm {
+									  margin: 0px 3px;
+									}
+								}
+							}
+							.last {
+								.single-day {
+									border-top: 2px solid #cccccc;
+									.half-hour {
+								    border-bottom-style: dashed;
+								    border-color: #A6A8AB;
+									}
+									.dayview {
+								    background: rgb(161, 211, 161)!important;
+								    color: black;
+								    border-radius: 0px !important;
+								    border: none;
+								    border-left: 10px solid #47AC4B !important;
+								    width: 100% !important;
+								    margin: 0px;
+										a.ctools-use-modal.ctools-use-modal-processed {
+									    position: absolute;
+									    text-indent: -9999px;
+									    width: 100%;
+									    height: 100%;
+									    background: transparent;
+										}
+										.contents {
+											background: rgb(161, 211, 161) !important;
+											div.field-content {
+										    margin: 2px;
+										    font-family: $lato-regular;
+										    font-size: 12px;
+										    color: $black;
+											}
+											span.field-content, .cutoff {
+												display: none !important;
+											}
+										}
+									}
+								}		
+							}
+    				}
+					}
+				}
+			//Semana 
+				.week-view {
+					.header-body-divider, .single-day-footer-processed {
+						display: none
+					}
+					#header-container {
+						th {
+							border: 0px solid #ccc;
+							background-color: #F9FAFB;
+							color: #808081;
+							font-weight: normal;
+							font-size: 12px;
+							border-top: 1px solid #808184;
+						}
+					}
+					#multi-day-container {
+						height: 40px !important;
+    				border-bottom: none !important;
+    				.full {
+  						.calendar-agenda-hour { 
+  							span {
+							  	display: none;
+							  }
+							}
+    				}
+					}
+					#single-day-container {
+						.full {
+							.first {
+								div {
+									text-align: center;
+							    font-family: $lato-regular;
+							    color : #808081;
+							    .calendar-ampm {
+									  margin: 0px 3px;
+									}
+								}
+							}
+							td {
+								color: $black;
+								padding: 0px !important;
+								.single-day {
+									.half-hour {
+								    border-bottom-style: dashed;
+								    border-color: #A6A8AB;
+									}
+									.weekview {
+										background: rgb(161, 211, 161) !important;
+										border-radius: 0px !important;
+										border: 0px solid transparent;
+										border-left: 10px solid #47AC4B !important;
+										font-size: x-small !important;
+										text-align: justify;
+										word-break: break-all;
+										width: 100% !important;
+										a.ctools-use-modal.ctools-use-modal-processed {
+									    position: absolute;
+									    text-indent: -9999px;
+									    width: 100%;
+									    height: 100%;
+									    background: transparent;
+										}
+										.contents {
+											.views-field {
+												div.field-content {
+											    margin: 2px;
+											    font-family: $lato-regular;
+											    font-size: 12px;
+											    color: $black;
+												}
+												span.field-content, .cutoff {
+													display: none !important;
+												}
+											}
+										}
+									} 
+								}
+							}
+    				}
+					}
+				}
+			//Mes
+				.month-view {
+					.full {
+						th.days {
+							background-color: #F9FAFB;
+							color: #808081;
+							font-weight: normal;
+							border: 0px solid #ccc;
+							border-top: 1px solid #000;
+							font-size: 12px;
+						}
+						td {
+							padding: 0px !important;
+							color: $black;
+							&.date-box {
+								.month.day {
+							    float: left;
+							    font-family : Lato Regular;
+							    font-size : 21px;
+							    color : #808081;
+							    a {
+							    	color: $black;
+							    }
+								}
+							}
+							&.single-day {
+								.monthview {
+									background: rgb(161, 211, 161);
+									border-radius: 0px;
+									a.ctools-use-modal.ctools-use-modal-processed {
+										position: absolute;
+								    text-indent: -9999px;
+								    width: 100%;
+								    height: 100%;
+								    background: transparent;
+									}
+									.contents {
+										.views-field {
+											div.field-content {
+										    margin: 2px;
+										    font-family: $lato-regular;
+										    font-size: 12px;
+										    color: $black;
+											}
+
+											span.field-content, .cutoff, span.views-label {
+												display: none !important;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

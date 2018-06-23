@@ -2014,7 +2014,7 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
   }
 }
 
-/* ------| Informacion |----- */
+/* ------| Informacion de cita |----- */
 .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas {
   width: 100%;
   display: -webkit-inline-box;
@@ -2102,24 +2102,26 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0em 0.3em 0 0 !important;
-  margin-top: 10px;
+  padding: 0px;
+  margin-bottom: 25px;
 }
 
-.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper {
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget {
+  padding: 0px;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget:nth-child(1) {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 69%;
-  margin-left: 15px;
 }
 
-.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper label {
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
   display: none;
 }
 
 @media only screen and (min-width: 992px) {
-  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper label {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
     display: block;
     position: relative;
     word-break: break-all;
@@ -2133,7 +2135,7 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
     font-weight: normal;
     text-align: left;
   }
-  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper label::before {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label::before {
     content: "";
     position: absolute;
     left: -22px;
@@ -2142,12 +2144,15 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
     height: 0;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
-    border-left: 10px solid black;
+    border-left: 10px solid #000000;
   }
 }
 
-.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper .input-group input#edit-uid {
-  width: 100%;
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget {
+  margin: 0px 15px;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input {
   height: 32px;
   font-family: "Lato Light";
   font-size: 20px;
@@ -2162,7 +2167,7 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
   transition: none;
 }
 
-.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper .input-group input#edit-uid :focus {
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input :focus {
   border-color: transparent;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
@@ -2170,27 +2175,21 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
 }
 
 @media only screen and (min-width: 992px) {
-  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper .input-group input#edit-uid {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input {
     width: 537px;
     height: 45px;
   }
 }
 
-.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper .input-group span {
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget span {
   display: none;
 }
 
-.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper .dropdown ul {
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .dropdown ul {
   border-radius: 0px;
 }
 
-@media only screen and (min-width: 992px) {
-  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets #edit-uid-wrapper {
-    width: auto;
-  }
-}
-
-.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-submit-button button, .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-reset-button button {
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button, .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
   width: 30px;
   height: 30px;
   text-indent: -99999px;
@@ -2199,18 +2198,22 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
   border: 1px solid transparent;
 }
 
-.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-submit-button button:hover, .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-reset-button button:hover {
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button:hover, .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button:hover {
   opacity: 0.5;
 }
 
 @media only screen and (min-width: 992px) {
-  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-submit-button button, .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-reset-button button {
-    width: 53px;
-    height: 52px;
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button, .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+    width: 45px;
+    height: 45px;
   }
 }
 
-.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-submit-button button {
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button {
+  margin-right: 10px;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
   background: url("../img/buscar.svg") no-repeat;
   background-size: 19px;
   background-position: 5px;
@@ -2219,13 +2222,17 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
 }
 
 @media only screen and (min-width: 992px) {
-  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-submit-button button {
-    background-size: 38px;
-    background-position: 6px;
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
+    background-size: 34px;
+    background-position: 5px;
   }
 }
 
-.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-reset-button button {
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button {
+  margin-right: 10px;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
   background: url("../img/reiniciar.png") no-repeat;
   background-size: 19px;
   background-position: 5px;
@@ -2234,10 +2241,567 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
 }
 
 @media only screen and (min-width: 992px) {
-  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-reset-button button {
-    background-size: 38px;
-    background-position: 6px;
+  .page-crear-citas .usuarios-agenda-de-servicios .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+    background-size: 34px;
+    background-position: 5px;
   }
+}
+
+/* ------| Informacion del estudiante agregado |----- */
+.page-crear-citas .usuarios-agenda-de-servicios .view-content ul {
+  background: #F5F1F1;
+  min-height: 26pc;
+  -webkit-padding-start: 0px;
+  -moz-padding-start: 0px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  margin: 0 5%;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita {
+  list-style: none;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita .views-field.views-field-uid {
+  display: none;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita > div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-bottom-style: solid;
+  border-right-style: none;
+  border-width: 1px;
+  border-color: #A6A8AB;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita > div span:first-child {
+  color: #41B65B;
+  font-size: 15px;
+  font-family: lato;
+  padding-right: 10px;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita > div:last-child {
+  border-bottom-style: none;
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita > div:last-child span:nth-child(1) {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita > div:last-child span:nth-child(1) {
+    display: initial;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita > div:nth-child(-n+4) {
+    border-width: 0px 0px 1px 0px;
+    border-bottom-style: dashed;
+  }
+  .page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita > div:nth-child(1n+5) {
+    padding-top: 10px;
+    border-color: transparent;
+  }
+}
+
+.page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita > div select {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0px;
+  border: 1px solid #929497;
+  background-image: url(../img/flecha.png);
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position: 98% 7px;
+  background-color: #ffffff;
+  -webkit-box-shadow: inset 0px 0px 0px transparent;
+          box-shadow: inset 0px 0px 0px transparent;
+  padding: 4px;
+  outline: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita > div select {
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita > div {
+    width: 33.3333%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .usuarios-agenda-de-servicios .view-content ul {
+    min-height: 10pc;
+  }
+}
+
+/* ------| Button Agregar, Cancelar, Crear Cita |----- */
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper {
+  text-align: center;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper > button {
+  padding: 6px 12px;
+  border: 1px solid #41B65B;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 0px;
+  margin-top: -100px;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper > button .glyphicon-refresh, .page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper > button span {
+  display: none;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-width: 0px 0px 1px 0px;
+  border-bottom-style: double;
+  border-right-style: solid;
+  border-color: #9E9E9E;
+  text-align: center;
+  position: relative;
+  width: auto;
+  margin: 0px 5% 19px;
+  padding: 0px;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline:last-child {
+  border-bottom-style: initial;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline .form-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline .form-item:nth-child(1), .page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline .form-item:nth-child(5) {
+  display: none;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline .form-item:nth-child(2), .page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline .form-item:nth-child(3) {
+  border-width: 0px 0px 1px 0px;
+  border-bottom-style: dashed;
+  border-right-style: solid;
+  border-color: #9E9E9E;
+  padding-bottom: 7px;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline .form-item:nth-child(2), .page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline .form-item:nth-child(3) {
+    border-width: 0px 0px 1px 0px;
+    border-bottom-style: dashed;
+    border-right-style: solid;
+    border-color: transparent;
+    padding-bottom: 0px;
+  }
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline .form-item label {
+  color: #41B65B;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline .form-item input {
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-family: "Lato Regular";
+  font-size: 14px;
+  color: #000000;
+  text-align: center;
+  background-image: none;
+  border-radius: 0px;
+  border: none;
+  border-right: 2px solid #9E9E9E;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline .form-item:nth-child(3) input {
+  border-right: 2px solid transparent;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline .form-item:nth-child(3) input {
+    border-right: 2px solid #9E9E9E;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline .form-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0px;
+  }
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline #disable-quote {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline #disable-quote label {
+  color: #41B65B;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline #disable-quote button {
+  padding: 6px 12px;
+  border: 1px solid #5cb85c;
+  background: #5cb85c;
+  color: white;
+  border-radius: 0px;
+  width: 110px;
+  height: 34px;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline #disable-quote button span {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline #disable-quote {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper .form-wrapper .container-inline {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    border-bottom-style: dashed;
+  }
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form > div:nth-child(2) {
+  text-align: center;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form > div:nth-child(2) button#edit-submit {
+  position: absolute;
+  top: 21px;
+  right: 91px;
+  left: auto;
+  text-indent: -999999px;
+  overflow: hidden;
+  background-image: url(../img/guardar.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  padding: 6px 16px;
+  border: none;
+  margin: 0px;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form > div:nth-child(2) button#edit-submit span {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .agendar-citas #agenda-records-form > div:nth-child(2) button#edit-submit {
+    position: initial;
+    color: white;
+    text-indent: initial;
+    border-radius: 0px;
+    border: 1px solid #41B65B;
+    padding: 6px 20px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    background: #41B65B;
+  }
+  .page-crear-citas .agendar-citas #agenda-records-form > div:nth-child(2) button#edit-submit .glyphicon-refresh {
+    display: none;
+  }
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form > div:nth-child(2) button#edit-cancelar {
+  position: absolute;
+  top: 21px;
+  right: 39px;
+  text-indent: -999999px;
+  overflow: hidden;
+  background-image: url(../img/cancelar-x.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  padding: 6px 16px;
+  border: none;
+  margin: 0px;
+}
+
+.page-crear-citas .agendar-citas #agenda-records-form > div:nth-child(2) button#edit-cancelar span {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-crear-citas .agendar-citas #agenda-records-form > div:nth-child(2) button#edit-cancelar {
+    position: initial;
+    margin-bottom: 15px;
+    border: 1px solid #41B65B;
+    border-radius: 0px;
+    padding: 6px 20px;
+    background: #ffffff;
+    color: #000000;
+    text-indent: initial;
+  }
+}
+
+/* 
+//------------------------------------------------------------------------------
+//	Citas
+//------------------------------------------------------------------------------  
+*/
+.page-calendario-consejero-citas-programadas .main-container {
+  padding: 0px;
+}
+
+.page-calendario-consejero-citas-programadas .main-container h1.page-header {
+  display: none;
+}
+
+/* ------| Buscador |----- */
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px;
+  margin-bottom: 25px;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget {
+  padding: 0px;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget:nth-child(1) {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
+    display: block;
+    position: relative;
+    word-break: break-all;
+    width: 69px;
+    text-align: center;
+    margin: 8px 16px 0px 0px;
+    font-family: "Lato Regular";
+    font-size: 20px;
+    line-height: 28.75px;
+    color: #41B65B;
+    font-weight: normal;
+    text-align: left;
+  }
+  .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label::before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 4px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #000000;
+  }
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget {
+  margin: 0px 15px;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input {
+  height: 32px;
+  font-family: "Lato Light";
+  font-size: 20px;
+  color: #000000;
+  border-radius: 0px;
+  border: 1px solid #F5F1F1;
+  background: #F5F1F1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input :focus {
+  border-color: transparent;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
+          box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input {
+    width: 537px;
+    height: 45px;
+  }
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget span {
+  display: none;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .dropdown ul {
+  border-radius: 0px;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button, .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+  width: 30px;
+  height: 30px;
+  text-indent: -99999px;
+  margin-top: 0px !important;
+  border-radius: 0px;
+  border: 1px solid transparent;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button:hover, .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button:hover {
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button, .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button {
+  margin-right: 10px;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
+  background: url("../img/buscar.svg") no-repeat;
+  background-size: 19px;
+  background-position: 5px;
+  background-color: #4cae4c;
+  outline: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
+    background-size: 34px;
+    background-position: 5px;
+  }
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button {
+  margin-right: 10px;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+  background: url("../img/reiniciar.png") no-repeat;
+  background-size: 19px;
+  background-position: 5px;
+  background-color: #929497;
+  outline: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+    background-size: 34px;
+    background-position: 5px;
+  }
+}
+
+/* ------| Buscador |----- */
+.page-calendario-consejero-citas-programadas .citas-programadas table {
+  width: 99%;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas table tr.odd, .page-calendario-consejero-citas-programadas .citas-programadas table tr.even {
+  background-color: #F5F1F1 !important;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas table tr th {
+  font-family: "Lato Regular";
+  font-size: 14px;
+  color: #4cae4c;
+  border-bottom: 2px solid transparent;
+  line-height: 15px;
+  text-align: center;
+  vertical-align: text-top;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas table tr th.numero-documento, .page-calendario-consejero-citas-programadas .citas-programadas table tr th.nombre-estudiante, .page-calendario-consejero-citas-programadas .citas-programadas table tr th.apellido-estudiante {
+  width: 93px;
+  /* 135px */
+  white-space: initial;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas table tr td {
+  border-width: 0px 1px 1px 1px;
+  border-bottom-style: dashed;
+  border-right-style: solid;
+  border-color: #A6A8AB;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas table tr td:last-child {
+  border-width: 0px 0px 1px 0px;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas table tr:last-child td {
+  border-width: 0px 1px 0px 0px;
+}
+
+.page-calendario-consejero-citas-programadas .citas-programadas table tr:last-child td:last-child {
+  border-width: 0px 0px 0px 0px;
 }
 
 /*# sourceMappingURL=agenda.css.map */

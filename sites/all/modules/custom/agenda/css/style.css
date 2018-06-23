@@ -1635,7 +1635,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 
 
 /* -\* Informacion del estudiante *\- */
-.view-id-usuarios_agenda_de_servicios .view-content ul {
+/* .view-id-usuarios_agenda_de_servicios .view-content ul {
     background: #F5F1F1;
     min-height: 10pc;  
     -webkit-padding-start: 0px;
@@ -1651,17 +1651,17 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-}
-.view-id-usuarios_agenda_de_servicios .view-content li > div.views-field.views-field-uid {
+} */
+/* .view-id-usuarios_agenda_de_servicios .view-content li > div.views-field.views-field-uid {
     display: none;
-}
-.view-id-usuarios_agenda_de_servicios .view-content li > div > span:first-child {
+} */
+/* .view-id-usuarios_agenda_de_servicios .view-content li > div > span:first-child {
     color: #4cae4c;
     font-size: 15px;
     font-family: lato;
     padding-right: 10px;
-}  
-.view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(-n+4) {
+}   */
+/* .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(-n+4) {
     border-width: 0px 0px 1px 0px;
     border-bottom-style: dashed;
     border-right-style: solid;
@@ -1671,8 +1671,8 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 }
 .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(1n+5) {
     padding-top: 10px;
-}
-.view-id-usuarios_agenda_de_servicios .view-content li > div select {
+} */
+/* .view-id-usuarios_agenda_de_servicios .view-content li > div select {
     -moz-appearance: none; 
     -webkit-appearance: none;
     appearance: none;
@@ -1688,9 +1688,9 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     padding: 4px;
     width: 150px;
     outline: none;
-}
+} */
 @media screen and (max-width: 991px) {
-    .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(n) {
+    /* .view-id-usuarios_agenda_de_servicios .view-content li > div:nth-child(n) {
         display: flex;
         flex-direction: column;
         border-bottom-style: solid;
@@ -1698,31 +1698,31 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         border-width: 1px;
         border-color: #A6A8AB;
         width: 100%
-    }
-    .view-id-usuarios_agenda_de_servicios .view-content li > div:last-child {
+    } */
+    /* .view-id-usuarios_agenda_de_servicios .view-content li > div:last-child {
         border-bottom-style: none;
-    }
-    .view-id-usuarios_agenda_de_servicios .view-content li > div select {
+    } */
+    /* .view-id-usuarios_agenda_de_servicios .view-content li > div select {
         width: 100%;
-    }
-    .view-id-usuarios_agenda_de_servicios .view-content li > div:last-child > span:first-child {
+    } */
+    /* .view-id-usuarios_agenda_de_servicios .view-content li > div:last-child > span:first-child {
         visibility: hidden;
-    }
-    .view-id-usuarios_agenda_de_servicios .view-content ul {
+    } */
+    /* .view-id-usuarios_agenda_de_servicios .view-content ul {
         min-height: 26pc;
         padding: 0px;
         margin: auto;
-    }
+    } */
 }
 
 /* -\* Button guardar - Button cancelar  *\- */
 /* .agendar_citas form {
     position: relative;
 } */
-.agendar_citas form > div {
+/* .agendar_citas form > div {
     text-align: center;
-}
-.agendar_citas button#edit-submit {
+} */
+/* .agendar_citas button#edit-submit {
     padding: 6px 20px;
     border: 1px solid #5cb85c;
     background: #5cb85c;
@@ -1773,24 +1773,24 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         border: none;
         margin: 0px;
     }
-}
+} */
 
 /* -\* Button Crear citas  *\- */
-.agendar_citas div#js-ajax-elements-wrapper button.btn-success{
+/* .agendar_citas div#js-ajax-elements-wrapper button.btn-success{
     padding: 6px 12px;
     border: 1px solid #5cb85c;
     background: #FFF;
     color: black;
     border-radius: 0px;
     margin-top: -100px;
-}
-.agendar_citas button .glyphicon-refresh {
+} */
+/* .agendar_citas button .glyphicon-refresh {
     display: none;
-}
-.agendar_citas button span{
+} */
+/* .agendar_citas button span {
     display: none;
-}
-@media screen and (max-width: 1024px) {
+} */
+/* @media screen and (max-width: 1024px) {
     .agendar_citas button.btn-success {
         top: -60px;
     }
@@ -1804,10 +1804,10 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     .agendar_citas button.btn-success {
         left: 40%;
     }
-}
+} */
 
 /* -\* citas - creadas   *\- */
-.agendar_citas #js-ajax-elements-wrapper .form-wrapper .form-type-textfield input {
+/* .agendar_citas #js-ajax-elements-wrapper .form-wrapper .form-type-textfield input {
     height: 34px;
     padding: 6px 12px;
     font-size: 14px;
@@ -1818,11 +1818,11 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     -moz-appearance: none; 
     -webkit-appearance: none;
     appearance: none;
-}
-.agendar_citas #js-ajax-elements-wrapper .form-wrapper .container-inline + .container-inline label  {
+} */
+/* .agendar_citas #js-ajax-elements-wrapper .form-wrapper .container-inline + .container-inline label  {
    display: none;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline {
+} */
+/* .agendar_citas #js-ajax-elements-wrapper .container-inline {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1834,18 +1834,18 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     position: relative;
     width: auto;
     margin: 0px 5% 19px;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline:last-child {
+} */
+/* .agendar_citas #js-ajax-elements-wrapper .container-inline:last-child {
     border-bottom-style: initial;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(1) {
+} */
+/* .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(1) {
     display: none;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(n) {
+} */
+/* .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(n) {
     width: 25%;
     margin-right: 10px;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline div#disable-quote {
+} */
+/* .agendar_citas #js-ajax-elements-wrapper .container-inline div#disable-quote {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1860,7 +1860,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         -ms-flex-align: center;
             align-items: center;
 }
-.agendar_citas #js-ajax-elements-wrapper .container-inline button {
+ *//* .agendar_citas #js-ajax-elements-wrapper .container-inline button {
     padding: 6px 12px;
     border: 1px solid #5cb85c;
     background: #5cb85c; 
@@ -1868,14 +1868,14 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     border-radius: 0px;
     width: 110px;
     height: 34px;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline button span  {
+} */
+/* .agendar_citas #js-ajax-elements-wrapper .container-inline button span  {
     display: none;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline label {
+} */
+/* .agendar_citas #js-ajax-elements-wrapper .container-inline label {
    color: #5cb85c;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline input {
+} */
+/* .agendar_citas #js-ajax-elements-wrapper .container-inline input {
     width: 100%;
     height: 34px;
     padding: 6px 12px;
@@ -1889,42 +1889,42 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     outline: none; 
         -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0 ,0);
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(1n+2) input {
+} */
+/* .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(1n+2) input {
     border-right: 1px solid #A6A8AB;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(5)  {
+} */
+/* .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(5)  {
     display: none;
-}
-.agendar_citas #js-ajax-elements-wrapper .container-inline span {
+} */
+/* .agendar_citas #js-ajax-elements-wrapper .container-inline span {
     font-weight: bold;
     height: 20px;
-}
+} */
 @media screen and (max-width: 1024px) {
-    .agendar_citas #js-ajax-elements-wrapper .container-inline {
+    /* .agendar_citas #js-ajax-elements-wrapper .container-inline {
         display: inherit;
         padding: 0px;
-    }
-    .agendar_citas #js-ajax-elements-wrapper .container-inline div input {
+    } */
+   /*  .agendar_citas #js-ajax-elements-wrapper .container-inline div input {
         text-align: center;
-    }
-    .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(n) {
+    } */
+    /* .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(n) {
         width: 48%;
         float: left;
-    }
-    .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(3) input{
+    } */
+    /* .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(3) input{
         border-right: 1px solid transparent;
     }
     .agendar_citas #js-ajax-elements-wrapper .form-wrapper .container-inline + .container-inline label  {
        display: inherit;
-    }
+    } */
 }
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .agendar_citas #js-ajax-elements-wrapper .container-inline div:nth-child(n) {
         width: 46%;
     }
-}
+} */
 
 /*------------------ Modal - Disponibilidad calendario  ------------------ */
 /* .modal-dialog.node-teaser {
@@ -2236,7 +2236,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 
 
 /* -\* Tabla de Citas  *\- */
-.view-id-mis_citas .view-content table , .view-id-citas .view-content table {
+/* .view-id-mis_citas .view-content table , .view-id-citas .view-content table {
     width: 99%;
 }
 .view-id-mis_citas .view-content table ,.view-id-citas .view-content table > thead:first-child > tr:first-child > th, .view-id-mis_citas .view-content table > thead:first-child > tr:first-child > th  {
@@ -2245,38 +2245,38 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     font-size : 14px;
     line-height : 15px;
     vertical-align: text-top; 
-}
-.view-id-citas .view-content table.table > thead:first-child > tr:first-child > th.views-field-field-collec-numero-de-documento, .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th.views-field-field-collec-nombre, .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th.views-field-field-collec-apellido {
-    width: 93px; /* 135px */
+} */
+/* .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th.views-field-field-collec-numero-de-documento, .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th.views-field-field-collec-nombre, .view-id-citas .view-content table.table > thead:first-child > tr:first-child > th.views-field-field-collec-apellido {
+    width: 93px; 
     white-space: initial;
-}
-.view-id-mis_citas .view-content thead th, .view-id-citas .view-content thead th {
+} */
+/* .view-id-mis_citas .view-content thead th, .view-id-citas .view-content thead th {
     color: #4cae4c;
     border-bottom: 2px solid transparent; 
-}
-.view-id-mis_citas .view-content tbody, .view-id-citas .view-content tbody {
+} */
+/* .view-id-mis_citas .view-content tbody, .view-id-citas .view-content tbody {
     background-color: #F5F1F1;
     padding: 10px;
-}
-.view-id-mis_citas .view-content tbody tr, .view-id-citas .view-content tbody tr {
+} */
+/* .view-id-mis_citas .view-content tbody tr, .view-id-citas .view-content tbody tr {
     background-color: #F5F1F1 !important;
-}
-.view-id-mis_citas .view-content tbody tr td, .view-id-citas .view-content tbody tr td {
+} */
+/* .view-id-mis_citas .view-content tbody tr td, .view-id-citas .view-content tbody tr td {
     border-width: 0px 1px 1px 1px;
     border-bottom-style: dashed;
     border-right-style: solid;
     border-color: #A6A8AB;
-}
-.view-id-mis_citas .view-content tbody tr td:last-child, .view-id-citas .view-content tbody tr td:last-child {
+} */
+./* view-id-mis_citas .view-content tbody tr td:last-child, .view-id-citas .view-content tbody tr td:last-child {
     border-width: 0px 0px 1px 0px;
-}
+} */
 
-.view-id-mis_citas .view-content tbody tr:last-child td, .view-id-citas .view-content tbody tr:last-child td {
+/* .view-id-mis_citas .view-content tbody tr:last-child td, .view-id-citas .view-content tbody tr:last-child td {
     border-width: 0px 1px 0px 0px;
-}
-.view-id-mis_citas .view-content tbody tr:last-child td:last-child, .view-id-citas .view-content tbody tr:last-child td:last-child {
+} */
+/* .view-id-mis_citas .view-content tbody tr:last-child td:last-child, .view-id-citas .view-content tbody tr:last-child td:last-child {
     border-width: 0px 0px 0px 0px;
-}
+} */
 .view-id-mis_citas .view-content tbody tr td:last-child a, .view-id-citas .view-content tbody tr td:last-child a,.page-mis-citas .view-id-mis_citas .view-content tbody tr td:last-child a {
     color: #231F20;
     text-decoration: none;
@@ -2302,9 +2302,9 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     color : #231F20;
     padding: 5px 8px;
 }
-.view-id-mis_citas .view-content tbody tr td:last-child a, .view-id-citas .view-content table.table > tbody > tr > td:last-child {
+/* .view-id-mis_citas .view-content tbody tr td:last-child a, .view-id-citas .view-content table.table > tbody > tr > td:last-child {
     padding: 10px 0px;
-}
+} */
 @media screen and (max-width: 1024px) {
 
    .view-id-mis_citas .view-content tbody tr td:last-child a, .view-id-citas .view-content tbody tr td:last-child a {

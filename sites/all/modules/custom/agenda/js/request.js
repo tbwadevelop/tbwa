@@ -13,14 +13,13 @@
 	    	// add class user student menu my data
 	    	$(".page-user-edit #user-profile-form .form-wrapper.form-group").addClass("col-lg-4 col-xs-6 col-sm-6");
 
+	    	// Danilo Inicio
 		    //Tamaño de cajas móvil consejero calendario y button crear disponibilidad 
 			$(window).ready(function() {
 				closeBurger();
 				modalDisponibilidad();
 			    checkSize();
 			    $(window).resize(checkSize);
-			    $(window).resize(button);
-
 			    
 			});
 			function checkSize() {
@@ -30,30 +29,29 @@
 				}
 			}
 		
-			$("body .main-container .row aside .well section:nth-child(1) nav").prepend("<div class='cerrar_modal text-right'><button type='button' id='cerrar'>x</button></div>");
-			function closeBurger() { 
-				// $("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, #block-agenda-modals").hide();
-				$("button#cbox2").click(function(e) {
-					//movimiento deslizante
-					$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .month-view, #block-agenda-modals").slideToggle("slow", function() {
-						$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, #block-agenda-modals").show();		
-						//next
-						// $("body .main-container .row aside .well section:nth-child(1) nav li.next a span ").click(function() {
-						// 	e.preventDefault();
-						// });
-					});
-				});
 
-				//button close
-				$("button#cerrar").click(function() {
-					$("body div div aside div div.view div.view-header nav.clearfix.date-nav-wrapper,body div div aside div div.view div.view-content div div.month-view, #block-agenda-modals").hide();
-				});
-			}
-			function button() { 
-				if ($(window).width() >= 991) {
-					$("body div div aside div div.view div.view-header nav.clearfix.date-nav-wrapper,body div div aside div div.view div.view-content div div.month-view, #block-agenda-modals").show();
+			function closeBurger() { 
+				if ($(window).width() <= 991) {
+					$("body .main-container .row aside .well section:nth-child(1) nav").prepend("<div class='cerrar_modal text-right'><button type='button' id='cerrar'>x</button></div>");
+					// $("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, #block-agenda-modals").hide();
+					$("button#cbox2").click(function(e) {
+						//movimiento deslizante
+						$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .month-view, #block-agenda-modals").slideToggle("slow", function() {
+							$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .view-content .month-view, #block-agenda-modals").show();		
+							//next
+							// $("body .main-container .row aside .well section:nth-child(1) nav li.next a span ").click(function() {
+							// 	e.preventDefault();
+							// });
+						});
+					});
+
+					//button close
+					$("button#cerrar").click(function() {
+						$("body .main-container .row aside .well section:nth-child(1) nav, body .main-container .row aside .well section:nth-child(1) .month-view, #block-agenda-modals").hide();
+					});
 				}
 			}
+
 			function modalDisponibilidad () {
 				if ($(window).width() <= 991) {
 					$("div#magical-modal-link a").click(function(event) {
@@ -67,46 +65,47 @@
 					
 	      		}
 			}
-				
-				
-	
-
-
-
-
-
-
 			//Crear Citas cambiar orden 
 			$('body.page-crear-citas section#block-agenda-citas-ajax form#agenda-records-form div div#js-ajax-elements-wrapper').prependTo('body.page-crear-citas section#block-agenda-citas-ajax form#agenda-records-form');
-
-
-					
-	        // Page service taxonomia (calendar estudiante) 
-	    	if ( $(".page-calendario-estudiante #block-views-servicios-block-1").length ) {
+			//Danilo Fin.
+			var hoy = $(".month-view .mini .today").text().trim();
+		    // Page service taxonomia (calendar estudiante) 
+	    	if ($(".page-calendario-estudiante #block-views-servicios-block-1").length) {
 	    		var tid = window.location.href.charAt(window.location.href.length-1);
 				$( ".page-calendario-estudiante .tabs--primary li" ).each(function( index ) {
 					var arg = window.location.pathname.split('/');
 
-					if (arg[2].length == 7) {
+				    if (arg[2].length == 7) {
 						var hoy = $(".month-view .mini .today").text();
 						arg[2] = arg[2].concat("-" + $.trim(hoy));
-					}
+					}					
 
 					switch ($(this).context.firstChild.firstChild.data) {
 						case "Mes":
-							$(this).context.lastChild.href = Drupal.settings.agenda.dominio.concat("/"+arg[1]+"/"+arg[2].substr(0,7)+"/mensual/".concat(tid));
+						if (arg[3].length <= 7) {
+								$(this).context.lastChild.href = Drupal.settings.agenda.dominio+"/calendario-estudiante/"+arg[3]+'-'+hoy+"/mensual/"+tid;
+							}else {
+								$(this).context.lastChild.href = Drupal.settings.agenda.dominio+"/calendario-estudiante/"+arg[3].substring(0,7)+"/mensual/"+tid;
+							}
 							break;
 						case "Semana":
-							$(this).context.lastChild.href = Drupal.settings.agenda.dominio.concat("/"+arg[1]+"/"+arg[2]+"/semanal/".concat(tid));
+						if (arg[3].length <= 7) {
+							$(this).context.lastChild.href = Drupal.settings.agenda.dominio+"/calendario-estudiante/"+arg[3]+'-'+hoy+"/semanal/"+tid;
+						}else{
+							$(this).context.lastChild.href = Drupal.settings.agenda.dominio+"/calendario-estudiante/"+arg[3]+"/semanal/"+tid;
+						}
 							break;
 						case "Día":
-							$(this).context.lastChild.href = Drupal.settings.agenda.dominio.concat("/"+arg[1]+"/"+arg[2]+"/diario/".concat(tid));
+							if (arg[3].length <= 7) {
+								$(this).context.lastChild.href = Drupal.settings.agenda.dominio+"/calendario-estudiante/"+arg[3]+'-'+hoy+"/diario/"+tid;
+							}else{
+								$(this).context.lastChild.href = Drupal.settings.agenda.dominio+"/calendario-estudiante/"+arg[3]+"/diario/"+tid;
+							}
 							break;
-
 					}
 				});
 			}
-	    	// Add PlaceHolder Fields Login.
+			// Add PlaceHolder Fields Login.
 			$('.page-user-login #edit-name').attr('placeholder', 'Usuario');
 	    	$('.page-user-login #edit-pass').attr('placeholder', 'Clave');
 	        $( "#edit-submit-usuarios-agenda-de-servicios" ).click(function() {
@@ -128,70 +127,70 @@
 				var mes = $(".dropdown .active").text();
 			      switch($('.view-header .dropdown .selected').text()) {
 				    case 'Enero':
-				    	if (mes == 'Enero' && url.searchParams.get("mini") != null) {
-				    		setTimeout(function(){ window.location.href = Drupal.settings.agenda.dominio+"/"+arg[1]+"/diario?mini=2018-01"; 
-				    		}, 2000);
+				    	if (mes == 'Enero') {
+				    		setTimeout(function(){ window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario/2018-01-01"; 
+				    		}, 1000);
 					    }
 					break;
 				    case 'Febrero':
 					    if (mes == 'Febrero') {
-					    	window.location.href = Drupal.settings.agenda.dominio+"/"+arg[1]+"/diario?mini=2018-02";
+					    	window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario/2018-02-01";
 					    }
 				    break;
 				    case 'Marzo':
 					    if (mes == 'Marzo') {
-					    	 window.location.href = Drupal.settings.agenda.dominio+"/"+arg[1]+"/diario?mini=2018-03";
+					    	 window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario/2018-03-01";
 					    }	 
 				    break;
 				    case 'Abril':
 					    if (mes == 'Abril') {
-					    	window.location.href = Drupal.settings.agenda.dominio+"/"+arg[1]+"/diario?mini=2018-04"; 	 
+					    	window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario/2018-04-01"; 	 
 					    }
 				    break;
 				    case 'Mayo':
 				    	if (mes == 'Mayo') {
-				    		window.location.href = Drupal.settings.agenda.dominio+"/"+arg[1]+"/diario?mini=2018-05";
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario/2018-05-01";
 				    	}
 	 
 				    break;				        
 				    case 'Junio':
 				    	if (mes == 'Junio') {
-				    		window.location.href = Drupal.settings.agenda.dominio+"/"+arg[1]+"/diario?mini=2018-06";
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario/2018-06-01";
 				    	}      
 				   break;				
 				    case 'Julio':
 				    	if (mes == 'Julio') {
-				    		window.location.href = Drupal.settings.agenda.dominio+"/"+arg[1]+"/diario?mini=2018-07";
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario/2018-07-01";
 				    	}
 	 
 				    break;				
 				    case 'Agosto':
 				    	if (mes == 'Agosto') {
-				    		window.location.href = Drupal.settings.agenda.dominio+"/"+arg[1]+"/diario?mini=2018-08";
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario/2018-08-01";
 				    	}
 	 
 				    break;	
 				    case 'Septiembre':
 				    	if (mes == 'Septiembre') {
-				    		window.location.href = Drupal.settings.agenda.dominio+"/"+arg[1]+"/diario?mini=2018-09";
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario/2018-09-01";
 				    	}
 	 
 				    break;	
 				    case 'Octubre':
 				    	if (mes == 'Octubre') {
-				    		window.location.href = Drupal.settings.agenda.dominio+"/"+arg[1]+"/diario?mini=2018-10";
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario/2018-10-01";
 				    	}
 	 
 				    break;	
 				    case 'Noviembre':
 				    	if (mes == 'Noviembre') {
-				    		window.location.href = Drupal.settings.agenda.dominio+"/"+arg[1]+"/diario?mini=2018-11";
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario/2018-11-01";
 				    	}
 	 
 				    break;	
 				    case 'Diciembre':
 				    	if (mes == 'Diciembre') {
-				    		window.location.href = Drupal.settings.agenda.dominio+"/"+arg[1]+"/diario?mini=2018-12";
+				    		window.location.href = Drupal.settings.agenda.dominio+"/calendario-consejero/diario/2018-12-01";
 				    	}
 				    break;					        
 				}
@@ -294,8 +293,7 @@
 		// Add Year to Month Calendar (Estudiante)
 		$( ".page-calendario-estudiante .date-nav-wrapper h3 a" ).attr( "src", function() {
 			var params = $(this).context.href.split("-");
-			var arg = params[3].split("/");
-			var mes = params[2].split("/");
+			var arg = params[3].split("/"); var mes = params[2].split("/");
 			if (mes[1] != 'mensual') {
 				if ($( ".page-calendario-estudiante .date-nav-wrapper h3 a").text().split(' ').length <2) {
 				 	$('.page-calendario-estudiante .date-nav-wrapper h3 a').text($( ".page-calendario-estudiante .date-nav-wrapper h3 a" ).text() + ' '+ arg[2]);
@@ -307,8 +305,6 @@
 				}			
 			}
 		});
-
-
 
 		// Add link to days for block calendar (Consejero)
      	$('.page-calendario-consejero .mini tr').each(function(){
@@ -336,6 +332,3 @@
 function goBack() {
   return window.history.back();
 }
-
-
-

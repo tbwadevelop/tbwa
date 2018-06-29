@@ -573,6 +573,14 @@ form#user-login div#edit-actions button#edit-submit {
   padding: 0px;
 }
 
+.page-calendario-consejero > .main-container > h1.page-header {
+  display: none;
+}
+
+.page-calendario-consejero > .main-container .region-content {
+  padding: 0px;
+}
+
 .page-calendario-consejero .row {
   padding: 0px;
   margin: 0px;
@@ -604,7 +612,7 @@ form#user-login div#edit-actions button#edit-submit {
   position: relative;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header {
   width: 100%;
   background-color: #47AC4B;
   height: 72px;
@@ -623,24 +631,25 @@ form#user-login div#edit-actions button#edit-submit {
           justify-content: flex-end;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header #cbox2 {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header #cbox2 {
+  width: 25px;
+  height: 25px;
   background: url(../img/Menu.png) no-repeat;
   background-size: 27px;
   border-color: transparent;
   border-radius: 0px;
   border-width: 0px;
+  margin-left: 15px;
   padding: 0px;
-  width: 25px;
-  height: 25px;
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header #cbox2 {
+  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header #cbox2 {
     display: none;
   }
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,85 +658,90 @@ form#user-login div#edit-actions button#edit-submit {
           align-items: center;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper .dropdown {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown {
   border: none !important;
   width: 182px;
   background-color: transparent;
   color: #ffffff;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper .dropdown:hover {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown:hover {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0) !important;
           box-shadow: 0 0 5px rgba(0, 0, 0, 0) !important;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper .dropdown.open div {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown.open div {
   width: 113px;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper .dropdown .selected {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown .selected {
   font-family: "Lato Black";
   font-size: 26px;
   color: #ffffff;
   text-transform: uppercase;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper .dropdown .selected:after {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown .selected:after {
   -webkit-box-shadow: inset 0px 0px 0px 0px #fff;
           box-shadow: inset 0px 0px 0px 0px #fff;
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper .dropdown .selected {
+  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown .selected {
     color: #808184;
   }
 }
 
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown .carat {
+  display: none;
+}
+
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper .dropdown .carat {
-    left: 30% !important;
-    top: 43px !important;
-    margin-top: -10px !important;
-    border: none !important;
-    border-bottom: 2px solid black !important;
-    border-right: 2px solid black !important;
-    border-top: none !important;
+  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown .carat {
+    display: block;
+    left: 30%;
+    top: 43px;
     width: 15px;
     height: 15px;
+    margin-top: -10px;
+    border: none;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-top: none;
     -webkit-transform: rotate(44deg);
         -ms-transform: rotate(44deg);
             transform: rotate(44deg);
   }
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper .dropdown ul {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown ul {
   background: #47AC4B;
   -webkit-padding-start: 0px;
   -moz-padding-start: 0px;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper .dropdown ul li {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown ul li {
   color: #ffffff !important;
   text-align: center;
   padding: 4px 12px;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper .dropdown ul li.active {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown ul li.active {
   font-weight: 700;
   color: rgba(224, 224, 224, 0.95) !important;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper .dropdown ul li.focus {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown ul li.focus {
   background: rgba(222, 222, 222, 0.44) !important;
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .wrapper .dropdown {
+  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .wrapper .dropdown {
     background-color: #ffffff;
   }
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .date-nav-wrapper {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .date-nav-wrapper {
   width: 76.6%;
   position: absolute;
   top: 0px;
@@ -739,41 +753,55 @@ form#user-login div#edit-actions button#edit-submit {
   background-color: white;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .date-nav-wrapper li a {
-  color: #000;
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .date-nav-wrapper .cerrar_modal {
+  margin: 0px;
+  padding: 0px;
+}
+
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .date-nav-wrapper .cerrar_modal button#cerrar {
+  border-radius: 0px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px 7px 25px;
+  vertical-align: text-top;
+  width: 22px;
+  height: 22px;
+}
+
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .date-nav-wrapper .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  float: initial !important;
+  margin: 0px 10%;
+}
+
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .date-nav-wrapper .pagination li a {
   background-color: transparent;
   border: none;
   font-size: 12px;
-}
-
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .date-nav-wrapper li.prev {
-  position: absolute;
-  top: 19px;
-  left: 12%;
-}
-
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .date-nav-wrapper li.next {
-  position: absolute;
-  top: 19px;
-  left: 78%;
+  color: #000;
+  padding: 6px 8px;
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .date-nav-wrapper li.prev {
-    top: 0px;
-    left: 0px;
-  }
-  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .date-nav-wrapper li.next {
-    top: 0px;
-    right: 0px;
+  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .date-nav-wrapper .pagination {
+    margin: 0px;
   }
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .date-nav-wrapper h3 {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .date-nav-wrapper h3 {
   text-align: center;
+  margin-top: -32px;
+  margin-bottom: 0px;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .date-nav-wrapper h3 a {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .date-nav-wrapper h3 a {
   color: #000;
   font-family: Lato Bold;
   font-weight: bold;
@@ -786,14 +814,7 @@ form#user-login div#edit-actions button#edit-submit {
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .date-nav-wrapper h3 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header .date-nav-wrapper {
+  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header .date-nav-wrapper {
     margin-top: 63px;
     position: relative;
     width: 100%;
@@ -803,13 +824,13 @@ form#user-login div#edit-actions button#edit-submit {
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-header {
+  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-header {
     background-color: transparent;
     display: initial;
   }
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-content .calendar-calendar .month-view {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-content .calendar-calendar .month-view {
   width: 76.6%;
   position: absolute;
   top: 58px;
@@ -825,52 +846,52 @@ form#user-login div#edit-actions button#edit-submit {
   z-index: 2;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-content .calendar-calendar .month-view table {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-content .calendar-calendar .month-view table {
   width: 76%;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-content .calendar-calendar .month-view table th {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-content .calendar-calendar .month-view table th {
   background-color: transparent;
   color: #000;
   font-weight: normal;
   border: 1px solid transparent;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-content .calendar-calendar .month-view table td.mini a {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-content .calendar-calendar .month-view table td.mini a {
   color: #000;
   text-decoration: none;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-content .calendar-calendar .month-view table td.has-no-events {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-content .calendar-calendar .month-view table td.has-no-events {
   text-align: center;
   color: black;
   padding: 0px 0px 0px 0px;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-content .calendar-calendar .month-view table td.has-no-events .mini-day-on {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-content .calendar-calendar .month-view table td.has-no-events .mini-day-on {
   padding: 0px;
   text-align: center;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-content .calendar-calendar .month-view table td.today {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-content .calendar-calendar .month-view table td.today {
   background-color: #4C48A8;
   color: white;
   text-align: center;
 }
 
-.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-content .calendar-calendar .month-view table td.today a {
+.page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-content .calendar-calendar .month-view table td.today a {
   color: white;
   text-decoration: none;
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-content .calendar-calendar .month-view table {
+  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-content .calendar-calendar .month-view table {
     width: 100%;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .calendar-miniature .view-content .calendar-calendar .month-view {
+  .page-calendario-consejero .region-sidebar-first .Calendario_Contenedor .view-content .calendar-calendar .month-view {
     width: 100%;
     position: initial;
     display: block;
@@ -879,11 +900,11 @@ form#user-login div#edit-actions button#edit-submit {
 }
 
 .page-calendario-consejero .region-sidebar-first .crear_disponibilidad {
-  width: 76.6%;
+  width: 76.6% !important;
   background: white;
   border-right: 3px solid #BBBDBF;
   position: absolute;
-  top: 194px;
+  top: 182px;
   z-index: 2;
 }
 
@@ -1010,38 +1031,27 @@ form#user-login div#edit-actions button#edit-submit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   list-style: none;
   background-color: transparent;
   border-bottom: 0px solid #ddd;
-  width: 25px;
-  position: relative;
   position: absolute;
-  right: 41px;
+  right: 7px;
   z-index: 1;
   margin-top: 34px;
 }
 
-.page-calendario-consejero ul.tabs--primary:before {
-  content: "";
-  width: 23px;
-  height: 75px;
-  border-radius: 28px;
-  border: 2px solid #808184;
-  position: absolute;
-  top: -6px;
-  right: 20px;
-  z-index: -1;
-}
-
-.page-calendario-consejero ul.tabs--primary li {
-  left: 40px;
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero ul.tabs--primary:before {
+    content: "";
+    width: 23px;
+    height: 75px;
+    border-radius: 28px;
+    border: 2px solid #808184;
+    position: absolute;
+    top: -6px;
+    right: 20px;
+    z-index: -1;
+  }
 }
 
 .page-calendario-consejero ul.tabs--primary li:nth-child(1) {
@@ -1055,11 +1065,17 @@ form#user-login div#edit-actions button#edit-submit {
   display: block !important;
   border-radius: 0px !important;
   border: 0px;
-  text-align: left;
+  text-align: center;
   width: 56px;
   font-family: "Lato Regular";
   font-size: 15px;
   color: #000000;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero ul.tabs--primary li a {
+    text-align: left;
+  }
 }
 
 .page-calendario-consejero ul.tabs--primary li.active a, .page-calendario-consejero ul.tabs--primary li.active a:focus, .page-calendario-consejero ul.tabs--primary li.active a:hover {
@@ -1070,26 +1086,58 @@ form#user-login div#edit-actions button#edit-submit {
 }
 
 .page-calendario-consejero ul.tabs--primary li.active a.active {
-  color: #41B65B !important;
+  color: #41B65B;
   background: transparent;
+  border: none;
+  border-bottom: 3px solid #41B65B;
+  margin: 0px 5px;
 }
 
-.page-calendario-consejero ul.tabs--primary li.active a.active:before {
-  content: "";
-  margin-right: 16px;
-  color: #41B65B;
-  background-color: #E8E8E8;
-  background-image: url("../img/punto.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 5px;
-  right: 48px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 12px;
-  height: 12px;
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero ul.tabs--primary li.active a.active:before {
+    content: "";
+    margin-right: 16px;
+    color: #41B65B;
+    background-color: #E8E8E8;
+    background-image: url("../img/punto.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    right: 48px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero ul.tabs--primary li.active a.active {
+    border-bottom: 0px solid #41B65B;
+    margin: 0px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero ul.tabs--primary li {
+    left: 40px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero ul.tabs--primary {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 25px;
+    right: 41px;
+  }
 }
 
 /* ------| region-content |----- */
@@ -1120,13 +1168,18 @@ form#user-login div#edit-actions button#edit-submit {
   }
 }
 
-.page-calendario-consejero .region-content .calendar-contain .view-header .pagination {
+.page-calendario-consejero .region-content .calendar-contain .view-header .clearfix {
+  margin-top: -20px;
+  margin-bottom: 13px;
+}
+
+.page-calendario-consejero .region-content .calendar-contain .view-header .clearfix .pagination {
   position: absolute;
   top: 0px;
   left: 0px;
 }
 
-.page-calendario-consejero .region-content .calendar-contain .view-header .pagination li a {
+.page-calendario-consejero .region-content .calendar-contain .view-header .clearfix .pagination li a {
   color: #000;
   background-color: transparent;
   border: none;
@@ -1139,7 +1192,7 @@ form#user-login div#edit-actions button#edit-submit {
   padding: 0;
 }
 
-.page-calendario-consejero .region-content .calendar-contain .view-header .pagination li.prev a {
+.page-calendario-consejero .region-content .calendar-contain .view-header .clearfix .pagination li.prev a {
   -webkit-transform: rotate(46deg);
       -ms-transform: rotate(46deg);
           transform: rotate(46deg);
@@ -1148,7 +1201,7 @@ form#user-login div#edit-actions button#edit-submit {
   margin-right: 27px;
 }
 
-.page-calendario-consejero .region-content .calendar-contain .view-header .pagination li.next a {
+.page-calendario-consejero .region-content .calendar-contain .view-header .clearfix .pagination li.next a {
   -webkit-transform: rotate(224deg);
       -ms-transform: rotate(224deg);
           transform: rotate(224deg);
@@ -1156,32 +1209,50 @@ form#user-login div#edit-actions button#edit-submit {
   border-bottom-right-radius: 0px !important;
 }
 
-.page-calendario-consejero .region-content .calendar-contain .view-header .pagination li:hover {
+.page-calendario-consejero .region-content .calendar-contain .view-header .clearfix .pagination li:hover {
   color: #000 !important;
   background-color: transparent !important;
 }
 
-.page-calendario-consejero .region-content .calendar-contain .view-header h3 {
-  margin-left: 66px;
-  padding-right: 20px;
+.page-calendario-consejero .region-content .calendar-contain .view-header .clearfix h3 {
   width: auto;
-  border-right: 2px solid #808184;
   font-family: "Lato Regular";
-  font-size: 24px;
+  font-size: 15px;
   color: #808081;
   font-weight: normal;
+  margin-left: 66px;
+  padding-right: 20px;
+  border-right: 2px solid #808184;
   float: left;
 }
 
-.page-calendario-consejero .region-content .calendar-contain .view-header .cotainer-name-user {
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .region-content .calendar-contain .view-header .clearfix h3 {
+    font-size: 24px;
+  }
+}
+
+.page-calendario-consejero .region-content .calendar-contain .view-header .clearfix .cotainer-name-user {
   padding-left: 20px;
   width: auto;
   font-family: "Lato Regular";
-  font-size: 24px;
-  line-height: 21px;
+  font-size: 15px;
   font-weight: normal;
-  color: #47AC4B;
+  color: #41B65B;
   float: left;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .region-content .calendar-contain .view-header .clearfix .cotainer-name-user {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .region-content .calendar-contain .view-header .clearfix {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
 }
 
 .page-calendario-consejero .region-content .calendar-contain .view-content .day-view .header-body-divider, .page-calendario-consejero .region-content .calendar-contain .view-content .day-view .single-day-footer-processed {
@@ -2040,8 +2111,13 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
 .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .fecha > span, .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .hora > span {
   color: #4cae4c;
   font-size: 15px;
-  font-family: lato;
+  font-family: "Lato Regular";
   padding-right: 5px;
+}
+
+.page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .fecha div, .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .hora div {
+  font-family: "Lato Regular";
+  color: #000000;
 }
 
 @media only screen and (min-width: 992px) {
@@ -2066,7 +2142,7 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
 .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .lugar > span, .page-crear-citas .informacion-disponibilidad .view-content .informacion-citas .servicio > span {
   color: #4cae4c;
   font-size: 15px;
-  font-family: lato;
+  font-family: "Lato Regular";
   padding-right: 5px;
 }
 
@@ -2304,6 +2380,12 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
   }
 }
 
+.page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita > div div {
+  font-family: "Lato Regular";
+  font-size: 14px;
+  color: #000000;
+}
+
 @media only screen and (min-width: 992px) {
   .page-crear-citas .usuarios-agenda-de-servicios .view-content ul .lista-cita > div:nth-child(-n+4) {
     border-width: 0px 0px 1px 0px;
@@ -2359,6 +2441,10 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
 }
 
 /* ------| Button Agregar, Cancelar, Crear Cita |----- */
+.page-crear-citas .agendar-citas h2.block-title {
+  display: none;
+}
+
 .page-crear-citas .agendar-citas #agenda-records-form #js-ajax-elements-wrapper {
   text-align: center;
 }
@@ -2599,16 +2685,110 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
 //	Citas
 //------------------------------------------------------------------------------  
 */
-.page-calendario-consejero-citas-programadas .main-container {
-  padding: 0px;
+/* ------| Filtar citas |----- */
+.page-calendario-consejero .filtar-citas .coment-mobil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #41B65B;
+  height: 73px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-.page-calendario-consejero-citas-programadas .main-container h1.page-header {
+.page-calendario-consejero .filtar-citas .coment-mobil .form-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.page-calendario-consejero .filtar-citas .coment-mobil .form-item input {
+  background: #41B65B;
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 20px;
+  height: 18px;
+  border: none;
+  background-image: url(../img/flecha-blanca.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+  margin-left: 16px;
+  margin-right: 7px;
+  padding: 0px;
+  border-radius: 0px;
+}
+
+.page-calendario-consejero .filtar-citas .coment-mobil .form-item span {
+  font-family: "Lato Regular";
+  color: #ffffff;
+  font-size: 19px;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .filtar-citas .coment-mobil {
+    display: none;
+  }
+}
+
+/* ------| Filtar citas |----- */
+.page-calendario-consejero .filtar-citas {
+  position: relative;
+}
+
+.page-calendario-consejero .filtar-citas label {
   display: none;
 }
 
+.page-calendario-consejero .filtar-citas select#edit-options-qoute {
+  width: 153px;
+  background-color: #41B65B;
+  background-image: url(../img/punto-horizontales.svg);
+  background-size: 4%;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  font-size: 17px;
+  color: white;
+  border: none;
+  border-radius: 0px;
+  margin-top: -53px;
+  margin-bottom: 0px;
+  padding: 0px 12px;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  float: right;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .filtar-citas select#edit-options-qoute {
+    width: 20%;
+    position: initial;
+    color: #231F20;
+    background-color: #ffffff;
+    background-image: url(../img/flecha.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: 93% 10px;
+    border: 1px solid #ccc;
+    margin-top: 0px;
+    margin-bottom: 27px;
+  }
+}
+
 /* ------| Buscador |----- */
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2619,22 +2799,22 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
   margin-bottom: 25px;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget {
   padding: 0px;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget:nth-child(1) {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget:nth-child(1) {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
   display: none;
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
+  .page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
     display: block;
     position: relative;
     word-break: break-all;
@@ -2648,7 +2828,7 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
     font-weight: normal;
     text-align: left;
   }
-  .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label::before {
+  .page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label::before {
     content: "";
     position: absolute;
     left: -22px;
@@ -2661,11 +2841,11 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
   }
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget {
   margin: 0px 15px;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input {
   height: 32px;
   font-family: "Lato Light";
   font-size: 20px;
@@ -2680,7 +2860,7 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
   transition: none;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input :focus {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input :focus {
   border-color: transparent;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
@@ -2688,21 +2868,21 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input {
+  .page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input {
     width: 537px;
     height: 45px;
   }
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget span {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget span {
   display: none;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .dropdown ul {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .dropdown ul {
   border-radius: 0px;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button, .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button, .page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
   width: 30px;
   height: 30px;
   text-indent: -99999px;
@@ -2711,22 +2891,22 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
   border: 1px solid transparent;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button:hover, .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button:hover {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button:hover, .page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button:hover {
   opacity: 0.5;
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button, .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+  .page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button, .page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
     width: 45px;
     height: 45px;
   }
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button {
   margin-right: 10px;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
   background: url("../img/buscar.svg") no-repeat;
   background-size: 19px;
   background-position: 5px;
@@ -2735,17 +2915,17 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
+  .page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
     background-size: 34px;
     background-position: 5px;
   }
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button {
   margin-right: 10px;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+.page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
   background: url("../img/reiniciar.png") no-repeat;
   background-size: 19px;
   background-position: 5px;
@@ -2754,22 +2934,22 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
 }
 
 @media only screen and (min-width: 992px) {
-  .page-calendario-consejero-citas-programadas .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+  .page-calendario-consejero .citas-programadas .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
     background-size: 34px;
     background-position: 5px;
   }
 }
 
 /* ------| Buscador |----- */
-.page-calendario-consejero-citas-programadas .citas-programadas table {
+.page-calendario-consejero .citas-programadas table {
   width: 99%;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas table tr.odd, .page-calendario-consejero-citas-programadas .citas-programadas table tr.even {
+.page-calendario-consejero .citas-programadas table tr.odd, .page-calendario-consejero .citas-programadas table tr.even {
   background-color: #F5F1F1 !important;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas table tr th {
+.page-calendario-consejero .citas-programadas table tr th {
   font-family: "Lato Regular";
   font-size: 14px;
   color: #4cae4c;
@@ -2779,29 +2959,319 @@ div#ui-datepicker-div .ui-datepicker-calendar td a.ui-state-highlight {
   vertical-align: text-top;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas table tr th.numero-documento, .page-calendario-consejero-citas-programadas .citas-programadas table tr th.nombre-estudiante, .page-calendario-consejero-citas-programadas .citas-programadas table tr th.apellido-estudiante {
+.page-calendario-consejero .citas-programadas table tr th.numero-documento, .page-calendario-consejero .citas-programadas table tr th.nombre-estudiante, .page-calendario-consejero .citas-programadas table tr th.apellido-estudiante {
   width: 93px;
   /* 135px */
   white-space: initial;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas table tr td {
+.page-calendario-consejero .citas-programadas table tr td {
   border-width: 0px 1px 1px 1px;
   border-bottom-style: dashed;
   border-right-style: solid;
   border-color: #A6A8AB;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas table tr td:last-child {
+.page-calendario-consejero .citas-programadas table tr td:last-child {
   border-width: 0px 0px 1px 0px;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas table tr:last-child td {
+.page-calendario-consejero .citas-programadas table tr:last-child td {
   border-width: 0px 1px 0px 0px;
 }
 
-.page-calendario-consejero-citas-programadas .citas-programadas table tr:last-child td:last-child {
+.page-calendario-consejero .citas-programadas table tr:last-child td:last-child {
   border-width: 0px 0px 0px 0px;
+}
+
+/* 
+//------------------------------------------------------------------------------
+//	historial estudiantes 
+//------------------------------------------------------------------------------  
+*/
+/* ------| Buscador |----- */
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px;
+  margin-bottom: 25px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget {
+  padding: 0px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget:nth-child(1) {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label {
+    display: block;
+    position: relative;
+    word-break: break-all;
+    width: 69px;
+    text-align: center;
+    margin: 8px 16px 0px 0px;
+    font-family: "Lato Regular";
+    font-size: 20px;
+    line-height: 28.75px;
+    color: #41B65B;
+    font-weight: normal;
+    text-align: left;
+  }
+  .page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget label::before {
+    content: "";
+    position: absolute;
+    left: -22px;
+    top: 4px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #000000;
+  }
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget {
+  margin: 0px 15px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input {
+  height: 32px;
+  font-family: "Lato Light";
+  font-size: 20px;
+  color: #000000;
+  border-radius: 0px;
+  border: 1px solid #F5F1F1;
+  background: #F5F1F1;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input :focus {
+  border-color: transparent;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
+          box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget input {
+    width: 537px;
+    height: 45px;
+  }
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .views-widget span {
+  display: none;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget .dropdown ul {
+  border-radius: 0px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button, .page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+  width: 30px;
+  height: 30px;
+  text-indent: -99999px;
+  margin-top: 0px !important;
+  border-radius: 0px;
+  border: 1px solid transparent;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button:hover, .page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button:hover {
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button, .page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button {
+  margin-right: 10px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
+  background: url("../img/buscar.svg") no-repeat;
+  background-size: 19px;
+  background-position: 5px;
+  background-color: #4cae4c;
+  outline: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-submit-button button {
+    background-size: 34px;
+    background-position: 5px;
+  }
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button {
+  margin-right: 10px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+  background: url("../img/reiniciar.png") no-repeat;
+  background-size: 19px;
+  background-position: 5px;
+  background-color: #929497;
+  outline: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .historial-estudiante-con .view-filters .views-exposed-form .views-exposed-widgets .views-exposed-widget.views-reset-button button {
+    background-size: 34px;
+    background-position: 5px;
+  }
+}
+
+/* ------| Buscador |----- */
+.page-calendario-consejero .historial-estudiante-con .view-content .views-field.views-field-uid {
+  display: none;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .ui-accordion-header.ui-state-default {
+  background: #E6E7E8;
+  border-radius: 0px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .ui-accordion-header.ui-state-default a span {
+  font-family: Lato Bold;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: #231F20;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .ui-accordion-header.ui-state-default .ui-accordion-header-icon {
+  position: absolute;
+  right: 35px;
+  left: auto;
+  top: 30%;
+  margin-top: 0px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .ui-accordion-header.ui-state-default .ui-accordion-header-icon.ui-icon {
+  background: url("../img/flecha.png") no-repeat;
+  background-size: contain;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .ui-accordion-header.ui-state-active {
+  background: #808184;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .ui-accordion-header.ui-state-active a span {
+  color: #FFFFFF;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .ui-accordion-header.ui-state-active .ui-icon {
+  -webkit-transform: rotate(0deg) !important;
+      -ms-transform: rotate(0deg) !important;
+          transform: rotate(0deg) !important;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-estudiante .ui-accordion-content {
+  padding: 1em 0px 0px 0px;
+  height: auto !important;
+  border-radius: 0px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-estudiante .ui-accordion-content .item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-estudiante .ui-accordion-content .item > span {
+  display: block;
+  font-family: "Lato Bold";
+  font-size: 18px;
+  line-height: 19.75px;
+  color: #41B65B;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-estudiante .ui-accordion-content .item > span {
+    font-size: 20px;
+  }
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-estudiante .ui-accordion-content .item .items {
+  background-color: rgba(158, 158, 158, 0.15);
+  padding: 10px 5px;
+  font-family: "Lato Light";
+  font-size: 14px;
+  color: #000000;
+}
+
+@media only screen and (min-width: 640px) {
+  .page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-estudiante .ui-accordion-content .item .items {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-estudiante .ui-accordion-content .item .items {
+    background-color: transparent;
+    font-size: 20px;
+  }
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-estudiante .ui-accordion-content .uid {
+  display: none;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-estudiante .ui-accordion-content .dt-acudiente {
+  background: #E8E8E8;
+  padding: 0px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-acudiente {
+  margin-top: 15px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-acudiente .title-acudiente {
+  margin: 15px 0px;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-acudiente .title-acudiente span {
+  font-family: "Lato Bold";
+  font-size: 20px;
+  line-height: 19.75px;
+  color: #000000;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-acudiente .item > span {
+  color: #000000 !important;
+}
+
+.page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-acudiente .items {
+  background-color: #ffffff !important;
+}
+
+@media only screen and (min-width: 992px) {
+  .page-calendario-consejero .historial-estudiante-con .view-content .informacion-estudiante .datos-acudiente .items {
+    background-color: #E8E8E8 !important;
+  }
 }
 
 /*# sourceMappingURL=agenda.css.map */

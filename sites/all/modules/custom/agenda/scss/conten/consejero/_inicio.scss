@@ -6,6 +6,12 @@
 .page-calendario-consejero {
 	> .main-container {
 		padding: 0px;
+		> h1.page-header {
+			display: none;
+		}
+		.region-content {
+			padding: 0px;
+		}
 	}
 	.row {
     padding: 0px;
@@ -33,238 +39,244 @@
 		margin: 0px;
 		.Calendario_Contenedor {
 			position: relative;
-			.calendar-miniature {
-				.view-header {
-					width: 100%;
-	        background-color: #47AC4B;
-	        height: 72px;
-	        display: flex;
-	        align-items: center;
-	        flex-direction: row-reverse;
-	        justify-content: flex-end;
-	        #cbox2 {
-				    background: url(../img/Menu.png) no-repeat;
-				    background-size: 27px;
-				    border-color: transparent;
-				    border-radius: 0px;
-				    border-width: 0px;
-				    padding: 0px;
-				    width: 25px;
-				    height: 25px;
+			.view-header {
+				width: 100%;
+        background-color: #47AC4B;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        #cbox2 {
+        	width: 25px;
+			    height: 25px;
+			    background: url(../img/Menu.png) no-repeat;
+			    background-size: 27px;
+			    border-color: transparent;
+			    border-radius: 0px;
+			    border-width: 0px;
+			    margin-left: 15px;
+			    padding: 0px;
+			    
+				}
+				@include respond-to('tablet-lg') {
+					#cbox2 {
+						display: none;
 					}
-					@include respond-to('tablet-lg') {
-						#cbox2 {
+				}
+				//select Meses 
+				.wrapper {
+					display: flex;
+  				align-items: center;
+					.dropdown {
+						border: none !important;
+    				width: 182px;
+    				background-color: transparent;
+    				color: $white;
+    				&:hover {
+    					box-shadow: 0 0 5px rgba(0,0,0,0) !important;
+    				}
+    				&.open {
+    					div {
+							  width: 113px;
+							}
+    				}
+    				.selected {
+    					font-family: "Lato Black";
+						  font-size: 26px;
+						  color: $white;
+						  text-transform: uppercase;
+    					&:after {
+								box-shadow: inset 0px 0px 0px 0px #fff;
+    					}
+    				}
+    				@include respond-to('tablet-lg') { 
+    					.selected {
+								color: $gray-tree;
+							}
+						}
+						.carat {
 							display: none;
 						}
-					}
-					//select Meses 
-					.wrapper {
-						display: flex;
-    				align-items: center;
-						.dropdown {
-							border: none !important;
-	    				width: 182px;
-	    				background-color: transparent;
-	    				color: $white;
-	    				&:hover {
-	    					box-shadow: 0 0 5px rgba(0,0,0,0) !important;
-	    				}
-	    				&.open {
-	    					div {
-								  width: 113px;
-								}
-	    				}
-	    				.selected {
-	    					font-family: "Lato Black";
-							  font-size: 26px;
-							  color: $white;
-							  text-transform: uppercase;
-	    					&:after {
-									box-shadow: inset 0px 0px 0px 0px #fff;
-	    					}
-	    				}
-	    				@include respond-to('tablet-lg') { 
-	    					.selected {
-									color: $gray-tree;
-								}
-							}
-							@include respond-to('tablet-lg') { 
-		    				.carat {
-							    left: 30% !important;
-							    top: 43px !important;
-							    margin-top: -10px !important;
-							    border: none !important;
-							    border-bottom: 2px solid black !important;
-							    border-right: 2px solid black !important;
-							    border-top: none !important;
-							    width: 15px;
-							    height: 15px;
-							    transform: rotate(44deg);
-								}
-							}
-							ul {
-								background: $green-secundary;
-						    -webkit-padding-start: 0px;
-						    -moz-padding-start: 0px;
-						    li {
-						    	color: $white !important;
-							    text-align: center;
-							    padding: 4px 12px;
-						    	&.active {
-								    font-weight: 700;
-								    color: rgba(224, 224, 224, 0.95) !important;
-									}
-									&.focus {
-									  background: rgba(222, 222, 222, 0.44) !important;
-									}
-						    }
-							}
-						}
 						@include respond-to('tablet-lg') { 
-							.dropdown {
-								background-color: $white ;
+	    				.carat {
+	    					display: block;
+						    left: 30%;
+						    top: 43px;
+						    width: 15px;
+						    height: 15px;
+						    margin-top: -10px;
+						    border: none;
+						    border-bottom: 2px solid black;
+						    border-right: 2px solid black;
+						    border-top: none;
+						    
+						    transform: rotate(44deg);
 							}
 						}
+						ul {
+							background: $green-secundary;
+					    -webkit-padding-start: 0px;
+					    -moz-padding-start: 0px;
+					    li {
+					    	color: $white !important;
+						    text-align: center;
+						    padding: 4px 12px;
+					    	&.active {
+							    font-weight: 700;
+							    color: rgba(224, 224, 224, 0.95) !important;
+								}
+								&.focus {
+								  background: rgba(222, 222, 222, 0.44) !important;
+								}
+					    }
+						}
 					}
-					//Paguinador y Mes 
-					.date-nav-wrapper {
-				    width: 76.6%;
-				    position: absolute;
-				    top: 0px;
-				    left: 0;
-				    display: inline-block;
-				    margin: 0 auto;
-				    height: 58px;
-				    border-right: 3px solid #BBBDBF;
-				    background-color: white;
-    				li {
-    					a {
-								color: #000;
+					@include respond-to('tablet-lg') { 
+						.dropdown {
+							background-color: $white ;
+						}
+					}
+				}
+				//Paguinador y Mes 
+				.date-nav-wrapper {
+			    width: 76.6%;
+			    position: absolute;
+			    top: 0px;
+			    left: 0;
+			    display: inline-block;
+			    margin: 0 auto;
+			    height: 58px;
+			    border-right: 3px solid #BBBDBF;
+			    background-color: white;
+			    .cerrar_modal {
+		        margin: 0px;
+		        padding: 0px;
+		        button#cerrar {
+			        border-radius: 0px;
+			        background-color: transparent;
+			        border: none;
+			        font-size: 20px;
+			        margin: 0px;
+			        padding: 0px 7px 25px;
+			        vertical-align: text-top;
+			        width: 22px;
+			        height: 22px;
+				    }
+		    	}
+			    .pagination {
+			    	display: flex;
+				    justify-content: space-between;
+				    float: initial !important;
+				    margin: 0px 10%;
+	  				li {
+	  					a {
 						    background-color: transparent;
 						    border: none;
 						    font-size: 12px;
-    					}
-    					&.prev {
-								position: absolute;
-								top: 19px;
- 						  	left: 12%;
-    					}
-    					&.next {
-								position: absolute;
-								top: 19px;
-    						left: 78%;
-    					}
-    				}
-    				@include respond-to('tablet-lg') { 
-							li {
-								&.prev {
-							    top: 0px;
-							    left: 0px;
-								}
-								&.next {
-									top: 0px;
-									right: 0px;
-	    					}
-							}
-    				}
-    				h3 {
-    					text-align: center;
-    					a {
-								color: #000;
-								font-family : Lato Bold;
-								font-weight : bold;
-								font-size : 15px;
-								letter-spacing : 1.5px;
-								text-decoration: none;
-								pointer-events: none;
-								cursor: default;
-								text-transform: uppercase; 
-    					}
-    				}
-    				@include respond-to('tablet-lg') { 
-							h3 {
-								margin-top: 0px;
-					    	margin-bottom: 0px;
-							}
-    				}
-					}
-					@include respond-to('tablet-lg') { 
-						.date-nav-wrapper {
-							margin-top: 63px;
-							position: relative;
-					    width: 100%;
-					    border: none;
-					    height: auto;
-						}
-					}
+						    color: #000;
+						    padding: 6px 8px;
+	  					}
+	  				}
+	  			}
+	  			@include respond-to('tablet-lg') { 
+	  				.pagination {
+							margin: 0px;
+	  				}
+	  			}
+  				h3 {
+  					text-align: center;
+				    margin-top: -32px;
+				    margin-bottom: 0px;
+  					a {
+							color: #000;
+							font-family : Lato Bold;
+							font-weight : bold;
+							font-size : 15px;
+							letter-spacing : 1.5px;
+							text-decoration: none;
+							pointer-events: none;
+							cursor: default;
+							text-transform: uppercase; 
+  					}
+  				}
 				}
 				@include respond-to('tablet-lg') { 
-					.view-header {
-						background-color: transparent;
-						display: initial;
+					.date-nav-wrapper {
+						margin-top: 63px;
+						position: relative;
+				    width: 100%;
+				    border: none;
+				    height: auto;
 					}
 				}
-				//calendario
-				.view-content {	
-					.calendar-calendar {
-						.month-view {
-							width: 76.6%;
-							position: absolute;
-			        top: 58px;
-			        left: 0;
-			        display: flex;
-			        justify-content: center;
-			        background: white;
-			        border-right: 3px solid #BBBDBF;
-			        z-index: 2;
-							table {
-								width: 76%;
-								th {
-									background-color: transparent;
-							    color: #000;
-							    font-weight: normal;
-							    border: 1px solid transparent;
-								}
-								td {
-									&.mini {
-										a {
-								    	color: #000;
-  										text-decoration: none;
-								    }
-									}
-									&.has-no-events {
-								    text-align: center;
-								    color: black;
-								    padding: 0px 0px 0px 0px;
-								    .mini-day-on {
-									    padding: 0px;
-									    text-align: center;
-										}
-									}
-									&.today {
-								    background-color: #4C48A8;
-								    color: white;
-								    text-align: center;
-								    a {
-											color: white;
-    									text-decoration: none;
-								    }
-									}
-								}
+			}
+			@include respond-to('tablet-lg') { 
+				.view-header {
+					background-color: transparent;
+					display: initial;
+				}
+			}
+			//calendario
+			.view-content {	
+				.calendar-calendar {
+					.month-view {
+						width: 76.6%;
+						position: absolute;
+		        top: 58px;
+		        left: 0;
+		        display: flex;
+		        justify-content: center;
+		        background: white;
+		        border-right: 3px solid #BBBDBF;
+		        z-index: 2;
+						table {
+							width: 76%;
+							th {
+								background-color: transparent;
+						    color: #000;
+						    font-weight: normal;
+						    border: 1px solid transparent;
 							}
-							@include respond-to('tablet-lg') { 
-								table {
-									width: 100%;
+							td {
+								&.mini {
+									a {
+							    	color: #000;
+										text-decoration: none;
+							    }
+								}
+								&.has-no-events {
+							    text-align: center;
+							    color: black;
+							    padding: 0px 0px 0px 0px;
+							    .mini-day-on {
+								    padding: 0px;
+								    text-align: center;
+									}
+								}
+								&.today {
+							    background-color: #4C48A8;
+							    color: white;
+							    text-align: center;
+							    a {
+										color: white;
+  									text-decoration: none;
+							    }
 								}
 							}
 						}
 						@include respond-to('tablet-lg') { 
-							.month-view {
-							width: 100%;
-							position: initial;
-							display: block;
-							border: none; 
+							table {
+								width: 100%;
 							}
+						}
+					}
+					@include respond-to('tablet-lg') { 
+						.month-view {
+						width: 100%;
+						position: initial;
+						display: block;
+						border: none; 
 						}
 					}
 				}
@@ -272,11 +284,11 @@
 		}
 		//Button Crear Disponibilidad 
 		.crear_disponibilidad {
-				width: 76.6%;
+				width: 76.6% !important;
         background: white;
         border-right: 3px solid #BBBDBF;
         position: absolute;
-        top: 194px;
+        top: 182px;
         z-index: 2;
 			.block-title {
 				display: none;
@@ -379,31 +391,28 @@
 	}
 	ul.tabs--primary {
     display: flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
     list-style: none;
     background-color: transparent;
     border-bottom: 0px solid #ddd;
-    width: 25px;
-    position: relative;
     position: absolute;
-    right: 41px;
+    right: 7px;
     z-index: 1;
     margin-top: 34px;
-		&:before {
-	    content: "";
-	    width: 23px;
-	    height: 75px;
-	    border-radius: 28px;
-	    border: 2px solid #808184;
-	    position: absolute;
-	    top: -6px;
-	    right: 20px;
-	    z-index: -1;
+    @include respond-to('tablet-lg') { 
+			&:before {
+		    content: "";
+		    width: 23px;
+		    height: 75px;
+		    border-radius: 28px;
+		    border: 2px solid #808184;
+		    position: absolute;
+		    top: -6px;
+		    right: 20px;
+		    z-index: -1;
+			}
 		}
 	 li {
-    	left: 40px;
-			&:nth-child(1) {
+    	&:nth-child(1) {
 		    display: none;
 			}
 			a {
@@ -413,11 +422,16 @@
 		    display: block !important;
 		    border-radius: 0px !important;
 		    border: 0px;
-		    text-align: left;
+		    text-align: center;
 		    width: 56px;
 		    font-family: $lato-regular;
 		    font-size : 15px;
 		    color : $black;
+			}
+			@include respond-to('tablet-lg') { 
+				a {
+					text-align: left;
+				}
 			}
 			&.active {
 				a ,	a:focus, a:hover {
@@ -429,27 +443,51 @@
 			}
 			&.active  {
 				a.active {
-			    color: $green !important;
+			    color: $green;
 			    background: transparent;
-			    &:before {
-				    content: "";
-				    margin-right: 16px;
-				    color: $green;
-				    background-color: #E8E8E8;
-				    background-image: url("../img/punto.png");
-				    background-size: cover;
-				    background-repeat: no-repeat;
-				    position: absolute;
-				    top: 5px;
-				    right: 48px;
-				    display: -webkit-inline-box;
-				    display: -ms-inline-flexbox;
-				    display: inline-flex;
-				    width: 12px;
-				    height: 12px;
+			    border: none;
+			    border-bottom: 3px solid $green;
+			    margin: 0px 5px;
+					@include respond-to('tablet-lg') { 
+						&:before {
+							content: "";
+					    margin-right: 16px;
+					    color: $green;
+					    background-color: #E8E8E8;
+					    background-image: url("../img/punto.png");
+					    background-size: cover;
+					    background-repeat: no-repeat;
+					    position: absolute;
+					    top: 5px;
+					    right: 48px;
+					    display: -webkit-inline-box;
+					    display: -ms-inline-flexbox;
+					    display: inline-flex;
+					    width: 12px;
+					    height: 12px;
+						}
 					}
 			  }
+			  @include respond-to('tablet-lg') { 
+			  	a.active { 
+						border-bottom: 0px solid $green;
+			    	margin: 0px;
+			  	}
+			  }
 			}
+		}
+		@include respond-to('tablet-lg') { 
+			li {
+    		left: 40px;
+    	}
+		}
+	}
+	@include respond-to('tablet-lg') { 
+		ul.tabs--primary { 
+			flex-direction: column-reverse;
+    	align-items: flex-end;
+    	width: 25px;
+    	right: 41px;
 		}
 	}
 }
@@ -482,65 +520,84 @@
 			    	}
 		    	}
 		    }
-		    //paguinadores
-		    .pagination {
-					position: absolute;
-			    top: 0px;
-			    left: 0px;
-			    li { 
-			    	a  {
-			    		color: #000;
-					    background-color: transparent;
-					    border: none;
-					    text-indent: -9999%;
-					    overflow: hidden;
-					    border-left: 2px solid black !important;
-					    border-bottom: 2px solid black !important;
-					    width: 10px;
-					    height: 10px;
-					    padding: 0;
-			    	}
-			    	&.prev {
-			    		a {
-		            transform: rotate(46deg);
-						    border-top-left-radius: 0px !important;
-						    border-bottom-left-radius: 0px !important;
-						    margin-right: 27px;
-			    		}
-			    	}
-			    	&.next a {
-					    transform: rotate(224deg);
-					    border-top-right-radius: 0px !important;
-					    border-bottom-right-radius: 0px !important;
-						}
-						&:hover {
-							color: #000 !important;
-	    				background-color: transparent !important;
-						}
+		    .clearfix {
+		    	margin-top: -20px;
+    			margin-bottom: 13px;
+			    //paguinadores
+			    .pagination {
+						position: absolute;
+				    top: 0px;
+				    left: 0px;
+				    li { 
+				    	a  {
+				    		color: #000;
+						    background-color: transparent;
+						    border: none;
+						    text-indent: -9999%;
+						    overflow: hidden;
+						    border-left: 2px solid black !important;
+						    border-bottom: 2px solid black !important;
+						    width: 10px;
+						    height: 10px;
+						    padding: 0;
+				    	}
+				    	&.prev {
+				    		a {
+			            transform: rotate(46deg);
+							    border-top-left-radius: 0px !important;
+							    border-bottom-left-radius: 0px !important;
+							    margin-right: 27px;
+				    		}
+				    	}
+				    	&.next a {
+						    transform: rotate(224deg);
+						    border-top-right-radius: 0px !important;
+						    border-bottom-right-radius: 0px !important;
+							}
+							&:hover {
+								color: #000 !important;
+		    				background-color: transparent !important;
+							}
+				    }
 			    }
-		    }
-		    //fecha calendario
-		    h3 {
-			    margin-left: 66px;
-			    padding-right: 20px;
-			    width: auto;
-			    border-right: 2px solid #808184;
-			    font-family: $lato-regular;
-			    font-size : 24px;
-			    color : #808081;
-			    font-weight: normal;
-			    float: left;
+			    //fecha calendario
+			    h3 {
+			    	width: auto;
+				    font-family: $lato-regular;
+				    font-size: 15px;
+				    color: #808081;
+				    font-weight: normal;
+				    margin-left: 66px;
+				    padding-right: 20px;
+				    border-right: 2px solid #808184;
+				    float: left;
+					}
+					@include respond-to('tablet-lg') { 
+						h3 {
+							font-size: 24px;
+						}
+					}
+					//nombre del consejero
+					.cotainer-name-user {
+						padding-left: 20px;
+						width: auto;
+						font-family: $lato-regular;
+						font-size: 15px;
+						font-weight: normal;
+						color: $green;
+						float: left;
+					}
+					@include respond-to('tablet-lg') { 
+						.cotainer-name-user {
+							font-size : 24px;
+						}
+					}
 				}
-				//nombre del consejero
-				.cotainer-name-user {
-					padding-left: 20px;
-					width: auto;
-					font-family: $lato-regular;
-					font-size : 24px;
-					line-height : 21px;
-					font-weight: normal;
-					color : #47AC4B;
-					float: left;
+				@include respond-to('tablet-lg') { 
+					.clearfix {
+						margin-top: 5px;
+						margin-bottom: 10px;
+					}
 				}
 			}
 			.view-content {

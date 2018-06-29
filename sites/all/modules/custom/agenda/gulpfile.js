@@ -23,7 +23,7 @@ var options = {};
 
 // Set the URL used to access the Drupal website under development. This will
 // allow Browser Sync to serve the website and update CSS changes on the fly.
-options.drupalURL = 'http://localhost/tbwa/';
+options.drupalURL = 'http://localhost/tbwa';
 
 // Define which browsers to add vendor prefixes for.
 // http://browserl.ist/?q=last+5+version

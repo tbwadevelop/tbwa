@@ -514,11 +514,11 @@ body .main-container header section.title-agenda-de-servicio .contenedor > h2 + 
     display: flex;
     align-items: center;
 } */
-@media screen and (min-width: 992px){
+/* @media screen and (min-width: 992px){
     body .view-consejero-calendar section div.wrapper button#cbox2,body .main-container .row aside .well section:nth-child(1) nav div.cerrar_modal button#cerrar  {
         display: none;
     }
-}
+} */
 /* body .view-consejero-calendar section div.wrapper button#cbox2 {
     background: url(../img/Menu.png) no-repeat;
     background-size: 27px;
@@ -529,7 +529,7 @@ body .main-container header section.title-agenda-de-servicio .contenedor > h2 + 
     width: 25px;
     height: 25px;
 } */
-@media screen and (max-width: 991px) {
+/* @media screen and (max-width: 991px) {
     body.sidebar-first .wrapper {
         margin-left: 21px;
     }
@@ -548,7 +548,7 @@ body .main-container header section.title-agenda-de-servicio .contenedor > h2 + 
         width: 22px;
         height: 22px;
     }
-}
+} */
 /* -\* Selec Calendario -/* - */
 /* body.sidebar-first .dropdown {
     border: none !important;
@@ -2403,17 +2403,17 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
 
 /*------------------ Menu Historial Estudiante    ------------------ */
 
-.view-id-historial_estudiante_views .view-content .views-field-uid span {
+/* .view-id-historial_estudiante_views .view-content .views-field-uid span {
     display: none;
-}
-.ui-accordion-header.ui-state-default span.ui-accordion-header-icon {
+} */
+/* .ui-accordion-header.ui-state-default span.ui-accordion-header-icon {
     position: absolute !important;
     left: 95% !important;
     top: 50% !important;
     margin-top: -8px !important;
-}
+} */
 
-.ui-accordion-header.ui-state-default .ui-icon {
+/* .ui-accordion-header.ui-state-default .ui-icon {
     background: url("../img/flecha.png")no-repeat;
     background-size: contain;
     -webkit-transform: rotate(-180deg);
@@ -2424,103 +2424,103 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
     background-size: contain !important;
     -webkit-transform: rotate(0deg) !important;
             transform: rotate(0deg) !important;
- }
-.ui-accordion-header.ui-state-default.ui-state-default {
+ } */
+/* .ui-accordion-header.ui-state-default.ui-state-default {
     background: #E6E7E8;
     border-radius: 0px;
-}
+} */
 
-.ui-accordion-header.ui-state-default.ui-state-default a span {
+/* .ui-accordion-header.ui-state-default.ui-state-default a span {
     font-family: Lato Bold;
     font-weight: bold;
     font-size: 18px;
     line-height: 18px;
     color: #231F20;
-}
-.ui-accordion-header.ui-state-default.ui-state-active {
+} */
+/* .ui-accordion-header.ui-state-default.ui-state-active {
     background: #808184;
 }
 .ui-accordion-header.ui-state-default.ui-state-active a span {
     color : #FFFFFF;
-}
-@media screen and (max-width: 640px) {
+} */
+/* @media screen and (max-width: 640px) {
     .ui-accordion-header.ui-state-default span.ui-accordion-header-icon {
         left: 90% !important;
     }
-}
+} */
 /* -\* informacion estudiante - informacion de la cita  - */
-.ui-accordion .ui-accordion-content {
+/* .ui-accordion .ui-accordion-content {
     padding: 1em 0px 0px 0px;
 }
-.views-row-last .ui-corner-bottom > div span:nth-child(1) {
+ *//* .views-row-last .ui-corner-bottom > div span:nth-child(1) {
     font-family: Lato Bold;
     font-weight: bold;
     font-size: 20px;
     line-height: 19.75px;
     color : #41B65B;
     
-}
-.views-row-last .ui-corner-bottom > div span:nth-child(2) {
+} */
+/* .views-row-last .ui-corner-bottom > div span:nth-child(2) {
     display: inherit;
     margin: 10px 0;
     font-family: Lato Light;
     font-size : 20px;
     color : #000000;
-}
-.views-row-last .ui-corner-bottom > div > div  span.date-display-single {
+} */
+/* .views-row-last .ui-corner-bottom > div > div  span.date-display-single {
     font-size: 100%;
     font-family: Lato Light;
     font-size: 20px;
     color: #000000;
     font-weight: normal;
-} 
-.views-row-last .ui-corner-bottom div[class*="col-"], .views-row-last .ui-corner-bottom a, .views-row-last .ui-corner-bottom .date-display-single {
+}  */
+/* .views-row-last .ui-corner-bottom div[class*="col-"], .views-row-last .ui-corner-bottom a, .views-row-last .ui-corner-bottom .date-display-single {
     font-family : Lato Light;
     font-size: 20px;
     color: #000000;
     text-decoration: none;
     cursor: auto;
     height: 87px;
-}
-.views-row-last .ui-corner-bottom div[class*="col-"] > div {
+} */
+/* .views-row-last .ui-corner-bottom div[class*="col-"] > div {
     padding: 10px 0;
     font-family : Lato Light;
     font-size : 20px;
     color : #000000;
-}
-.ui-accordion .ui-accordion-content div.views-field-view {
+} */
+/* .ui-accordion .ui-accordion-content div.views-field-view {
     padding: 0px;
-}
-.ui-accordion .ui-accordion-content div.views-field-uid {
+} */
+/* .ui-accordion .ui-accordion-content div.views-field-uid {
     display: none;
-}
-.views-row-last .ui-corner-bottom .views-field-view .views-row-last {
+} */
+/* .views-row-last .ui-corner-bottom .views-field-view .views-row-last {
     background: #E8E8E8;
     min-height: 23pc;
-}
-.views-row-last .ui-corner-bottom .views-field-view .views-row-last {
+} */
+/* .views-row-last .ui-corner-bottom .views-field-view .views-row-last {
     margin:15px 0px 0px 0px;
-}
-.views-row-last .ui-corner-bottom .views-field-view .views-row-last .views-field.views-field-nothing {
+} */
+/* .views-row-last .ui-corner-bottom .views-field-view .views-row-last .views-field.views-field-nothing {
     display: flex;
     align-items: center;
-}
-.views-row-last .ui-corner-bottom .views-field-view .views-row-last div {
+} */
+/* .views-row-last .ui-corner-bottom .views-field-view .views-row-last div {
     padding-left: 10px
-}
-.views-row-last .ui-corner-bottom .views-field-view .views-row-last div span {
+} */
+/* .views-row-last .ui-corner-bottom .views-field-view .views-row-last div span {
     font-family : Lato Bold;
     font-weight : bold;
     font-size : 20px;
     line-height : 19.75px;
     color : #231F20;
-}
-.views-row-last .ui-corner-bottom .views-field-view .views-row-last div div {
+} */
+/* .views-row-last .ui-corner-bottom .views-field-view .views-row-last div div {
     font-family : Lato Light;
     font-size : 20px;
     color : #000000;
-}
-@media screen and (max-width: 768px) {
+} */
+/* @media screen and (max-width: 768px) {
     .views-row-last .ui-corner-bottom > div span:nth-child(2) {
     padding: 10px 0;
     margin: 0px;
@@ -2536,8 +2536,8 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         background: #F5F1F1;
          padding-left: 5px;
     }
-}
-@media screen and (max-width: 640px) {
+} */
+/* @media screen and (max-width: 640px) {
     .views-row-last .ui-corner-bottom > div span:nth-child(1) {
         font-size: 14px;
     }
@@ -2572,7 +2572,7 @@ div#ui-datepicker-div table td a.ui-state-highlight  {
         background: #F5F1F1;
          padding-left: 5px;
     }
-}
+} */
 /*@media screen and (max-width: 640px) {
     .views-row-last .ui-corner-bottom > div span:nth-child(1) {
         font-size: 18px;
@@ -2862,13 +2862,13 @@ li.icon-apo-estudiante .views-field-name span.field-content::after  {
     border: 3px solid #41B65B;
 }
 /* -\* Mis citas  - Estudiantes - */
-body.page-mis-citas .row {
+/* body.page-mis-citas .row {
     border: 3px solid #808184;
-}
-.filtar_citas .form-group {
+} */
+/* .filtar_citas .form-group {
     margin-bottom: 0px;
-}
-.filtar_citas label {
+} */
+/* .filtar_citas label {
     display: none;
 }
 .filtar_citas #edit-options-qoute {
@@ -2886,8 +2886,8 @@ body.page-mis-citas .row {
     appearance: none;
     float: right;
     margin-bottom: 27px;
-}
-.coment-mobil {
+} */
+/* .coment-mobil {
     display: none;
 }
 @media screen and (max-width: 991px) {
@@ -2934,8 +2934,8 @@ body.page-mis-citas .row {
         padding: 0px 12px;
         width: 191px;
     }
-}
-@media screen and (max-width: 640px) {
+} */
+/* @media screen and (max-width: 640px) {
     .coment-mobil {
         font-size: 20px;
     }
@@ -2949,7 +2949,7 @@ body.page-mis-citas .row {
         background-position: 99%;
         width: 159px;
     }
-}
+} */
 
 /* -\* Mis Datos  - Estudiantes - */
 body.page-user-edit .main-container .row section div.region.region-content {
